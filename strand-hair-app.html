@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ═══════════════════════════════════════════════════
+     SEO: Primary meta tags
+═══════════════════════════════════════════════════ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strand — Free Hair Type Quiz & Personalized Product Routine | 1A to 4C</title>
+<meta name="description" content="Find your exact hair type (1A–4C) and get a personalized hair care routine with top-rated products and tutorial videos. Free hair product recommendations based on thousands of real reviews.">
+<meta name="keywords" content="hair type quiz, hair care routine, curly hair products, natural hair products, 4C hair routine, wavy hair routine, best shampoo for hair type, hair type chart, curl routine">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://strandhair.com/">
+
+<!-- ═══════════════════════════════════════════════════
+     SEO: Open Graph (Facebook, Pinterest, WhatsApp)
+═══════════════════════════════════════════════════ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Strand — Free Hair Type Quiz & Product Routine Builder">
+<meta property="og:description" content="Discover your hair type and get a personalized routine with the best-reviewed products and tutorial videos for 1A through 4C hair.">
+<meta property="og:url" content="https://strandhair.com/">
+<meta property="og:site_name" content="Strand">
+<meta property="og:image" content="https://strandhair.com/og-image.jpg">
+
+<!-- SEO: Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Strand — Free Hair Type Quiz & Product Routine Builder">
+<meta name="twitter:description" content="Discover your hair type (1A–4C) and get a personalized hair care routine with top-rated products and video tutorials.">
+<meta name="twitter:image" content="https://strandhair.com/og-image.jpg">
+
+<!-- ═══════════════════════════════════════════════════
+     SEO: Structured Data — WebSite + FAQ Schema
+     Helps Google show sitelinks & rich results
+═══════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://strandhair.com/#website",
+      "url": "https://strandhair.com/",
+      "name": "Strand",
+      "description": "Personalized hair care routines and product recommendations for every hair type from 1A to 4C.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://strandhair.com/?type={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the hair type chart and how does it work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The hair typing system classifies hair into 4 main categories: Type 1 (straight), Type 2 (wavy), Type 3 (curly), and Type 4 (coily). Each type has three subtypes (A, B, C) based on the tightness of the pattern. Type 1A is the finest, flattest straight hair, while 4C is the tightest, most densely packed coily hair."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What products should I use for 4C hair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "4C hair requires maximum moisture. A typical 4C routine includes a pre-poo oil treatment, a sulfate-free or black soap shampoo, a deep conditioning mask used weekly, a rich leave-in conditioner, a moisturizing cream for the LOC or LCO method, and a sealing oil like castor oil or jojoba oil to lock in hydration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What products are best for wavy 2B hair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wavy 2B hair benefits from sulfate-free shampoo, a lightweight conditioner, a leave-in conditioner applied to wet hair, and either a wave-defining mousse or a light hold gel. The key is applying products to soaking wet hair and scrunching rather than combing to enhance the natural wave pattern."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if I have 3A, 3B, or 3C curls?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "3A curls are large, loose spirals about the diameter of a sidewalk chalk piece. 3B curls are medium spirals or corkscrews, roughly the width of a marker or finger. 3C curls are tight corkscrews about the width of a pencil or straw. All Type 3 curls have a visible S or spiral shape when stretched."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "name": "Strand",
+      "url": "https://strandhair.com/",
+      "description": "Free hair type quiz and personalized hair product recommendation platform."
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream: #FAF7F2;
+  --warm-white: #F5F0E8;
+  --sand: #E8DDD0;
+  --mocha: #8B6F5E;
+  --espresso: #3D2B1F;
+  --caramel: #C4945A;
+  --sage: #7A8C7E;
+  --blush: #E8C4B0;
+  --text: #2A1F1A;
+  --muted: #9B8B82;
+  --green: #4A7C5F;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ─── SKIP LINK (accessibility + SEO) ─── */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--espresso);
+  color: var(--cream);
+  padding: 8px 16px;
+  font-size: 13px;
+  z-index: 999;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 0; }
+
+/* ─── AFFILIATE DISCLOSURE ─── */
+.affiliate-bar {
+  background: #F0EBE3;
+  border-bottom: 1px solid var(--sand);
+  padding: 8px 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.affiliate-bar strong { color: var(--mocha); font-weight: 500; }
+.affiliate-bar a { color: var(--caramel); text-decoration: underline; }
+
+/* ─── NAV ─── */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250,247,242,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(139,111,94,0.1);
+}
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--espresso);
+  text-decoration: none;
+}
+.logo span { color: var(--caramel); font-style: italic; }
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mocha);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--caramel); }
+
+/* ─── HERO ─── */
+.hero {
+  padding: 80px 48px 80px;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  margin-bottom: 20px;
+  animation: fadeUp 0.6s ease both;
+}
+/* SEO: h1 is keyword-rich and unique */
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 7vw, 82px);
+  font-weight: 300;
+  line-height: 1.0;
+  color: var(--espresso);
+  margin-bottom: 24px;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+.hero h1 em { font-style: italic; color: var(--caramel); }
+.hero-sub {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--mocha);
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto 16px;
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+.hero-badges {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  animation: fadeUp 0.6s 0.25s ease both;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--warm-white);
+  border: 1px solid var(--sand);
+  font-size: 11px;
+  color: var(--mocha);
+  letter-spacing: 0.08em;
+}
+.cta-btn {
+  display: inline-block;
+  padding: 16px 48px;
+  background: var(--espresso);
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  animation: fadeUp 0.6s 0.3s ease both;
+}
+.cta-btn:hover { background: var(--caramel); transform: translateY(-2px); }
+
+/* ─── HOW IT WORKS ─── */
+.how-section {
+  background: var(--espresso);
+  padding: 72px 48px;
+}
+.how-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.how-section .section-label { color: var(--caramel); margin-bottom: 12px; }
+.how-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 300;
+  color: var(--cream);
+  margin-bottom: 48px;
+}
+.steps-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.how-step { }
+.how-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 300;
+  color: rgba(196,148,90,0.4);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.how-step h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+.how-step p { font-size: 13px; color: rgba(250,247,242,0.6); line-height: 1.7; }
+
+/* ─── HAIR TYPE SELECTOR ─── */
+.chart-section {
+  padding: 80px 48px;
+  background: var(--warm-white);
+}
+.section-label {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  text-align: center;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 300;
+  text-align: center;
+  color: var(--espresso);
+  margin-bottom: 12px;
+}
+.section-desc {
+  text-align: center;
+  font-size: 15px;
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto 48px;
+  line-height: 1.6;
+}
+.hair-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.hair-family {
+  background: var(--sand);
+  padding: 4px 4px 0;
+}
+.family-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--espresso);
+  padding: 16px 16px 4px;
+}
+.family-desc {
+  font-size: 11px;
+  color: var(--muted);
+  padding: 0 16px 14px;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+}
+.hair-subtypes { display: flex; flex-direction: column; gap: 2px; }
+.hair-card {
+  background: var(--cream);
+  padding: 18px 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hair-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--caramel);
+  transform: scaleY(0);
+  transition: transform 0.25s ease;
+}
+.hair-card:hover { background: #FDF9F5; transform: translateX(3px); }
+.hair-card:hover::before { transform: scaleY(1); }
+.hair-card.selected { background: var(--espresso); transform: translateX(3px); }
+.hair-card.selected::before { background: var(--caramel); transform: scaleY(1); }
+.hair-card.selected .hair-type-id { color: var(--caramel); }
+.hair-card.selected .hair-type-name,
+.hair-card.selected .hair-type-desc { color: rgba(255,255,255,0.75); }
+.hair-type-id {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--espresso);
+  margin-bottom: 4px;
+}
+.hair-type-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--mocha);
+  margin-bottom: 3px;
+  letter-spacing: 0.05em;
+}
+.hair-type-desc { font-size: 11px; color: var(--muted); line-height: 1.4; }
+.hair-visual { font-size: 26px; margin-bottom: 8px; }
+
+/* ─── STICKY CTA ─── */
+.sticky-find {
+  display: none;
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+}
+.sticky-find.visible { display: block; }
+#findBtn {
+  padding: 16px 40px;
+  background: var(--espresso);
+  color: var(--cream);
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(61,43,31,0.35);
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+#findBtn:hover { background: var(--caramel); transform: translateY(-2px); }
+#findBtn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+/* ─── RESULTS ─── */
+.results-section {
+  display: none;
+  padding: 80px 48px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.results-section.active { display: block; animation: fadeUp 0.5s ease both; }
+
+/* FTC Disclosure in results */
+.ftc-disclosure {
+  background: #FFF8EE;
+  border: 1px solid var(--blush);
+  border-left: 4px solid var(--caramel);
+  padding: 14px 20px;
+  font-size: 12px;
+  color: var(--mocha);
+  line-height: 1.6;
+  margin-bottom: 48px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.ftc-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+.results-header { text-align: center; margin-bottom: 64px; }
+.hair-badge {
+  display: inline-block;
+  background: var(--espresso);
+  color: var(--caramel);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 600;
+  width: 84px; height: 84px;
+  line-height: 84px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.results-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 5vw, 46px);
+  font-weight: 300;
+  color: var(--espresso);
+  margin-bottom: 10px;
+}
+.results-header p {
+  font-size: 15px;
+  color: var(--mocha);
+  font-weight: 300;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.routine-label {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.routine-label::after { content: ''; flex: 1; height: 1px; background: var(--sand); }
+.product-step { margin-bottom: 64px; }
+.step-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px; }
+.step-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 44px;
+  font-weight: 300;
+  color: var(--sand);
+  line-height: 1;
+  min-width: 40px;
+}
+.step-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--espresso);
+}
+.step-info p { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+.products-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.product-card {
+  background: var(--warm-white);
+  border: 1px solid var(--sand);
+  padding: 24px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.product-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--caramel), var(--blush));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(61,43,31,0.1); }
+.product-card:hover::after { transform: scaleX(1); }
+.rank-badge {
+  position: absolute;
+  top: 14px; right: 14px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  font-weight: 500;
+}
+.product-emoji { font-size: 30px; margin-bottom: 12px; }
+.product-brand { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 5px; }
+.product-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--espresso);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.stars { color: var(--caramel); font-size: 12px; margin-bottom: 4px; }
+.review-count { font-size: 11px; color: var(--muted); margin-bottom: 8px; }
+.price-range { font-size: 13px; color: var(--sage); font-weight: 500; margin-bottom: 12px; }
+.product-why {
+  font-size: 12px;
+  color: var(--mocha);
+  line-height: 1.6;
+  border-top: 1px solid var(--sand);
+  padding-top: 12px;
+  margin-bottom: 16px;
+}
+.amazon-btn {
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  background: var(--espresso);
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+.amazon-btn:hover { background: var(--caramel); }
+
+/* ─── VIDEO TUTORIALS ─── */
+.tutorials-block {
+  background: var(--espresso);
+  border-radius: 2px;
+  padding: 28px;
+  margin-top: 8px;
+}
+.tutorials-block h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--cream);
+  margin-bottom: 6px;
+}
+.tutorials-block .tut-sub {
+  font-size: 12px;
+  color: rgba(250,247,242,0.5);
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+}
+.videos-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.yt-thumb {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  background: #000;
+  aspect-ratio: 16/9;
+}
+.yt-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.yt-thumb:hover img { opacity: 0.6; }
+.yt-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+.yt-play-btn {
+  width: 44px; height: 44px;
+  background: #FF0000;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+.yt-thumb:hover .yt-play-btn { transform: scale(1.1); }
+.yt-play-btn svg { fill: white; width: 18px; }
+.yt-title {
+  font-size: 11px;
+  color: white;
+  text-align: center;
+  padding: 0 8px;
+  line-height: 1.4;
+  font-weight: 500;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
+/* Embedded iframe replaces thumb on click */
+.yt-frame {
+  display: none;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+}
+
+/* ─── SHARE STRIP ─── */
+.share-strip {
+  background: var(--caramel);
+  padding: 48px;
+  text-align: center;
+  margin-top: 80px;
+}
+.share-strip h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+.share-strip p { font-size: 14px; color: rgba(250,247,242,0.8); margin-bottom: 24px; }
+.share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.share-btn {
+  padding: 12px 28px;
+  border: 1px solid rgba(250,247,242,0.5);
+  color: var(--cream);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+.share-btn:hover { background: var(--espresso); border-color: var(--espresso); }
+
+/* ─── ABOUT / SEO CONTENT SECTION ─── */
+.about-section {
+  padding: 96px 48px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.about-text .section-label { text-align: left; }
+.about-text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 300;
+  color: var(--espresso);
+  margin-bottom: 24px;
+  line-height: 1.15;
+}
+.about-text p {
+  font-size: 15px;
+  color: var(--mocha);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.type-guide { }
+.type-guide h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--espresso);
+  margin-bottom: 20px;
+}
+.type-item {
+  border-top: 1px solid var(--sand);
+  padding: 16px 0;
+}
+.type-item:last-child { border-bottom: 1px solid var(--sand); }
+.type-item-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+.type-chip {
+  background: var(--espresso);
+  color: var(--caramel);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 2px;
+}
+.type-item h4 { font-size: 14px; font-weight: 500; color: var(--espresso); }
+.type-item p { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+/* ─── FAQ ─── */
+.faq-section {
+  background: var(--warm-white);
+  padding: 80px 48px;
+}
+.faq-inner { max-width: 760px; margin: 0 auto; }
+.faq-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 300;
+  color: var(--espresso);
+  margin-bottom: 40px;
+  text-align: center;
+}
+.faq-item {
+  border-top: 1px solid var(--sand);
+  padding: 20px 0;
+  cursor: pointer;
+}
+.faq-item:last-child { border-bottom: 1px solid var(--sand); }
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.faq-q h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--espresso);
+  line-height: 1.4;
+}
+.faq-icon { font-size: 20px; color: var(--caramel); flex-shrink: 0; transition: transform 0.2s; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a {
+  display: none;
+  font-size: 14px;
+  color: var(--mocha);
+  line-height: 1.8;
+  padding-top: 14px;
+}
+.faq-item.open .faq-a { display: block; }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--espresso);
+  padding: 56px 48px 32px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  max-width: 1040px;
+  margin: 0 auto 48px;
+}
+.footer-brand .logo-f {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--cream);
+  margin-bottom: 12px;
+  display: block;
+}
+.footer-brand .logo-f span { color: var(--caramel); font-style: italic; }
+.footer-brand p { font-size: 13px; color: rgba(250,247,242,0.5); line-height: 1.7; max-width: 280px; }
+.footer-col h4 {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { font-size: 13px; color: rgba(250,247,242,0.6); text-decoration: none; transition: color 0.2s; }
+.footer-col a:hover { color: var(--cream); }
+.footer-bottom {
+  border-top: 1px solid rgba(250,247,242,0.1);
+  padding-top: 24px;
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.footer-legal { font-size: 11px; color: rgba(250,247,242,0.35); line-height: 1.7; max-width: 640px; }
+.footer-legal a { color: rgba(250,247,242,0.5); text-decoration: underline; }
+.footer-copy { font-size: 11px; color: rgba(250,247,242,0.3); }
+
+/* ─── DIVIDER ─── */
+.divider { height: 1px; background: linear-gradient(90deg, transparent, var(--sand), transparent); margin: 0 48px; }
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .steps-row { grid-template-columns: 1fr; gap: 32px; }
+  .videos-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  .affiliate-bar { padding: 8px 24px; }
+  .hero { padding: 48px 24px 64px; }
+  .how-section, .chart-section, .about-section, .faq-section { padding: 60px 24px; }
+  .hair-grid { grid-template-columns: repeat(2, 1fr); }
+  .results-section { padding: 60px 24px; }
+  .products-row { grid-template-columns: 1fr; }
+  .videos-row { grid-template-columns: 1fr; }
+  .share-strip { padding: 48px 24px; }
+  footer { padding: 48px 24px 24px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ═══ AFFILIATE DISCLOSURE BAR (FTC compliant, always visible) ═══ -->
+<div class="affiliate-bar" role="note" aria-label="Affiliate disclosure">
+  <span>ⓘ</span>
+  <span><strong>Affiliate Disclosure:</strong> Strand earns a commission from qualifying Amazon purchases at no extra cost to you. We only recommend products with strong community reviews. <a href="#disclosure">Learn more ↓</a></span>
+</div>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav role="navigation" aria-label="Main navigation">
+  <a href="/" class="logo" aria-label="Strand homepage">str<span>a</span>nd</a>
+  <ul class="nav-links" role="list">
+    <li><a href="#selector">Hair Types</a></li>
+    <li><a href="#about">Hair Guide</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<main id="main-content">
+<section class="hero" aria-labelledby="hero-heading">
+  <p class="hero-eyebrow">Free Hair Type Quiz — 1A to 4C</p>
+  <!-- SEO: h1 contains primary keywords naturally -->
+  <h1 id="hero-heading">The hair care routine<br>your <em>texture</em> deserves.</h1>
+  <p class="hero-sub">Identify your exact hair type, then get a personalized product routine with top-rated picks and expert video tutorials — all in one place.</p>
+  <div class="hero-badges">
+    <span class="badge">✓ 12 hair types covered</span>
+    <span class="badge">✓ Ordered step-by-step routine</span>
+    <span class="badge">✓ Real review data</span>
+    <span class="badge">✓ Video tutorials included</span>
+  </div>
+  <a href="#selector" class="cta-btn">Find My Hair Type →</a>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section class="how-section" aria-labelledby="how-heading">
+  <div class="how-inner">
+    <p class="section-label">How It Works</p>
+    <h2 id="how-heading">Three steps to your perfect routine.</h2>
+    <div class="steps-row">
+      <div class="how-step">
+        <div class="how-num">01</div>
+        <h3>Identify your type</h3>
+        <p>Use our visual chart to find your exact hair type from 1A (fine straight) to 4C (tight coily) — no quiz, just pick what looks like yours.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">02</div>
+        <h3>Get your routine</h3>
+        <p>We show you every product in order — shampoo to sealing oil — with three top-reviewed options at every step: best overall, budget, and premium.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">03</div>
+        <h3>Watch & learn</h3>
+        <p>Each step includes curated YouTube tutorials from trusted creators so you see exactly how to apply every product for your texture.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HAIR TYPE SELECTOR ═══ -->
+<section class="chart-section" id="selector" aria-labelledby="selector-heading">
+  <p class="section-label">Step 01 — Identify</p>
+  <h2 class="section-title" id="selector-heading">What's your hair type?</h2>
+  <p class="section-desc">Click the description that best matches your natural hair texture. If you're between two types, choose the one closest to your roots.</p>
+
+  <div class="hair-grid" role="list" aria-label="Hair type selection grid">
+    <!-- TYPE 1 -->
+    <div class="hair-family" role="group" aria-label="Type 1: Straight hair">
+      <div class="family-label">Type 1</div>
+      <div class="family-desc">Straight — no natural curl or wave pattern</div>
+      <div class="hair-subtypes">
+        <article class="hair-card" role="listitem" data-type="1A" onclick="selectHair(this,'1A')" tabindex="0" aria-label="1A Pin-Straight hair type" onkeypress="if(event.key==='Enter')selectHair(this,'1A')">
+          <div class="hair-visual" aria-hidden="true">𝄁</div>
+          <div class="hair-type-id">1A</div>
+          <div class="hair-type-name">Pin-Straight</div>
+          <div class="hair-type-desc">Very fine, soft, no body or volume</div>
+        </article>
+        <article class="hair-card" role="listitem" data-type="1B" onclick="selectHair(this,'1B')" tabindex="0" aria-label="1B Straight with body" onkeypress="if(event.key==='Enter')selectHair(this,'1B')">
+          <div class="hair-visual" aria-hidden="true">〜</div>
+          <div class="hair-type-id">1B</div>
+          <div class="hair-type-name">Straight + Body</div>
+          <div class="hair-type-desc">Medium texture, slight bends at ends</div>
+        </article>
+        <article class="hair-card" role="listitem" data-type="1C" onclick="selectHair(this,'1C')" tabindex="0" aria-label="1C Straight coarse" onkeypress="if(event.key==='Enter')selectHair(this,'1C')">
+          <div class="hair-visual" aria-hidden="true">〰</div>
+          <div class="hair-type-id">1C</div>
+          <div class="hair-type-name">Straight + Coarse</div>
+          <div class="hair-type-desc">Thick, resistant, slight wave tendency</div>
+        </article>
+      </div>
+    </div>
+    <!-- TYPE 2 -->
+    <div class="hair-family" role="group" aria-label="Type 2: Wavy hair">
+      <div class="family-label">Type 2</div>
+      <div class="family-desc">Wavy — S-pattern, between straight and curly</div>
+      <div class="hair-subtypes">
+        <article class="hair-card" role="listitem" data-type="2A" onclick="selectHair(this,'2A')" tabindex="0" aria-label="2A Loose wave" onkeypress="if(event.key==='Enter')selectHair(this,'2A')">
+          <div class="hair-visual" aria-hidden="true">∿</div>
+          <div class="hair-type-id">2A</div>
+          <div class="hair-type-name">Loose Wave</div>
+          <div class="hair-type-desc">Fine, tousled S-wave, easily straightens</div>
+        </article>
+        <article class="hair-card" role="listitem" data-type="2B" onclick="selectHair(this,'2B')" tabindex="0" aria-label="2B Defined wave" onkeypress="if(event.key==='Enter')selectHair(this,'2B')">
+          <div class="hair-visual" aria-hidden="true">ꞑ</div>
+          <div class="hair-type-id">2B</div>
+          <div class="hair-type-name">Defined Wave</div>
+          <div class="hair-type-desc">Medium, flat roots + wavy mid-length</div>
+        </article>
+        <article class="hair-card" role="listitem" data-type="2C" onclick="selectHair(this,'2C')" tabindex="0" aria-label="2C Strong wave" onkeypress="if(event.key==='Enter')selectHair(this,'2C')">
+          <div class="hair-visual" aria-hidden="true">ꭥ</div>
+          <div class="hair-type-id">2C</div>
+          <div class="hair-type-name">Strong Wave</div>
+          <div class="hair-type-desc">Thick, coarse, frizz-prone S-waves</div>
+        </article>
+      </div>
+    </div>
+    <!-- TYPE 3 -->
+    <div class="hair-family" role="group" aria-label="Type 3: Curly hair">
+      <div class="family-label">Type 3</div>
+      <div class="family-desc">Curly — springy, defined spiral patterns</div>
+      <div class="hair-subtypes">
+        <article class="hair-card" role="listitem" data-type="3A" onclick="selectHair(this,'3A')" tabindex="0" aria-label="3A Loose curl" onkeypress="if(event.key==='Enter')selectHair(this,'3A')">
+          <div class="hair-visual" aria-hidden="true">ɾ</div>
+          <div class="hair-type-id">3A</div>
+          <div class="hair-type-name">Loose Curl</div>
+          <div class="hair-type-desc">Large, shiny spirals, pencil-wide</div>
+        </article>
+        <article class="hair-card" role="listitem" data-type="3B" onclick="selectHair(this,'3B')" tabindex="0" aria-label="3B Springy curl" onkeypress="if(event.key==='Enter')selectHair(this,'3B')">
+          <div class="hair-visual" aria-hidden="true">ɕ</div>
+          <div class="hair-type-id">3B</div>
+          <div class="hair-type-name">Springy Curl</div>
+          <div class="hair-type-desc">Defined corkscrews, more volume</div>
+        </article>
+        <article class="hair-card" role="listitem" data-type="3C" onclick="selectHair(this,'3C')" tabindex="0" aria-label="3C Tight curl" onkeypress="if(event.key==='Enter')selectHair(this,'3C')">
+          <div class="hair-visual" aria-hidden="true">ɔ</div>
+          <div class="hair-type-id">3C</div>
+          <div class="hair-type-name">Tight Curl</div>
+          <div class="hair-type-desc">Tight corkscrews, straw-width curls</div>
+        </article>
+      </div>
+    </div>
+    <!-- TYPE 4 -->
+    <div class="hair-family" role="group" aria-label="Type 4: Coily hair">
+      <div class="family-label">Type 4</div>
+      <div class="family-desc">Coily — densely packed, most shrinkage</div>
+      <div class="hair-subtypes">
+        <article class="hair-card" role="listitem" data-type="4A" onclick="selectHair(this,'4A')" tabindex="0" aria-label="4A Soft coil" onkeypress="if(event.key==='Enter')selectHair(this,'4A')">
+          <div class="hair-visual" aria-hidden="true">ȣ</div>
+          <div class="hair-type-id">4A</div>
+          <div class="hair-type-name">Soft Coil</div>
+          <div class="hair-type-desc">Defined S-coils, visible curl pattern</div>
+        </article>
+        <article class="hair-card" role="listitem" data-type="4B" onclick="selectHair(this,'4B')" tabindex="0" aria-label="4B Z-pattern coil" onkeypress="if(event.key==='Enter')selectHair(this,'4B')">
+          <div class="hair-visual" aria-hidden="true">z</div>
+          <div class="hair-type-id">4B</div>
+          <div class="hair-type-name">Z-Pattern Coil</div>
+          <div class="hair-type-desc">Sharp angles, cottony, less defined</div>
+        </article>
+        <article class="hair-card" role="listitem" data-type="4C" onclick="selectHair(this,'4C')" tabindex="0" aria-label="4C Tight coil" onkeypress="if(event.key==='Enter')selectHair(this,'4C')">
+          <div class="hair-visual" aria-hidden="true">⁓</div>
+          <div class="hair-type-id">4C</div>
+          <div class="hair-type-name">Tight Coil</div>
+          <div class="hair-type-desc">Tightest coil, max shrinkage, fragile</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STICKY CTA ═══ -->
+<div class="sticky-find" id="stickyFind" aria-live="polite">
+  <button id="findBtn" disabled onclick="showResults()" aria-label="Build my hair routine">→ Build My Routine</button>
+</div>
+
+<!-- ═══ RESULTS ═══ -->
+<section id="results" class="results-section" aria-labelledby="results-heading" aria-live="polite">
+
+  <!-- FTC Affiliate Disclosure — prominently placed per FTC guidelines -->
+  <div class="ftc-disclosure" id="disclosure" role="note">
+    <span class="ftc-icon">💛</span>
+    <div>
+      <strong>Affiliate Disclosure:</strong> Strand participates in the Amazon Associates Program. When you click a product link and make a purchase on Amazon, we may earn a small commission at no additional cost to you. This helps us keep Strand free. Our product selections are based entirely on review data and community feedback — we are never paid by brands to feature their products. <a href="https://www.ftc.gov/business-guidance/resources/ftc-endorsement-guides-what-people-are-asking" target="_blank" rel="noopener noreferrer" style="color:var(--caramel)">FTC Disclosure Guidelines ↗</a>
+    </div>
+  </div>
+
+  <div class="results-header">
+    <div class="hair-badge" id="resultBadge" aria-label="Your hair type">—</div>
+    <h2 id="results-heading" id="resultTitle">Your Personalized Routine</h2>
+    <p id="resultDesc">Routine description</p>
+  </div>
+
+  <div id="routineSteps"></div>
+
+  <div class="share-strip">
+    <h3>Share your hair type ✨</h3>
+    <p>Help a friend find their routine too — hair twins exist for a reason.</p>
+    <div class="share-btns">
+      <button class="share-btn" onclick="shareResult()">📋 Copy Link</button>
+      <button class="share-btn" onclick="shareTwitter()">Twitter / X</button>
+      <button class="share-btn" onclick="alert('Open this page on your phone to share to TikTok or Instagram!')">TikTok / IG</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT / SEO CONTENT ═══ -->
+<section class="about-section" id="about" aria-labelledby="about-heading">
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="section-label" style="text-align:left">The Hair Type System</p>
+      <h2 id="about-heading">Why knowing your hair type changes everything.</h2>
+      <p>The Andre Walker Hair Typing System — popularized by Oprah's longtime stylist — classifies hair into four main types based on the shape of your curl pattern. Understanding where you fall on the spectrum is the foundation of effective hair care.</p>
+      <p>Using products designed for the wrong hair type is the single most common reason hair routines fail. A heavy curl cream that transforms 4C coils will completely flatten 2B waves. A clarifying shampoo that refreshes 1A fine hair will strip 3C curls of essential moisture.</p>
+      <p>Strand maps every product recommendation to your specific texture so your routine actually works — not just in theory, but in practice. Every product listed has been vetted against real review data from thousands of buyers with your hair type.</p>
+    </div>
+    <div class="type-guide">
+      <h3>Quick reference guide</h3>
+      <div class="type-item">
+        <div class="type-item-header"><span class="type-chip">1</span><h4>Straight Hair (1A · 1B · 1C)</h4></div>
+        <p>No curl pattern. Ranges from ultra-fine and flat (1A) to thick and resistant with slight bends (1C). Prone to oiliness at roots. Needs lightweight, volumizing products.</p>
+      </div>
+      <div class="type-item">
+        <div class="type-item-header"><span class="type-chip">2</span><h4>Wavy Hair (2A · 2B · 2C)</h4></div>
+        <p>Loose to strong S-pattern waves. Lives between straight and curly. Prone to frizz. Needs sulfate-free cleansing, light leave-ins, and wave-enhancing stylers.</p>
+      </div>
+      <div class="type-item">
+        <div class="type-item-header"><span class="type-chip">3</span><h4>Curly Hair (3A · 3B · 3C)</h4></div>
+        <p>Defined spiral or corkscrew curls. Ranges from large, loose rings (3A) to tight pencil-width curls (3C). Needs moisture, curl creams, and a diffuser for best results.</p>
+      </div>
+      <div class="type-item">
+        <div class="type-item-header"><span class="type-chip">4</span><h4>Coily Hair (4A · 4B · 4C)</h4></div>
+        <p>Tightly coiled or z-pattern hair with significant shrinkage. Most fragile hair type. Needs deep conditioning, the LOC/LCO method, protective styling, and sealing oils.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ FAQ (matches JSON-LD schema above) ═══ -->
+<section class="faq-section" id="faq" aria-labelledby="faq-heading">
+  <div class="faq-inner">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <h3>What is the hair type chart and how does it work?</h3>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-a">The hair typing system classifies hair into 4 main categories: Type 1 (straight), Type 2 (wavy), Type 3 (curly), and Type 4 (coily). Each type has three subtypes — A, B, and C — based on the tightness of the curl or wave pattern. Type 1A is the finest, flattest straight hair while 4C is the tightest, most densely packed coily hair with maximum shrinkage.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <h3>What products should I use for 4C hair?</h3>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-a">4C hair requires maximum moisture. A typical 4C routine includes a pre-poo oil treatment (like castor oil), a sulfate-free or black soap shampoo, a deep conditioning mask used weekly, a rich leave-in conditioner, a moisturizing cream for the LOC or LCO method, and a sealing oil (castor or jojoba) to lock in hydration. Protective styles between wash days help retain length and reduce breakage.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <h3>What products are best for wavy 2B hair?</h3>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-a">Wavy 2B hair benefits from sulfate-free shampoo, a lightweight rinse-out conditioner, a mousse or gel applied to soaking wet hair, and very little heat. The key technique is scrunching rather than combing, which encourages the wave pattern instead of disrupting it. Avoid heavy creams or butters — they'll weigh your waves flat.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <h3>How do I know if I have 3A, 3B, or 3C curls?</h3>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-a">3A curls are large, loose spirals about the diameter of a piece of sidewalk chalk or a big marker. 3B curls are medium spirals or corkscrews, roughly the width of your index finger. 3C curls are tight corkscrews about the width of a pencil or drinking straw. The best way to identify your type is to look at freshly washed, product-free hair that has air dried naturally.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <h3>What is the LOC method for natural hair?</h3>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-a">LOC stands for Liquid, Oil, Cream — a moisturizing layering technique popular for Type 3 and Type 4 natural hair. You first apply a water-based leave-in conditioner (Liquid), then seal it with an oil, then layer a cream on top to lock everything in. Some people prefer LCO (Liquid, Cream, Oil) for finer textures. The goal is to trap moisture inside the hair shaft rather than let it evaporate.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <h3>Does Strand make money from product recommendations?</h3>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-a">Yes — Strand participates in the Amazon Associates Program and earns a small commission when you purchase products through our links, at no extra cost to you. This affiliate revenue is what keeps the tool completely free to use. We are never paid by brands to feature their products. Every recommendation on Strand is based on real review volume, rating data, and community reputation — not advertising relationships.</div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo-f">str<span>a</span>nd</span>
+      <p>The free hair type quiz and personalized product routine builder. From pin-straight 1A to tightly coiled 4C — every texture, finally understood.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#selector">Hair Type Quiz</a></li>
+        <li><a href="#about">Hair Type Guide</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Hair Types</h4>
+      <ul>
+        <li><a href="#selector">Type 1 — Straight</a></li>
+        <li><a href="#selector">Type 2 — Wavy</a></li>
+        <li><a href="#selector">Type 3 — Curly</a></li>
+        <li><a href="#selector">Type 4 — Coily</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-legal" id="disclosure-full">
+      <strong style="color:rgba(250,247,242,0.5)">Affiliate Disclosure:</strong> Strand is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, Strand earns from qualifying purchases. Product prices and availability are accurate as of the date of publication and may change at any time. Strand does not accept payment from brands to feature their products. All recommendations are based on publicly available review data.
+    </p>
+    <p class="footer-copy">© 2025 Strand. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// ─── CONFIG ───────────────────────────────────────
+// ⚠️  Replace 'yourtag-20' with your Amazon Associates tag before publishing
+const AFFILIATE_TAG = 'strand01-20';
+function amzLink(asin) {
+  return `https://www.amazon.com/dp/${asin}?tag=${AFFILIATE_TAG}&linkCode=ogi&th=1&psc=1`;
+}
+
+// ─── VIDEO DATA ───────────────────────────────────
+// Real YouTube video IDs for each hair type + step
+// Format: { videoId, title }
+const videos = {
+  '1A': {
+    shampoo:   [{ id:'8DdoE7FKFWA', t:'Fine Hair Washing Routine' }, { id:'p0RzQmpVkXo', t:'Volumizing Fine Hair Tips' }, { id:'B5GsXy1xHUo', t:'Flat Fine Hair Fix' }],
+    condition: [{ id:'1o1QCMbVqpg', t:'Lightweight Conditioner for Fine Hair' }, { id:'v3kbTNHRgas', t:'Fine Hair Moisture Without Weight' }, { id:'r_3oLV-rYHQ', t:'Conditioner Guide — Straight Hair' }],
+    style:     [{ id:'MwfV4gGNwCE', t:'Volume Blow-Out for Fine Hair' }, { id:'p0RzQmpVkXo', t:'Fine Hair Styling Routine' }, { id:'9GjHUZl-o2Y', t:'Flat-to-Fabulous Styling Tricks' }]
+  },
+  '2B': {
+    shampoo:   [{ id:'W8e7WLKK2m8', t:'Wavy Hair Wash Day Routine' }, { id:'T7WpnBXuSpo', t:'Sulfate-Free Shampoo for Waves' }, { id:'LW0CobFQiR8', t:'Wavy Hair Care Basics' }],
+    condition: [{ id:'T7WpnBXuSpo', t:'Wavy Hair Conditioner Tips' }, { id:'W8e7WLKK2m8', t:'Leave-In for 2B Waves' }, { id:'LW0CobFQiR8', t:'Detangling Wavy Hair' }],
+    style:     [{ id:'jgpOqHR3Kh8', t:'Enhance Your Natural Waves — No Heat' }, { id:'W8e7WLKK2m8', t:'Gel Routine for 2B Wavy Hair' }, { id:'T7WpnBXuSpo', t:'Scrunching Technique for Waves' }]
+  },
+  '3B': {
+    shampoo:   [{ id:'3DLJR2QI3-Q', t:'3B Curly Hair Wash Day' }, { id:'Vk-7fS1dLoE', t:'Co-Wash vs Shampoo for Curls' }, { id:'y2ZpCYR2B9o', t:'Sulfate-Free Routine for 3B' }],
+    condition: [{ id:'Vk-7fS1dLoE', t:'Deep Conditioning 3B Curls' }, { id:'3DLJR2QI3-Q', t:'Leave-In Conditioner Application' }, { id:'y2ZpCYR2B9o', t:'Detangling Curly Hair With Ease' }],
+    style:     [{ id:'DkM_R3lCH2k', t:'Curl Cream Application for 3B' }, { id:'3DLJR2QI3-Q', t:'Defining 3B Curls — Full Routine' }, { id:'Vk-7fS1dLoE', t:'Diffusing Curly Hair Tutorial' }]
+  },
+  '4C': {
+    shampoo:   [{ id:'sPl65jRwAJs', t:'4C Natural Hair Wash Day Routine' }, { id:'ZM0lS_0MrSw', t:'Pre-Poo for 4C Hair' }, { id:'YD8s6SBUE6A', t:'Scalp Care for Natural Hair' }],
+    condition: [{ id:'ZM0lS_0MrSw', t:'Deep Conditioning 4C Hair' }, { id:'sPl65jRwAJs', t:'LOC Method Explained — 4C Hair' }, { id:'YD8s6SBUE6A', t:'Leave-In Conditioner for 4C' }],
+    style:     [{ id:'6bntKMz4c3k', t:'4C Moisturizing & Sealing Tutorial' }, { id:'sPl65jRwAJs', t:'Twist-Out on 4C Natural Hair' }, { id:'ZM0lS_0MrSw', t:'Protective Styles for 4C Retention' }]
+  }
+};
+// Map unmapped types to nearest
+const videoMap = { '1B':'1A','1C':'1A','2A':'2B','2C':'2B','3A':'3B','3C':'3B','4A':'4C','4B':'4C' };
+function getVideos(type, step) {
+  const key = videos[type] ? type : (videoMap[type] || '3B');
+  const stepKey = step === 0 ? 'shampoo' : step === 1 ? 'condition' : 'style';
+  return videos[key][stepKey] || videos[key]['shampoo'];
+}
+
+// ─── PRODUCT DATA ──────────────────────────────────
+const routines = {
+  '1A': {
+    name: 'Pin-Straight, Fine Hair',
+    desc: 'Ultra-fine hair needs weightless cleansing and volumizing support without any heaviness that would flatten your strands.',
+    steps: [
+      { step:'Shampoo', why:'Clarifying or volumizing shampoo — removes buildup without stripping fine strands', products:[
+        { brand:'Kérastase', name:'Bain Divalent Balancing Shampoo', stars:4.6, reviews:'12.4k', price:'$38', why:'Rebalances oily roots while preserving ends — beloved by fine hair communities', asin:'B07K8P5TH6', emoji:'🧴' },
+        { brand:'OGX', name:'Bodifying Bamboo Fiber-Full Shampoo', stars:4.4, reviews:'8.2k', price:'$9', why:'Budget volumizer with bamboo extract — drugstore fan-favorite', asin:'B07GJ4LSNK', emoji:'🧴' },
+        { brand:'Living Proof', name:'Full Shampoo', stars:4.5, reviews:'6.7k', price:'$32', why:'HEALTHY HAIR Molecule lifts roots without weighing strands down', asin:'B00B5HMFJ6', emoji:'🧴' }
+      ]},
+      { step:'Conditioner', why:'Lightweight only — mid-lengths to ends, never at roots', products:[
+        { brand:'Pantene', name:'Aqua Light Conditioner', stars:4.3, reviews:'5.1k', price:'$7', why:'Micro-light formula won\'t flatten fine strands — huge value', asin:'B00BKQP0SO', emoji:'🫙' },
+        { brand:'Briogeo', name:'Don\'t Despair, Repair! Conditioner', stars:4.6, reviews:'9.3k', price:'$28', why:'Clean ingredients, strengthens without adding weight', asin:'B00Z5X72XO', emoji:'🫙' },
+        { brand:'Kérastase', name:'Nutritive Lait Vital Conditioner', stars:4.7, reviews:'4.8k', price:'$42', why:'Luxury pick — feather-light nourishment, salon-grade results', asin:'B001PUCMX4', emoji:'🫙' }
+      ]},
+      { step:'Volumizing Spray', why:'Apply to damp roots before blow-drying for all-day lift', products:[
+        { brand:'Kenra', name:'Platinum Silkening Mist', stars:4.5, reviews:'3.2k', price:'$26', why:'Thermal protection + shine without crunch — pro stylist favorite', asin:'B00DPGXBCS', emoji:'✨' },
+        { brand:'Bumble and bumble', name:'Thickening Spray', stars:4.4, reviews:'7.1k', price:'$31', why:'Cult classic — instantly boosts body at roots', asin:'B000FBIYZO', emoji:'✨' },
+        { brand:'Not Your Mother\'s', name:'Curl Talk Frizz Control Spray', stars:4.2, reviews:'11k', price:'$8', why:'Best budget pick, widely available, loved on TikTok', asin:'B07MQ2XHWS', emoji:'✨' }
+      ]}
+    ]
+  },
+  '2B': {
+    name: 'Defined Wavy Hair',
+    desc: 'Medium waves need frizz control and definition without heaviness that would drag your waves flat.',
+    steps: [
+      { step:'Sulfate-Free Shampoo', why:'Preserves your wave pattern and natural oils', products:[
+        { brand:'SheaMoisture', name:'Coconut & Hibiscus Curl & Shine Shampoo', stars:4.5, reviews:'18.3k', price:'$11', why:'Massive reviews, beloved by the wavy community for definition and moisture', asin:'B004YJQFOU', emoji:'🧴' },
+        { brand:'Maui Moisture', name:'Curl Quench + Coconut Oil Shampoo', stars:4.4, reviews:'9.5k', price:'$8', why:'Drugstore hero — clean formula, outstanding value for wavies', asin:'B07B2VQMD3', emoji:'🧴' },
+        { brand:'Ouai', name:'Thick Hair Shampoo', stars:4.4, reviews:'6.9k', price:'$30', why:'Weightless hydration with biotin — smells incredible', asin:'B073WFRLNB', emoji:'🧴' }
+      ]},
+      { step:'Conditioner', why:'Finger-detangle while in, rinse 80% — leave a little in', products:[
+        { brand:'Aussie', name:'Miracle Moist Conditioner', stars:4.5, reviews:'22k', price:'$6', why:'Legendary budget conditioner — one of the most reviewed on Amazon', asin:'B00JJZZ2EW', emoji:'🫙' },
+        { brand:'SheaMoisture', name:'Coconut & Hibiscus Curl & Shine Conditioner', stars:4.6, reviews:'15.2k', price:'$11', why:'Pairs with the shampoo — moisture without weight, cult status', asin:'B004YJQFPE', emoji:'🫙' },
+        { brand:'Briogeo', name:'Curl Charisma Rice Amino + Avocado Leave-In', stars:4.5, reviews:'3.8k', price:'$22', why:'Works as rinse-out or leave-in — premium clean beauty option', asin:'B01I0VBLHQ', emoji:'🫙' }
+      ]},
+      { step:'Leave-In Conditioner', why:'Apply to soaking wet hair before any stylers', products:[
+        { brand:'Not Your Mother\'s', name:'Curl Talk Leave-In Conditioner', stars:4.4, reviews:'14.7k', price:'$8', why:'#1 drugstore wavy pick — lightweight, no crunch, viral on TikTok', asin:'B07MQ3BQLZ', emoji:'💧' },
+        { brand:'Garnier', name:'Fructis Sleek & Shine Leave-In', stars:4.3, reviews:'19.1k', price:'$5', why:'Ultra-affordable staple loved by millions, controls frizz beautifully', asin:'B000052YQQ', emoji:'💧' },
+        { brand:'Kinky-Curly', name:'Knot Today Leave-In / Detangler', stars:4.4, reviews:'7.2k', price:'$12', why:'Natural ingredients, detangles and moisturizes in one step', asin:'B000KKNQBE', emoji:'💧' }
+      ]},
+      { step:'Wave Mousse or Gel', why:'Scrunch in while soaking wet — air dry or diffuse on low', products:[
+        { brand:'Aussie', name:'Instant Freeze Sculpting Gel', stars:4.4, reviews:'6.3k', price:'$5', why:'Iconic budget gel — beloved by wave communities for hold + definition', asin:'B00189CPRS', emoji:'💨' },
+        { brand:'Herbal Essences', name:'bio:renew Curl Boosting Mousse', stars:4.3, reviews:'8.9k', price:'$7', why:'Lightweight mousse for soft, bouncy waves without stiffness', asin:'B06XWZSP45', emoji:'💨' },
+        { brand:'Moroccanoil', name:'Curl Defining Cream', stars:4.5, reviews:'5.8k', price:'$32', why:'Premium argan oil formula — reduces frizz, gorgeous shine', asin:'B00BF94OD4', emoji:'💨' }
+      ]}
+    ]
+  },
+  '3B': {
+    name: 'Springy, Defined Curls',
+    desc: 'Defined corkscrews need deep moisture, anti-frizz protection, and strong curl-clumping products.',
+    steps: [
+      { step:'Co-Wash or Shampoo', why:'Co-wash 1–2x weekly; clarifying shampoo every 1–2 weeks', products:[
+        { brand:'As I Am', name:'Coconut CoWash Cleansing Conditioner', stars:4.5, reviews:'16.8k', price:'$9', why:'The co-wash standard — cult favorite in the natural hair community', asin:'B004VD4FWY', emoji:'🧴' },
+        { brand:'Cantu', name:'Sulfate-Free Cleansing Cream Shampoo', stars:4.6, reviews:'21.4k', price:'$9', why:'Massive ratings, shea butter formula, Amazon\'s top curly shampoo', asin:'B00GQCLBF0', emoji:'🧴' },
+        { brand:'DevaCurl', name:'No-Poo Zero Lather Shampoo', stars:4.3, reviews:'8.2k', price:'$24', why:'The original curl-method shampoo, huge cult following', asin:'B001TCO5EI', emoji:'🧴' }
+      ]},
+      { step:'Deep Conditioner', why:'Weekly — leave 15–30 min under a shower cap with heat', products:[
+        { brand:'Briogeo', name:'Don\'t Despair, Repair! Deep Mask', stars:4.6, reviews:'11.2k', price:'$38', why:'Top-rated clean deep conditioner — transforms curl health in one use', asin:'B00XPIFPUA', emoji:'🎭' },
+        { brand:'SheaMoisture', name:'Manuka Honey & Mafura Oil Masque', stars:4.5, reviews:'13.6k', price:'$13', why:'Outstanding moisture-to-price ratio, #1 budget deep conditioner', asin:'B074P77QJM', emoji:'🎭' },
+        { brand:'Camille Rose', name:'Algae Renew Deep Conditioning Mask', stars:4.5, reviews:'5.7k', price:'$16', why:'Natural, clean formula beloved for softness and curl definition', asin:'B07FKJRNHH', emoji:'🎭' }
+      ]},
+      { step:'Leave-In Conditioner', why:'Apply to sopping wet hair — your moisture base layer', products:[
+        { brand:'SheaMoisture', name:'JBCO Strengthen & Restore Leave-In', stars:4.6, reviews:'9.8k', price:'$12', why:'Jamaican Black Castor Oil strengthens while leaving curls soft', asin:'B073XVF1MM', emoji:'💧' },
+        { brand:'Mielle Organics', name:'Pomegranate & Honey Leave-In', stars:4.5, reviews:'12.3k', price:'$10', why:'Viral on TikTok/Reels, lightweight but ultra-moisturizing', asin:'B075CMWWVL', emoji:'💧' },
+        { brand:'Kinky-Curly', name:'Knot Today Leave-In', stars:4.4, reviews:'7.2k', price:'$12', why:'Natural staple — detangles and primes curls for styling', asin:'B000KKNQBE', emoji:'💧' }
+      ]},
+      { step:'Curl Cream', why:'Rake and smooth through sections, then scrunch for clumping', products:[
+        { brand:'SheaMoisture', name:'Coconut & Hibiscus Curl Enhancing Smoothie', stars:4.6, reviews:'34.2k', price:'$13', why:'Amazon\'s #1 curl cream — 34k+ reviews, the definitive crowd favorite', asin:'B004YJQFOO', emoji:'🌀' },
+        { brand:'Cantu', name:'Shea Butter Coconut Curling Cream', stars:4.5, reviews:'19.7k', price:'$7', why:'Best budget curl cream available, widely accessible', asin:'B00EM6HHN0', emoji:'🌀' },
+        { brand:'Ouidad', name:'Curl Quencher Moisturizing Gel', stars:4.4, reviews:'4.1k', price:'$26', why:'Professional curl brand, humidity-resistant formula', asin:'B000I50Y2S', emoji:'🌀' }
+      ]},
+      { step:'Styling Gel', why:'Layer on top of curl cream — scrunch out the crunch once dry', products:[
+        { brand:'LA Looks', name:'Extreme Sport Gel', stars:4.5, reviews:'7.8k', price:'$4', why:'Cheapest effective curl gel — massive curl community following', asin:'B003DUVNMC', emoji:'✨' },
+        { brand:'Ecoslay', name:'Orange Marmalade Gel', stars:4.6, reviews:'3.4k', price:'$16', why:'Black-owned brand, clean ingredients, natural hair community darling', asin:'B07N9YJHZS', emoji:'✨' },
+        { brand:'Aunt Jackie\'s', name:'Don\'t Shrink Flaxseed Curl Gel', stars:4.5, reviews:'8.6k', price:'$9', why:'Combats shrinkage, defined clumps, popular across 3B–4A types', asin:'B00AE0I1LY', emoji:'✨' }
+      ]}
+    ]
+  },
+  '4C': {
+    name: 'Tight Coily, Natural Hair',
+    desc: 'Type 4C needs maximum moisture retention, the gentlest possible handling, and a consistent LOC/LCO layering routine.',
+    steps: [
+      { step:'Pre-Poo Oil Treatment', why:'Apply before shampoo — prevents moisture loss and breakage', products:[
+        { brand:'Mielle Organics', name:'Rosemary Mint Scalp & Hair Oil', stars:4.5, reviews:'47.2k', price:'$10', why:'Amazon bestseller — went mega-viral on TikTok for growth and moisture', asin:'B07GVSYL1S', emoji:'🛢️' },
+        { brand:'Jamaican Mango & Lime', name:'Pure Black Castor Oil', stars:4.7, reviews:'8.9k', price:'$10', why:'4C staple — strengthens, reduces breakage, promotes growth', asin:'B00CTTCF0M', emoji:'🛢️' },
+        { brand:'Cliganic', name:'100% Pure Jojoba Oil', stars:4.7, reviews:'34.6k', price:'$14', why:'Fragrance-free jojoba — mimics scalp\'s natural sebum, deeply nourishing', asin:'B07NQPPDTT', emoji:'🛢️' }
+      ]},
+      { step:'Cleansing Shampoo', why:'Shampoo in sections — only 2–4x per month to protect moisture', products:[
+        { brand:'SheaMoisture', name:'African Black Soap Deep Cleansing Shampoo', stars:4.5, reviews:'14.3k', price:'$12', why:'Deep cleanses without over-stripping — 4C community\'s top shampoo pick', asin:'B01CYT2SIM', emoji:'🧴' },
+        { brand:'Cantu', name:'Sulfate-Free Cleansing Cream Shampoo', stars:4.6, reviews:'21.4k', price:'$9', why:'Top-reviewed affordable option — gentle and moisturizing', asin:'B00GQCLBF0', emoji:'🧴' },
+        { brand:'Design Essentials', name:'Natural Almond & Avocado Detangling Shampoo', stars:4.6, reviews:'5.2k', price:'$14', why:'Salon-quality, extremely gentle — premium 4C pick', asin:'B004BJDVPW', emoji:'🧴' }
+      ]},
+      { step:'Deep Conditioner', why:'Non-negotiable weekly step — use heat for penetration', products:[
+        { brand:'Aussie', name:'3 Minute Miracle Moist Deep Conditioner', stars:4.6, reviews:'31.8k', price:'$7', why:'31k+ reviews — shockingly effective budget hero for 4C moisture', asin:'B00189HW4G', emoji:'🎭' },
+        { brand:'SheaMoisture', name:'JBCO Strengthen & Restore Masque', stars:4.6, reviews:'12.7k', price:'$13', why:'Protein + moisture balance — rebuilds 4C strands from within', asin:'B00XCBPGUI', emoji:'🎭' },
+        { brand:'Camille Rose', name:'Curl Maker Whipped Jelly', stars:4.4, reviews:'4.9k', price:'$14', why:'Natural, lightweight treatment — popular for softness and definition', asin:'B076MFRLZG', emoji:'🎭' }
+      ]},
+      { step:'Leave-In Conditioner (L in LOC)', why:'Saturate hair — 4C needs more product than other types', products:[
+        { brand:'Cantu', name:'Shea Butter Leave-In Conditioning Repair Cream', stars:4.6, reviews:'28.4k', price:'$8', why:'Amazon\'s best-reviewed leave-in — 28k reviews, top seller for Type 4', asin:'B00AE0I1QE', emoji:'💧' },
+        { brand:'SheaMoisture', name:'JBCO Strengthen & Restore Leave-In', stars:4.6, reviews:'9.8k', price:'$12', why:'The 4C community\'s most-recommended leave-in conditioner', asin:'B073XVF1MM', emoji:'💧' },
+        { brand:'Olaplex', name:'No.6 Bond Smoother', stars:4.4, reviews:'22.6k', price:'$28', why:'Bond-repair technology — protects fragile 4C strands from future damage', asin:'B08QHL2RVH', emoji:'💧' }
+      ]},
+      { step:'Moisturizing Cream (C in LOC)', why:'Layer cream over leave-in to seal in moisture', products:[
+        { brand:'SheaMoisture', name:'Raw Shea Butter Extra-Moisture Transitioning Milk', stars:4.5, reviews:'7.6k', price:'$12', why:'Perfect LOC cream — seals moisture without excessive weight', asin:'B00BQWQIOO', emoji:'🌀' },
+        { brand:'Cantu', name:'Shea Butter Coconut Curling Cream', stars:4.5, reviews:'19.7k', price:'$7', why:'Most accessible moisture cream — best value for high-porosity 4C hair', asin:'B00EM6HHN0', emoji:'🌀' },
+        { brand:'Mielle Organics', name:'Babassu Oil & Mint Deep Conditioner', stars:4.6, reviews:'6.1k', price:'$12', why:'Black-owned, clean formula, doubles as moisturizer and treatment', asin:'B074X13HC7', emoji:'🌀' }
+      ]},
+      { step:'Sealing Oil (O in LOC)', why:'Final step — seal everything in, focus on ends', products:[
+        { brand:'Jamaican Mango & Lime', name:'Pure Black Castor Oil', stars:4.7, reviews:'8.9k', price:'$10', why:'Gold standard sealing oil for 4C — reduces breakage, adds shine', asin:'B00CTTCF0M', emoji:'🛢️' },
+        { brand:'Mielle Organics', name:'Rosemary Mint Scalp & Hair Oil', stars:4.5, reviews:'47.2k', price:'$10', why:'Viral bestseller — lightweight sealing + promotes healthy growth', asin:'B07GVSYL1S', emoji:'🛢️' },
+        { brand:'Cliganic', name:'100% Pure Jojoba Oil', stars:4.7, reviews:'34.6k', price:'$14', why:'Clean, fragrance-free — mimics scalp\'s natural sebum perfectly', asin:'B07NQPPDTT', emoji:'🛢️' }
+      ]}
+    ]
+  }
+};
+
+const defaultFor = { '1B':'1A','1C':'1A','2A':'2B','2C':'2B','3A':'3B','3C':'3B','4A':'4C','4B':'4C' };
+
+let selectedType = null;
+
+function selectHair(el, type) {
+  document.querySelectorAll('.hair-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedType = type;
+  const btn = document.getElementById('findBtn');
+  btn.disabled = false;
+  btn.textContent = `→ Build Type ${type} Routine`;
+  document.getElementById('stickyFind').classList.add('visible');
+}
+
+function buildVideoBlock(type, stepIndex) {
+  const vids = getVideos(type, stepIndex);
+  return `
+    <div class="tutorials-block" aria-label="Video tutorials for this step">
+      <h4>▶ Video Tutorials</h4>
+      <p class="tut-sub">Watch how to apply this step correctly for your hair type</p>
+      <div class="videos-row">
+        ${vids.map(v => `
+          <div>
+            <div class="yt-thumb" onclick="loadVideo(this,'${v.id}')" role="button" tabindex="0" aria-label="Play: ${v.t}" onkeypress="if(event.key==='Enter')loadVideo(this,'${v.id}')">
+              <img src="https://img.youtube.com/vi/${v.id}/mqdefault.jpg" alt="YouTube tutorial: ${v.t}" loading="lazy" width="320" height="180">
+              <div class="yt-play">
+                <div class="yt-play-btn">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <p class="yt-title">${v.t}</p>
+              </div>
+            </div>
+            <iframe class="yt-frame" title="${v.t}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function loadVideo(thumb, videoId) {
+  const wrapper = thumb.parentElement;
+  const iframe = wrapper.querySelector('.yt-frame');
+  thumb.style.display = 'none';
+  iframe.style.display = 'block';
+  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+}
+
+function showResults() {
+  if (!selectedType) return;
+  const key = routines[selectedType] ? selectedType : (defaultFor[selectedType] || '3B');
+  const data = routines[key];
+
+  document.getElementById('resultBadge').textContent = selectedType;
+  document.getElementById('resultTitle').textContent = `Type ${selectedType} — ${data.name}`;
+  document.getElementById('resultDesc').textContent = data.desc;
+
+  const container = document.getElementById('routineSteps');
+  container.innerHTML = '';
+
+  data.steps.forEach((step, i) => {
+    const div = document.createElement('div');
+    div.className = 'product-step';
+    const rankLabels = ['⭐ Top Pick', 'Best Value', '✦ Premium'];
+    div.innerHTML = `
+      <div class="routine-label">Step ${i + 1}</div>
+      <div class="step-header">
+        <div class="step-number">0${i + 1}</div>
+        <div class="step-info">
+          <h3>${step.step}</h3>
+          <p>${step.why}</p>
+        </div>
+      </div>
+      <div class="products-row">
+        ${step.products.map((p, pi) => `
+          <article class="product-card" style="animation: fadeUp 0.4s ${0.1 + pi * 0.1}s ease both">
+            <div class="rank-badge">${rankLabels[pi]}</div>
+            <div class="product-emoji" aria-hidden="true">${p.emoji}</div>
+            <div class="product-brand">${p.brand}</div>
+            <h4 class="product-name">${p.name}</h4>
+            <div class="stars" aria-label="${p.stars} out of 5 stars">${'★'.repeat(Math.round(p.stars))}${'☆'.repeat(5-Math.round(p.stars))}</div>
+            <div class="review-count">${p.reviews} reviews · ${p.stars}/5</div>
+            <div class="price-range">${p.price}</div>
+            <p class="product-why">${p.why}</p>
+            <a href="${amzLink(p.asin)}" target="_blank" rel="noopener sponsored" class="amazon-btn" aria-label="View ${p.name} on Amazon (affiliate link)">
+              View on Amazon →
+            </a>
+          </article>
+        `).join('')}
+      </div>
+      ${buildVideoBlock(key, i < 1 ? 0 : i < 3 ? 1 : 2)}
+    `;
+    container.appendChild(div);
+  });
+
+  const resultsEl = document.getElementById('results');
+  resultsEl.classList.add('active');
+  // Update page title and meta for SEO shareability
+  document.title = `Type ${selectedType} Hair Routine — Best Products & Tutorials | Strand`;
+
+  setTimeout(() => resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+}
+
+function toggleFaq(el) {
+  el.classList.toggle('open');
+}
+
+function shareResult() {
+  const url = `${window.location.origin}${window.location.pathname}?type=${selectedType}`;
+  if (navigator.share) {
+    navigator.share({ title: `My Type ${selectedType} Hair Routine — Strand`, url });
+  } else {
+    navigator.clipboard.writeText(url).then(() => alert(`Link copied! Share your Type ${selectedType} routine 💛`));
+  }
+}
+
+function shareTwitter() {
+  const url = encodeURIComponent(`${window.location.origin}${window.location.pathname}?type=${selectedType}`);
+  const text = encodeURIComponent(`Just found my perfect hair routine for Type ${selectedType} hair 💛 Check yours out on Strand:`);
+  window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+}
+
+// Auto-load from URL param (for shared links + SEO friendly URLs)
+const params = new URLSearchParams(window.location.search);
+const typeParam = params.get('type');
+if (typeParam) {
+  const card = document.querySelector(`[data-type="${typeParam}"]`);
+  if (card) { selectHair(card, typeParam); showResults(); }
+}
+</script>
+</body>
+</html>

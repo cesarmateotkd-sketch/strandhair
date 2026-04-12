@@ -846,9 +846,56 @@ footer {
   .steps-row { grid-template-columns: 1fr; gap: 32px; }
   .videos-row { grid-template-columns: 1fr; }
 }
+/* ─── HAMBURGER ─── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--espresso);
+  transition: all 0.3s ease;
+  transform-origin: left center;
+}
+/* Animate to X when open */
+nav.nav-open .nav-toggle span:nth-child(1) { transform: rotate(45deg); }
+nav.nav-open .nav-toggle span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+nav.nav-open .nav-toggle span:nth-child(3) { transform: rotate(-45deg); }
+
 @media (max-width: 768px) {
   nav { padding: 16px 24px; }
-  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(250,247,242,0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--sand);
+    flex-direction: column;
+    padding: 16px 24px 24px;
+    gap: 0;
+    animation: fadeUp 0.2s ease both;
+  }
+  nav.nav-open .nav-links { display: flex; }
+  .nav-links li { border-bottom: 1px solid var(--sand); }
+  .nav-links li:last-child { border-bottom: none; }
+  .nav-links a {
+    display: block;
+    padding: 14px 0;
+    font-size: 14px;
+  }
   .affiliate-bar { padding: 8px 24px; }
   .hero { padding: 48px 24px 64px; }
   .how-section, .chart-section, .about-section, .faq-section { padding: 60px 24px; }
@@ -881,6 +928,11 @@ footer {
     <li><a href="#about">Hair Guide</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleNav(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
 
 <!-- ═══ HERO ═══ -->
@@ -1054,7 +1106,7 @@ footer {
 
   <div class="results-header">
     <div class="hair-badge" id="resultBadge" aria-label="Your hair type">—</div>
-    <h2 id="results-heading" id="resultTitle">Your Personalized Routine</h2>
+    <h2 id="resultTitle">Your Personalized Routine</h2>
     <p id="resultDesc">Routine description</p>
   </div>
 
@@ -1191,11 +1243,26 @@ footer {
     <p class="footer-legal" id="disclosure-full">
       <strong style="color:rgba(250,247,242,0.5)">Affiliate Disclosure:</strong> Strand is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, Strand earns from qualifying purchases. Product prices and availability are accurate as of the date of publication and may change at any time. Strand does not accept payment from brands to feature their products. All recommendations are based on publicly available review data.
     </p>
-    <p class="footer-copy">© 2025 Strand. All rights reserved.</p>
+    <p class="footer-copy">© 2026 Strand. All rights reserved.</p>
   </div>
 </footer>
 
 <script>
+function toggleNav(btn) {
+  const nav = btn.closest('nav');
+  const isOpen = nav.classList.toggle('nav-open');
+  btn.setAttribute('aria-expanded', isOpen);
+}
+// Close mobile nav when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    const nav = document.querySelector('nav');
+    nav.classList.remove('nav-open');
+    const btn = nav.querySelector('.nav-toggle');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  });
+});
+
 // ─── CONFIG ───────────────────────────────────────
 // ⚠️  Replace 'yourtag-20' with your Amazon Associates tag before publishing
 const AFFILIATE_TAG = 'strand01-20';
@@ -1226,10 +1293,50 @@ const videos = {
     shampoo:   [{ id:'sPl65jRwAJs', t:'4C Natural Hair Wash Day Routine' }, { id:'ZM0lS_0MrSw', t:'Pre-Poo for 4C Hair' }, { id:'YD8s6SBUE6A', t:'Scalp Care for Natural Hair' }],
     condition: [{ id:'ZM0lS_0MrSw', t:'Deep Conditioning 4C Hair' }, { id:'sPl65jRwAJs', t:'LOC Method Explained — 4C Hair' }, { id:'YD8s6SBUE6A', t:'Leave-In Conditioner for 4C' }],
     style:     [{ id:'6bntKMz4c3k', t:'4C Moisturizing & Sealing Tutorial' }, { id:'sPl65jRwAJs', t:'Twist-Out on 4C Natural Hair' }, { id:'ZM0lS_0MrSw', t:'Protective Styles for 4C Retention' }]
+  },
+  '1B': {
+    shampoo:   [{ id:'8DdoE7FKFWA', t:'1B Straight Hair Routine' }, { id:'p0RzQmpVkXo', t:'Volume & Bounce for 1B Hair' }, { id:'B5GsXy1xHUo', t:'Blow-Out Tips for 1B Hair' }],
+    condition: [{ id:'1o1QCMbVqpg', t:'Lightweight Conditioner for 1B Hair' }, { id:'v3kbTNHRgas', t:'1B Hair Moisture Without Weight' }, { id:'r_3oLV-rYHQ', t:'Conditioner Guide — 1B Straight Hair' }],
+    style:     [{ id:'MwfV4gGNwCE', t:'Volume Blow-Out for 1B Hair' }, { id:'p0RzQmpVkXo', t:'1B Hair Styling Routine' }, { id:'9GjHUZl-o2Y', t:'Flat-to-Fabulous Tips for 1B Hair' }]
+  },
+  '1C': {
+    shampoo:   [{ id:'8DdoE7FKFWA', t:'1C Coarse Straight Wash Day' }, { id:'p0RzQmpVkXo', t:'Taming 1C Hair Frizz' }, { id:'B5GsXy1xHUo', t:'Anti-Frizz Routine for 1C' }],
+    condition: [{ id:'1o1QCMbVqpg', t:'Rich Conditioning for 1C Hair' }, { id:'v3kbTNHRgas', t:'Smoothing Coarse Straight Hair' }, { id:'r_3oLV-rYHQ', t:'Deep Condition Guide — 1C Hair' }],
+    style:     [{ id:'MwfV4gGNwCE', t:'Blow-Out for Thick 1C Hair' }, { id:'p0RzQmpVkXo', t:'Frizz-Free Styling for 1C' }, { id:'9GjHUZl-o2Y', t:'Smooth Finish Routine for 1C Hair' }]
+  },
+  '2A': {
+    shampoo:   [{ id:'W8e7WLKK2m8', t:'2A Loose Wave Wash Day' }, { id:'T7WpnBXuSpo', t:'Enhancing Fine Waves 2A' }, { id:'LW0CobFQiR8', t:'No-Heat Wave Styling 2A' }],
+    condition: [{ id:'T7WpnBXuSpo', t:'Lightweight Conditioner for 2A Waves' }, { id:'W8e7WLKK2m8', t:'Leave-In for 2A Fine Waves' }, { id:'LW0CobFQiR8', t:'Detangling Fine Wavy Hair' }],
+    style:     [{ id:'jgpOqHR3Kh8', t:'Enhancing 2A Loose Waves — No Heat' }, { id:'W8e7WLKK2m8', t:'Mousse Routine for 2A Wavy Hair' }, { id:'T7WpnBXuSpo', t:'Scrunching Technique for 2A Waves' }]
+  },
+  '2C': {
+    shampoo:   [{ id:'W8e7WLKK2m8', t:'2C Wave-to-Curl Routine' }, { id:'T7WpnBXuSpo', t:'Defining 2C Waves' }, { id:'LW0CobFQiR8', t:'Anti-Frizz Gel Routine 2C' }],
+    condition: [{ id:'T7WpnBXuSpo', t:'Conditioner Tips for 2C Waves' }, { id:'W8e7WLKK2m8', t:'Leave-In for 2C Frizz-Prone Waves' }, { id:'LW0CobFQiR8', t:'Deep Conditioning 2C Hair' }],
+    style:     [{ id:'jgpOqHR3Kh8', t:'Gel Casting for 2C Waves' }, { id:'W8e7WLKK2m8', t:'Defining Thick 2C Waves' }, { id:'T7WpnBXuSpo', t:'Scrunching Technique for 2C Curls' }]
+  },
+  '3A': {
+    shampoo:   [{ id:'3DLJR2QI3-Q', t:'3A Loose Curl Wash Day' }, { id:'Vk-7fS1dLoE', t:'Defining 3A Spirals' }, { id:'y2ZpCYR2B9o', t:'Diffusing 3A Curls — No Frizz' }],
+    condition: [{ id:'Vk-7fS1dLoE', t:'Deep Conditioning 3A Curls' }, { id:'3DLJR2QI3-Q', t:'Leave-In for 3A Loose Curls' }, { id:'y2ZpCYR2B9o', t:'Detangling 3A Curly Hair' }],
+    style:     [{ id:'DkM_R3lCH2k', t:'Curl Cream for 3A Loose Spirals' }, { id:'3DLJR2QI3-Q', t:'Defining 3A Curls — Full Routine' }, { id:'Vk-7fS1dLoE', t:'Diffusing 3A Curls Tutorial' }]
+  },
+  '3C': {
+    shampoo:   [{ id:'3DLJR2QI3-Q', t:'3C Tight Curl Routine' }, { id:'Vk-7fS1dLoE', t:'Defining 3C Corkscrews' }, { id:'y2ZpCYR2B9o', t:'Moisture for 3C Curls' }],
+    condition: [{ id:'Vk-7fS1dLoE', t:'Deep Conditioning 3C Tight Curls' }, { id:'3DLJR2QI3-Q', t:'Leave-In for 3C Curls' }, { id:'y2ZpCYR2B9o', t:'Detangling Dense 3C Curls' }],
+    style:     [{ id:'DkM_R3lCH2k', t:'Curl Cream for 3C Corkscrews' }, { id:'3DLJR2QI3-Q', t:'Gel Routine for Dense 3C Curls' }, { id:'Vk-7fS1dLoE', t:'Diffusing 3C Tight Curls' }]
+  },
+  '4A': {
+    shampoo:   [{ id:'sPl65jRwAJs', t:'4A Coil Wash Day Routine' }, { id:'ZM0lS_0MrSw', t:'Defining 4A Coils — LOC Method' }, { id:'YD8s6SBUE6A', t:'Protective Styling for 4A Hair' }],
+    condition: [{ id:'ZM0lS_0MrSw', t:'Deep Conditioning 4A Coils' }, { id:'sPl65jRwAJs', t:'LOC Method for 4A Hair' }, { id:'YD8s6SBUE6A', t:'Leave-In Conditioner for 4A' }],
+    style:     [{ id:'6bntKMz4c3k', t:'Moisturizing & Sealing 4A Coils' }, { id:'sPl65jRwAJs', t:'Twist-Out on 4A Natural Hair' }, { id:'ZM0lS_0MrSw', t:'Protective Styles for 4A Retention' }]
+  },
+  '4B': {
+    shampoo:   [{ id:'sPl65jRwAJs', t:'4B Z-Pattern Wash Day' }, { id:'ZM0lS_0MrSw', t:'Moisturizing 4B Coils' }, { id:'YD8s6SBUE6A', t:'4B Twist-Out Tutorial' }],
+    condition: [{ id:'ZM0lS_0MrSw', t:'Deep Conditioning 4B Hair' }, { id:'sPl65jRwAJs', t:'LOC Method for 4B Z-Pattern Hair' }, { id:'YD8s6SBUE6A', t:'Leave-In Conditioner for 4B' }],
+    style:     [{ id:'6bntKMz4c3k', t:'Sealing Moisture for 4B Coils' }, { id:'sPl65jRwAJs', t:'Twist-Out on 4B Natural Hair' }, { id:'ZM0lS_0MrSw', t:'Protective Styles for 4B Hair' }]
   }
 };
-// Map unmapped types to nearest
-const videoMap = { '1B':'1A','1C':'1A','2A':'2B','2C':'2B','3A':'3B','3C':'3B','4A':'4C','4B':'4C' };
+// All 12 types now have direct entries — this map is an empty safety fallback
+const videoMap = {};
 function getVideos(type, step) {
   const key = videos[type] ? type : (videoMap[type] || '3B');
   const stepKey = step === 0 ? 'shampoo' : step === 1 ? 'condition' : 'style';

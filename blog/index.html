@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hair Care Blog — Strand</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #FAF7F2; --espresso: #3D2B1F; --caramel: #C4945A;
+  --mocha: #8B6F5E; --sand: #E8DDD0; --muted: #9B8B82;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--espresso); }
+nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 48px; position: sticky; top: 0; z-index: 100;
+  background: rgba(250,247,242,0.95); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(139,111,94,0.1);
+}
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300;
+  letter-spacing: 0.12em; color: var(--espresso); text-decoration: none; }
+.logo span { color: var(--caramel); font-style: italic; }
+.hero { padding: 80px 48px; max-width: 860px; margin: 0 auto; }
+.eyebrow { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--caramel); margin-bottom: 16px; }
+h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 6vw, 64px);
+  font-weight: 300; line-height: 1.1; margin-bottom: 16px; }
+.sub { font-size: 16px; color: var(--mocha); line-height: 1.7; }
+.posts { max-width: 860px; margin: 0 auto; padding: 0 48px 96px; }
+.coming-soon {
+  border-top: 1px solid var(--sand); padding: 64px 0; text-align: center;
+}
+.coming-soon p { font-size: 15px; color: var(--muted); line-height: 1.8; }
+.coming-soon a { color: var(--caramel); text-decoration: none; font-weight: 500; }
+footer { background: var(--espresso); padding: 32px 48px; text-align: center; }
+footer a { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300;
+  letter-spacing: 0.12em; color: var(--cream); text-decoration: none; }
+footer a span { color: var(--caramel); font-style: italic; }
+@media (max-width: 768px) {
+  nav, .hero, .posts, footer { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="logo">str<span>a</span>nd</a>
+</nav>
+<div class="hero">
+  <p class="eyebrow">The Strand Blog</p>
+  <h1>Hair care, <em style="font-style:italic;color:var(--caramel)">demystified.</em></h1>
+  <p class="sub">Tips, guides, and deep dives for every hair type — from scalp health to styling techniques.</p>
+</div>
+<div class="posts">
+  <div class="coming-soon">
+    <p>Posts coming soon. In the meantime, <a href="/">find your hair type and routine →</a></p>
+  </div>
+</div>
+<footer>
+  <a href="/">str<span>a</span>nd</a>
+</footer>
+</body>
+</html>

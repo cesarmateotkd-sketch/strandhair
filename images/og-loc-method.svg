@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1500" width="1000" height="1500">
+  <defs>
+    <style>
+      .f-serif { font-family: Georgia, 'Times New Roman', serif; }
+      .f-sans  { font-family: system-ui, -apple-system, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1500" fill="#FAF7F2"/>
+
+  <!-- Caramel eyebrow bar -->
+  <rect width="1000" height="80" fill="#C4945A"/>
+  <text x="500" y="51" class="f-sans" font-size="20" fill="#FAF7F2" text-anchor="middle" letter-spacing="6" font-weight="600">TECHNIQUE GUIDE · NATURAL HAIR</text>
+
+  <!-- Cream title block -->
+  <rect x="0" y="80" width="1000" height="280" fill="#FAF7F2"/>
+  <text x="500" y="180" class="f-serif" font-size="96" fill="#3D2B1F" text-anchor="middle" font-weight="700">The LOC</text>
+  <text x="500" y="278" class="f-serif" font-size="64" fill="#8B6F5E" text-anchor="middle" font-style="italic">Method for Natural Hair</text>
+
+  <!-- Divider -->
+  <line x1="100" y1="324" x2="900" y2="324" stroke="#E8DDD0" stroke-width="2"/>
+
+  <!-- Lead text -->
+  <text x="500" y="374" class="f-sans" font-size="26" fill="#8B6F5E" text-anchor="middle">A beginner's complete guide to</text>
+  <text x="500" y="410" class="f-sans" font-size="26" fill="#8B6F5E" text-anchor="middle">locking in moisture that actually lasts</text>
+
+  <!-- ── L step ── -->
+  <rect x="60" y="450" width="880" height="230" fill="#3D2B1F" rx="4"/>
+  <text x="820" y="610" class="f-serif" font-size="130" fill="rgba(250,247,242,0.08)" text-anchor="middle" font-weight="700">L</text>
+  <text x="130" y="530" class="f-sans" font-size="18" fill="#C4945A" letter-spacing="4" font-weight="600">STEP ONE</text>
+  <text x="130" y="590" class="f-serif" font-size="58" fill="#FAF7F2" font-weight="700">Liquid</text>
+  <text x="130" y="636" class="f-sans" font-size="24" fill="rgba(250,247,242,0.65)">Water or water-based leave-in conditioner</text>
+  <text x="130" y="666" class="f-sans" font-size="22" fill="rgba(250,247,242,0.45)">The only true moisturizer for hair</text>
+
+  <!-- ── O step ── -->
+  <rect x="60" y="700" width="880" height="230" fill="#E8DDD0" rx="4"/>
+  <text x="820" y="860" class="f-serif" font-size="130" fill="rgba(61,43,31,0.07)" text-anchor="middle" font-weight="700">O</text>
+  <text x="130" y="778" class="f-sans" font-size="18" fill="#C4945A" letter-spacing="4" font-weight="600">STEP TWO</text>
+  <text x="130" y="838" class="f-serif" font-size="58" fill="#3D2B1F" font-weight="700">Oil</text>
+  <text x="130" y="884" class="f-sans" font-size="24" fill="#8B6F5E">Penetrating or sealing oil</text>
+  <text x="130" y="914" class="f-sans" font-size="22" fill="#8B6F5E" opacity="0.7">Seals the cuticle so moisture can't escape</text>
+
+  <!-- ── C step ── -->
+  <rect x="60" y="950" width="880" height="230" fill="#3D2B1F" rx="4"/>
+  <text x="820" y="1110" class="f-serif" font-size="130" fill="rgba(250,247,242,0.08)" text-anchor="middle" font-weight="700">C</text>
+  <text x="130" y="1028" class="f-sans" font-size="18" fill="#C4945A" letter-spacing="4" font-weight="600">STEP THREE</text>
+  <text x="130" y="1088" class="f-serif" font-size="58" fill="#FAF7F2" font-weight="700">Cream</text>
+  <text x="130" y="1134" class="f-sans" font-size="24" fill="rgba(250,247,242,0.65)">Butter, cream moisturizer, or styling cream</text>
+  <text x="130" y="1164" class="f-sans" font-size="22" fill="rgba(250,247,242,0.45)">Final seal + definition on top</text>
+
+  <!-- Result callout -->
+  <rect x="60" y="1218" width="880" height="120" fill="#FAF7F2" stroke="#E8DDD0" stroke-width="2" rx="4"/>
+  <line x1="60" y1="1218" x2="60" y2="1338" stroke="#C4945A" stroke-width="8"/>
+  <text x="100" y="1275" class="f-serif" font-size="32" fill="#3D2B1F" font-style="italic">"Moisture your hair retains for days</text>
+  <text x="100" y="1316" class="f-serif" font-size="32" fill="#3D2B1F" font-style="italic">— not just until your next wash."</text>
+
+  <!-- CTA -->
+  <rect x="0" y="1376" width="1000" height="124" fill="#C4945A"/>
+  <text x="500" y="1430" class="f-serif" font-size="36" fill="#FAF7F2" text-anchor="middle" font-weight="700">Find your hair type + full routine</text>
+  <text x="500" y="1474" class="f-sans" font-size="24" fill="rgba(250,247,242,0.85)" text-anchor="middle">hairtypequiz.hair</text>
+
+  <!-- Footer -->
+  <rect x="0" y="1456" width="1000" height="44" fill="#3D2B1F"/>
+  <text x="500" y="1484" class="f-serif" font-size="22" fill="rgba(250,247,242,0.6)" text-anchor="middle" letter-spacing="3">str<tspan fill="#C4945A" font-style="italic">a</tspan>nd  ·  hairtypequiz.hair</text>
+</svg>

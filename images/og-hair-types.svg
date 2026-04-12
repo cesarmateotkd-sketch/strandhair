@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1500" width="1000" height="1500">
+  <defs>
+    <style>
+      .f-serif { font-family: Georgia, 'Times New Roman', serif; }
+      .f-sans  { font-family: system-ui, -apple-system, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="1500" fill="#FAF7F2"/>
+
+  <!-- Header -->
+  <rect width="1000" height="360" fill="#3D2B1F"/>
+  <text x="500" y="108" class="f-sans" font-size="20" fill="#C4945A" text-anchor="middle" letter-spacing="6">HOW TO FIND YOUR</text>
+  <text x="500" y="218" class="f-serif" font-size="104" fill="#FAF7F2" text-anchor="middle" font-weight="700">Hair Type</text>
+  <text x="500" y="292" class="f-sans" font-size="28" fill="rgba(250,247,242,0.55)" text-anchor="middle">1A to 4C — The Complete Guide</text>
+  <line x1="120" y1="330" x2="880" y2="330" stroke="rgba(196,148,90,0.35)" stroke-width="1"/>
+  <text x="500" y="358" class="f-sans" font-size="20" fill="rgba(250,247,242,0.35)" text-anchor="middle">Andre Walker Hair Typing System · 12 Types Explained</text>
+
+  <!-- Section: Type 1 Straight -->
+  <rect x="0" y="390" width="1000" height="50" fill="#E8DDD0"/>
+  <text x="60" y="424" class="f-sans" font-size="18" fill="#8B6F5E" letter-spacing="5" font-weight="600">TYPE 1 — STRAIGHT</text>
+
+  <rect x="60"  y="456" width="280" height="130" fill="#3D2B1F" rx="3"/>
+  <rect x="360" y="456" width="280" height="130" fill="#E8DDD0" rx="3"/>
+  <rect x="660" y="456" width="280" height="130" fill="#3D2B1F" rx="3"/>
+  <text x="200" y="508" class="f-serif" font-size="40" fill="#FAF7F2" text-anchor="middle" font-weight="700">1A</text>
+  <text x="200" y="544" class="f-sans" font-size="17" fill="rgba(250,247,242,0.55)" text-anchor="middle">Fine, sleek, flat</text>
+  <text x="200" y="568" class="f-sans" font-size="15" fill="rgba(250,247,242,0.35)" text-anchor="middle">Gets oily fast</text>
+  <text x="500" y="508" class="f-serif" font-size="40" fill="#3D2B1F" text-anchor="middle" font-weight="700">1B</text>
+  <text x="500" y="544" class="f-sans" font-size="17" fill="#8B6F5E" text-anchor="middle">Medium, slight bend</text>
+  <text x="500" y="568" class="f-sans" font-size="15" fill="#8B6F5E" text-anchor="middle" opacity="0.7">Most common</text>
+  <text x="800" y="508" class="f-serif" font-size="40" fill="#FAF7F2" text-anchor="middle" font-weight="700">1C</text>
+  <text x="800" y="544" class="f-sans" font-size="17" fill="rgba(250,247,242,0.55)" text-anchor="middle">Coarse, thick</text>
+  <text x="800" y="568" class="f-sans" font-size="15" fill="rgba(250,247,242,0.35)" text-anchor="middle">Frizz-prone</text>
+
+  <!-- Section: Type 2 Wavy -->
+  <rect x="0" y="610" width="1000" height="50" fill="#E8DDD0"/>
+  <text x="60" y="644" class="f-sans" font-size="18" fill="#8B6F5E" letter-spacing="5" font-weight="600">TYPE 2 — WAVY</text>
+
+  <rect x="60"  y="676" width="280" height="130" fill="#E8DDD0" rx="3"/>
+  <rect x="360" y="676" width="280" height="130" fill="#3D2B1F" rx="3"/>
+  <rect x="660" y="676" width="280" height="130" fill="#E8DDD0" rx="3"/>
+  <text x="200" y="728" class="f-serif" font-size="40" fill="#3D2B1F" text-anchor="middle" font-weight="700">2A</text>
+  <text x="200" y="764" class="f-sans" font-size="17" fill="#8B6F5E" text-anchor="middle">Loose, fine waves</text>
+  <text x="200" y="788" class="f-sans" font-size="15" fill="#8B6F5E" text-anchor="middle" opacity="0.7">Easy to straighten</text>
+  <text x="500" y="728" class="f-serif" font-size="40" fill="#FAF7F2" text-anchor="middle" font-weight="700">2B</text>
+  <text x="500" y="764" class="f-sans" font-size="17" fill="rgba(250,247,242,0.6)" text-anchor="middle">Defined S-waves</text>
+  <text x="500" y="788" class="f-sans" font-size="15" fill="rgba(250,247,242,0.4)" text-anchor="middle">Medium texture</text>
+  <text x="800" y="728" class="f-serif" font-size="40" fill="#3D2B1F" text-anchor="middle" font-weight="700">2C</text>
+  <text x="800" y="764" class="f-sans" font-size="17" fill="#8B6F5E" text-anchor="middle">Thick, frizzy waves</text>
+  <text x="800" y="788" class="f-sans" font-size="15" fill="#8B6F5E" text-anchor="middle" opacity="0.7">Coarse strands</text>
+
+  <!-- Section: Type 3 Curly -->
+  <rect x="0" y="830" width="1000" height="50" fill="#E8DDD0"/>
+  <text x="60" y="864" class="f-sans" font-size="18" fill="#8B6F5E" letter-spacing="5" font-weight="600">TYPE 3 — CURLY</text>
+
+  <rect x="60"  y="896" width="280" height="130" fill="#3D2B1F" rx="3"/>
+  <rect x="360" y="896" width="280" height="130" fill="#E8DDD0" rx="3"/>
+  <rect x="660" y="896" width="280" height="130" fill="#3D2B1F" rx="3"/>
+  <text x="200" y="948" class="f-serif" font-size="40" fill="#FAF7F2" text-anchor="middle" font-weight="700">3A</text>
+  <text x="200" y="984" class="f-sans" font-size="17" fill="rgba(250,247,242,0.55)" text-anchor="middle">Loose, springy curls</text>
+  <text x="200" y="1008" class="f-sans" font-size="15" fill="rgba(250,247,242,0.35)" text-anchor="middle">Pencil-wide spiral</text>
+  <text x="500" y="948" class="f-serif" font-size="40" fill="#3D2B1F" text-anchor="middle" font-weight="700">3B</text>
+  <text x="500" y="984" class="f-sans" font-size="17" fill="#8B6F5E" text-anchor="middle">Defined spirals</text>
+  <text x="500" y="1008" class="f-sans" font-size="15" fill="#8B6F5E" text-anchor="middle" opacity="0.7">Marker-wide curl</text>
+  <text x="800" y="948" class="f-serif" font-size="40" fill="#FAF7F2" text-anchor="middle" font-weight="700">3C</text>
+  <text x="800" y="984" class="f-sans" font-size="17" fill="rgba(250,247,242,0.55)" text-anchor="middle">Tight corkscrews</text>
+  <text x="800" y="1008" class="f-sans" font-size="15" fill="rgba(250,247,242,0.35)" text-anchor="middle">Pencil-wide, dense</text>
+
+  <!-- Section: Type 4 Coily -->
+  <rect x="0" y="1050" width="1000" height="50" fill="#E8DDD0"/>
+  <text x="60" y="1084" class="f-sans" font-size="18" fill="#8B6F5E" letter-spacing="5" font-weight="600">TYPE 4 — COILY</text>
+
+  <rect x="60"  y="1116" width="280" height="130" fill="#E8DDD0" rx="3"/>
+  <rect x="360" y="1116" width="280" height="130" fill="#3D2B1F" rx="3"/>
+  <rect x="660" y="1116" width="280" height="130" fill="#E8DDD0" rx="3"/>
+  <text x="200" y="1168" class="f-serif" font-size="40" fill="#3D2B1F" text-anchor="middle" font-weight="700">4A</text>
+  <text x="200" y="1204" class="f-sans" font-size="17" fill="#8B6F5E" text-anchor="middle">Soft coily S-pattern</text>
+  <text x="200" y="1228" class="f-sans" font-size="15" fill="#8B6F5E" text-anchor="middle" opacity="0.7">Fine strands</text>
+  <text x="500" y="1168" class="f-serif" font-size="40" fill="#FAF7F2" text-anchor="middle" font-weight="700">4B</text>
+  <text x="500" y="1204" class="f-sans" font-size="17" fill="rgba(250,247,242,0.6)" text-anchor="middle">Z-pattern coils</text>
+  <text x="500" y="1228" class="f-sans" font-size="15" fill="rgba(250,247,242,0.4)" text-anchor="middle">Bends sharply</text>
+  <text x="800" y="1168" class="f-serif" font-size="40" fill="#3D2B1F" text-anchor="middle" font-weight="700">4C</text>
+  <text x="800" y="1204" class="f-sans" font-size="17" fill="#8B6F5E" text-anchor="middle">Tight kinky coils</text>
+  <text x="800" y="1228" class="f-sans" font-size="15" fill="#8B6F5E" text-anchor="middle" opacity="0.7">Most shrinkage</text>
+
+  <!-- CTA -->
+  <rect x="0" y="1294" width="1000" height="150" fill="#C4945A"/>
+  <text x="500" y="1360" class="f-serif" font-size="42" fill="#FAF7F2" text-anchor="middle" font-weight="700">Not sure which you are?</text>
+  <text x="500" y="1408" class="f-sans" font-size="26" fill="rgba(250,247,242,0.85)" text-anchor="middle">Take the free quiz at hairtypequiz.hair →</text>
+
+  <!-- Footer -->
+  <rect x="0" y="1444" width="1000" height="56" fill="#3D2B1F"/>
+  <text x="500" y="1480" class="f-serif" font-size="24" fill="rgba(250,247,242,0.6)" text-anchor="middle" letter-spacing="3">str<tspan fill="#C4945A" font-style="italic">a</tspan>nd  ·  hairtypequiz.hair</text>
+</svg>

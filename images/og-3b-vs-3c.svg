@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1500" width="1000" height="1500">
+  <defs>
+    <style>
+      .f-serif { font-family: Georgia, 'Times New Roman', serif; }
+      .f-sans  { font-family: system-ui, -apple-system, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="1500" fill="#FAF7F2"/>
+
+  <!-- Header block -->
+  <rect width="1000" height="380" fill="#3D2B1F"/>
+  <text x="500" y="108" class="f-sans" font-size="20" fill="#C4945A" text-anchor="middle" letter-spacing="6">TYPE 3 CURLS · COMPARISON GUIDE</text>
+  <text x="500" y="230" class="f-serif" font-size="120" fill="#FAF7F2" text-anchor="middle" font-weight="700">3B vs 3C</text>
+  <text x="500" y="302" class="f-serif" font-size="44" fill="#C4945A" text-anchor="middle" font-style="italic">Curls</text>
+  <text x="500" y="358" class="f-sans" font-size="23" fill="rgba(250,247,242,0.5)" text-anchor="middle">What's the difference — and how to care for each</text>
+
+  <!-- Divider / VS line -->
+  <line x1="500" y1="400" x2="500" y2="1260" stroke="#E8DDD0" stroke-width="2"/>
+  <rect x="460" y="428" width="80" height="80" fill="#C4945A" rx="40"/>
+  <text x="500" y="479" class="f-sans" font-size="22" fill="#FAF7F2" text-anchor="middle" font-weight="700">VS</text>
+
+  <!-- 3B side (left) -->
+  <rect x="0" y="400" width="500" height="860" fill="#FAF7F2"/>
+  <text x="250" y="490" class="f-serif" font-size="72" fill="#3D2B1F" text-anchor="middle" font-weight="700">3B</text>
+  <text x="250" y="536" class="f-sans" font-size="20" fill="#C4945A" text-anchor="middle" letter-spacing="3">SPIRAL CURLS</text>
+  <line x1="60" y1="560" x2="440" y2="560" stroke="#E8DDD0" stroke-width="1"/>
+
+  <!-- 3B traits -->
+  <text x="80" y="616" class="f-sans" font-size="22" fill="#3D2B1F">· Corkscrew spirals</text>
+  <text x="80" y="664" class="f-sans" font-size="22" fill="#3D2B1F">· Marker-wide curls</text>
+  <text x="80" y="712" class="f-sans" font-size="22" fill="#3D2B1F">· Medium density</text>
+  <text x="80" y="760" class="f-sans" font-size="22" fill="#3D2B1F">· Holds definition</text>
+  <text x="80" y="808" class="f-sans" font-size="22" fill="#3D2B1F">· Prone to frizz</text>
+  <text x="80" y="856" class="f-sans" font-size="22" fill="#3D2B1F">· Well-defined without</text>
+  <text x="80" y="896" class="f-sans" font-size="22" fill="#3D2B1F">  much product</text>
+
+  <rect x="60" y="960" width="380" height="80" fill="#E8DDD0" rx="3"/>
+  <text x="250" y="995" class="f-sans" font-size="19" fill="#8B6F5E" text-anchor="middle" font-weight="600">Best for:</text>
+  <text x="250" y="1025" class="f-sans" font-size="19" fill="#8B6F5E" text-anchor="middle">Curl creams · Gels · Diffusing</text>
+
+  <rect x="60" y="1064" width="380" height="80" fill="#3D2B1F" rx="3"/>
+  <text x="250" y="1112" class="f-sans" font-size="19" fill="rgba(250,247,242,0.8)" text-anchor="middle">Humidity = frizz risk</text>
+
+  <!-- 3C side (right) -->
+  <rect x="500" y="400" width="500" height="860" fill="#3D2B1F"/>
+  <text x="750" y="490" class="f-serif" font-size="72" fill="#FAF7F2" text-anchor="middle" font-weight="700">3C</text>
+  <text x="750" y="536" class="f-sans" font-size="20" fill="#C4945A" text-anchor="middle" letter-spacing="3">CORKSCREW CURLS</text>
+  <line x1="560" y1="560" x2="940" y2="560" stroke="rgba(250,247,242,0.15)" stroke-width="1"/>
+
+  <!-- 3C traits -->
+  <text x="560" y="616" class="f-sans" font-size="22" fill="rgba(250,247,242,0.85)">· Tight corkscrews</text>
+  <text x="560" y="664" class="f-sans" font-size="22" fill="rgba(250,247,242,0.85)">· Pencil-wide curls</text>
+  <text x="560" y="712" class="f-sans" font-size="22" fill="rgba(250,247,242,0.85)">· Very dense volume</text>
+  <text x="560" y="760" class="f-sans" font-size="22" fill="rgba(250,247,242,0.85)">· High shrinkage</text>
+  <text x="560" y="808" class="f-sans" font-size="22" fill="rgba(250,247,242,0.85)">· Needs more moisture</text>
+  <text x="560" y="856" class="f-sans" font-size="22" fill="rgba(250,247,242,0.85)">· Borders on coily</text>
+  <text x="560" y="896" class="f-sans" font-size="22" fill="rgba(250,247,242,0.85)">  (Type 4 territory)</text>
+
+  <rect x="560" y="960" width="380" height="80" fill="rgba(255,255,255,0.08)" rx="3"/>
+  <text x="750" y="995" class="f-sans" font-size="19" fill="rgba(250,247,242,0.6)" text-anchor="middle" font-weight="600">Best for:</text>
+  <text x="750" y="1025" class="f-sans" font-size="19" fill="rgba(250,247,242,0.6)" text-anchor="middle">LOC method · Rich creams</text>
+
+  <rect x="560" y="1064" width="380" height="80" fill="#C4945A" rx="3"/>
+  <text x="750" y="1112" class="f-sans" font-size="19" fill="#FAF7F2" text-anchor="middle">Moisture is everything</text>
+
+  <!-- CTA strip -->
+  <rect x="0" y="1260" width="1000" height="160" fill="#C4945A"/>
+  <text x="500" y="1330" class="f-serif" font-size="42" fill="#FAF7F2" text-anchor="middle" font-weight="700">Find your exact type &amp; routine</text>
+  <text x="500" y="1384" class="f-sans" font-size="26" fill="rgba(250,247,242,0.85)" text-anchor="middle">hairtypequiz.hair — free in 30 seconds</text>
+
+  <!-- Footer -->
+  <rect x="0" y="1420" width="1000" height="80" fill="#3D2B1F"/>
+  <text x="500" y="1468" class="f-serif" font-size="26" fill="rgba(250,247,242,0.6)" text-anchor="middle" letter-spacing="3">str<tspan fill="#C4945A" font-style="italic">a</tspan>nd  ·  hairtypequiz.hair</text>
+</svg>

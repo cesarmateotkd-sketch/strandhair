@@ -20,13 +20,16 @@
 <meta property="og:description" content="Discover your hair type and get a personalized routine with the best-reviewed products and tutorial videos for 1A through 4C hair.">
 <meta property="og:url" content="https://hairtypequiz.hair/">
 <meta property="og:site_name" content="Strand">
-<meta property="og:image" content="https://hairtypequiz.hair/og-image.jpg">
+<meta property="og:image" content="https://hairtypequiz.hair/images/og-quiz.svg">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="1500">
+<meta name="p:domain_verify" content="REPLACE_WITH_PINTEREST_VERIFY_CODE">
 
 <!-- SEO: Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Strand — Free Hair Type Quiz & Product Routine Builder">
 <meta name="twitter:description" content="Discover your hair type (1A–4C) and get a personalized hair care routine with top-rated products and video tutorials.">
-<meta name="twitter:image" content="https://hairtypequiz.hair/og-image.jpg">
+<meta name="twitter:image" content="https://hairtypequiz.hair/images/og-quiz.svg">
 
 <!-- ═══════════════════════════════════════════════════
      SEO: Structured Data — WebSite + FAQ Schema
@@ -1256,8 +1259,9 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // ─── CONFIG ───────────────────────────────────────
 // ⚠️  Replace 'yourtag-20' with your Amazon Associates tag before publishing
 const AFFILIATE_TAG = 'strand01-20';
-function amzLink(asin) {
-  return `https://www.amazon.com/dp/${asin}?tag=${AFFILIATE_TAG}&linkCode=ogi&th=1&psc=1`;
+function amzLink(brand, name) {
+  const q = encodeURIComponent(`${brand} ${name}`);
+  return `https://www.amazon.com/s?k=${q}&tag=${AFFILIATE_TAG}`;
 }
 
 // ─── VIDEO DATA ───────────────────────────────────
@@ -1681,7 +1685,7 @@ function showResults() {
             <div class="review-count">${p.reviews} reviews · ${p.stars}/5</div>
             <div class="price-range">${p.price}</div>
             <p class="product-why">${p.why}</p>
-            <a href="${amzLink(p.asin)}" target="_blank" rel="noopener sponsored" class="amazon-btn" aria-label="View ${p.name} on Amazon (affiliate link)">
+            <a href="${amzLink(p.brand, p.name)}" target="_blank" rel="noopener sponsored" class="amazon-btn" aria-label="View ${p.name} on Amazon (affiliate link)">
               View on Amazon →
             </a>
           </article>

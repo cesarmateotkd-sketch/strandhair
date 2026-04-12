@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1500" width="1000" height="1500">
+  <defs>
+    <style>
+      .f-serif { font-family: Georgia, 'Times New Roman', serif; }
+      .f-sans  { font-family: system-ui, -apple-system, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="1500" fill="#3D2B1F"/>
+
+  <!-- Header -->
+  <text x="500" y="106" class="f-sans" font-size="20" fill="#C4945A" text-anchor="middle" letter-spacing="6">4C NATURAL HAIR · PRODUCT GUIDE</text>
+  <text x="500" y="224" class="f-serif" font-size="92" fill="#FAF7F2" text-anchor="middle" font-weight="700">Best Products</text>
+  <text x="500" y="316" class="f-serif" font-size="76" fill="#C4945A" text-anchor="middle" font-style="italic">for 4C Hair</text>
+  <text x="500" y="378" class="f-sans" font-size="22" fill="rgba(250,247,242,0.45)" text-anchor="middle">Ranked by real reviews — no paid placements</text>
+  <line x1="80" y1="416" x2="920" y2="416" stroke="rgba(196,148,90,0.3)" stroke-width="1"/>
+
+  <!-- Product category rows -->
+  <!-- Shampoo -->
+  <rect x="60" y="444" width="880" height="156" fill="rgba(255,255,255,0.05)" rx="4"/>
+  <rect x="60" y="444" width="8" height="156" fill="#C4945A" rx="2"/>
+  <circle cx="148" cy="522" r="42" fill="rgba(196,148,90,0.15)" stroke="#C4945A" stroke-width="1.5"/>
+  <text x="148" y="534" class="f-sans" font-size="28" fill="#C4945A" text-anchor="middle">🧴</text>
+  <text x="218" y="500" class="f-serif" font-size="36" fill="#FAF7F2" font-weight="700">Shampoo</text>
+  <text x="218" y="536" class="f-sans" font-size="21" fill="rgba(250,247,242,0.55)">Moisture-first, sulfate-free formulas</text>
+  <text x="218" y="572" class="f-sans" font-size="18" fill="rgba(250,247,242,0.3)">Look for: shea butter, coconut oil, glycerin</text>
+
+  <!-- Deep Conditioner -->
+  <rect x="60" y="620" width="880" height="156" fill="rgba(255,255,255,0.03)" rx="4"/>
+  <rect x="60" y="620" width="8" height="156" fill="#8B6F5E" rx="2"/>
+  <circle cx="148" cy="698" r="42" fill="rgba(139,111,94,0.15)" stroke="#8B6F5E" stroke-width="1.5"/>
+  <text x="148" y="710" class="f-sans" font-size="28" fill="#8B6F5E" text-anchor="middle">🫙</text>
+  <text x="218" y="676" class="f-serif" font-size="36" fill="#FAF7F2" font-weight="700">Deep Conditioner</text>
+  <text x="218" y="712" class="f-sans" font-size="21" fill="rgba(250,247,242,0.55)">Protein-moisture balance for 4C coils</text>
+  <text x="218" y="748" class="f-sans" font-size="18" fill="rgba(250,247,242,0.3)">Weekly: 20–30 min with heat for max penetration</text>
+
+  <!-- Leave-In -->
+  <rect x="60" y="796" width="880" height="156" fill="rgba(255,255,255,0.05)" rx="4"/>
+  <rect x="60" y="796" width="8" height="156" fill="#C4945A" rx="2"/>
+  <circle cx="148" cy="874" r="42" fill="rgba(196,148,90,0.15)" stroke="#C4945A" stroke-width="1.5"/>
+  <text x="148" y="886" class="f-sans" font-size="28" fill="#C4945A" text-anchor="middle">💧</text>
+  <text x="218" y="852" class="f-serif" font-size="36" fill="#FAF7F2" font-weight="700">Leave-In Conditioner</text>
+  <text x="218" y="888" class="f-sans" font-size="21" fill="rgba(250,247,242,0.55)">The L in the LOC method — applied first</text>
+  <text x="218" y="924" class="f-sans" font-size="18" fill="rgba(250,247,242,0.3)">Lightweight base that opens moisture absorption</text>
+
+  <!-- Curl Cream -->
+  <rect x="60" y="972" width="880" height="156" fill="rgba(255,255,255,0.03)" rx="4"/>
+  <rect x="60" y="972" width="8" height="156" fill="#8B6F5E" rx="2"/>
+  <circle cx="148" cy="1050" r="42" fill="rgba(139,111,94,0.15)" stroke="#8B6F5E" stroke-width="1.5"/>
+  <text x="148" y="1062" class="f-sans" font-size="28" fill="#8B6F5E" text-anchor="middle">✨</text>
+  <text x="218" y="1028" class="f-serif" font-size="36" fill="#FAF7F2" font-weight="700">Curl Cream</text>
+  <text x="218" y="1064" class="f-sans" font-size="21" fill="rgba(250,247,242,0.55)">Definition and hold without dryness</text>
+  <text x="218" y="1100" class="f-sans" font-size="18" fill="rgba(250,247,242,0.3)">The C in LOC — locks in everything below it</text>
+
+  <!-- Sealing Oil -->
+  <rect x="60" y="1148" width="880" height="156" fill="rgba(255,255,255,0.05)" rx="4"/>
+  <rect x="60" y="1148" width="8" height="156" fill="#C4945A" rx="2"/>
+  <circle cx="148" cy="1226" r="42" fill="rgba(196,148,90,0.15)" stroke="#C4945A" stroke-width="1.5"/>
+  <text x="148" y="1238" class="f-sans" font-size="28" fill="#C4945A" text-anchor="middle">🌿</text>
+  <text x="218" y="1204" class="f-serif" font-size="36" fill="#FAF7F2" font-weight="700">Sealing Oil</text>
+  <text x="218" y="1240" class="f-sans" font-size="21" fill="rgba(250,247,242,0.55)">Lock in moisture between wash days</text>
+  <text x="218" y="1276" class="f-sans" font-size="18" fill="rgba(250,247,242,0.3)">Jamaican black castor oil, jojoba, or argan</text>
+
+  <!-- CTA -->
+  <rect x="0" y="1352" width="1000" height="92" fill="#C4945A"/>
+  <text x="500" y="1408" class="f-serif" font-size="38" fill="#FAF7F2" text-anchor="middle" font-weight="700">Get your personalized 4C routine →</text>
+
+  <!-- Footer -->
+  <rect x="0" y="1444" width="1000" height="56" fill="rgba(0,0,0,0.3)"/>
+  <text x="500" y="1480" class="f-serif" font-size="24" fill="rgba(250,247,242,0.5)" text-anchor="middle" letter-spacing="3">str<tspan fill="#C4945A" font-style="italic">a</tspan>nd  ·  hairtypequiz.hair</text>
+</svg>

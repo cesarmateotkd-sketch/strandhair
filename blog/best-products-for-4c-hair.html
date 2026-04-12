@@ -12,6 +12,10 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hairtypequiz.hair/blog/best-products-for-4c-hair">
 <meta property="article:published_time" content="2025-06-01">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Best Products for 4C Hair in 2025 — Ranked by Real Reviews">
+<meta name="twitter:description" content="Stop guessing at the beauty supply store. These are the highest-rated, community-approved products for 4C natural hair — ordered by your routine steps.">
+<meta name="twitter:image" content="https://hairtypequiz.hair/og-image.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,11 +34,27 @@
 :root{--cream:#FAF7F2;--warm:#F5F0E8;--sand:#E8DDD0;--mocha:#8B6F5E;--espresso:#3D2B1F;--caramel:#C4945A;--muted:#9B8B82;--sage:#7A8C7E;}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--espresso);line-height:1.7;}
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:1px solid var(--sand);background:var(--cream);}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:1px solid var(--sand);background:var(--cream);position:sticky;top:0;z-index:100;}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--caramel);}
+.nav-toggle{display:none;flex-direction:column;justify-content:space-between;width:24px;height:18px;background:transparent;border:none;cursor:pointer;padding:0;}
+.nav-toggle span{display:block;width:100%;height:2px;background:var(--espresso);transition:all .3s ease;transform-origin:left center;}
+nav.nav-open .nav-toggle span:nth-child(1){transform:rotate(45deg);}
+nav.nav-open .nav-toggle span:nth-child(2){opacity:0;transform:scaleX(0);}
+nav.nav-open .nav-toggle span:nth-child(3){transform:rotate(-45deg);}
+@media(max-width:768px){
+nav{padding:16px 20px;}
+.nav-toggle{display:flex;}
+.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(250,247,242,.98);border-bottom:1px solid var(--sand);flex-direction:column;padding:12px 20px 20px;gap:0;}
+nav.nav-open .nav-links{display:flex;}
+.nav-links li{border-bottom:1px solid var(--sand);}
+.nav-links li:last-child{border-bottom:none;}
+.nav-links a{display:block;padding:13px 0;font-size:14px;}
+article{padding-left:20px;padding-right:20px;}
+}
 .logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;letter-spacing:.12em;text-decoration:none;color:var(--espresso);}
 .logo span{color:var(--caramel);font-style:italic;}
-.back{font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:.1em;}
-.back:hover{color:var(--caramel);}
 article{max-width:740px;margin:0 auto;padding:64px 24px 96px;}
 .post-tag{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--caramel);margin-bottom:16px;}
 h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);font-weight:300;line-height:1.1;color:var(--espresso);margin-bottom:20px;}
@@ -70,9 +90,15 @@ footer a{color:rgba(255,255,255,.5);text-decoration:none;}
 </head>
 <body>
 
-<nav>
+<nav id="main-nav">
   <a href="/" class="logo">str<span>a</span>nd</a>
-  <a href="/blog" class="back">← All Articles</a>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="/">Quiz</a></li>
+    <li><a href="/blog" aria-current="page">Blog</a></li>
+  </ul>
 </nav>
 
 <article>
@@ -294,7 +320,7 @@ footer a{color:rgba(255,255,255,.5);text-decoration:none;}
 </article>
 
 <footer>
-  <p>© 2025 Strand · <a href="https://hairtypequiz.hair">hairtypequiz.hair</a> · <a href="/">Take the Hair Type Quiz</a></p>
+  <p style="font-size:12px;color:rgba(255,255,255,.4);">© 2026 Strand &nbsp;·&nbsp; <a href="https://hairtypequiz.hair" style="color:rgba(255,255,255,.5);text-decoration:none;">hairtypequiz.hair</a> &nbsp;·&nbsp; <a href="/" style="color:rgba(255,255,255,.5);text-decoration:none;">Take the Quiz</a> &nbsp;·&nbsp; <a href="/blog" style="color:rgba(255,255,255,.5);text-decoration:none;">Blog</a></p>
 </footer>
 </body>
 </html>

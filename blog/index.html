@@ -3,62 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hair Care Blog — Strand</title>
+<title>Hair Care Blog — Tips, Guides & Routines by Hair Type | Strand</title>
+<meta name="description" content="The Strand blog covers hair care routines, product guides, and tips for every hair type from 1A to 4C. Learn the LOC method, CGM, and more.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://strandhair.com/blog/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hair Care Blog — Strand">
+<meta property="og:description" content="Tips, guides, and deep dives for every hair type — from the LOC method to the Curly Girl Method.">
+<meta property="og:url" content="https://strandhair.com/blog/">
+<meta property="og:site_name" content="Strand">
+<meta property="og:image" content="https://strandhair.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hair Care Blog — Strand">
+<meta name="twitter:description" content="Hair care tips, product guides, and routines for every texture — 1A through 4C.">
+<meta name="twitter:image" content="https://strandhair.com/og-image.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://strandhair.com/blog/",
+      "url": "https://strandhair.com/blog/",
+      "name": "Hair Care Blog — Strand",
+      "description": "Hair care tips, product guides, and routines for every hair type from 1A to 4C.",
+      "isPartOf": { "@id": "https://strandhair.com/#website" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://strandhair.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://strandhair.com/blog/" }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://strandhair.com/#website",
+      "url": "https://strandhair.com/",
+      "name": "Strand"
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --cream: #FAF7F2; --espresso: #3D2B1F; --caramel: #C4945A;
-  --mocha: #8B6F5E; --sand: #E8DDD0; --muted: #9B8B82;
+  --cream: #FAF7F2; --warm-white: #F5F0E8; --sand: #E8DDD0;
+  --mocha: #8B6F5E; --espresso: #3D2B1F; --caramel: #C4945A;
+  --text: #2A1F1A; --muted: #9B8B82;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--espresso); }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); }
+.skip-link { position: absolute; top: -40px; left: 0; background: var(--espresso); color: var(--cream); padding: 8px 16px; font-size: 13px; z-index: 999; transition: top 0.2s; }
+.skip-link:focus { top: 0; }
 nav {
   display: flex; justify-content: space-between; align-items: center;
   padding: 20px 48px; position: sticky; top: 0; z-index: 100;
   background: rgba(250,247,242,0.95); backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(139,111,94,0.1);
 }
-.logo { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300;
-  letter-spacing: 0.12em; color: var(--espresso); text-decoration: none; }
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; letter-spacing: 0.12em; color: var(--espresso); text-decoration: none; }
 .logo span { color: var(--caramel); font-style: italic; }
-.hero { padding: 80px 48px; max-width: 860px; margin: 0 auto; }
-.eyebrow { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
-  color: var(--caramel); margin-bottom: 16px; }
-h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 6vw, 64px);
-  font-weight: 300; line-height: 1.1; margin-bottom: 16px; }
-.sub { font-size: 16px; color: var(--mocha); line-height: 1.7; }
-.posts { max-width: 860px; margin: 0 auto; padding: 0 48px 96px; }
-.coming-soon {
-  border-top: 1px solid var(--sand); padding: 64px 0; text-align: center;
-}
-.coming-soon p { font-size: 15px; color: var(--muted); line-height: 1.8; }
-.coming-soon a { color: var(--caramel); text-decoration: none; font-weight: 500; }
-footer { background: var(--espresso); padding: 32px 48px; text-align: center; }
-footer a { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300;
-  letter-spacing: 0.12em; color: var(--cream); text-decoration: none; }
-footer a span { color: var(--caramel); font-style: italic; }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mocha); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a[aria-current] { color: var(--caramel); }
+.nav-toggle { display: none; flex-direction: column; justify-content: space-between; width: 24px; height: 18px; background: transparent; border: none; cursor: pointer; padding: 0; }
+.nav-toggle span { display: block; width: 100%; height: 2px; background: var(--espresso); transition: all 0.3s ease; transform-origin: left center; }
+nav.nav-open .nav-toggle span:nth-child(1) { transform: rotate(45deg); }
+nav.nav-open .nav-toggle span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+nav.nav-open .nav-toggle span:nth-child(3) { transform: rotate(-45deg); }
+.breadcrumb { max-width: 900px; margin: 0 auto; padding: 20px 48px 0; font-size: 12px; color: var(--muted); }
+.breadcrumb a { color: var(--mocha); text-decoration: none; }
+.breadcrumb a:hover { color: var(--caramel); }
+.hero { padding: 64px 48px 48px; max-width: 900px; margin: 0 auto; }
+.eyebrow { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--caramel); margin-bottom: 16px; }
+.hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(38px, 5vw, 58px); font-weight: 300; line-height: 1.1; margin-bottom: 16px; }
+.hero h1 em { font-style: italic; color: var(--caramel); }
+.hero-sub { font-size: 16px; color: var(--mocha); line-height: 1.7; max-width: 520px; }
+.posts-grid { max-width: 900px; margin: 0 auto; padding: 48px 48px 96px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.post-card { background: var(--warm-white); border: 1px solid var(--sand); padding: 28px; display: flex; flex-direction: column; transition: transform 0.25s, box-shadow 0.25s; }
+.post-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(61,43,31,0.08); }
+.post-tag { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--caramel); margin-bottom: 12px; }
+.post-card h2 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--espresso); line-height: 1.3; margin-bottom: 12px; }
+.post-excerpt { font-size: 13px; color: var(--mocha); line-height: 1.7; flex: 1; margin-bottom: 20px; }
+.post-meta { font-size: 11px; color: var(--muted); margin-bottom: 16px; }
+.read-more { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--espresso); text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--caramel); padding-bottom: 2px; align-self: flex-start; transition: color 0.2s; }
+.read-more:hover { color: var(--caramel); }
+.cta-strip { background: var(--espresso); padding: 72px 48px; text-align: center; }
+.cta-strip h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 42px); font-weight: 300; color: var(--cream); margin-bottom: 12px; }
+.cta-strip p { font-size: 15px; color: rgba(250,247,242,0.65); margin-bottom: 28px; }
+.cta-btn { display: inline-block; padding: 16px 48px; background: var(--caramel); color: var(--cream); font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
+.cta-btn:hover { background: #b8834a; transform: translateY(-2px); }
+footer { background: var(--espresso); padding: 48px 48px 28px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; max-width: 900px; margin: 0 auto 40px; }
+.logo-f { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; letter-spacing: 0.12em; color: var(--cream); display: block; margin-bottom: 10px; text-decoration: none; }
+.logo-f span { color: var(--caramel); font-style: italic; }
+.footer-brand p { font-size: 13px; color: rgba(250,247,242,0.5); line-height: 1.7; max-width: 260px; }
+.footer-col h4 { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--caramel); margin-bottom: 14px; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { font-size: 13px; color: rgba(250,247,242,0.6); text-decoration: none; transition: color 0.2s; }
+.footer-col a:hover { color: var(--cream); }
+.footer-bottom { border-top: 1px solid rgba(250,247,242,0.1); padding-top: 20px; max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.footer-copy { font-size: 11px; color: rgba(250,247,242,0.3); }
 @media (max-width: 768px) {
-  nav, .hero, .posts, footer { padding-left: 24px; padding-right: 24px; }
+  nav { padding: 16px 24px; }
+  .nav-toggle { display: flex; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,247,242,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--sand); flex-direction: column; padding: 16px 24px 24px; gap: 0; }
+  nav.nav-open .nav-links { display: flex; }
+  .nav-links li { border-bottom: 1px solid var(--sand); }
+  .nav-links li:last-child { border-bottom: none; }
+  .nav-links a { display: block; padding: 14px 0; font-size: 14px; }
+  .breadcrumb, .hero, .posts-grid, .cta-strip, footer { padding-left: 24px; padding-right: 24px; }
+  .posts-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; }
 }
 </style>
 </head>
 <body>
-<nav>
-  <a href="/" class="logo">str<span>a</span>nd</a>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<nav role="navigation" aria-label="Main navigation">
+  <a href="/" class="logo" aria-label="Strand homepage">str<span>a</span>nd</a>
+  <ul class="nav-links" role="list">
+    <li><a href="/#selector">Hair Types</a></li>
+    <li><a href="/#about">Hair Guide</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+    <li><a href="/blog/" aria-current="page">Blog</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleNav(this)">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-<div class="hero">
-  <p class="eyebrow">The Strand Blog</p>
-  <h1>Hair care, <em style="font-style:italic;color:var(--caramel)">demystified.</em></h1>
-  <p class="sub">Tips, guides, and deep dives for every hair type — from scalp health to styling techniques.</p>
-</div>
-<div class="posts">
-  <div class="coming-soon">
-    <p>Posts coming soon. In the meantime, <a href="/">find your hair type and routine →</a></p>
+<main id="main-content">
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="/">Home</a> / Blog
+  </nav>
+  <div class="hero">
+    <p class="eyebrow">The Strand Blog</p>
+    <h1>Hair care, <em>demystified.</em></h1>
+    <p class="hero-sub">Guides, techniques, and product science for every hair type — from pin-straight to tightly coiled.</p>
   </div>
-</div>
-<footer>
-  <a href="/">str<span>a</span>nd</a>
+  <div class="posts-grid" aria-label="Blog posts">
+    <article class="post-card">
+      <p class="post-tag">Type 3 &amp; 4 Hair</p>
+      <h2>The LOC Method Explained: Step-by-Step Moisture Layering for Natural Hair</h2>
+      <p class="post-excerpt">Learn how the Liquid–Oil–Cream layering technique seals moisture into natural hair — and why the order of products makes all the difference for coily and curly textures.</p>
+      <p class="post-meta">April 12, 2026 · 6 min read</p>
+      <a href="/blog/loc-method-explained.html" class="read-more">Read Article →</a>
+    </article>
+    <article class="post-card">
+      <p class="post-tag">All Hair Types</p>
+      <h2>Hair Types 1A to 4C: The Complete Andre Walker Hair Typing Guide</h2>
+      <p class="post-excerpt">Everything you need to know about the hair typing system — how to identify your type, what the subtypes really mean, and why knowing yours is the foundation of an effective routine.</p>
+      <p class="post-meta">April 12, 2026 · 7 min read</p>
+      <a href="/blog/hair-typing-system.html" class="read-more">Read Article →</a>
+    </article>
+    <article class="post-card">
+      <p class="post-tag">Type 2 &amp; 3 Hair</p>
+      <h2>The Curly Girl Method for Beginners: No-Heat, No-Sulfate Curl Care</h2>
+      <p class="post-excerpt">The Curly Girl Method transformed the wavy and curly hair community. Here's how to start CGM from scratch — what to cut out, what to add, and what to expect in the first few weeks.</p>
+      <p class="post-meta">April 12, 2026 · 8 min read</p>
+      <a href="/blog/curly-girl-method-beginners.html" class="read-more">Read Article →</a>
+    </article>
+  </div>
+  <div class="cta-strip">
+    <h2>Not sure what your hair type is?</h2>
+    <p>Take our free quiz — identify your type in 30 seconds and get a full personalized routine.</p>
+    <a href="/" class="cta-btn">Find My Hair Type →</a>
+  </div>
+</main>
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="logo-f">str<span>a</span>nd</a>
+      <p>The free hair type quiz and personalized product routine builder. Every texture, finally understood.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="/#selector">Hair Type Quiz</a></li>
+        <li><a href="/#about">Hair Type Guide</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>From the Blog</h4>
+      <ul>
+        <li><a href="/blog/loc-method-explained.html">The LOC Method</a></li>
+        <li><a href="/blog/hair-typing-system.html">Hair Typing Guide</a></li>
+        <li><a href="/blog/curly-girl-method-beginners.html">Curly Girl Method</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Strand. All rights reserved.</p>
+  </div>
 </footer>
+<script>
+function toggleNav(btn) {
+  const nav = btn.closest('nav');
+  const isOpen = nav.classList.toggle('nav-open');
+  btn.setAttribute('aria-expanded', isOpen);
+}
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    const nav = document.querySelector('nav');
+    nav.classList.remove('nav-open');
+    const btn = nav.querySelector('.nav-toggle');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  });
+});
+</script>
 </body>
 </html>

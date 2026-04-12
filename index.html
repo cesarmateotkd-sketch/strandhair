@@ -1088,6 +1088,11 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: rotate(-45deg); }
   </div>
 </section>
 
+<!-- ═══ INLINE CTA (appears after selection) ═══ -->
+<div id="inlineCta" style="display:none;text-align:center;padding:32px 48px 0;">
+  <button onclick="showResults()" class="cta-btn" id="inlineBtn" aria-label="Build my hair routine">→ Build My Routine</button>
+</div>
+
 <!-- ═══ STICKY CTA ═══ -->
 <div class="sticky-find" id="stickyFind" aria-live="polite">
   <button id="findBtn" disabled onclick="showResults()" aria-label="Build my hair routine">→ Build My Routine</button>
@@ -1691,6 +1696,10 @@ function selectHair(el, type) {
   btn.disabled = false;
   btn.textContent = `→ Build Type ${type} Routine`;
   document.getElementById('stickyFind').classList.add('visible');
+  const inlineBtn = document.getElementById('inlineBtn');
+  if (inlineBtn) inlineBtn.textContent = `→ Build Type ${type} Routine`;
+  const inlineCta = document.getElementById('inlineCta');
+  if (inlineCta) inlineCta.style.display = 'block';
 }
 
 function buildVideoBlock(type, stepIndex) {
@@ -1728,7 +1737,8 @@ function loadVideo(thumb, videoId) {
 }
 
 function showResults() {
-  if (!selectedType) return;
+  if (!selectedType) { alert('Please select your hair type above first.'); return; }
+  try {
   const key = routines[selectedType] ? selectedType : (defaultFor[selectedType] || '3B');
   const data = routines[key];
 
@@ -1780,6 +1790,10 @@ function showResults() {
   document.title = `Type ${selectedType} Hair Routine — Best Products & Tutorials | Strand`;
 
   setTimeout(() => resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+  } catch(err) {
+    alert('Error building routine: ' + err.message + '\n\nPlease open your browser console (F12) for details.');
+    console.error('showResults error:', err);
+  }
 }
 
 function toggleFaq(el) {

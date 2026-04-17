@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1500" width="1000" height="1500">
+  <defs>
+    <style>
+      .f-serif { font-family: Georgia, 'Times New Roman', serif; }
+      .f-sans  { font-family: system-ui, -apple-system, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="1500" fill="#2C1A2E"/>
+
+  <!-- Header -->
+  <text x="500" y="106" class="f-sans" font-size="20" fill="#C4945A" text-anchor="middle" letter-spacing="6">NATURAL HAIR · PROTEIN GUIDE</text>
+  <text x="500" y="216" class="f-serif" font-size="82" fill="#FAF7F2" text-anchor="middle" font-weight="700">Protein Treatment</text>
+  <text x="500" y="304" class="f-serif" font-size="72" fill="#C4945A" text-anchor="middle" font-style="italic">for Natural Hair</text>
+  <text x="500" y="366" class="f-sans" font-size="22" fill="rgba(250,247,242,0.45)" text-anchor="middle">Find your level · Light · Medium · Heavy</text>
+  <line x1="80" y1="404" x2="920" y2="404" stroke="rgba(196,148,90,0.3)" stroke-width="1"/>
+
+  <!-- Stretch Test -->
+  <rect x="60" y="432" width="880" height="120" fill="rgba(255,255,255,0.05)" rx="4"/>
+  <rect x="60" y="432" width="8" height="120" fill="#C4945A" rx="2"/>
+  <text x="124" y="486" class="f-serif" font-size="30" fill="#FAF7F2" font-weight="700">The Stretch Test</text>
+  <text x="124" y="520" class="f-sans" font-size="20" fill="rgba(250,247,242,0.55)">Wet a strand · stretch slowly · watch how it behaves</text>
+  <text x="124" y="548" class="f-sans" font-size="17" fill="rgba(250,247,242,0.3)">Breaks immediately = needs protein · No snap = overloaded</text>
+
+  <!-- Level 01: Light -->
+  <rect x="60" y="572" width="880" height="160" fill="rgba(255,255,255,0.04)" rx="4"/>
+  <rect x="60" y="572" width="8" height="160" fill="#8BC4A0" rx="2"/>
+  <text x="124" y="650" class="f-serif" font-size="52" fill="rgba(139,196,160,0.25)" font-weight="300">01</text>
+  <text x="220" y="622" class="f-serif" font-size="34" fill="#FAF7F2" font-weight="700">Light Treatment</text>
+  <text x="220" y="658" class="f-sans" font-size="20" fill="rgba(250,247,242,0.55)">Weekly — leave-in conditioners with protein</text>
+  <text x="220" y="690" class="f-sans" font-size="17" fill="rgba(250,247,242,0.3)">Cantu Leave-In · Aussie 3 Minute Miracle · prevention</text>
+  <text x="220" y="716" class="f-sans" font-size="15" fill="rgba(139,196,160,0.6)">Fine hair · color-treated · mild damage</text>
+
+  <!-- Level 02: Medium -->
+  <rect x="60" y="752" width="880" height="160" fill="rgba(255,255,255,0.06)" rx="4"/>
+  <rect x="60" y="752" width="8" height="160" fill="#C4945A" rx="2"/>
+  <text x="124" y="830" class="f-serif" font-size="52" fill="rgba(196,148,90,0.25)" font-weight="300">02</text>
+  <text x="220" y="802" class="f-serif" font-size="34" fill="#FAF7F2" font-weight="700">Medium Treatment</text>
+  <text x="220" y="838" class="f-sans" font-size="20" fill="rgba(250,247,242,0.55)">Bi-weekly — dedicated protein treatments</text>
+  <text x="220" y="870" class="f-sans" font-size="17" fill="rgba(250,247,242,0.3)">SheaMoisture JBCO Masque · Olaplex No.5 Bond</text>
+  <text x="220" y="896" class="f-sans" font-size="15" fill="rgba(196,148,90,0.6)">Type 4 hair · heat damage · moderate breakage</text>
+
+  <!-- Level 03: Heavy -->
+  <rect x="60" y="932" width="880" height="160" fill="rgba(255,255,255,0.04)" rx="4"/>
+  <rect x="60" y="932" width="8" height="160" fill="#C47A7A" rx="2"/>
+  <text x="124" y="1010" class="f-serif" font-size="52" fill="rgba(196,122,122,0.25)" font-weight="300">03</text>
+  <text x="220" y="982" class="f-serif" font-size="34" fill="#FAF7F2" font-weight="700">Heavy Treatment</text>
+  <text x="220" y="1018" class="f-sans" font-size="20" fill="rgba(250,247,242,0.55)">Monthly — professional-strength reconstruction</text>
+  <text x="220" y="1050" class="f-sans" font-size="17" fill="rgba(250,247,242,0.3)">ApHogee Two-Step · Cantu Strengthening Masque</text>
+  <text x="220" y="1076" class="f-sans" font-size="15" fill="rgba(196,122,122,0.6)">Severe breakage · chemical damage · high porosity</text>
+
+  <!-- Warning -->
+  <rect x="60" y="1112" width="880" height="96" fill="rgba(196,122,122,0.1)" rx="4"/>
+  <text x="500" y="1156" class="f-serif" font-size="26" fill="#FAF7F2" text-anchor="middle" font-weight="700">⚠  Follow every protein treatment with moisture</text>
+  <text x="500" y="1188" class="f-sans" font-size="19" fill="rgba(250,247,242,0.5)" text-anchor="middle">Balance is everything — overloaded hair feels stiff and snaps</text>
+
+  <!-- Tips row -->
+  <rect x="60" y="1228" width="880" height="80" fill="rgba(255,255,255,0.04)" rx="4"/>
+  <text x="500" y="1264" class="f-sans" font-size="19" fill="rgba(250,247,242,0.55)" text-anchor="middle">Stretch test weekly · deep condition after every treatment</text>
+  <text x="500" y="1292" class="f-sans" font-size="16" fill="rgba(250,247,242,0.3)" text-anchor="middle">Rice water · egg mask · hydrolyzed protein — know your source</text>
+
+  <!-- CTA -->
+  <rect x="0" y="1340" width="1000" height="92" fill="#C4945A"/>
+  <text x="500" y="1396" class="f-serif" font-size="36" fill="#FAF7F2" text-anchor="middle" font-weight="700">Find your personalized hair routine →</text>
+
+  <!-- Footer -->
+  <rect x="0" y="1432" width="1000" height="68" fill="rgba(0,0,0,0.3)"/>
+  <text x="500" y="1474" class="f-serif" font-size="24" fill="rgba(250,247,242,0.5)" text-anchor="middle" letter-spacing="3">str<tspan fill="#C4945A" font-style="italic">a</tspan>nd  ·  hairtypequiz.hair</text>
+</svg>

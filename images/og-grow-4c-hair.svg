@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1500" width="1000" height="1500">
+  <defs>
+    <style>
+      .f-serif { font-family: Georgia, 'Times New Roman', serif; }
+      .f-sans  { font-family: system-ui, -apple-system, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="1500" fill="#1A2A1F"/>
+
+  <!-- Header -->
+  <text x="500" y="106" class="f-sans" font-size="20" fill="#C4945A" text-anchor="middle" letter-spacing="6">4C NATURAL HAIR · SCIENCE-BACKED</text>
+  <text x="500" y="210" class="f-serif" font-size="80" fill="#FAF7F2" text-anchor="middle" font-weight="700">How to Grow</text>
+  <text x="500" y="296" class="f-serif" font-size="72" fill="#C4945A" text-anchor="middle" font-style="italic">4C Hair Faster</text>
+  <text x="500" y="356" class="f-sans" font-size="22" fill="rgba(250,247,242,0.45)" text-anchor="middle">The retention problem — and how to fix it</text>
+  <line x1="80" y1="394" x2="920" y2="394" stroke="rgba(196,148,90,0.3)" stroke-width="1"/>
+
+  <!-- Myth bust -->
+  <rect x="60" y="420" width="880" height="100" fill="rgba(196,148,90,0.12)" rx="4"/>
+  <text x="500" y="460" class="f-serif" font-size="28" fill="#FAF7F2" text-anchor="middle" font-weight="700">4C hair grows 0.5 inches/month — same as all hair</text>
+  <text x="500" y="494" class="f-sans" font-size="19" fill="rgba(250,247,242,0.6)" text-anchor="middle">The problem is breakage, not the follicle</text>
+  <text x="500" y="514" class="f-sans" font-size="15" fill="rgba(196,148,90,0.6)" text-anchor="middle">70–80% shrinkage hides the growth — measure on stretched hair</text>
+
+  <!-- Pillar 01 -->
+  <rect x="60" y="540" width="880" height="120" fill="rgba(255,255,255,0.05)" rx="4"/>
+  <rect x="60" y="540" width="8" height="120" fill="#C4945A" rx="2"/>
+  <text x="124" y="612" class="f-serif" font-size="48" fill="rgba(196,148,90,0.25)" font-weight="300">01</text>
+  <text x="220" y="578" class="f-serif" font-size="32" fill="#FAF7F2" font-weight="700">LOC Method — daily moisture</text>
+  <text x="220" y="614" class="f-sans" font-size="19" fill="rgba(250,247,242,0.55)">Liquid → Oil → Cream every 48–72 hours</text>
+  <text x="220" y="646" class="f-sans" font-size="15" fill="rgba(196,148,90,0.6)">Reduces transepidermal water loss ~30%</text>
+
+  <!-- Pillar 02 -->
+  <rect x="60" y="676" width="880" height="120" fill="rgba(255,255,255,0.03)" rx="4"/>
+  <rect x="60" y="676" width="8" height="120" fill="#7BB8A0" rx="2"/>
+  <text x="124" y="748" class="f-serif" font-size="48" fill="rgba(123,184,160,0.25)" font-weight="300">02</text>
+  <text x="220" y="714" class="f-serif" font-size="32" fill="#FAF7F2" font-weight="700">Scalp Massage — proven</text>
+  <text x="220" y="750" class="f-sans" font-size="19" fill="rgba(250,247,242,0.55)">4 min/day · 24 weeks → significant thickness increase</text>
+  <text x="220" y="782" class="f-sans" font-size="15" fill="rgba(123,184,160,0.6)">ePlasty 2016 study · blood flow up 69%</text>
+
+  <!-- Pillar 03 -->
+  <rect x="60" y="812" width="880" height="120" fill="rgba(255,255,255,0.05)" rx="4"/>
+  <rect x="60" y="812" width="8" height="120" fill="#C4945A" rx="2"/>
+  <text x="124" y="884" class="f-serif" font-size="48" fill="rgba(196,148,90,0.25)" font-weight="300">03</text>
+  <text x="220" y="850" class="f-serif" font-size="32" fill="#FAF7F2" font-weight="700">Rosemary Oil — clinical evidence</text>
+  <text x="220" y="886" class="f-sans" font-size="19" fill="rgba(250,247,242,0.55)">Matched minoxidil 2% in 6-month trial</text>
+  <text x="220" y="918" class="f-sans" font-size="15" fill="rgba(196,148,90,0.6)">Panahi et al. 2015 · 12 drops/oz carrier oil at scalp</text>
+
+  <!-- Nutrition -->
+  <rect x="60" y="952" width="880" height="140" fill="rgba(255,255,255,0.03)" rx="4"/>
+  <rect x="60" y="952" width="8" height="140" fill="#8B6F5E" rx="2"/>
+  <text x="124" y="988" class="f-serif" font-size="26" fill="#FAF7F2" font-weight="700">Nutrition That Actually Matters</text>
+  <text x="124" y="1018" class="f-sans" font-size="18" fill="rgba(250,247,242,0.55)">Iron / Ferritin — #1 nutritional cause of hair loss in women</text>
+  <text x="124" y="1046" class="f-sans" font-size="18" fill="rgba(250,247,242,0.55)">Vitamin D — most studied nutrient in alopecia research</text>
+  <text x="124" y="1074" class="f-sans" font-size="18" fill="rgba(250,247,242,0.55)">Omega-3 — reduced shedding in double-blind trial</text>
+  <text x="124" y="1082" class="f-sans" font-size="14" fill="rgba(250,247,242,0.25)"> </text>
+
+  <!-- Retention table -->
+  <rect x="60" y="1112" width="880" height="100" fill="rgba(255,255,255,0.05)" rx="4"/>
+  <text x="500" y="1148" class="f-serif" font-size="24" fill="#FAF7F2" text-anchor="middle" font-weight="700">Annual Retention by Care Level</text>
+  <text x="180" y="1180" class="f-sans" font-size="16" fill="rgba(250,247,242,0.5)" text-anchor="middle">No routine</text>
+  <text x="180" y="1200" class="f-sans" font-size="16" fill="#C4945A" text-anchor="middle">0.5–1 in/yr</text>
+  <text x="500" y="1180" class="f-sans" font-size="16" fill="rgba(250,247,242,0.5)" text-anchor="middle">Basic care</text>
+  <text x="500" y="1200" class="f-sans" font-size="16" fill="#C4945A" text-anchor="middle">1–3 in/yr</text>
+  <text x="820" y="1180" class="f-sans" font-size="16" fill="rgba(250,247,242,0.5)" text-anchor="middle">Optimized</text>
+  <text x="820" y="1200" class="f-sans" font-size="16" fill="#C4945A" text-anchor="middle">4–6 in/yr</text>
+
+  <!-- CTA -->
+  <rect x="0" y="1340" width="1000" height="92" fill="#C4945A"/>
+  <text x="500" y="1396" class="f-serif" font-size="36" fill="#FAF7F2" text-anchor="middle" font-weight="700">Find your personalized 4C routine →</text>
+
+  <!-- Footer -->
+  <rect x="0" y="1432" width="1000" height="68" fill="rgba(0,0,0,0.3)"/>
+  <text x="500" y="1474" class="f-serif" font-size="24" fill="rgba(250,247,242,0.5)" text-anchor="middle" letter-spacing="3">str<tspan fill="#C4945A" font-style="italic">a</tspan>nd  ·  hairtypequiz.hair</text>
+</svg>

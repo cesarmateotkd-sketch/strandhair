@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <style>
+      .f-serif { font-family: Georgia, 'Times New Roman', serif; }
+      .f-sans  { font-family: system-ui, -apple-system, Arial, sans-serif; }
+    </style>
+    <clipPath id="circle">
+      <circle cx="200" cy="200" r="200"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="200" cy="200" r="200" fill="#3D2B1F"/>
+
+  <!-- Subtle radial glow -->
+  <radialGradient id="glow" cx="50%" cy="45%" r="50%">
+    <stop offset="0%" stop-color="#C4945A" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#3D2B1F" stop-opacity="0"/>
+  </radialGradient>
+  <circle cx="200" cy="200" r="200" fill="url(#glow)"/>
+
+  <!-- Curl mark: three arcs representing curl types, centered -->
+  <!-- Tight coil (innermost) -->
+  <path d="M200 108 C224 108 244 128 244 152 C244 176 224 196 200 196 C184 196 170 186 164 172"
+        fill="none" stroke="#C4945A" stroke-width="7" stroke-linecap="round"/>
+  <!-- Medium curl -->
+  <path d="M200 88 C236 88 264 116 264 152 C264 188 236 216 200 216 C172 216 148 200 140 176"
+        fill="none" stroke="rgba(196,148,90,0.55)" stroke-width="5" stroke-linecap="round"/>
+  <!-- Loose wave (outermost) -->
+  <path d="M200 68 C248 68 284 104 284 152 C284 200 248 236 200 236 C160 236 128 210 118 174"
+        fill="none" stroke="rgba(196,148,90,0.25)" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Dot at curl base -->
+  <circle cx="200" cy="152" r="5" fill="#C4945A"/>
+
+  <!-- Wordmark -->
+  <text x="200" y="295" class="f-serif" font-size="52" fill="#FAF7F2"
+        text-anchor="middle" font-weight="700" letter-spacing="2">strand</text>
+
+  <!-- Tagline -->
+  <text x="200" y="330" class="f-sans" font-size="16" fill="rgba(196,148,90,0.75)"
+        text-anchor="middle" letter-spacing="4" text-transform="uppercase">HAIR TYPE QUIZ</text>
+
+  <!-- Thin gold ring just inside edge -->
+  <circle cx="200" cy="200" r="192" fill="none" stroke="rgba(196,148,90,0.2)" stroke-width="1.5"/>
+</svg>

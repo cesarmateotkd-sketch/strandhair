@@ -7,18 +7,27 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-WZFESSQ350');
-  window.addEventListener('load', function() {
+  gtag('config', 'AW-980643963');
+  var _gaLoaded = false;
+  function _loadGA() {
+    if (_gaLoaded) return; _gaLoaded = true;
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WZFESSQ350';
     document.head.appendChild(s);
+  }
+  var _gaTimer = setTimeout(_loadGA, 5000);
+  ['mousedown','keydown','touchstart','scroll'].forEach(function(evt) {
+    window.addEventListener(evt, function h() {
+      clearTimeout(_gaTimer); _loadGA();
+      window.removeEventListener(evt, h);
+    }, {passive: true});
   });
 </script>
 <meta charset="UTF-8">
 <meta name="p:domain_verify" content="fdb06c200ffd2e4d27e5981697fa680c">
 <meta name="google-adsense-account" content="ca-pub-4118008750263820">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' https: data:; connect-src 'self' https://*.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' https: data:; connect-src 'self' https://*.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self';">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>How to Grow 4C Hair Faster — Science-Backed Length Retention Guide | Strand</title>

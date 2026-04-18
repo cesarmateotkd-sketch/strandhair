@@ -442,6 +442,11 @@ function _showResults(skipScroll) {
   resultsEl.classList.add('active');
   // Update page title and meta for SEO shareability
   document.title = `Type ${selectedType} Hair Routine — Best Products & Tutorials | Strand`;
+  // Conversion events — GA4 + Google Ads
+  if (typeof gtag === 'function') {
+    gtag('event', 'quiz_complete', { hair_type: selectedType });
+    gtag('event', 'conversion', { send_to: 'AW-980643963/tiqHCOC9tJ4cEPvgzdMD', value: 1.0, currency: 'USD' });
+  }
 
   if (!skipScroll) {
     requestAnimationFrame(() => requestAnimationFrame(() =>

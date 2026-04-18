@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+  <defs><style>.fs{font-family:Georgia,'Times New Roman',serif;}.fn{font-family:system-ui,-apple-system,Arial,sans-serif;}</style></defs>
+  <rect width="1200" height="1200" fill="#3D2B1F"/>
+  <rect x="0" y="0" width="8" height="1200" fill="#C4945A"/>
+  <text x="640" y="100" class="fn" font-size="15" fill="#C4945A" text-anchor="middle" letter-spacing="5">HAIR SCIENCE</text>
+  <text x="640" y="230" class="fs" font-size="90" fill="#FAF7F2" font-weight="700" text-anchor="middle">Wrong</text>
+  <text x="640" y="330" class="fs" font-size="90" fill="#FAF7F2" font-weight="700" text-anchor="middle">products.</text>
+  <text x="640" y="430" class="fs" font-size="90" fill="#C4945A" font-style="italic" text-anchor="middle">No results.</text>
+  <text x="640" y="498" class="fn" font-size="20" fill="rgba(250,247,242,0.5)" text-anchor="middle">Porosity determines which products work</text>
+  <text x="640" y="526" class="fn" font-size="20" fill="rgba(250,247,242,0.5)" text-anchor="middle">for your hair — and which ones don't.</text>
+  <line x1="80" y1="560" x2="1120" y2="560" stroke="rgba(196,148,90,0.25)" stroke-width="1"/>
+  <rect x="80" y="585" width="1040" height="130" fill="rgba(196,148,90,0.1)" rx="3"/>
+  <rect x="80" y="585" width="5" height="130" fill="#C4945A"/>
+  <text x="108" y="636" class="fs" font-size="26" fill="#FAF7F2" font-weight="700">Low Porosity</text>
+  <text x="108" y="668" class="fn" font-size="17" fill="rgba(250,247,242,0.55)">Cuticles sealed. Resists moisture. Needs heat to open.</text>
+  <text x="108" y="700" class="fn" font-size="15" fill="rgba(196,148,90,0.6)">Use: lightweight products, clarifying shampoo, LCO method</text>
+  <rect x="80" y="730" width="1040" height="130" fill="rgba(255,255,255,0.04)" rx="3"/>
+  <rect x="80" y="730" width="5" height="130" fill="#7BB8A0"/>
+  <text x="108" y="781" class="fs" font-size="26" fill="#FAF7F2" font-weight="700">Medium Porosity</text>
+  <text x="108" y="813" class="fn" font-size="17" fill="rgba(250,247,242,0.55)">Balanced cuticles. Most products absorb well.</text>
+  <text x="108" y="845" class="fn" font-size="15" fill="rgba(123,184,160,0.6)">Use: protein every 6-8 weeks, any good routine</text>
+  <rect x="80" y="875" width="1040" height="130" fill="rgba(255,255,255,0.04)" rx="3"/>
+  <rect x="80" y="875" width="5" height="130" fill="#C4945A"/>
+  <text x="108" y="926" class="fs" font-size="26" fill="#FAF7F2" font-weight="700">High Porosity</text>
+  <text x="108" y="958" class="fn" font-size="17" fill="rgba(250,247,242,0.55)">Raised cuticles. Absorbs fast, dries fast.</text>
+  <text x="108" y="990" class="fn" font-size="15" fill="rgba(196,148,90,0.6)">Use: LOC method, protein treatments, heavy sealants</text>
+  <rect x="200" y="1040" width="800" height="76" fill="#C4945A"/>
+  <text x="600" y="1087" class="fs" font-size="28" fill="#FAF7F2" text-anchor="middle" font-weight="700">Find Your Porosity + Hair Type</text>
+  <text x="600" y="1158" class="fs" font-size="20" fill="rgba(250,247,242,0.2)" text-anchor="middle" letter-spacing="3">str<tspan fill="rgba(196,148,90,0.4)" font-style="italic">a</tspan>nd  ·  hairtypequiz.hair</text>
+</svg>

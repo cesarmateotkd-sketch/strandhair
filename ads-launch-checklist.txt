@@ -1,0 +1,196 @@
+ADS LAUNCH CHECKLIST — STRAND (hairtypequiz.hair)
+===================================================
+Track your setup across Meta, Google, and Pinterest.
+Complete each section before launching paid campaigns.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1 — EMAIL (MAILCHIMP)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Account & Setup
+  [ ] Create Mailchimp account (mailchimp.com, free to 500 contacts)
+  [ ] Name audience: "Strand Hair"
+  [ ] Set from name: Strand | from email: your address
+  [ ] Upload 4C Wash Day Checklist PDF to Mailchimp Files
+
+Welcome Automation
+  [ ] Go to Automations → Email → Welcome new subscribers
+  [ ] Write welcome email (copy from email-welcome-and-checklist.txt)
+  [ ] Attach or link to the checklist PDF
+  [ ] Send yourself a test — check on mobile
+
+Signup Form
+  [ ] Go to Audience → Signup Forms → Embedded Forms
+  [ ] Title: "Get the free 4C Wash Day Checklist"
+  [ ] Fields: Email + First Name only
+  [ ] Set width to 100%
+  [ ] Copy embed code → paste to Claude to embed on all pages
+
+DONE WHEN: First test signup triggers the welcome email with checklist attached.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2 — META ADS (FACEBOOK/INSTAGRAM)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Account Setup
+  [ ] Go to business.facebook.com → Create account
+  [ ] Add your Facebook Page to Business Manager
+  [ ] Create an Ad Account under the business
+  [ ] Add a payment method to the Ad Account
+
+Pixel Setup (REQUIRED before any ads)
+  [ ] Go to Events Manager (business.facebook.com/events_manager)
+  [ ] Create → Web → Meta Pixel → name it "Strand Pixel"
+  [ ] Copy your Pixel ID (16-digit number)
+  [ ] Paste Pixel ID to Claude → I'll add it to all 12 pages
+  [ ] Verify pixel fires: use Meta Pixel Helper Chrome extension
+
+  SITE STATUS: Waiting for Pixel ID
+
+Standard Events to Configure
+  [ ] PageView — fires automatically on every page (included in base pixel code)
+  [ ] ViewContent — fires when quiz result is shown (I'll add this)
+  [ ] Lead — fires when email signup is completed (Mailchimp thank-you page)
+
+Audiences to Build (after 1 week of pixel data)
+  [ ] Website Custom Audience — all visitors, 30 days
+  [ ] Website Custom Audience — quiz completers (ViewContent), 60 days
+  [ ] Lookalike Audience — 1% from quiz completers (US)
+  [ ] Lookalike Audience — 1% from all visitors (US)
+
+Creative to Prepare
+  [ ] 3 static images — use existing OG images (already 1000x1500 = Story format)
+  [ ] 1 carousel — 4C hair type comparison (use hair type images from the quiz)
+  [ ] Video hook script: "Your hair isn't growing slower — here's what's actually happening"
+
+First Campaigns (in order)
+  [ ] Campaign 1: Traffic → blog posts (warms the pixel, cheap data, $5/day)
+  [ ] Campaign 2: Lead gen → checklist signup (once pixel has 50+ events)
+  [ ] Campaign 3: Retargeting → quiz visitors who didn't complete ($3/day)
+
+DONE WHEN: Pixel fires on hairtypequiz.hair + one Traffic campaign is live.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3 — GOOGLE ADS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Account Setup
+  [ ] Go to ads.google.com → Create account
+  [ ] Select "Expert Mode" (not Smart campaigns)
+  [ ] Skip campaign creation during setup (create it manually after)
+  [ ] Add billing information
+
+Link to GA4 (no code changes needed)
+  [ ] In Google Ads: Tools → Linked Accounts → Google Analytics
+  [ ] Link GA4 property G-WZFESSQ350
+  [ ] Import GA4 conversions into Google Ads:
+        Tools → Conversions → Import → Google Analytics 4
+
+Conversions to Import from GA4
+  [ ] quiz_complete (already added to quiz.js — fires when result is shown)
+  [ ] session_start (built-in GA4 event)
+  [ ] scroll (built-in, shows engagement)
+
+Keyword Targets — Search Campaign 1 (quiz/brand)
+  [ ] hair type quiz
+  [ ] free hair type quiz
+  [ ] hair type chart 1a to 4c
+  [ ] what is my hair type
+  [ ] curly hair type quiz
+
+Keyword Targets — Search Campaign 2 (informational/blog)
+  [ ] hair porosity test at home
+  [ ] how to grow 4c hair faster
+  [ ] loc method natural hair
+  [ ] best products for 4c hair
+  [ ] how to wash 4c hair
+
+Campaign Structure
+  [ ] Campaign 1: Brand/quiz keywords → homepage (Target CPA: quiz_complete)
+  [ ] Campaign 2: Blog keywords → matching blog posts (Target: traffic)
+  [ ] Campaign 3: (Later) Performance Max once you have 30+ conversions/month
+
+Budget Recommendation to Start
+  [ ] $5–10/day on Campaign 1 (quiz traffic, high intent)
+  [ ] Pause Campaign 2 until Campaign 1 has 30 conversions
+
+DONE WHEN: GA4 linked, quiz_complete imported as conversion, first search
+           campaign live targeting hair type quiz keywords.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4 — PINTEREST ADS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Account Setup
+  [ ] Convert Pinterest account to Business (settings → account type)
+  [ ] Confirm website is claimed (hairtypequiz.hair — meta tag already installed)
+  [ ] Enable Rich Pins via Pinterest URL debugger
+
+Pinterest Tag Setup (equivalent of Meta Pixel)
+  [ ] Go to Ads → Conversions → Create Pinterest Tag
+  [ ] Name it "Strand Tag"
+  [ ] Copy the Tag ID (8–10 digit number)
+  [ ] Paste Tag ID to Claude → I'll add it to all 12 pages
+
+  SITE STATUS: Waiting for Pinterest Tag ID
+
+Conversions to Configure
+  [ ] PageView — all pages (included in base tag)
+  [ ] Custom — quiz completion (I'll add this once tag is installed)
+  [ ] Lead — email signup
+
+Promoted Pins Strategy
+  [ ] Wait 2 weeks of organic pinning before promoting
+  [ ] Check Pinterest Analytics → find top-performing organic pins
+  [ ] Promote top 2–3 pins first (proven organic interest = better paid performance)
+  [ ] Start with $5/day per promoted pin
+
+Best Pins to Promote First
+  [ ] Hair porosity test (educational, saves well)
+  [ ] Best products for 4C hair (commercial intent, affiliate synergy)
+  [ ] How to grow 4C hair faster (high search volume)
+
+Targeting
+  [ ] Interest: Natural hair care, 4C hair, Hair products
+  [ ] Keyword: "4c hair routine", "natural hair tips", "hair porosity"
+  [ ] Actalike: Upload your email list to Pinterest once you have 100+ subscribers
+
+DONE WHEN: Pinterest Tag fires on site + first 2 organic pins are getting
+           saves + one promoted pin is live.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MASTER LAUNCH SEQUENCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Week 1
+  [ ] Mailchimp account + welcome automation live
+  [ ] Checklist PDF uploaded and sending
+  [ ] Email signup form embedded on all pages (Claude)
+  [ ] Continue pinning remaining 6 posts organically (1–2/day)
+
+Week 2
+  [ ] Meta Pixel ID → paste to Claude → added to all pages
+  [ ] Pinterest Tag ID → paste to Claude → added to all pages
+  [ ] Google Ads account created + linked to GA4
+  [ ] First Google Search campaign live ($5–10/day, quiz keywords)
+
+Week 3
+  [ ] Meta Traffic campaign live ($5/day → blog posts)
+  [ ] Pinterest Rich Pins confirmed active
+  [ ] Check GA4 → confirm quiz_complete events are firing
+
+Week 4
+  [ ] Review: which blog posts are getting the most clicks/time-on-page
+  [ ] Double down on those topics with new posts
+  [ ] Meta: if pixel has 50+ events, launch Lead Gen campaign for checklist
+  [ ] Apply for Google AdSense once sessions cross 100/day
+
+Content Target: 20 posts before AdSense application
+  Posts live: 11
+  Posts needed: 9 more
+  Next up: 4A hair care routine → scalp care → best leave-ins for 4C

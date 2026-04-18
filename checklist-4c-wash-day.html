@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>4C Wash Day Checklist — Strand</title>
+<style>
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: block;
+  src: url('/fonts/cormorant-garamond-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 300 400;
+  font-display: block;
+  src: url('/fonts/cormorant-garamond-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 300 500;
+  font-display: block;
+  src: url('/fonts/dm-sans.woff2') format('woff2');
+}
+
+@page {
+  size: letter;
+  margin: 0.65in 0.75in;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: #FAF7F2;
+  color: #2A1F1A;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 48px 56px;
+  background: #FAF7F2;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #3D2B1F;
+  margin-bottom: 24px;
+}
+.logo {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: #3D2B1F;
+}
+.logo em { color: #C4945A; font-style: italic; }
+.header-meta { text-align: right; }
+.header-meta .doc-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #3D2B1F;
+  display: block;
+}
+.header-meta .doc-sub {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8B5E1A;
+}
+
+/* ── Intro callout ── */
+.intro {
+  background: #F5F0E8;
+  border-left: 3px solid #C4945A;
+  padding: 14px 18px;
+  margin-bottom: 28px;
+}
+.intro p { font-size: 13px; color: #3D2B1F; line-height: 1.75; }
+.intro strong { color: #8B5E1A; }
+
+/* ── Section ── */
+.section {
+  margin-bottom: 22px;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.section-num {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: #C4945A;
+  white-space: nowrap;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #3D2B1F;
+}
+.section-rule {
+  flex: 1;
+  height: 1px;
+  background: #E8DDD0;
+}
+.optional-tag {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9B8B82;
+  background: #F5F0E8;
+  padding: 2px 7px;
+  border: 1px solid #E8DDD0;
+}
+
+/* ── Checklist items ── */
+.items { list-style: none; }
+.items li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 5px 0 5px 4px;
+  border-bottom: 1px solid #F0EBE3;
+}
+.items li:last-child { border-bottom: none; }
+.box {
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  border: 1.5px solid #C4945A;
+  margin-top: 2px;
+  background: #fff;
+}
+.item-body { flex: 1; }
+.item-body span { color: #2A1F1A; }
+.item-body strong { color: #3D2B1F; font-weight: 500; }
+.item-note {
+  display: block;
+  font-size: 11px;
+  color: #9B8B82;
+  margin-top: 2px;
+  font-style: italic;
+}
+.item-tag {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8B5E1A;
+  white-space: nowrap;
+  margin-top: 3px;
+}
+
+/* ── Frequency grid ── */
+.freq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 6px;
+}
+.freq-item {
+  background: #F5F0E8;
+  border: 1px solid #E8DDD0;
+  padding: 9px 12px;
+}
+.freq-label {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9B8B82;
+  margin-bottom: 3px;
+}
+.freq-value {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #3D2B1F;
+}
+
+/* ── Signs it's working ── */
+.signs {
+  background: #3D2B1F;
+  padding: 16px 20px;
+  margin-top: 24px;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.signs-title {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C4945A;
+  margin-bottom: 10px;
+}
+.signs ul { list-style: none; }
+.signs li {
+  font-size: 12.5px;
+  color: rgba(250,247,242,0.8);
+  padding: 4px 0 4px 16px;
+  position: relative;
+}
+.signs li::before {
+  content: "\2192";
+  position: absolute;
+  left: 0;
+  color: #C4945A;
+}
+.signs li strong { color: #FAF7F2; }
+
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid #E8DDD0;
+  padding-top: 16px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.footer p { font-size: 11px; color: #9B8B82; }
+.footer a { color: #8B5E1A; text-decoration: none; }
+
+/* ── Print button (screen only) ── */
+.print-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #3D2B1F;
+  color: #FAF7F2;
+  border: none;
+  padding: 13px 28px;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 100;
+}
+.print-btn:hover { background: #C4945A; }
+
+@media print {
+  .print-btn { display: none; }
+  body { background: #FAF7F2; }
+  .page { padding: 0; }
+}
+</style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">Save as PDF &darr;</button>
+<div class="page">
+
+  <div class="header">
+    <div class="logo">str<em>a</em>nd</div>
+    <div class="header-meta">
+      <span class="doc-title">4C Wash Day Checklist</span>
+      <span class="doc-sub">hairtypequiz.hair</span>
+    </div>
+  </div>
+
+  <div class="intro">
+    <p><strong>4C hair grows half an inch every month.</strong> Whether you retain that growth depends entirely on wash day. This checklist covers the full sequence in the right order &mdash; including the steps most people skip that cause the most breakage.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <span class="section-title">Pre-Wash</span>
+      <div class="section-rule"></div>
+    </div>
+    <ul class="items">
+      <li><div class="box"></div><div class="item-body"><span>Section hair into 4 parts with clips</span><span class="item-note">Keeps detangling manageable and prevents re-tangling while you work</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span>Apply pre-poo to dry hair: coconut oil, olive oil, or a thick conditioner</span><span class="item-note">Protects the strand before water exposure &mdash; reduces hygral fatigue</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span>Cover with a plastic cap and let sit <strong>30 minutes minimum</strong>, or overnight</span></div></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <span class="section-title">Detangle</span>
+      <div class="section-rule"></div>
+    </div>
+    <ul class="items">
+      <li><div class="box"></div><div class="item-body"><span>Work one section at a time, all others clipped away</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span><strong>Start at the ends</strong>, work slowly toward the root &mdash; never root-to-tip</span><span class="item-note">Root-to-tip detangling causes the most breakage of any single mistake</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span>Use fingers first, then wide-tooth comb only. No bristle brushes on 4C</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span>Add a detangler or conditioner for slip if hair is resistant</span></div></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <span class="section-title">Cleanse</span>
+      <div class="section-rule"></div>
+    </div>
+    <ul class="items">
+      <li><div class="box"></div><div class="item-body"><span>Rinse out pre-poo with warm water</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span>Apply sulfate-free shampoo to <strong>scalp only</strong> &mdash; not the length</span><span class="item-note">Let it rinse through the length on its own &mdash; scrubbing causes tangles</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span>Massage scalp gently with fingertip pads for 3&ndash;4 minutes</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span>Rinse thoroughly until water runs clear</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span class="item-tag">Low porosity</span><span>Use a clarifying shampoo once a month to remove product buildup from flat cuticles</span></div></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <span class="section-title">Deep Condition</span>
+      <div class="section-rule"></div>
+      <span class="optional-tag">Never skip</span>
+    </div>
+    <ul class="items">
+      <li><div class="box"></div><div class="item-body"><span>Apply deep conditioner from <strong>mid-shaft to ends only</strong> &mdash; not the scalp</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span>Distribute with fingers or wide-tooth comb through each section</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span>Cover with plastic cap. Sit under hooded dryer or heated cap for <strong>20&ndash;30 min</strong></span><span class="item-note">Heat opens the cuticle so moisture penetrates &mdash; critical for low porosity hair</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span>Rinse with <strong>cool water</strong> to seal the cuticle flat</span></div></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <span class="section-title">ACV Rinse</span>
+      <div class="section-rule"></div>
+      <span class="optional-tag">Optional</span>
+    </div>
+    <ul class="items">
+      <li><div class="box"></div><div class="item-body"><span>Mix 1 part apple cider vinegar + 4 parts water</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span>Pour over hair after rinsing conditioner. Let sit 1 min, rinse cool</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span class="item-tag">High porosity</span><span>Smooths raised cuticles, restores pH, reduces frizz &mdash; use max once per week</span></div></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <span class="section-title">LOC or LCO Method</span>
+      <div class="section-rule"></div>
+    </div>
+    <ul class="items">
+      <li><div class="box"></div><div class="item-body"><span>Apply to <strong>soaking wet hair</strong> &mdash; do not towel dry first</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span><strong>L &mdash;</strong> Liquid: water-based leave-in conditioner, section by section</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span><strong>O &mdash;</strong> Oil: penetrating oil (jojoba, argan, or olive) over the leave-in</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span><strong>C &mdash;</strong> Cream or butter: seals everything in</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span class="item-tag">High porosity</span><span>Use LOC order &mdash; oil between liquid and cream slows moisture escape</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span class="item-tag">Low porosity</span><span>Use LCO order &mdash; cream before oil prevents oil blocking absorption on flat cuticles</span></div></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <span class="section-title">Style &amp; Protect</span>
+      <div class="section-rule"></div>
+    </div>
+    <ul class="items">
+      <li><div class="box"></div><div class="item-body"><span>Choose style while hair is still <strong>soaking wet</strong>: twist-out, braid-out, or wash-and-go</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span>Apply styling product section by section to wet hair</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span><strong>Do not touch while drying</strong> &mdash; let the curl set undisturbed</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span>Air dry or diffuse on low heat only</span></div></li>
+      <li><div class="box"></div><div class="item-body"><span>Overnight: pineapple or loose twists + satin bonnet or satin pillowcase</span><span class="item-note">Cotton absorbs moisture overnight and causes friction breakage every single night</span></div></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-title">Frequency Guide</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="freq-grid">
+      <div class="freq-item"><div class="freq-label">Full wash day</div><div class="freq-value">Every 1&ndash;2 weeks</div></div>
+      <div class="freq-item"><div class="freq-label">Deep condition</div><div class="freq-value">Every wash day</div></div>
+      <div class="freq-item"><div class="freq-label">Protein treatment</div><div class="freq-value">Every 6&ndash;8 weeks</div></div>
+      <div class="freq-item"><div class="freq-label">Scalp massage</div><div class="freq-value">3&ndash;4&times; per week</div></div>
+      <div class="freq-item"><div class="freq-label">Trim</div><div class="freq-value">Every 8&ndash;12 weeks</div></div>
+      <div class="freq-item"><div class="freq-label">Protective style</div><div class="freq-value">8 wks in, 2 out</div></div>
+    </div>
+  </div>
+
+  <div class="signs">
+    <div class="signs-title">Signs your routine is working</div>
+    <ul>
+      <li>Less breakage on wash day compared to last month</li>
+      <li>Hair stays moisturized for 48&ndash;72 hours between wash days</li>
+      <li>Fewer single-strand knots at the ends</li>
+      <li>Visible length retention &mdash; measure on <strong>stretched hair</strong>, not your shrunken wash-and-go</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2026 Strand &nbsp;&middot;&nbsp; <a href="https://hairtypequiz.hair">hairtypequiz.hair</a></p>
+    <p>Take the free quiz for your personalized routine &rarr;</p>
+  </div>
+
+</div>
+</body>
+</html>

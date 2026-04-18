@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+  <defs><style>.fs{font-family:Georgia,'Times New Roman',serif;}.fn{font-family:system-ui,-apple-system,Arial,sans-serif;}</style></defs>
+  <rect width="1200" height="1200" fill="#FAF7F2"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#3D2B1F"/>
+  <rect x="0" y="1192" width="1200" height="8" fill="#C4945A"/>
+  <text x="600" y="110" class="fn" font-size="15" fill="#8B5E1A" text-anchor="middle" letter-spacing="5">FREE HAIR QUIZ</text>
+  <text x="600" y="240" class="fs" font-size="104" fill="#3D2B1F" font-weight="700" text-anchor="middle">Your</text>
+  <text x="600" y="356" class="fs" font-size="104" fill="#3D2B1F" font-weight="700" text-anchor="middle">personalized</text>
+  <text x="600" y="472" class="fs" font-size="104" fill="#C4945A" font-style="italic" text-anchor="middle">hair routine</text>
+  <text x="600" y="556" class="fs" font-size="60" fill="#3D2B1F" font-weight="300" text-anchor="middle">in 30 seconds.</text>
+  <line x1="100" y1="590" x2="1100" y2="590" stroke="#E8DDD0" stroke-width="2"/>
+  <rect x="100" y="618" width="300" height="200" fill="#F5F0E8" rx="4"/>
+  <text x="250" y="694" class="fs" font-size="52" fill="#C4945A" text-anchor="middle" font-weight="700">12</text>
+  <text x="250" y="730" class="fn" font-size="16" fill="#7A5848" text-anchor="middle">hair types</text>
+  <text x="250" y="754" class="fn" font-size="16" fill="#7A5848" text-anchor="middle">covered</text>
+  <rect x="450" y="618" width="300" height="200" fill="#F5F0E8" rx="4"/>
+  <text x="600" y="694" class="fs" font-size="52" fill="#C4945A" text-anchor="middle" font-weight="700">5</text>
+  <text x="600" y="730" class="fn" font-size="16" fill="#7A5848" text-anchor="middle">product steps</text>
+  <text x="600" y="754" class="fn" font-size="16" fill="#7A5848" text-anchor="middle">per routine</text>
+  <rect x="800" y="618" width="300" height="200" fill="#F5F0E8" rx="4"/>
+  <text x="950" y="694" class="fs" font-size="52" fill="#C4945A" text-anchor="middle" font-weight="700">$0</text>
+  <text x="950" y="730" class="fn" font-size="16" fill="#7A5848" text-anchor="middle">completely</text>
+  <text x="950" y="754" class="fn" font-size="16" fill="#7A5848" text-anchor="middle">free</text>
+  <text x="600" y="878" class="fn" font-size="20" fill="#7A5848" text-anchor="middle">Identify your curl pattern, porosity, and density.</text>
+  <text x="600" y="908" class="fn" font-size="20" fill="#7A5848" text-anchor="middle">Get top-rated products and video tutorials</text>
+  <text x="600" y="936" class="fn" font-size="20" fill="#7A5848" text-anchor="middle">matched to your exact hair type.</text>
+  <rect x="200" y="984" width="800" height="80" fill="#3D2B1F"/>
+  <text x="600" y="1034" class="fs" font-size="32" fill="#FAF7F2" text-anchor="middle" font-weight="700">Find My Hair Type</text>
+  <text x="600" y="1130" class="fs" font-size="24" fill="rgba(61,43,31,0.25)" text-anchor="middle" letter-spacing="4">str<tspan fill="rgba(196,148,90,0.6)" font-style="italic">a</tspan>nd</text>
+</svg>

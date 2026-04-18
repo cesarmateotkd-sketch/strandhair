@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 628" width="1200" height="628">
+  <defs>
+    <style>
+      .f-serif { font-family: Georgia, 'Times New Roman', serif; }
+      .f-sans  { font-family: system-ui, -apple-system, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="628" fill="#3D2B1F"/>
+
+  <!-- Right accent panel -->
+  <rect x="780" y="0" width="420" height="628" fill="#2A1A0F"/>
+  <rect x="780" y="0" width="4" height="628" fill="#C4945A"/>
+
+  <!-- Left content -->
+  <!-- Eyebrow -->
+  <text x="64" y="120" class="f-sans" font-size="16" fill="#C4945A" letter-spacing="5">FREE HAIR TYPE QUIZ</text>
+
+  <!-- Headline -->
+  <text x="64" y="210" class="f-serif" font-size="72" fill="#FAF7F2" font-weight="700">Find Your</text>
+  <text x="64" y="290" class="f-serif" font-size="72" fill="#FAF7F2" font-weight="700">Exact Hair</text>
+  <text x="64" y="370" class="f-serif" font-size="72" fill="#C4945A" font-style="italic">Type.</text>
+
+  <!-- Subhead -->
+  <text x="64" y="430" class="f-sans" font-size="20" fill="rgba(250,247,242,0.6)">Types 1A through 4C — personalized routine</text>
+  <text x="64" y="456" class="f-sans" font-size="20" fill="rgba(250,247,242,0.6)">with top-rated products and tutorials.</text>
+
+  <!-- CTA button -->
+  <rect x="64" y="492" width="240" height="56" fill="#C4945A"/>
+  <text x="184" y="526" class="f-sans" font-size="17" fill="#FAF7F2" font-weight="500" text-anchor="middle" letter-spacing="1">Take the Quiz →</text>
+
+  <!-- Right panel content — hair type grid -->
+  <text x="820" y="90" class="f-sans" font-size="12" fill="rgba(196,148,90,0.6)" letter-spacing="3">EVERY TEXTURE</text>
+
+  <!-- Type chips -->
+  <rect x="820" y="108" width="68" height="68" fill="rgba(196,148,90,0.12)" rx="2"/>
+  <text x="854" y="149" class="f-serif" font-size="26" fill="#FAF7F2" text-anchor="middle" font-weight="700">1A</text>
+  <text x="854" y="167" class="f-sans" font-size="10" fill="rgba(196,148,90,0.7)" text-anchor="middle">Straight</text>
+
+  <rect x="900" y="108" width="68" height="68" fill="rgba(196,148,90,0.12)" rx="2"/>
+  <text x="934" y="149" class="f-serif" font-size="26" fill="#FAF7F2" text-anchor="middle" font-weight="700">2B</text>
+  <text x="934" y="167" class="f-sans" font-size="10" fill="rgba(196,148,90,0.7)" text-anchor="middle">Wavy</text>
+
+  <rect x="980" y="108" width="68" height="68" fill="rgba(196,148,90,0.12)" rx="2"/>
+  <text x="1014" y="149" class="f-serif" font-size="26" fill="#FAF7F2" text-anchor="middle" font-weight="700">3C</text>
+  <text x="1014" y="167" class="f-sans" font-size="10" fill="rgba(196,148,90,0.7)" text-anchor="middle">Curly</text>
+
+  <rect x="1060" y="108" width="68" height="68" fill="rgba(196,148,90,0.12)" rx="2"/>
+  <text x="1094" y="149" class="f-serif" font-size="26" fill="#FAF7F2" text-anchor="middle" font-weight="700">4C</text>
+  <text x="1094" y="167" class="f-sans" font-size="10" fill="rgba(196,148,90,0.7)" text-anchor="middle">Coily</text>
+
+  <!-- Feature list -->
+  <text x="820" y="232" class="f-sans" font-size="16" fill="#FAF7F2">→  Identify your curl pattern</text>
+  <text x="820" y="268" class="f-sans" font-size="16" fill="#FAF7F2">→  Get your porosity type</text>
+  <text x="820" y="304" class="f-sans" font-size="16" fill="#FAF7F2">→  Full personalized routine</text>
+  <text x="820" y="340" class="f-sans" font-size="16" fill="#FAF7F2">→  Top-rated product picks</text>
+  <text x="820" y="376" class="f-sans" font-size="16" fill="#FAF7F2">→  YouTube tutorials for your type</text>
+
+  <line x1="820" y1="410" x2="1140" y2="410" stroke="rgba(196,148,90,0.2)" stroke-width="1"/>
+
+  <text x="820" y="440" class="f-sans" font-size="13" fill="rgba(250,247,242,0.4)">Takes 30 seconds. Completely free.</text>
+
+  <!-- Logo -->
+  <text x="820" y="560" class="f-serif" font-size="28" fill="rgba(250,247,242,0.25)" letter-spacing="4">str</text>
+  <text x="862" y="560" class="f-serif" font-size="28" fill="rgba(196,148,90,0.5)" font-style="italic">a</text>
+  <text x="875" y="560" class="f-serif" font-size="28" fill="rgba(250,247,242,0.25)" letter-spacing="4">nd</text>
+  <text x="820" y="582" class="f-sans" font-size="12" fill="rgba(250,247,242,0.2)" letter-spacing="1">hairtypequiz.hair</text>
+</svg>

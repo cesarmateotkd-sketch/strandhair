@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 628" width="1200" height="628">
+  <defs><style>.fs{font-family:Georgia,'Times New Roman',serif;}.fn{font-family:system-ui,-apple-system,Arial,sans-serif;}</style></defs>
+  <rect width="1200" height="628" fill="#3D2B1F"/>
+  <rect x="580" y="0" width="620" height="628" fill="rgba(0,0,0,0.25)"/>
+  <rect x="580" y="0" width="4" height="628" fill="#C4945A"/>
+  <text x="60" y="110" class="fn" font-size="14" fill="rgba(196,148,90,0.8)" letter-spacing="4">PERSONALIZED ROUTINE</text>
+  <text x="60" y="210" class="fs" font-size="70" fill="#FAF7F2" font-weight="700">Stop buying</text>
+  <text x="60" y="294" class="fs" font-size="70" fill="#FAF7F2" font-weight="700">products that</text>
+  <text x="60" y="378" class="fs" font-size="70" fill="#C4945A" font-style="italic">don't work.</text>
+  <text x="60" y="434" class="fn" font-size="18" fill="rgba(250,247,242,0.5)">Know your type. Build your routine.</text>
+  <rect x="60" y="474" width="300" height="60" fill="#C4945A"/>
+  <text x="210" y="511" class="fn" font-size="17" fill="#FAF7F2" font-weight="500" text-anchor="middle">Take the Free Quiz</text>
+  <text x="620" y="100" class="fn" font-size="13" fill="rgba(196,148,90,0.6)" letter-spacing="3">YOUR ROUTINE INCLUDES</text>
+  <line x1="620" y1="118" x2="1140" y2="118" stroke="rgba(196,148,90,0.2)" stroke-width="1"/>
+  <text x="640" y="168" class="fs" font-size="20" fill="#FAF7F2">Shampoo</text>
+  <text x="640" y="196" class="fn" font-size="14" fill="rgba(250,247,242,0.45)">Sulfate-free formula for your porosity</text>
+  <text x="640" y="242" class="fs" font-size="20" fill="#FAF7F2">Deep Conditioner</text>
+  <text x="640" y="270" class="fn" font-size="14" fill="rgba(250,247,242,0.45)">Protein vs. moisture based on your needs</text>
+  <text x="640" y="316" class="fs" font-size="20" fill="#FAF7F2">Leave-In Conditioner</text>
+  <text x="640" y="344" class="fn" font-size="14" fill="rgba(250,247,242,0.45)">Lightweight or rich — matched to your type</text>
+  <text x="640" y="390" class="fs" font-size="20" fill="#FAF7F2">Styling Cream + Sealant</text>
+  <text x="640" y="418" class="fn" font-size="14" fill="rgba(250,247,242,0.45)">LOC or LCO — whichever suits your porosity</text>
+  <text x="640" y="464" class="fs" font-size="20" fill="#FAF7F2">Tutorial Videos</text>
+  <text x="640" y="492" class="fn" font-size="14" fill="rgba(250,247,242,0.45)">YouTube picks for your exact curl pattern</text>
+  <line x1="620" y1="520" x2="1140" y2="520" stroke="rgba(196,148,90,0.2)" stroke-width="1"/>
+  <text x="880" y="576" class="fs" font-size="20" fill="rgba(250,247,242,0.2)" text-anchor="middle" letter-spacing="3">str<tspan fill="rgba(196,148,90,0.4)" font-style="italic">a</tspan>nd</text>
+</svg>

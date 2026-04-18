@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" width="960" height="1200">
+  <defs><style>.fs{font-family:Georgia,'Times New Roman',serif;}.fn{font-family:system-ui,-apple-system,Arial,sans-serif;}</style></defs>
+  <rect width="960" height="1200" fill="#FAF7F2"/>
+  <rect x="0" y="0" width="960" height="8" fill="#3D2B1F"/>
+  <rect x="0" y="1192" width="960" height="8" fill="#C4945A"/>
+  <text x="480" y="96" class="fn" font-size="14" fill="#8B5E1A" text-anchor="middle" letter-spacing="5">HAIR POROSITY TEST</text>
+  <text x="480" y="216" class="fs" font-size="82" fill="#3D2B1F" font-weight="700" text-anchor="middle">Does your</text>
+  <text x="480" y="310" class="fs" font-size="82" fill="#3D2B1F" font-weight="700" text-anchor="middle">hair absorb</text>
+  <text x="480" y="404" class="fs" font-size="82" fill="#C4945A" font-style="italic" text-anchor="middle">moisture?</text>
+  <text x="480" y="462" class="fn" font-size="18" fill="#7A5848" text-anchor="middle">Porosity changes everything about your routine.</text>
+  <line x1="60" y1="494" x2="900" y2="494" stroke="#E8DDD0" stroke-width="2"/>
+  <rect x="60" y="518" width="840" height="128" fill="#F5F0E8" rx="3"/>
+  <rect x="60" y="518" width="5" height="128" fill="#C4945A"/>
+  <text x="88" y="566" class="fs" font-size="24" fill="#3D2B1F" font-weight="700">Low Porosity</text>
+  <text x="88" y="598" class="fn" font-size="16" fill="#7A5848">Flat cuticles resist moisture. Needs heat</text>
+  <text x="88" y="622" class="fn" font-size="16" fill="#7A5848">to open. LCO method works best.</text>
+  <rect x="60" y="660" width="840" height="128" fill="#F5F0E8" rx="3"/>
+  <rect x="60" y="660" width="5" height="128" fill="#7BB8A0"/>
+  <text x="88" y="708" class="fs" font-size="24" fill="#3D2B1F" font-weight="700">Medium Porosity</text>
+  <text x="88" y="740" class="fn" font-size="16" fill="#7A5848">Balanced and easy to maintain. Most</text>
+  <text x="88" y="764" class="fn" font-size="16" fill="#7A5848">products absorb and hold well.</text>
+  <rect x="60" y="802" width="840" height="128" fill="#F5F0E8" rx="3"/>
+  <rect x="60" y="802" width="5" height="128" fill="#C4945A"/>
+  <text x="88" y="850" class="fs" font-size="24" fill="#3D2B1F" font-weight="700">High Porosity</text>
+  <text x="88" y="882" class="fn" font-size="16" fill="#7A5848">Raised cuticles absorb and lose moisture</text>
+  <text x="88" y="906" class="fn" font-size="16" fill="#7A5848">fast. LOC method + protein treatments.</text>
+  <text x="480" y="974" class="fn" font-size="17" fill="#7A5848" text-anchor="middle">Take the free quiz to find your porosity type</text>
+  <text x="480" y="1002" class="fn" font-size="17" fill="#7A5848" text-anchor="middle">and get a personalized routine built for it.</text>
+  <rect x="80" y="1040" width="800" height="80" fill="#3D2B1F"/>
+  <text x="480" y="1089" class="fs" font-size="30" fill="#FAF7F2" text-anchor="middle" font-weight="700">Find Your Hair Type Free</text>
+  <text x="480" y="1158" class="fs" font-size="20" fill="rgba(61,43,31,0.25)" text-anchor="middle" letter-spacing="4">str<tspan fill="rgba(196,148,90,0.6)" font-style="italic">a</tspan>nd</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 628" width="1200" height="628">
+  <defs><style>.fs{font-family:Georgia,'Times New Roman',serif;}.fn{font-family:system-ui,-apple-system,Arial,sans-serif;}</style></defs>
+  <rect width="1200" height="628" fill="#FAF7F2"/>
+  <rect x="0" y="0" width="6" height="628" fill="#C4945A"/>
+  <rect x="660" y="0" width="540" height="628" fill="#3D2B1F"/>
+  <text x="60" y="110" class="fn" font-size="14" fill="#8B5E1A" letter-spacing="5">HAIR SCIENCE</text>
+  <text x="60" y="210" class="fs" font-size="68" fill="#3D2B1F" font-weight="700">Why your hair</text>
+  <text x="60" y="288" class="fs" font-size="68" fill="#3D2B1F" font-weight="700">products</text>
+  <text x="60" y="366" class="fs" font-size="68" fill="#C4945A" font-style="italic">aren't working.</text>
+  <text x="60" y="424" class="fn" font-size="18" fill="#7A5848">You might have the wrong products</text>
+  <text x="60" y="450" class="fn" font-size="18" fill="#7A5848">for your porosity type.</text>
+  <rect x="60" y="490" width="260" height="56" fill="#3D2B1F"/>
+  <text x="190" y="524" class="fn" font-size="16" fill="#FAF7F2" font-weight="500" text-anchor="middle" letter-spacing="1">Find Your Hair Type</text>
+  <text x="700" y="130" class="fn" font-size="13" fill="rgba(196,148,90,0.7)" letter-spacing="3">POROSITY TYPES</text>
+  <rect x="700" y="155" width="460" height="110" fill="rgba(196,148,90,0.1)" rx="3"/>
+  <rect x="700" y="155" width="4" height="110" fill="#C4945A"/>
+  <text x="722" y="195" class="fs" font-size="22" fill="#FAF7F2" font-weight="700">Low Porosity</text>
+  <text x="722" y="225" class="fn" font-size="15" fill="rgba(250,247,242,0.6)">Cuticles sealed flat — resists moisture</text>
+  <text x="722" y="248" class="fn" font-size="15" fill="rgba(250,247,242,0.6)">Needs heat + lightweight products</text>
+  <rect x="700" y="280" width="460" height="110" fill="rgba(255,255,255,0.04)" rx="3"/>
+  <rect x="700" y="280" width="4" height="110" fill="#7BB8A0"/>
+  <text x="722" y="320" class="fs" font-size="22" fill="#FAF7F2" font-weight="700">Medium Porosity</text>
+  <text x="722" y="350" class="fn" font-size="15" fill="rgba(250,247,242,0.6)">Balanced — most products work well</text>
+  <text x="722" y="373" class="fn" font-size="15" fill="rgba(250,247,242,0.6)">Easiest to maintain</text>
+  <rect x="700" y="405" width="460" height="110" fill="rgba(255,255,255,0.04)" rx="3"/>
+  <rect x="700" y="405" width="4" height="110" fill="#C4945A"/>
+  <text x="722" y="445" class="fs" font-size="22" fill="#FAF7F2" font-weight="700">High Porosity</text>
+  <text x="722" y="475" class="fn" font-size="15" fill="rgba(250,247,242,0.6)">Absorbs fast, dries fast — needs sealants</text>
+  <text x="722" y="498" class="fn" font-size="15" fill="rgba(250,247,242,0.6)">Protein treatments + LOC method</text>
+  <text x="930" y="590" class="fs" font-size="22" fill="rgba(250,247,242,0.2)" text-anchor="middle" letter-spacing="3">str<tspan fill="rgba(196,148,90,0.4)" font-style="italic">a</tspan>nd</text>
+</svg>

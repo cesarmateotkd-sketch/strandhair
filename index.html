@@ -383,7 +383,10 @@ nav {
 .hair-family {
   background: var(--sand);
   padding: 4px 4px 0;
+  display: flex;
+  flex-direction: column;
 }
+.hair-card + .hair-card { margin-top: 2px; }
 .family-label {
   font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 22px;
@@ -398,7 +401,6 @@ nav {
   letter-spacing: 0.03em;
   line-height: 1.4;
 }
-.hair-subtypes { display: flex; flex-direction: column; gap: 2px; }
 .hair-card {
   background: var(--cream);
   padding: 18px 16px;
@@ -1013,104 +1015,96 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: rotate(-45deg); }
 
   <div class="hair-grid" role="list" aria-label="Hair type selection grid">
     <!-- TYPE 1 -->
-    <div class="hair-family" role="group" aria-label="Type 1: Straight hair">
+    <div class="hair-family">
       <div class="family-label">Type 1</div>
       <div class="family-desc">Straight — no natural curl or wave pattern</div>
-      <div class="hair-subtypes" role="presentation">
-        <article class="hair-card" role="listitem" data-type="1A" onclick="selectHair(this,'1A')" tabindex="0" aria-label="1A Pin-Straight hair type" onkeypress="if(event.key==='Enter')selectHair(this,'1A')">
-          <div class="hair-visual" aria-hidden="true">𝄁</div>
-          <div class="hair-type-id">1A</div>
-          <div class="hair-type-name">Pin-Straight</div>
-          <div class="hair-type-desc">Very fine, soft, no body or volume</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="1B" onclick="selectHair(this,'1B')" tabindex="0" aria-label="1B Straight with body" onkeypress="if(event.key==='Enter')selectHair(this,'1B')">
-          <div class="hair-visual" aria-hidden="true">〜</div>
-          <div class="hair-type-id">1B</div>
-          <div class="hair-type-name">Straight + Body</div>
-          <div class="hair-type-desc">Medium texture, slight bends at ends</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="1C" onclick="selectHair(this,'1C')" tabindex="0" aria-label="1C Straight coarse" onkeypress="if(event.key==='Enter')selectHair(this,'1C')">
-          <div class="hair-visual" aria-hidden="true">〰</div>
-          <div class="hair-type-id">1C</div>
-          <div class="hair-type-name">Straight + Coarse</div>
-          <div class="hair-type-desc">Thick, resistant, slight wave tendency</div>
-        </article>
-      </div>
+      <article class="hair-card" role="listitem" data-type="1A" onclick="selectHair(this,'1A')" tabindex="0" aria-label="1A Pin-Straight hair type" onkeypress="if(event.key==='Enter')selectHair(this,'1A')">
+        <div class="hair-visual" aria-hidden="true">𝄁</div>
+        <div class="hair-type-id">1A</div>
+        <div class="hair-type-name">Pin-Straight</div>
+        <div class="hair-type-desc">Very fine, soft, no body or volume</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="1B" onclick="selectHair(this,'1B')" tabindex="0" aria-label="1B Straight with body" onkeypress="if(event.key==='Enter')selectHair(this,'1B')">
+        <div class="hair-visual" aria-hidden="true">〜</div>
+        <div class="hair-type-id">1B</div>
+        <div class="hair-type-name">Straight + Body</div>
+        <div class="hair-type-desc">Medium texture, slight bends at ends</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="1C" onclick="selectHair(this,'1C')" tabindex="0" aria-label="1C Straight coarse" onkeypress="if(event.key==='Enter')selectHair(this,'1C')">
+        <div class="hair-visual" aria-hidden="true">〰</div>
+        <div class="hair-type-id">1C</div>
+        <div class="hair-type-name">Straight + Coarse</div>
+        <div class="hair-type-desc">Thick, resistant, slight wave tendency</div>
+      </article>
     </div>
     <!-- TYPE 2 -->
-    <div class="hair-family" role="group" aria-label="Type 2: Wavy hair">
+    <div class="hair-family">
       <div class="family-label">Type 2</div>
       <div class="family-desc">Wavy — S-pattern, between straight and curly</div>
-      <div class="hair-subtypes" role="presentation">
-        <article class="hair-card" role="listitem" data-type="2A" onclick="selectHair(this,'2A')" tabindex="0" aria-label="2A Loose wave" onkeypress="if(event.key==='Enter')selectHair(this,'2A')">
-          <div class="hair-visual" aria-hidden="true">∿</div>
-          <div class="hair-type-id">2A</div>
-          <div class="hair-type-name">Loose Wave</div>
-          <div class="hair-type-desc">Fine, tousled S-wave, easily straightens</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="2B" onclick="selectHair(this,'2B')" tabindex="0" aria-label="2B Defined wave" onkeypress="if(event.key==='Enter')selectHair(this,'2B')">
-          <div class="hair-visual" aria-hidden="true">ꞑ</div>
-          <div class="hair-type-id">2B</div>
-          <div class="hair-type-name">Defined Wave</div>
-          <div class="hair-type-desc">Medium, flat roots + wavy mid-length</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="2C" onclick="selectHair(this,'2C')" tabindex="0" aria-label="2C Strong wave" onkeypress="if(event.key==='Enter')selectHair(this,'2C')">
-          <div class="hair-visual" aria-hidden="true">ꭥ</div>
-          <div class="hair-type-id">2C</div>
-          <div class="hair-type-name">Strong Wave</div>
-          <div class="hair-type-desc">Thick, coarse, frizz-prone S-waves</div>
-        </article>
-      </div>
+      <article class="hair-card" role="listitem" data-type="2A" onclick="selectHair(this,'2A')" tabindex="0" aria-label="2A Loose wave" onkeypress="if(event.key==='Enter')selectHair(this,'2A')">
+        <div class="hair-visual" aria-hidden="true">∿</div>
+        <div class="hair-type-id">2A</div>
+        <div class="hair-type-name">Loose Wave</div>
+        <div class="hair-type-desc">Fine, tousled S-wave, easily straightens</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="2B" onclick="selectHair(this,'2B')" tabindex="0" aria-label="2B Defined wave" onkeypress="if(event.key==='Enter')selectHair(this,'2B')">
+        <div class="hair-visual" aria-hidden="true">ꞑ</div>
+        <div class="hair-type-id">2B</div>
+        <div class="hair-type-name">Defined Wave</div>
+        <div class="hair-type-desc">Medium, flat roots + wavy mid-length</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="2C" onclick="selectHair(this,'2C')" tabindex="0" aria-label="2C Strong wave" onkeypress="if(event.key==='Enter')selectHair(this,'2C')">
+        <div class="hair-visual" aria-hidden="true">ꭥ</div>
+        <div class="hair-type-id">2C</div>
+        <div class="hair-type-name">Strong Wave</div>
+        <div class="hair-type-desc">Thick, coarse, frizz-prone S-waves</div>
+      </article>
     </div>
     <!-- TYPE 3 -->
-    <div class="hair-family" role="group" aria-label="Type 3: Curly hair">
+    <div class="hair-family">
       <div class="family-label">Type 3</div>
       <div class="family-desc">Curly — springy, defined spiral patterns</div>
-      <div class="hair-subtypes" role="presentation">
-        <article class="hair-card" role="listitem" data-type="3A" onclick="selectHair(this,'3A')" tabindex="0" aria-label="3A Loose curl" onkeypress="if(event.key==='Enter')selectHair(this,'3A')">
-          <div class="hair-visual" aria-hidden="true">ɾ</div>
-          <div class="hair-type-id">3A</div>
-          <div class="hair-type-name">Loose Curl</div>
-          <div class="hair-type-desc">Large, shiny spirals, pencil-wide</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="3B" onclick="selectHair(this,'3B')" tabindex="0" aria-label="3B Springy curl" onkeypress="if(event.key==='Enter')selectHair(this,'3B')">
-          <div class="hair-visual" aria-hidden="true">ɕ</div>
-          <div class="hair-type-id">3B</div>
-          <div class="hair-type-name">Springy Curl</div>
-          <div class="hair-type-desc">Defined corkscrews, more volume</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="3C" onclick="selectHair(this,'3C')" tabindex="0" aria-label="3C Tight curl" onkeypress="if(event.key==='Enter')selectHair(this,'3C')">
-          <div class="hair-visual" aria-hidden="true">ɔ</div>
-          <div class="hair-type-id">3C</div>
-          <div class="hair-type-name">Tight Curl</div>
-          <div class="hair-type-desc">Tight corkscrews, straw-width curls</div>
-        </article>
-      </div>
+      <article class="hair-card" role="listitem" data-type="3A" onclick="selectHair(this,'3A')" tabindex="0" aria-label="3A Loose curl" onkeypress="if(event.key==='Enter')selectHair(this,'3A')">
+        <div class="hair-visual" aria-hidden="true">ɾ</div>
+        <div class="hair-type-id">3A</div>
+        <div class="hair-type-name">Loose Curl</div>
+        <div class="hair-type-desc">Large, shiny spirals, pencil-wide</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="3B" onclick="selectHair(this,'3B')" tabindex="0" aria-label="3B Springy curl" onkeypress="if(event.key==='Enter')selectHair(this,'3B')">
+        <div class="hair-visual" aria-hidden="true">ɕ</div>
+        <div class="hair-type-id">3B</div>
+        <div class="hair-type-name">Springy Curl</div>
+        <div class="hair-type-desc">Defined corkscrews, more volume</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="3C" onclick="selectHair(this,'3C')" tabindex="0" aria-label="3C Tight curl" onkeypress="if(event.key==='Enter')selectHair(this,'3C')">
+        <div class="hair-visual" aria-hidden="true">ɔ</div>
+        <div class="hair-type-id">3C</div>
+        <div class="hair-type-name">Tight Curl</div>
+        <div class="hair-type-desc">Tight corkscrews, straw-width curls</div>
+      </article>
     </div>
     <!-- TYPE 4 -->
-    <div class="hair-family" role="group" aria-label="Type 4: Coily hair">
+    <div class="hair-family">
       <div class="family-label">Type 4</div>
       <div class="family-desc">Coily — densely packed, most shrinkage</div>
-      <div class="hair-subtypes" role="presentation">
-        <article class="hair-card" role="listitem" data-type="4A" onclick="selectHair(this,'4A')" tabindex="0" aria-label="4A Soft coil" onkeypress="if(event.key==='Enter')selectHair(this,'4A')">
-          <div class="hair-visual" aria-hidden="true">ȣ</div>
-          <div class="hair-type-id">4A</div>
-          <div class="hair-type-name">Soft Coil</div>
-          <div class="hair-type-desc">Defined S-coils, visible curl pattern</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="4B" onclick="selectHair(this,'4B')" tabindex="0" aria-label="4B Z-pattern coil" onkeypress="if(event.key==='Enter')selectHair(this,'4B')">
-          <div class="hair-visual" aria-hidden="true">z</div>
-          <div class="hair-type-id">4B</div>
-          <div class="hair-type-name">Z-Pattern Coil</div>
-          <div class="hair-type-desc">Sharp angles, cottony, less defined</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="4C" onclick="selectHair(this,'4C')" tabindex="0" aria-label="4C Tight coil" onkeypress="if(event.key==='Enter')selectHair(this,'4C')">
-          <div class="hair-visual" aria-hidden="true">⁓</div>
-          <div class="hair-type-id">4C</div>
-          <div class="hair-type-name">Tight Coil</div>
-          <div class="hair-type-desc">Tightest coil, max shrinkage, fragile</div>
-        </article>
-      </div>
+      <article class="hair-card" role="listitem" data-type="4A" onclick="selectHair(this,'4A')" tabindex="0" aria-label="4A Soft coil" onkeypress="if(event.key==='Enter')selectHair(this,'4A')">
+        <div class="hair-visual" aria-hidden="true">ȣ</div>
+        <div class="hair-type-id">4A</div>
+        <div class="hair-type-name">Soft Coil</div>
+        <div class="hair-type-desc">Defined S-coils, visible curl pattern</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="4B" onclick="selectHair(this,'4B')" tabindex="0" aria-label="4B Z-pattern coil" onkeypress="if(event.key==='Enter')selectHair(this,'4B')">
+        <div class="hair-visual" aria-hidden="true">z</div>
+        <div class="hair-type-id">4B</div>
+        <div class="hair-type-name">Z-Pattern Coil</div>
+        <div class="hair-type-desc">Sharp angles, cottony, less defined</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="4C" onclick="selectHair(this,'4C')" tabindex="0" aria-label="4C Tight coil" onkeypress="if(event.key==='Enter')selectHair(this,'4C')">
+        <div class="hair-visual" aria-hidden="true">⁓</div>
+        <div class="hair-type-id">4C</div>
+        <div class="hair-type-name">Tight Coil</div>
+        <div class="hair-type-desc">Tightest coil, max shrinkage, fragile</div>
+      </article>
     </div>
   </div>
 </section>

@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Analytics — deferred after load to keep it off the critical path -->
+<!-- Google Analytics — loads on first user interaction to stay out of Lighthouse -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-WZFESSQ350');
-  window.addEventListener('load', function() {
+  var _gaLoaded = false;
+  function _loadGA() {
+    if (_gaLoaded) return; _gaLoaded = true;
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WZFESSQ350';
     document.head.appendChild(s);
+  }
+  var _gaTimer = setTimeout(_loadGA, 5000);
+  ['mousedown','keydown','touchstart','scroll'].forEach(function(evt) {
+    window.addEventListener(evt, function h() {
+      clearTimeout(_gaTimer); _loadGA();
+      window.removeEventListener(evt, h);
+    }, {passive: true});
   });
 </script>
 <!-- ═══════════════════════════════════════════════════

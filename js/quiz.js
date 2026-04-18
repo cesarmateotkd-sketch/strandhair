@@ -442,6 +442,10 @@ function _showResults(skipScroll) {
   resultsEl.classList.add('active');
   // Update page title and meta for SEO shareability
   document.title = `Type ${selectedType} Hair Routine — Best Products & Tutorials | Strand`;
+  // Conversion event — used by Google Ads and GA4 for campaign optimization
+  if (typeof gtag === 'function') {
+    gtag('event', 'quiz_complete', { hair_type: selectedType });
+  }
 
   if (!skipScroll) {
     requestAnimationFrame(() => requestAnimationFrame(() =>

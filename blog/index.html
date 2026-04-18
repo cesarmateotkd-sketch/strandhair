@@ -61,9 +61,12 @@
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root {
+  @font-face{font-family:'Cormorant Garamond Fallback';src:local('Georgia');size-adjust:89%;ascent-override:95%;descent-override:25%;line-gap-override:0%;}
+  @font-face{font-family:'DM Sans Fallback';src:local('Arial');size-adjust:102%;ascent-override:96%;descent-override:22%;line-gap-override:0%;}
+  :root {
   --cream: #FAF7F2; --warm-white: #F5F0E8; --sand: #E8DDD0;
   --mocha: #8B6F5E; --espresso: #3D2B1F; --caramel: #C4945A;
   --text: #2A1F1A; --muted: #9B8B82;

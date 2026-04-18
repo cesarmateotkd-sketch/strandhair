@@ -49,11 +49,14 @@
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#FAF7F2;--warm:#F5F0E8;--sand:#E8DDD0;--mocha:#8B6F5E;--espresso:#3D2B1F;--caramel:#C4945A;--muted:#9B8B82;}
+  @font-face{font-family:'Cormorant Garamond Fallback';src:local('Georgia');size-adjust:89%;ascent-override:95%;descent-override:25%;line-gap-override:0%;}
+  @font-face{font-family:'DM Sans Fallback';src:local('Arial');size-adjust:102%;ascent-override:96%;descent-override:22%;line-gap-override:0%;}
+  :root{--cream:#FAF7F2;--warm:#F5F0E8;--sand:#E8DDD0;--mocha:#8B6F5E;--espresso:#3D2B1F;--caramel:#C4945A;--muted:#9B8B82;}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--espresso);line-height:1.7;}
+body{font-family:'DM Sans','DM Sans Fallback',sans-serif;background:var(--cream);color:var(--espresso);line-height:1.7;}
 nav{display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:1px solid var(--sand);background:var(--cream);position:sticky;top:0;z-index:100;}
 .nav-links{display:flex;gap:28px;list-style:none;}
 .nav-links a{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
@@ -73,21 +76,21 @@ nav.nav-open .nav-links{display:flex;}
 .nav-links a{display:block;padding:13px 0;font-size:14px;}
 article{padding-left:20px;padding-right:20px;}
 }
-.logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;letter-spacing:.12em;text-decoration:none;color:var(--espresso);}
+.logo{font-family:'Cormorant Garamond','Cormorant Garamond Fallback',serif;font-size:24px;font-weight:300;letter-spacing:.12em;text-decoration:none;color:var(--espresso);}
 .logo span{color:var(--caramel);font-style:italic;}
 article{max-width:740px;margin:0 auto;padding:64px 24px 96px;}
 .post-tag{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--caramel);margin-bottom:16px;}
-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);font-weight:300;line-height:1.1;color:var(--espresso);margin-bottom:20px;}
+h1{font-family:'Cormorant Garamond','Cormorant Garamond Fallback',serif;font-size:clamp(36px,5vw,56px);font-weight:300;line-height:1.1;color:var(--espresso);margin-bottom:20px;}
 .meta{font-size:12px;color:var(--muted);margin-bottom:48px;padding-bottom:24px;border-bottom:1px solid var(--sand);}
-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,30px);font-weight:400;color:var(--espresso);margin:48px 0 16px;}
-h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--espresso);margin:32px 0 10px;}
+h2{font-family:'Cormorant Garamond','Cormorant Garamond Fallback',serif;font-size:clamp(22px,3vw,30px);font-weight:400;color:var(--espresso);margin:48px 0 16px;}
+h3{font-family:'Cormorant Garamond','Cormorant Garamond Fallback',serif;font-size:22px;font-weight:400;color:var(--espresso);margin:32px 0 10px;}
 p{font-size:16px;color:#4A3728;line-height:1.85;margin-bottom:20px;}
 ul,ol{padding-left:24px;margin-bottom:20px;}
 li{font-size:16px;color:#4A3728;line-height:1.8;margin-bottom:8px;}
 .callout{background:var(--warm);border-left:4px solid var(--caramel);padding:20px 24px;margin:32px 0;}
 .callout p{margin:0;font-size:15px;}
 .loc-step{background:var(--warm);border:1px solid var(--sand);padding:28px;margin:20px 0;position:relative;}
-.loc-letter{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:var(--sand);position:absolute;top:16px;right:20px;line-height:1;}
+.loc-letter{font-family:'Cormorant Garamond','Cormorant Garamond Fallback',serif;font-size:64px;font-weight:300;color:var(--sand);position:absolute;top:16px;right:20px;line-height:1;}
 .loc-step h3{margin:0 0 6px;font-size:22px;}
 .loc-step .sub{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--caramel);margin-bottom:12px;}
 .comparison-table{width:100%;border-collapse:collapse;margin:24px 0;}
@@ -95,7 +98,7 @@ li{font-size:16px;color:#4A3728;line-height:1.8;margin-bottom:8px;}
 .comparison-table td{padding:12px 16px;border-bottom:1px solid var(--sand);font-size:14px;color:#4A3728;vertical-align:top;}
 .comparison-table tr:nth-child(even) td{background:var(--warm);}
 .cta-box{background:var(--espresso);padding:40px;text-align:center;margin:56px 0;}
-.cta-box h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--cream);margin-bottom:8px;}
+.cta-box h3{font-family:'Cormorant Garamond','Cormorant Garamond Fallback',serif;font-size:28px;font-weight:300;color:var(--cream);margin-bottom:8px;}
 .cta-box p{color:rgba(255,255,255,.6);font-size:14px;margin-bottom:24px;}
 .cta-box a{display:inline-block;padding:14px 36px;background:var(--caramel);color:var(--cream);text-decoration:none;font-size:12px;letter-spacing:.15em;text-transform:uppercase;}
 footer{background:var(--espresso);padding:32px 48px;text-align:center;}
@@ -282,7 +285,7 @@ footer a{color:rgba(255,255,255,.5);text-decoration:none;}
   </section>
   <div style="text-align:center;margin:40px 0 0;padding:24px 0;border-top:1px solid var(--sand);">
     <p style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Found this helpful?</p>
-    <a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fhairtypequiz.hair%2Fblog%2Floc-method-beginners-guide.html&media=https%3A%2F%2Fhairtypequiz.hair%2Fimages%2Fog-loc-method.png&description=The+LOC+Method+for+Natural+Hair+—+complete+beginner%27s+guide+to+Liquid%2C+Oil%2C+Cream+moisture+layering.+Lock+in+hydration+for+days.+%23naturalhair+%23LOCmethod+%23haircare+%23curlyhair" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#E60023;color:#fff;text-decoration:none;padding:12px 24px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:.05em;">
+    <a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fhairtypequiz.hair%2Fblog%2Floc-method-beginners-guide.html&media=https%3A%2F%2Fhairtypequiz.hair%2Fimages%2Fog-loc-method.png&description=The+LOC+Method+for+Natural+Hair+—+complete+beginner%27s+guide+to+Liquid%2C+Oil%2C+Cream+moisture+layering.+Lock+in+hydration+for+days.+%23naturalhair+%23LOCmethod+%23haircare+%23curlyhair" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#E60023;color:#fff;text-decoration:none;padding:12px 24px;font-family:'DM Sans','DM Sans Fallback',sans-serif;font-size:13px;font-weight:500;letter-spacing:.05em;">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
       Save to Pinterest
     </a>

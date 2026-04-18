@@ -112,10 +112,13 @@
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-:root {
+  @font-face{font-family:'Cormorant Garamond Fallback';src:local('Georgia');size-adjust:89%;ascent-override:95%;descent-override:25%;line-gap-override:0%;}
+  @font-face{font-family:'DM Sans Fallback';src:local('Arial');size-adjust:102%;ascent-override:96%;descent-override:22%;line-gap-override:0%;}
+  :root {
   --cream: #FAF7F2;
   --warm-white: #F5F0E8;
   --sand: #E8DDD0;
@@ -1223,41 +1226,41 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: rotate(-45deg); }
 <section aria-labelledby="blog-heading" style="background:var(--warm-white);padding:80px 48px;border-top:1px solid var(--sand);">
   <div style="max-width:900px;margin:0 auto;">
     <p class="section-label" style="text-align:center;margin-bottom:12px;">From the Blog</p>
-    <h2 id="blog-heading" style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,42px);font-weight:300;text-align:center;margin-bottom:48px;color:var(--espresso);">Hair care, <em style="font-style:italic;color:var(--caramel);">demystified.</em></h2>
+    <h2 id="blog-heading" style="font-family:'Cormorant Garamond','Cormorant Garamond Fallback',serif;font-size:clamp(28px,4vw,42px);font-weight:300;text-align:center;margin-bottom:48px;color:var(--espresso);">Hair care, <em style="font-style:italic;color:var(--caramel);">demystified.</em></h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;margin-bottom:40px;">
       <a href="blog/how-to-grow-4c-hair-faster.html" style="background:var(--cream);border:1px solid var(--sand);padding:24px;display:flex;flex-direction:column;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(61,43,31,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <span style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--caramel);margin-bottom:10px;">4C Hair · Growth</span>
-        <span style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">How to Grow 4C Hair Faster — Science-Backed Guide</span>
+        <span style="font-family:'Cormorant Garamond','Cormorant Garamond Fallback',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">How to Grow 4C Hair Faster — Science-Backed Guide</span>
         <span style="font-size:12px;color:var(--muted);margin-top:auto;padding-top:12px;border-top:1px solid var(--sand);">Read Article →</span>
       </a>
       <a href="blog/protective-styles-for-natural-hair.html" style="background:var(--cream);border:1px solid var(--sand);padding:24px;display:flex;flex-direction:column;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(61,43,31,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <span style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--caramel);margin-bottom:10px;">Natural Hair · Length Retention</span>
-        <span style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">Best Protective Styles for Natural Hair — 10 Styles</span>
+        <span style="font-family:'Cormorant Garamond','Cormorant Garamond Fallback',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">Best Protective Styles for Natural Hair — 10 Styles</span>
         <span style="font-size:12px;color:var(--muted);margin-top:auto;padding-top:12px;border-top:1px solid var(--sand);">Read Article →</span>
       </a>
       <a href="blog/how-to-wash-4c-hair.html" style="background:var(--cream);border:1px solid var(--sand);padding:24px;display:flex;flex-direction:column;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(61,43,31,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <span style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--caramel);margin-bottom:10px;">Wash Day</span>
-        <span style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">How to Wash 4C Hair Without Breakage — Complete Routine</span>
+        <span style="font-family:'Cormorant Garamond','Cormorant Garamond Fallback',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">How to Wash 4C Hair Without Breakage — Complete Routine</span>
         <span style="font-size:12px;color:var(--muted);margin-top:auto;padding-top:12px;border-top:1px solid var(--sand);">Read Article →</span>
       </a>
       <a href="blog/loc-method-beginners-guide.html" style="background:var(--cream);border:1px solid var(--sand);padding:24px;display:flex;flex-direction:column;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(61,43,31,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <span style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--caramel);margin-bottom:10px;">Natural Hair · Technique</span>
-        <span style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">The LOC Method for Natural Hair — Beginner's Guide</span>
+        <span style="font-family:'Cormorant Garamond','Cormorant Garamond Fallback',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">The LOC Method for Natural Hair — Beginner's Guide</span>
         <span style="font-size:12px;color:var(--muted);margin-top:auto;padding-top:12px;border-top:1px solid var(--sand);">Read Article →</span>
       </a>
       <a href="blog/protein-treatment-for-natural-hair.html" style="background:var(--cream);border:1px solid var(--sand);padding:24px;display:flex;flex-direction:column;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(61,43,31,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <span style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--caramel);margin-bottom:10px;">Natural Hair · Strength</span>
-        <span style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">Protein Treatment for Natural Hair — Light, Medium &amp; Heavy</span>
+        <span style="font-family:'Cormorant Garamond','Cormorant Garamond Fallback',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">Protein Treatment for Natural Hair — Light, Medium &amp; Heavy</span>
         <span style="font-size:12px;color:var(--muted);margin-top:auto;padding-top:12px;border-top:1px solid var(--sand);">Read Article →</span>
       </a>
       <a href="blog/best-diffusers-for-curly-hair.html" style="background:var(--cream);border:1px solid var(--sand);padding:24px;display:flex;flex-direction:column;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(61,43,31,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <span style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--caramel);margin-bottom:10px;">Curly Hair · Tools</span>
-        <span style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">Best Diffusers for Curly Hair — Top Picks &amp; Techniques</span>
+        <span style="font-family:'Cormorant Garamond','Cormorant Garamond Fallback',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">Best Diffusers for Curly Hair — Top Picks &amp; Techniques</span>
         <span style="font-size:12px;color:var(--muted);margin-top:auto;padding-top:12px;border-top:1px solid var(--sand);">Read Article →</span>
       </a>
     </div>
     <div style="text-align:center;">
-      <a href="blog/" style="display:inline-block;padding:14px 40px;border:1px solid var(--espresso);color:var(--espresso);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.background='var(--espresso)';this.style.color='var(--cream)'" onmouseout="this.style.background='';this.style.color='var(--espresso)'">View All 10 Articles →</a>
+      <a href="blog/" style="display:inline-block;padding:14px 40px;border:1px solid var(--espresso);color:var(--espresso);font-family:'DM Sans','DM Sans Fallback',sans-serif;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.background='var(--espresso)';this.style.color='var(--cream)'" onmouseout="this.style.background='';this.style.color='var(--espresso)'">View All 10 Articles →</a>
     </div>
   </div>
 </section>

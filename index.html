@@ -146,14 +146,15 @@
   --cream: #FAF7F2;
   --warm-white: #F5F0E8;
   --sand: #E8DDD0;
-  --mocha: #8B6F5E;
+  --mocha: #7A5848;
   --espresso: #3D2B1F;
   --caramel: #C4945A;
   --sage: #7A8C7E;
   --blush: #E8C4B0;
   --text: #2A1F1A;
-  --muted: #9B8B82;
+  --muted: #6B5B53;
   --green: #4A7C5F;
+  --caramel-text: #8B5E1A;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -193,7 +194,7 @@ body {
   letter-spacing: 0.04em;
 }
 .affiliate-bar strong { color: var(--mocha); font-weight: 500; }
-.affiliate-bar a { color: var(--caramel); text-decoration: underline; }
+.affiliate-bar a { color: var(--caramel-text); text-decoration: underline; }
 
 /* ─── NAV ─── */
 nav {
@@ -216,7 +217,7 @@ nav {
   color: var(--espresso);
   text-decoration: none;
 }
-.logo span { color: var(--caramel); font-style: italic; }
+.logo span { color: var(--caramel-text); font-style: italic; }
 .nav-links {
   display: flex;
   gap: 32px;
@@ -243,7 +244,7 @@ nav {
   font-size: 11px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--caramel);
+  color: var(--caramel-text);
   margin-bottom: 20px;
   animation: fadeUp 0.6s ease both;
 }
@@ -331,7 +332,7 @@ nav {
   font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 52px;
   font-weight: 300;
-  color: rgba(196,148,90,0.4);
+  color: rgba(196,148,90,0.75);
   line-height: 1;
   margin-bottom: 12px;
 }
@@ -353,7 +354,7 @@ nav {
   font-size: 11px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--caramel);
+  color: var(--caramel-text);
   text-align: center;
   margin-bottom: 12px;
 }
@@ -528,7 +529,7 @@ nav {
   font-size: 11px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--caramel);
+  color: var(--caramel-text);
   margin-bottom: 24px;
   display: flex;
   align-items: center;
@@ -584,7 +585,7 @@ nav {
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--caramel);
+  color: var(--caramel-text);
   font-weight: 500;
 }
 .product-emoji { font-size: 30px; margin-bottom: 12px; }
@@ -597,9 +598,9 @@ nav {
   margin-bottom: 10px;
   line-height: 1.3;
 }
-.stars { color: var(--caramel); font-size: 12px; margin-bottom: 4px; }
+.stars { color: var(--caramel-text); font-size: 12px; margin-bottom: 4px; }
 .review-count { font-size: 11px; color: var(--muted); margin-bottom: 8px; }
-.price-range { font-size: 13px; color: var(--sage); font-weight: 500; margin-bottom: 12px; }
+.price-range { font-size: 13px; color: #3D5C47; font-weight: 500; margin-bottom: 12px; }
 .product-why {
   font-size: 12px;
   color: var(--mocha);
@@ -639,7 +640,7 @@ nav {
 }
 .tutorials-block .tut-sub {
   font-size: 12px;
-  color: rgba(250,247,242,0.5);
+  color: rgba(250,247,242,0.7);
   margin-bottom: 20px;
   letter-spacing: 0.05em;
 }
@@ -661,11 +662,11 @@ nav {
 }
 .yt-search-card:hover {
   background: rgba(255,255,255,0.11);
-  border-color: rgba(196,148,90,0.4);
+  border-color: rgba(196,148,90,0.75);
 }
 .yt-search-label {
   font-size: 10px;
-  color: rgba(250,247,242,0.35);
+  color: rgba(250,247,242,0.6);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -798,7 +799,7 @@ nav {
   color: var(--espresso);
   line-height: 1.4;
 }
-.faq-icon { font-size: 20px; color: var(--caramel); flex-shrink: 0; transition: transform 0.2s; }
+.faq-icon { font-size: 20px; color: var(--caramel-text); flex-shrink: 0; transition: transform 0.2s; }
 .faq-item.open .faq-icon { transform: rotate(45deg); }
 .faq-a {
   display: none;
@@ -831,7 +832,7 @@ footer {
   display: block;
 }
 .footer-brand .logo-f span { color: var(--caramel); font-style: italic; }
-.footer-brand p { font-size: 13px; color: rgba(250,247,242,0.5); line-height: 1.7; max-width: 280px; }
+.footer-brand p { font-size: 13px; color: rgba(250,247,242,0.65); line-height: 1.7; max-width: 280px; }
 .footer-col h4 {
   font-size: 11px;
   letter-spacing: 0.2em;
@@ -841,7 +842,7 @@ footer {
 }
 .footer-col ul { list-style: none; }
 .footer-col li { margin-bottom: 10px; }
-.footer-col a { font-size: 13px; color: rgba(250,247,242,0.6); text-decoration: none; transition: color 0.2s; }
+.footer-col a { font-size: 13px; color: rgba(250,247,242,0.7); text-decoration: none; transition: color 0.2s; }
 .footer-col a:hover { color: var(--cream); }
 .footer-bottom {
   border-top: 1px solid rgba(250,247,242,0.1);
@@ -854,9 +855,9 @@ footer {
   gap: 24px;
   flex-wrap: wrap;
 }
-.footer-legal { font-size: 11px; color: rgba(250,247,242,0.35); line-height: 1.7; max-width: 640px; }
-.footer-legal a { color: rgba(250,247,242,0.5); text-decoration: underline; }
-.footer-copy { font-size: 11px; color: rgba(250,247,242,0.3); }
+.footer-legal { font-size: 11px; color: rgba(250,247,242,0.65); line-height: 1.7; max-width: 640px; }
+.footer-legal a { color: rgba(250,247,242,0.65); text-decoration: underline; }
+.footer-copy { font-size: 11px; color: rgba(250,247,242,0.65); }
 
 /* ─── DIVIDER ─── */
 .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--sand), transparent); margin: 0 48px; }
@@ -989,17 +990,17 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: rotate(-45deg); }
     <h2 id="how-heading">Three steps to your perfect routine.</h2>
     <div class="steps-row">
       <div class="how-step">
-        <div class="how-num">01</div>
+        <div class="how-num" aria-hidden="true">01</div>
         <h3>Identify your type</h3>
         <p>Use our visual chart to find your exact hair type from 1A (fine straight) to 4C (tight coily) — no quiz, just pick what looks like yours.</p>
       </div>
       <div class="how-step">
-        <div class="how-num">02</div>
+        <div class="how-num" aria-hidden="true">02</div>
         <h3>Get your routine</h3>
         <p>We show you every product in order — shampoo to sealing oil — with three top-reviewed options at every step: best overall, budget, and premium.</p>
       </div>
       <div class="how-step">
-        <div class="how-num">03</div>
+        <div class="how-num" aria-hidden="true">03</div>
         <h3>Watch & learn</h3>
         <p>Each step includes curated YouTube tutorials from trusted creators so you see exactly how to apply every product for your texture.</p>
       </div>

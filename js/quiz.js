@@ -410,7 +410,7 @@ function _showResults(skipScroll) {
     div.innerHTML = `
       <div class="routine-label">Step ${i + 1}</div>
       <div class="step-header">
-        <div class="step-number">0${i + 1}</div>
+        <div class="step-number" aria-hidden="true">0${i + 1}</div>
         <div class="step-info">
           <h3>${step.step}</h3>
           <p>${step.why}</p>

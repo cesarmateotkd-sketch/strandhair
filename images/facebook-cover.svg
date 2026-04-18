@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1640 624" width="1640" height="624">
+  <defs>
+    <style>
+      .fs { font-family: Georgia, 'Times New Roman', serif; }
+      .fn { font-family: system-ui, -apple-system, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1640" height="624" fill="#2A1A0E"/>
+
+  <!-- Caramel left accent panel -->
+  <rect x="0" y="0" width="480" height="624" fill="rgba(196,148,90,0.08)"/>
+  <rect x="0" y="0" width="6" height="624" fill="#C4945A"/>
+
+  <!-- Top + bottom rules -->
+  <rect x="6" y="0" width="1634" height="4" fill="rgba(196,148,90,0.4)"/>
+  <rect x="6" y="620" width="1634" height="4" fill="rgba(196,148,90,0.4)"/>
+
+  <!-- Vertical divider -->
+  <line x1="840" y1="48" x2="840" y2="576" stroke="rgba(196,148,90,0.2)" stroke-width="1"/>
+
+  <!-- LEFT — bold question -->
+  <text x="60" y="168" class="fn" font-size="13" fill="#C4945A" letter-spacing="5">FREE HAIR TYPE QUIZ</text>
+  <text x="56" y="290" class="fs" font-size="102" fill="#FAF7F2" font-weight="700">What&apos;s your</text>
+  <text x="56" y="406" class="fs" font-size="102" fill="#C4945A" font-style="italic" font-weight="700">hair type?</text>
+  <text x="56" y="454" class="fn" font-size="17" fill="rgba(250,247,242,0.4)">1A through 4C — identify yours in 30 seconds</text>
+  <rect x="56" y="488" width="296" height="56" fill="#C4945A"/>
+  <text x="204" y="523" class="fn" font-size="16" fill="#FAF7F2" font-weight="600" text-anchor="middle" letter-spacing="1">hairtypequiz.hair</text>
+
+  <!-- RIGHT — logo + features -->
+  <!-- Logo: no letter-spacing, just natural kerning with tspan color swap -->
+  <text x="1240" y="230" class="fs" font-size="100" fill="#FAF7F2" font-weight="300" text-anchor="middle">strand</text>
+  <!-- Caramel overlay on the "a" only — positioned to match -->
+  <text x="1240" y="230" class="fs" font-size="100" fill="#2A1A0E" font-weight="300" text-anchor="middle">str<tspan fill="#C4945A" font-style="italic">a</tspan><tspan fill="#2A1A0E">nd</tspan></text>
+  <!-- Re-render white letters around the a -->
+  <text x="1240" y="230" class="fs" font-size="100" font-weight="300" text-anchor="middle">
+    <tspan fill="#FAF7F2">str</tspan><tspan fill="#C4945A" font-style="italic">a</tspan><tspan fill="#FAF7F2">nd</tspan>
+  </text>
+
+  <line x1="900" y1="258" x2="1580" y2="258" stroke="rgba(196,148,90,0.3)" stroke-width="1"/>
+  <text x="1240" y="302" class="fn" font-size="15" fill="rgba(250,247,242,0.4)" text-anchor="middle" letter-spacing="2">YOUR PERSONALIZED HAIR ROUTINE</text>
+
+  <!-- Feature chips 2x3 -->
+  <rect x="902" y="326" width="196" height="52" fill="rgba(196,148,90,0.12)" rx="2"/>
+  <text x="1000" y="358" class="fn" font-size="14" fill="rgba(250,247,242,0.75)" text-anchor="middle">Curl Pattern ID</text>
+
+  <rect x="1110" y="326" width="196" height="52" fill="rgba(196,148,90,0.12)" rx="2"/>
+  <text x="1208" y="358" class="fn" font-size="14" fill="rgba(250,247,242,0.75)" text-anchor="middle">Porosity Type</text>
+
+  <rect x="1318" y="326" width="260" height="52" fill="rgba(196,148,90,0.12)" rx="2"/>
+  <text x="1448" y="358" class="fn" font-size="14" fill="rgba(250,247,242,0.75)" text-anchor="middle">Product Routine</text>
+
+  <rect x="902" y="390" width="196" height="52" fill="rgba(196,148,90,0.12)" rx="2"/>
+  <text x="1000" y="422" class="fn" font-size="14" fill="rgba(250,247,242,0.75)" text-anchor="middle">Top-Rated Picks</text>
+
+  <rect x="1110" y="390" width="196" height="52" fill="rgba(196,148,90,0.12)" rx="2"/>
+  <text x="1208" y="422" class="fn" font-size="14" fill="rgba(250,247,242,0.75)" text-anchor="middle">Tutorial Videos</text>
+
+  <rect x="1318" y="390" width="260" height="52" fill="#C4945A" rx="2"/>
+  <text x="1448" y="422" class="fn" font-size="14" fill="#FAF7F2" text-anchor="middle" font-weight="600">Completely Free</text>
+
+  <text x="1240" y="514" class="fn" font-size="12" fill="rgba(250,247,242,0.2)" text-anchor="middle" letter-spacing="3">ALL 12 HAIR TYPES  ·  1A TO 4C</text>
+
+</svg>

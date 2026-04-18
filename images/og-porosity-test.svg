@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1500" width="1000" height="1500">
+  <defs>
+    <style>
+      .f-serif { font-family: Georgia, 'Times New Roman', serif; }
+      .f-sans  { font-family: system-ui, -apple-system, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="1500" fill="#1A0F0A"/>
+
+  <!-- Header -->
+  <text x="500" y="106" class="f-sans" font-size="20" fill="#C4945A" text-anchor="middle" letter-spacing="6">NATURAL HAIR · HAIR SCIENCE</text>
+  <text x="500" y="210" class="f-serif" font-size="88" fill="#FAF7F2" text-anchor="middle" font-weight="700">Hair Porosity</text>
+  <text x="500" y="296" class="f-serif" font-size="72" fill="#C4945A" text-anchor="middle" font-style="italic">Test at Home</text>
+  <text x="500" y="356" class="f-sans" font-size="22" fill="rgba(250,247,242,0.45)" text-anchor="middle">Low · Medium · High — find yours in 2 minutes</text>
+  <line x1="80" y1="394" x2="920" y2="394" stroke="rgba(196,148,90,0.3)" stroke-width="1"/>
+
+  <!-- Key concept callout -->
+  <rect x="60" y="420" width="880" height="100" fill="rgba(196,148,90,0.12)" rx="4"/>
+  <text x="500" y="460" class="f-serif" font-size="28" fill="#FAF7F2" text-anchor="middle" font-weight="700">Porosity determines which products work</text>
+  <text x="500" y="494" class="f-sans" font-size="19" fill="rgba(250,247,242,0.6)" text-anchor="middle">and which ones just sit on your hair doing nothing</text>
+  <text x="500" y="514" class="f-sans" font-size="15" fill="rgba(196,148,90,0.6)" text-anchor="middle">Wrong porosity = wrong routine, no matter how expensive the products</text>
+
+  <!-- Low Porosity -->
+  <rect x="60" y="540" width="880" height="120" fill="rgba(255,255,255,0.05)" rx="4"/>
+  <rect x="60" y="540" width="8" height="120" fill="#C4945A" rx="2"/>
+  <text x="124" y="612" class="f-serif" font-size="48" fill="rgba(196,148,90,0.25)" font-weight="300">01</text>
+  <text x="220" y="578" class="f-serif" font-size="32" fill="#FAF7F2" font-weight="700">Low Porosity</text>
+  <text x="220" y="614" class="f-sans" font-size="19" fill="rgba(250,247,242,0.55)">Cuticles flat and tightly sealed — resists water</text>
+  <text x="220" y="646" class="f-sans" font-size="15" fill="rgba(196,148,90,0.6)">Needs heat to open cuticle · LCO method · clarify monthly</text>
+
+  <!-- Medium Porosity -->
+  <rect x="60" y="676" width="880" height="120" fill="rgba(255,255,255,0.03)" rx="4"/>
+  <rect x="60" y="676" width="8" height="120" fill="#7BB8A0" rx="2"/>
+  <text x="124" y="748" class="f-serif" font-size="48" fill="rgba(123,184,160,0.25)" font-weight="300">02</text>
+  <text x="220" y="714" class="f-serif" font-size="32" fill="#FAF7F2" font-weight="700">Medium Porosity</text>
+  <text x="220" y="750" class="f-sans" font-size="19" fill="rgba(250,247,242,0.55)">Cuticles open and close normally — easiest to maintain</text>
+  <text x="220" y="782" class="f-sans" font-size="15" fill="rgba(123,184,160,0.6)">Most products work · protein treatment every 6–8 weeks</text>
+
+  <!-- High Porosity -->
+  <rect x="60" y="812" width="880" height="120" fill="rgba(255,255,255,0.05)" rx="4"/>
+  <rect x="60" y="812" width="8" height="120" fill="#C4945A" rx="2"/>
+  <text x="124" y="884" class="f-serif" font-size="48" fill="rgba(196,148,90,0.25)" font-weight="300">03</text>
+  <text x="220" y="850" class="f-serif" font-size="32" fill="#FAF7F2" font-weight="700">High Porosity</text>
+  <text x="220" y="886" class="f-sans" font-size="19" fill="rgba(250,247,242,0.55)">Cuticles raised or damaged — absorbs fast, dries fast</text>
+  <text x="220" y="918" class="f-sans" font-size="15" fill="rgba(196,148,90,0.6)">LOC method · protein treatments · acidic rinse to seal cuticle</text>
+
+  <!-- Three Tests -->
+  <rect x="60" y="952" width="880" height="180" fill="rgba(255,255,255,0.03)" rx="4"/>
+  <rect x="60" y="952" width="8" height="180" fill="#8B6F5E" rx="2"/>
+  <text x="124" y="988" class="f-serif" font-size="26" fill="#FAF7F2" font-weight="700">Three Tests — Run All Three</text>
+  <text x="124" y="1022" class="f-sans" font-size="18" fill="rgba(250,247,242,0.55)">Float test — drop a clean strand in water, watch for 4 min</text>
+  <text x="124" y="1052" class="f-sans" font-size="18" fill="rgba(250,247,242,0.55)">Spray bottle test — mist clean dry hair, watch absorption speed</text>
+  <text x="124" y="1082" class="f-sans" font-size="18" fill="rgba(250,247,242,0.55)">Slide test — run fingers from tip to root, feel for texture</text>
+  <text x="124" y="1114" class="f-sans" font-size="14" fill="rgba(196,148,90,0.6)">Always test clean hair — product buildup skews every result</text>
+
+  <!-- Product guidance -->
+  <rect x="60" y="1152" width="880" height="100" fill="rgba(255,255,255,0.05)" rx="4"/>
+  <text x="500" y="1188" class="f-serif" font-size="24" fill="#FAF7F2" text-anchor="middle" font-weight="700">LOC vs LCO — porosity decides</text>
+  <text x="240" y="1222" class="f-sans" font-size="17" fill="rgba(250,247,242,0.5)" text-anchor="middle">Low porosity</text>
+  <text x="240" y="1242" class="f-sans" font-size="17" fill="#C4945A" text-anchor="middle">LCO</text>
+  <text x="500" y="1222" class="f-sans" font-size="17" fill="rgba(250,247,242,0.5)" text-anchor="middle">Medium</text>
+  <text x="500" y="1242" class="f-sans" font-size="17" fill="#7BB8A0" text-anchor="middle">Either</text>
+  <text x="760" y="1222" class="f-sans" font-size="17" fill="rgba(250,247,242,0.5)" text-anchor="middle">High porosity</text>
+  <text x="760" y="1242" class="f-sans" font-size="17" fill="#C4945A" text-anchor="middle">LOC</text>
+
+  <!-- CTA -->
+  <rect x="0" y="1340" width="1000" height="92" fill="#C4945A"/>
+  <text x="500" y="1396" class="f-serif" font-size="36" fill="#FAF7F2" text-anchor="middle" font-weight="700">Find your personalized hair routine →</text>
+
+  <!-- Footer -->
+  <rect x="0" y="1432" width="1000" height="68" fill="rgba(0,0,0,0.3)"/>
+  <text x="500" y="1474" class="f-serif" font-size="24" fill="rgba(250,247,242,0.5)" text-anchor="middle" letter-spacing="3">str<tspan fill="#C4945A" font-style="italic">a</tspan>nd  ·  hairtypequiz.hair</text>
+</svg>

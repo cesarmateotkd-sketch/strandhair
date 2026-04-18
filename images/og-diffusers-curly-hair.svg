@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1500" width="1000" height="1500">
+  <defs>
+    <style>
+      .f-serif { font-family: Georgia, 'Times New Roman', serif; }
+      .f-sans  { font-family: system-ui, -apple-system, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="1500" fill="#1A2C2E"/>
+
+  <!-- Header -->
+  <text x="500" y="106" class="f-sans" font-size="20" fill="#C4945A" text-anchor="middle" letter-spacing="6">CURLY HAIR · DIFFUSER GUIDE</text>
+  <text x="500" y="216" class="f-serif" font-size="82" fill="#FAF7F2" text-anchor="middle" font-weight="700">Best Diffusers</text>
+  <text x="500" y="304" class="f-serif" font-size="72" fill="#C4945A" text-anchor="middle" font-style="italic">for Curly Hair</text>
+  <text x="500" y="366" class="f-sans" font-size="22" fill="rgba(250,247,242,0.45)" text-anchor="middle">No frizz · no heat damage · defined curls</text>
+  <line x1="80" y1="404" x2="920" y2="404" stroke="rgba(196,148,90,0.3)" stroke-width="1"/>
+
+  <!-- Pick 01 -->
+  <rect x="60" y="432" width="880" height="144" fill="rgba(255,255,255,0.05)" rx="4"/>
+  <rect x="60" y="432" width="8" height="144" fill="#C4945A" rx="2"/>
+  <text x="124" y="516" class="f-serif" font-size="52" fill="rgba(196,148,90,0.25)" font-weight="300">01</text>
+  <text x="220" y="480" class="f-serif" font-size="34" fill="#FAF7F2" font-weight="700">Xtava Black Orchid</text>
+  <text x="220" y="516" class="f-sans" font-size="20" fill="rgba(250,247,242,0.55)">Best budget pick · ~$20 · universal fit</text>
+  <text x="220" y="548" class="f-sans" font-size="17" fill="rgba(250,247,242,0.3)">Large bowl · 1875W · fits most dryer nozzles</text>
+  <text x="220" y="570" class="f-sans" font-size="15" fill="rgba(196,148,90,0.6)">Best for: 2B–4C all curl types</text>
+
+  <!-- Pick 02 -->
+  <rect x="60" y="596" width="880" height="144" fill="rgba(255,255,255,0.03)" rx="4"/>
+  <rect x="60" y="596" width="8" height="144" fill="#7BB8C4" rx="2"/>
+  <text x="124" y="680" class="f-serif" font-size="52" fill="rgba(123,184,196,0.25)" font-weight="300">02</text>
+  <text x="220" y="644" class="f-serif" font-size="34" fill="#FAF7F2" font-weight="700">DevaCurl DevaFuser</text>
+  <text x="220" y="680" class="f-sans" font-size="20" fill="rgba(250,247,242,0.55)">Best mid-range · ~$40 · deep bowl design</text>
+  <text x="220" y="712" class="f-sans" font-size="17" fill="rgba(250,247,242,0.3)">Deeper bowl · lifts roots · reduces frizz significantly</text>
+  <text x="220" y="734" class="f-sans" font-size="15" fill="rgba(123,184,196,0.6)">Best for: 3A–4C defined curl lovers</text>
+
+  <!-- Pick 03 -->
+  <rect x="60" y="760" width="880" height="144" fill="rgba(255,255,255,0.05)" rx="4"/>
+  <rect x="60" y="760" width="8" height="144" fill="#C4945A" rx="2"/>
+  <text x="124" y="844" class="f-serif" font-size="52" fill="rgba(196,148,90,0.25)" font-weight="300">03</text>
+  <text x="220" y="808" class="f-serif" font-size="34" fill="#FAF7F2" font-weight="700">Dyson Supersonic</text>
+  <text x="220" y="844" class="f-sans" font-size="20" fill="rgba(250,247,242,0.55)">Best luxury pick · ~$460 · intelligent heat control</text>
+  <text x="220" y="876" class="f-sans" font-size="17" fill="rgba(250,247,242,0.3)">Measures temp 40×/sec · prevents heat damage</text>
+  <text x="220" y="898" class="f-sans" font-size="15" fill="rgba(196,148,90,0.6)">Best for: fine or heat-damaged curls</text>
+
+  <!-- Techniques -->
+  <rect x="60" y="924" width="880" height="100" fill="rgba(255,255,255,0.04)" rx="4"/>
+  <text x="500" y="962" class="f-serif" font-size="28" fill="#FAF7F2" text-anchor="middle" font-weight="700">3 Diffusing Techniques</text>
+  <text x="500" y="996" class="f-sans" font-size="19" fill="rgba(250,247,242,0.5)" text-anchor="middle">Hover · Pixie · Combination — each shapes curl differently</text>
+
+  <!-- Tips -->
+  <rect x="60" y="1044" width="880" height="172" fill="rgba(255,255,255,0.03)" rx="4"/>
+  <rect x="60" y="1044" width="8" height="172" fill="#7BB8C4" rx="2"/>
+  <text x="124" y="1082" class="f-serif" font-size="26" fill="#FAF7F2" font-weight="700">5 Mistakes to Avoid</text>
+  <text x="124" y="1116" class="f-sans" font-size="19" fill="rgba(250,247,242,0.55)">✗  Moving the diffuser while curls are wet</text>
+  <text x="124" y="1146" class="f-sans" font-size="19" fill="rgba(250,247,242,0.55)">✗  High heat from root to tip</text>
+  <text x="124" y="1176" class="f-sans" font-size="19" fill="rgba(250,247,242,0.55)">✗  Skipping heat protectant</text>
+  <text x="124" y="1206" class="f-sans" font-size="17" fill="rgba(250,247,242,0.3)">+ 2 more inside the guide</text>
+
+  <!-- Settings reminder -->
+  <rect x="60" y="1236" width="880" height="76" fill="rgba(196,148,90,0.1)" rx="4"/>
+  <text x="500" y="1272" class="f-sans" font-size="20" fill="#C4945A" text-anchor="middle" font-weight="700">Always start on low heat · medium airflow</text>
+  <text x="500" y="1300" class="f-sans" font-size="17" fill="rgba(250,247,242,0.4)" text-anchor="middle">Finish with cool shot to seal the cuticle</text>
+
+  <!-- CTA -->
+  <rect x="0" y="1340" width="1000" height="92" fill="#C4945A"/>
+  <text x="500" y="1396" class="f-serif" font-size="36" fill="#FAF7F2" text-anchor="middle" font-weight="700">Find your personalized curl routine →</text>
+
+  <!-- Footer -->
+  <rect x="0" y="1432" width="1000" height="68" fill="rgba(0,0,0,0.3)"/>
+  <text x="500" y="1474" class="f-serif" font-size="24" fill="rgba(250,247,242,0.5)" text-anchor="middle" letter-spacing="3">str<tspan fill="#C4945A" font-style="italic">a</tspan>nd  ·  hairtypequiz.hair</text>
+</svg>

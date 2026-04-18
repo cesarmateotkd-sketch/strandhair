@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google Analytics — deferred after load to keep it off the critical path -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WZFESSQ350');
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WZFESSQ350';
+    document.head.appendChild(s);
+  });
+</script>
 <!-- ═══════════════════════════════════════════════════
      SEO: Primary meta tags
 ═══════════════════════════════════════════════════ -->
 <meta charset="UTF-8">
+<meta name="google-adsense-account" content="ca-pub-4118008750263820">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' https: data:; connect-src 'self' https://*.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; frame-src https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Strand — Free Hair Type Quiz & Personalized Product Routine | 1A to 4C</title>
 <meta name="description" content="Find your exact hair type (1A–4C) and get a personalized hair care routine with top-rated products and tutorial videos. Free hair product recommendations based on thousands of real reviews.">
 <meta name="keywords" content="hair type quiz, hair care routine, curly hair products, natural hair products, 4C hair routine, wavy hair routine, best shampoo for hair type, hair type chart, curl routine">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://strandhair.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://hairtypequiz.hair/">
 
 <!-- ═══════════════════════════════════════════════════
      SEO: Open Graph (Facebook, Pinterest, WhatsApp)
@@ -18,15 +36,19 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Strand — Free Hair Type Quiz & Product Routine Builder">
 <meta property="og:description" content="Discover your hair type and get a personalized routine with the best-reviewed products and tutorial videos for 1A through 4C hair.">
-<meta property="og:url" content="https://strandhair.com/">
+<meta property="og:url" content="https://hairtypequiz.hair/">
 <meta property="og:site_name" content="Strand">
-<meta property="og:image" content="https://strandhair.com/og-image.jpg">
+<meta property="og:image" content="https://hairtypequiz.hair/images/og-quiz.png">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="1500">
+<meta name="p:domain_verify" content="fdb06c200ffd2e4d27e5981697fa680c">
+<meta name="google-site-verification" content="E4yHibN9JMIBkx6u8XpdTjTHbn6GM9A58tUvM9UAi9k">
 
 <!-- SEO: Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Strand — Free Hair Type Quiz & Product Routine Builder">
 <meta name="twitter:description" content="Discover your hair type (1A–4C) and get a personalized hair care routine with top-rated products and video tutorials.">
-<meta name="twitter:image" content="https://strandhair.com/og-image.jpg">
+<meta name="twitter:image" content="https://hairtypequiz.hair/images/og-quiz.png">
 
 <!-- ═══════════════════════════════════════════════════
      SEO: Structured Data — WebSite + FAQ Schema
@@ -38,13 +60,13 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://strandhair.com/#website",
-      "url": "https://strandhair.com/",
+      "@id": "https://hairtypequiz.hair/#website",
+      "url": "https://hairtypequiz.hair/",
       "name": "Strand",
       "description": "Personalized hair care routines and product recommendations for every hair type from 1A to 4C.",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://strandhair.com/?type={search_term_string}",
+        "target": "https://hairtypequiz.hair/?type={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     },
@@ -88,35 +110,58 @@
     {
       "@type": "Organization",
       "name": "Strand",
-      "url": "https://strandhair.com/",
+      "url": "https://hairtypequiz.hair/",
       "description": "Free hair type quiz and personalized hair product recommendation platform."
     }
   ]
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/cormorant-garamond-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cormorant-garamond-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
 
 <style>
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: optional;
+  src: url('/fonts/cormorant-garamond-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 300 400;
+  font-display: optional;
+  src: url('/fonts/cormorant-garamond-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 300 500;
+  font-display: optional;
+  src: url('/fonts/dm-sans.woff2') format('woff2');
+}
 :root {
   --cream: #FAF7F2;
   --warm-white: #F5F0E8;
   --sand: #E8DDD0;
-  --mocha: #8B6F5E;
+  --mocha: #7A5848;
   --espresso: #3D2B1F;
   --caramel: #C4945A;
   --sage: #7A8C7E;
   --blush: #E8C4B0;
   --text: #2A1F1A;
-  --muted: #9B8B82;
+  --muted: #6B5B53;
   --green: #4A7C5F;
+  --caramel-text: #8B5E1A;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   background: var(--cream);
   color: var(--text);
   min-height: 100vh;
@@ -150,7 +195,7 @@ body {
   letter-spacing: 0.04em;
 }
 .affiliate-bar strong { color: var(--mocha); font-weight: 500; }
-.affiliate-bar a { color: var(--caramel); text-decoration: underline; }
+.affiliate-bar a { color: var(--caramel-text); text-decoration: underline; }
 
 /* ─── NAV ─── */
 nav {
@@ -166,14 +211,14 @@ nav {
   border-bottom: 1px solid rgba(139,111,94,0.1);
 }
 .logo {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 26px;
   font-weight: 300;
   letter-spacing: 0.12em;
   color: var(--espresso);
   text-decoration: none;
 }
-.logo span { color: var(--caramel); font-style: italic; }
+.logo span { color: var(--caramel-text); font-style: italic; }
 .nav-links {
   display: flex;
   gap: 32px;
@@ -200,13 +245,13 @@ nav {
   font-size: 11px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--caramel);
+  color: var(--caramel-text);
   margin-bottom: 20px;
   animation: fadeUp 0.6s ease both;
 }
 /* SEO: h1 is keyword-rich and unique */
 .hero h1 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: clamp(48px, 7vw, 82px);
   font-weight: 300;
   line-height: 1.0;
@@ -248,14 +293,14 @@ nav {
   padding: 16px 48px;
   background: var(--espresso);
   color: var(--cream);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
   animation: fadeUp 0.6s 0.3s ease both;
 }
@@ -272,7 +317,7 @@ nav {
 }
 .how-section .section-label { color: var(--caramel); margin-bottom: 12px; }
 .how-section h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: clamp(32px, 4vw, 44px);
   font-weight: 300;
   color: var(--cream);
@@ -285,15 +330,15 @@ nav {
 }
 .how-step { }
 .how-num {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 52px;
   font-weight: 300;
-  color: rgba(196,148,90,0.4);
+  color: rgba(196,148,90,0.75);
   line-height: 1;
   margin-bottom: 12px;
 }
 .how-step h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 22px;
   font-weight: 400;
   color: var(--cream);
@@ -310,12 +355,12 @@ nav {
   font-size: 11px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--caramel);
+  color: var(--caramel-text);
   text-align: center;
   margin-bottom: 12px;
 }
 .section-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: clamp(36px, 5vw, 52px);
   font-weight: 300;
   text-align: center;
@@ -340,9 +385,12 @@ nav {
 .hair-family {
   background: var(--sand);
   padding: 4px 4px 0;
+  display: flex;
+  flex-direction: column;
 }
+.hair-card + .hair-card { margin-top: 2px; }
 .family-label {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 22px;
   font-weight: 600;
   color: var(--espresso);
@@ -355,12 +403,11 @@ nav {
   letter-spacing: 0.03em;
   line-height: 1.4;
 }
-.hair-subtypes { display: flex; flex-direction: column; gap: 2px; }
 .hair-card {
   background: var(--cream);
   padding: 18px 16px;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
   border: 2px solid transparent;
   position: relative;
   overflow: hidden;
@@ -382,7 +429,7 @@ nav {
 .hair-card.selected .hair-type-name,
 .hair-card.selected .hair-type-desc { color: rgba(255,255,255,0.75); }
 .hair-type-id {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 24px;
   font-weight: 600;
   color: var(--espresso);
@@ -413,14 +460,14 @@ nav {
   background: var(--espresso);
   color: var(--cream);
   border: none;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   cursor: pointer;
   box-shadow: 0 8px 32px rgba(61,43,31,0.35);
-  transition: all 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
   white-space: nowrap;
 }
 #findBtn:hover { background: var(--caramel); transform: translateY(-2px); }
@@ -456,7 +503,7 @@ nav {
   display: inline-block;
   background: var(--espresso);
   color: var(--caramel);
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 42px;
   font-weight: 600;
   width: 84px; height: 84px;
@@ -465,7 +512,7 @@ nav {
   margin-bottom: 20px;
 }
 .results-header h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: clamp(30px, 5vw, 46px);
   font-weight: 300;
   color: var(--espresso);
@@ -483,7 +530,7 @@ nav {
   font-size: 11px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--caramel);
+  color: var(--caramel-text);
   margin-bottom: 24px;
   display: flex;
   align-items: center;
@@ -493,7 +540,7 @@ nav {
 .product-step { margin-bottom: 64px; }
 .step-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px; }
 .step-number {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 44px;
   font-weight: 300;
   color: var(--sand);
@@ -501,7 +548,7 @@ nav {
   min-width: 40px;
 }
 .step-info h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 28px;
   font-weight: 400;
   color: var(--espresso);
@@ -518,7 +565,7 @@ nav {
   background: var(--warm-white);
   border: 1px solid var(--sand);
   padding: 24px;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -539,22 +586,22 @@ nav {
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--caramel);
+  color: var(--caramel-text);
   font-weight: 500;
 }
 .product-emoji { font-size: 30px; margin-bottom: 12px; }
 .product-brand { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 5px; }
 .product-name {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 19px;
   font-weight: 400;
   color: var(--espresso);
   margin-bottom: 10px;
   line-height: 1.3;
 }
-.stars { color: var(--caramel); font-size: 12px; margin-bottom: 4px; }
+.stars { color: var(--caramel-text); font-size: 12px; margin-bottom: 4px; }
 .review-count { font-size: 11px; color: var(--muted); margin-bottom: 8px; }
-.price-range { font-size: 13px; color: var(--sage); font-weight: 500; margin-bottom: 12px; }
+.price-range { font-size: 13px; color: #3D5C47; font-weight: 500; margin-bottom: 12px; }
 .product-why {
   font-size: 12px;
   color: var(--mocha);
@@ -586,7 +633,7 @@ nav {
   margin-top: 8px;
 }
 .tutorials-block h4 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 20px;
   font-weight: 300;
   color: var(--cream);
@@ -594,7 +641,7 @@ nav {
 }
 .tutorials-block .tut-sub {
   font-size: 12px;
-  color: rgba(250,247,242,0.5);
+  color: rgba(250,247,242,0.7);
   margin-bottom: 20px;
   letter-spacing: 0.05em;
 }
@@ -603,56 +650,39 @@ nav {
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
 }
-.yt-thumb {
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  background: #000;
-  aspect-ratio: 16/9;
-}
-.yt-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.8;
-  transition: opacity 0.3s;
-}
-.yt-thumb:hover img { opacity: 0.6; }
-.yt-play {
-  position: absolute;
-  inset: 0;
+.yt-search-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 18px 16px;
+  text-decoration: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   gap: 8px;
+  transition: background 0.2s, border-color 0.2s;
+  min-height: 100px;
 }
-.yt-play-btn {
-  width: 44px; height: 44px;
-  background: #FF0000;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s;
+.yt-search-card:hover {
+  background: rgba(255,255,255,0.11);
+  border-color: rgba(196,148,90,0.75);
 }
-.yt-thumb:hover .yt-play-btn { transform: scale(1.1); }
-.yt-play-btn svg { fill: white; width: 18px; }
-.yt-title {
-  font-size: 11px;
-  color: white;
-  text-align: center;
-  padding: 0 8px;
+.yt-search-label {
+  font-size: 10px;
+  color: rgba(250,247,242,0.6);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.yt-search-title {
+  font-size: 13px;
+  color: var(--cream);
   line-height: 1.4;
   font-weight: 500;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+  flex: 1;
 }
-/* Embedded iframe replaces thumb on click */
-.yt-frame {
-  display: none;
-  width: 100%;
-  aspect-ratio: 16/9;
-  border: none;
+.yt-search-cta {
+  font-size: 11px;
+  color: var(--caramel);
+  letter-spacing: 0.05em;
+  font-weight: 500;
 }
 
 /* ─── SHARE STRIP ─── */
@@ -663,7 +693,7 @@ nav {
   margin-top: 80px;
 }
 .share-strip h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 30px;
   font-weight: 300;
   color: var(--cream);
@@ -680,8 +710,8 @@ nav {
   text-transform: uppercase;
   cursor: pointer;
   background: transparent;
-  transition: all 0.2s;
-  font-family: 'DM Sans', sans-serif;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 }
 .share-btn:hover { background: var(--espresso); border-color: var(--espresso); }
 
@@ -694,7 +724,7 @@ nav {
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
 .about-text .section-label { text-align: left; }
 .about-text h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: clamp(32px, 4vw, 44px);
   font-weight: 300;
   color: var(--espresso);
@@ -709,7 +739,7 @@ nav {
 }
 .type-guide { }
 .type-guide h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 24px;
   font-weight: 400;
   color: var(--espresso);
@@ -729,7 +759,7 @@ nav {
 .type-chip {
   background: var(--espresso);
   color: var(--caramel);
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 16px;
   font-weight: 600;
   padding: 2px 10px;
@@ -745,7 +775,7 @@ nav {
 }
 .faq-inner { max-width: 760px; margin: 0 auto; }
 .faq-section h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: clamp(32px, 4vw, 44px);
   font-weight: 300;
   color: var(--espresso);
@@ -770,7 +800,7 @@ nav {
   color: var(--espresso);
   line-height: 1.4;
 }
-.faq-icon { font-size: 20px; color: var(--caramel); flex-shrink: 0; transition: transform 0.2s; }
+.faq-icon { font-size: 20px; color: var(--caramel-text); flex-shrink: 0; transition: transform 0.2s; }
 .faq-item.open .faq-icon { transform: rotate(45deg); }
 .faq-a {
   display: none;
@@ -794,7 +824,7 @@ footer {
   margin: 0 auto 48px;
 }
 .footer-brand .logo-f {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 28px;
   font-weight: 300;
   letter-spacing: 0.12em;
@@ -803,8 +833,8 @@ footer {
   display: block;
 }
 .footer-brand .logo-f span { color: var(--caramel); font-style: italic; }
-.footer-brand p { font-size: 13px; color: rgba(250,247,242,0.5); line-height: 1.7; max-width: 280px; }
-.footer-col h4 {
+.footer-brand p { font-size: 13px; color: rgba(250,247,242,0.65); line-height: 1.7; max-width: 280px; }
+.footer-col h3 {
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -813,7 +843,7 @@ footer {
 }
 .footer-col ul { list-style: none; }
 .footer-col li { margin-bottom: 10px; }
-.footer-col a { font-size: 13px; color: rgba(250,247,242,0.6); text-decoration: none; transition: color 0.2s; }
+.footer-col a { font-size: 13px; color: rgba(250,247,242,0.7); text-decoration: none; transition: color 0.2s; }
 .footer-col a:hover { color: var(--cream); }
 .footer-bottom {
   border-top: 1px solid rgba(250,247,242,0.1);
@@ -826,9 +856,9 @@ footer {
   gap: 24px;
   flex-wrap: wrap;
 }
-.footer-legal { font-size: 11px; color: rgba(250,247,242,0.35); line-height: 1.7; max-width: 640px; }
-.footer-legal a { color: rgba(250,247,242,0.5); text-decoration: underline; }
-.footer-copy { font-size: 11px; color: rgba(250,247,242,0.3); }
+.footer-legal { font-size: 11px; color: rgba(250,247,242,0.65); line-height: 1.7; max-width: 640px; }
+.footer-legal a { color: rgba(250,247,242,0.65); text-decoration: underline; }
+.footer-copy { font-size: 11px; color: rgba(250,247,242,0.65); }
 
 /* ─── DIVIDER ─── */
 .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--sand), transparent); margin: 0 48px; }
@@ -846,9 +876,56 @@ footer {
   .steps-row { grid-template-columns: 1fr; gap: 32px; }
   .videos-row { grid-template-columns: 1fr; }
 }
+/* ─── HAMBURGER ─── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--espresso);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: left center;
+}
+/* Animate to X when open */
+nav.nav-open .nav-toggle span:nth-child(1) { transform: rotate(45deg); }
+nav.nav-open .nav-toggle span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+nav.nav-open .nav-toggle span:nth-child(3) { transform: rotate(-45deg); }
+
 @media (max-width: 768px) {
   nav { padding: 16px 24px; }
-  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(250,247,242,0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--sand);
+    flex-direction: column;
+    padding: 16px 24px 24px;
+    gap: 0;
+    animation: fadeUp 0.2s ease both;
+  }
+  nav.nav-open .nav-links { display: flex; }
+  .nav-links li { border-bottom: 1px solid var(--sand); }
+  .nav-links li:last-child { border-bottom: none; }
+  .nav-links a {
+    display: block;
+    padding: 14px 0;
+    font-size: 14px;
+  }
   .affiliate-bar { padding: 8px 24px; }
   .hero { padding: 48px 24px 64px; }
   .how-section, .chart-section, .about-section, .faq-section { padding: 60px 24px; }
@@ -880,7 +957,13 @@ footer {
     <li><a href="#selector">Hair Types</a></li>
     <li><a href="#about">Hair Guide</a></li>
     <li><a href="#faq">FAQ</a></li>
+    <li><a href="blog/">Blog</a></li>
   </ul>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleNav(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
 
 <!-- ═══ HERO ═══ -->
@@ -908,17 +991,17 @@ footer {
     <h2 id="how-heading">Three steps to your perfect routine.</h2>
     <div class="steps-row">
       <div class="how-step">
-        <div class="how-num">01</div>
+        <div class="how-num" aria-hidden="true">01</div>
         <h3>Identify your type</h3>
         <p>Use our visual chart to find your exact hair type from 1A (fine straight) to 4C (tight coily) — no quiz, just pick what looks like yours.</p>
       </div>
       <div class="how-step">
-        <div class="how-num">02</div>
+        <div class="how-num" aria-hidden="true">02</div>
         <h3>Get your routine</h3>
         <p>We show you every product in order — shampoo to sealing oil — with three top-reviewed options at every step: best overall, budget, and premium.</p>
       </div>
       <div class="how-step">
-        <div class="how-num">03</div>
+        <div class="how-num" aria-hidden="true">03</div>
         <h3>Watch & learn</h3>
         <p>Each step includes curated YouTube tutorials from trusted creators so you see exactly how to apply every product for your texture.</p>
       </div>
@@ -934,107 +1017,104 @@ footer {
 
   <div class="hair-grid" role="list" aria-label="Hair type selection grid">
     <!-- TYPE 1 -->
-    <div class="hair-family" role="group" aria-label="Type 1: Straight hair">
+    <div class="hair-family">
       <div class="family-label">Type 1</div>
       <div class="family-desc">Straight — no natural curl or wave pattern</div>
-      <div class="hair-subtypes">
-        <article class="hair-card" role="listitem" data-type="1A" onclick="selectHair(this,'1A')" tabindex="0" aria-label="1A Pin-Straight hair type" onkeypress="if(event.key==='Enter')selectHair(this,'1A')">
-          <div class="hair-visual" aria-hidden="true">𝄁</div>
-          <div class="hair-type-id">1A</div>
-          <div class="hair-type-name">Pin-Straight</div>
-          <div class="hair-type-desc">Very fine, soft, no body or volume</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="1B" onclick="selectHair(this,'1B')" tabindex="0" aria-label="1B Straight with body" onkeypress="if(event.key==='Enter')selectHair(this,'1B')">
-          <div class="hair-visual" aria-hidden="true">〜</div>
-          <div class="hair-type-id">1B</div>
-          <div class="hair-type-name">Straight + Body</div>
-          <div class="hair-type-desc">Medium texture, slight bends at ends</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="1C" onclick="selectHair(this,'1C')" tabindex="0" aria-label="1C Straight coarse" onkeypress="if(event.key==='Enter')selectHair(this,'1C')">
-          <div class="hair-visual" aria-hidden="true">〰</div>
-          <div class="hair-type-id">1C</div>
-          <div class="hair-type-name">Straight + Coarse</div>
-          <div class="hair-type-desc">Thick, resistant, slight wave tendency</div>
-        </article>
-      </div>
+      <article class="hair-card" role="listitem" data-type="1A" onclick="selectHair(this,'1A')" tabindex="0" aria-label="1A Pin-Straight hair type" onkeypress="if(event.key==='Enter')selectHair(this,'1A')">
+        <div class="hair-visual" aria-hidden="true">𝄁</div>
+        <div class="hair-type-id">1A</div>
+        <div class="hair-type-name">Pin-Straight</div>
+        <div class="hair-type-desc">Very fine, soft, no body or volume</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="1B" onclick="selectHair(this,'1B')" tabindex="0" aria-label="1B Straight with body" onkeypress="if(event.key==='Enter')selectHair(this,'1B')">
+        <div class="hair-visual" aria-hidden="true">〜</div>
+        <div class="hair-type-id">1B</div>
+        <div class="hair-type-name">Straight + Body</div>
+        <div class="hair-type-desc">Medium texture, slight bends at ends</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="1C" onclick="selectHair(this,'1C')" tabindex="0" aria-label="1C Straight coarse" onkeypress="if(event.key==='Enter')selectHair(this,'1C')">
+        <div class="hair-visual" aria-hidden="true">〰</div>
+        <div class="hair-type-id">1C</div>
+        <div class="hair-type-name">Straight + Coarse</div>
+        <div class="hair-type-desc">Thick, resistant, slight wave tendency</div>
+      </article>
     </div>
     <!-- TYPE 2 -->
-    <div class="hair-family" role="group" aria-label="Type 2: Wavy hair">
+    <div class="hair-family">
       <div class="family-label">Type 2</div>
       <div class="family-desc">Wavy — S-pattern, between straight and curly</div>
-      <div class="hair-subtypes">
-        <article class="hair-card" role="listitem" data-type="2A" onclick="selectHair(this,'2A')" tabindex="0" aria-label="2A Loose wave" onkeypress="if(event.key==='Enter')selectHair(this,'2A')">
-          <div class="hair-visual" aria-hidden="true">∿</div>
-          <div class="hair-type-id">2A</div>
-          <div class="hair-type-name">Loose Wave</div>
-          <div class="hair-type-desc">Fine, tousled S-wave, easily straightens</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="2B" onclick="selectHair(this,'2B')" tabindex="0" aria-label="2B Defined wave" onkeypress="if(event.key==='Enter')selectHair(this,'2B')">
-          <div class="hair-visual" aria-hidden="true">ꞑ</div>
-          <div class="hair-type-id">2B</div>
-          <div class="hair-type-name">Defined Wave</div>
-          <div class="hair-type-desc">Medium, flat roots + wavy mid-length</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="2C" onclick="selectHair(this,'2C')" tabindex="0" aria-label="2C Strong wave" onkeypress="if(event.key==='Enter')selectHair(this,'2C')">
-          <div class="hair-visual" aria-hidden="true">ꭥ</div>
-          <div class="hair-type-id">2C</div>
-          <div class="hair-type-name">Strong Wave</div>
-          <div class="hair-type-desc">Thick, coarse, frizz-prone S-waves</div>
-        </article>
-      </div>
+      <article class="hair-card" role="listitem" data-type="2A" onclick="selectHair(this,'2A')" tabindex="0" aria-label="2A Loose wave" onkeypress="if(event.key==='Enter')selectHair(this,'2A')">
+        <div class="hair-visual" aria-hidden="true">∿</div>
+        <div class="hair-type-id">2A</div>
+        <div class="hair-type-name">Loose Wave</div>
+        <div class="hair-type-desc">Fine, tousled S-wave, easily straightens</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="2B" onclick="selectHair(this,'2B')" tabindex="0" aria-label="2B Defined wave" onkeypress="if(event.key==='Enter')selectHair(this,'2B')">
+        <div class="hair-visual" aria-hidden="true">ꞑ</div>
+        <div class="hair-type-id">2B</div>
+        <div class="hair-type-name">Defined Wave</div>
+        <div class="hair-type-desc">Medium, flat roots + wavy mid-length</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="2C" onclick="selectHair(this,'2C')" tabindex="0" aria-label="2C Strong wave" onkeypress="if(event.key==='Enter')selectHair(this,'2C')">
+        <div class="hair-visual" aria-hidden="true">ꭥ</div>
+        <div class="hair-type-id">2C</div>
+        <div class="hair-type-name">Strong Wave</div>
+        <div class="hair-type-desc">Thick, coarse, frizz-prone S-waves</div>
+      </article>
     </div>
     <!-- TYPE 3 -->
-    <div class="hair-family" role="group" aria-label="Type 3: Curly hair">
+    <div class="hair-family">
       <div class="family-label">Type 3</div>
       <div class="family-desc">Curly — springy, defined spiral patterns</div>
-      <div class="hair-subtypes">
-        <article class="hair-card" role="listitem" data-type="3A" onclick="selectHair(this,'3A')" tabindex="0" aria-label="3A Loose curl" onkeypress="if(event.key==='Enter')selectHair(this,'3A')">
-          <div class="hair-visual" aria-hidden="true">ɾ</div>
-          <div class="hair-type-id">3A</div>
-          <div class="hair-type-name">Loose Curl</div>
-          <div class="hair-type-desc">Large, shiny spirals, pencil-wide</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="3B" onclick="selectHair(this,'3B')" tabindex="0" aria-label="3B Springy curl" onkeypress="if(event.key==='Enter')selectHair(this,'3B')">
-          <div class="hair-visual" aria-hidden="true">ɕ</div>
-          <div class="hair-type-id">3B</div>
-          <div class="hair-type-name">Springy Curl</div>
-          <div class="hair-type-desc">Defined corkscrews, more volume</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="3C" onclick="selectHair(this,'3C')" tabindex="0" aria-label="3C Tight curl" onkeypress="if(event.key==='Enter')selectHair(this,'3C')">
-          <div class="hair-visual" aria-hidden="true">ɔ</div>
-          <div class="hair-type-id">3C</div>
-          <div class="hair-type-name">Tight Curl</div>
-          <div class="hair-type-desc">Tight corkscrews, straw-width curls</div>
-        </article>
-      </div>
+      <article class="hair-card" role="listitem" data-type="3A" onclick="selectHair(this,'3A')" tabindex="0" aria-label="3A Loose curl" onkeypress="if(event.key==='Enter')selectHair(this,'3A')">
+        <div class="hair-visual" aria-hidden="true">ɾ</div>
+        <div class="hair-type-id">3A</div>
+        <div class="hair-type-name">Loose Curl</div>
+        <div class="hair-type-desc">Large, shiny spirals, pencil-wide</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="3B" onclick="selectHair(this,'3B')" tabindex="0" aria-label="3B Springy curl" onkeypress="if(event.key==='Enter')selectHair(this,'3B')">
+        <div class="hair-visual" aria-hidden="true">ɕ</div>
+        <div class="hair-type-id">3B</div>
+        <div class="hair-type-name">Springy Curl</div>
+        <div class="hair-type-desc">Defined corkscrews, more volume</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="3C" onclick="selectHair(this,'3C')" tabindex="0" aria-label="3C Tight curl" onkeypress="if(event.key==='Enter')selectHair(this,'3C')">
+        <div class="hair-visual" aria-hidden="true">ɔ</div>
+        <div class="hair-type-id">3C</div>
+        <div class="hair-type-name">Tight Curl</div>
+        <div class="hair-type-desc">Tight corkscrews, straw-width curls</div>
+      </article>
     </div>
     <!-- TYPE 4 -->
-    <div class="hair-family" role="group" aria-label="Type 4: Coily hair">
+    <div class="hair-family">
       <div class="family-label">Type 4</div>
       <div class="family-desc">Coily — densely packed, most shrinkage</div>
-      <div class="hair-subtypes">
-        <article class="hair-card" role="listitem" data-type="4A" onclick="selectHair(this,'4A')" tabindex="0" aria-label="4A Soft coil" onkeypress="if(event.key==='Enter')selectHair(this,'4A')">
-          <div class="hair-visual" aria-hidden="true">ȣ</div>
-          <div class="hair-type-id">4A</div>
-          <div class="hair-type-name">Soft Coil</div>
-          <div class="hair-type-desc">Defined S-coils, visible curl pattern</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="4B" onclick="selectHair(this,'4B')" tabindex="0" aria-label="4B Z-pattern coil" onkeypress="if(event.key==='Enter')selectHair(this,'4B')">
-          <div class="hair-visual" aria-hidden="true">z</div>
-          <div class="hair-type-id">4B</div>
-          <div class="hair-type-name">Z-Pattern Coil</div>
-          <div class="hair-type-desc">Sharp angles, cottony, less defined</div>
-        </article>
-        <article class="hair-card" role="listitem" data-type="4C" onclick="selectHair(this,'4C')" tabindex="0" aria-label="4C Tight coil" onkeypress="if(event.key==='Enter')selectHair(this,'4C')">
-          <div class="hair-visual" aria-hidden="true">⁓</div>
-          <div class="hair-type-id">4C</div>
-          <div class="hair-type-name">Tight Coil</div>
-          <div class="hair-type-desc">Tightest coil, max shrinkage, fragile</div>
-        </article>
-      </div>
+      <article class="hair-card" role="listitem" data-type="4A" onclick="selectHair(this,'4A')" tabindex="0" aria-label="4A Soft coil" onkeypress="if(event.key==='Enter')selectHair(this,'4A')">
+        <div class="hair-visual" aria-hidden="true">ȣ</div>
+        <div class="hair-type-id">4A</div>
+        <div class="hair-type-name">Soft Coil</div>
+        <div class="hair-type-desc">Defined S-coils, visible curl pattern</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="4B" onclick="selectHair(this,'4B')" tabindex="0" aria-label="4B Z-pattern coil" onkeypress="if(event.key==='Enter')selectHair(this,'4B')">
+        <div class="hair-visual" aria-hidden="true">z</div>
+        <div class="hair-type-id">4B</div>
+        <div class="hair-type-name">Z-Pattern Coil</div>
+        <div class="hair-type-desc">Sharp angles, cottony, less defined</div>
+      </article>
+      <article class="hair-card" role="listitem" data-type="4C" onclick="selectHair(this,'4C')" tabindex="0" aria-label="4C Tight coil" onkeypress="if(event.key==='Enter')selectHair(this,'4C')">
+        <div class="hair-visual" aria-hidden="true">⁓</div>
+        <div class="hair-type-id">4C</div>
+        <div class="hair-type-name">Tight Coil</div>
+        <div class="hair-type-desc">Tightest coil, max shrinkage, fragile</div>
+      </article>
     </div>
   </div>
 </section>
+
+<!-- ═══ INLINE CTA (appears after selection) ═══ -->
+<div id="inlineCta" style="display:none;text-align:center;padding:32px 48px 0;">
+  <button onclick="showResults()" class="cta-btn" id="inlineBtn" aria-label="Build my hair routine">→ Build My Routine</button>
+</div>
 
 <!-- ═══ STICKY CTA ═══ -->
 <div class="sticky-find" id="stickyFind" aria-live="polite">
@@ -1054,7 +1134,7 @@ footer {
 
   <div class="results-header">
     <div class="hair-badge" id="resultBadge" aria-label="Your hair type">—</div>
-    <h2 id="results-heading" id="resultTitle">Your Personalized Routine</h2>
+    <h2 id="resultTitle">Your Personalized Routine</h2>
     <p id="resultDesc">Routine description</p>
   </div>
 
@@ -1162,7 +1242,48 @@ footer {
 </section>
 </main>
 
-<!-- ═══ FOOTER ═══ -->
+<!-- ═══ BLOG SECTION ═══ -->
+<section aria-labelledby="blog-heading" style="background:var(--warm-white);padding:80px 48px;border-top:1px solid var(--sand);">
+  <div style="max-width:900px;margin:0 auto;">
+    <p class="section-label" style="text-align:center;margin-bottom:12px;">From the Blog</p>
+    <h2 id="blog-heading" style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,42px);font-weight:300;text-align:center;margin-bottom:48px;color:var(--espresso);">Hair care, <em style="font-style:italic;color:var(--caramel);">demystified.</em></h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;margin-bottom:40px;">
+      <a href="blog/how-to-grow-4c-hair-faster.html" style="background:var(--cream);border:1px solid var(--sand);padding:24px;display:flex;flex-direction:column;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(61,43,31,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--caramel);margin-bottom:10px;">4C Hair · Growth</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">How to Grow 4C Hair Faster — Science-Backed Guide</span>
+        <span style="font-size:12px;color:var(--muted);margin-top:auto;padding-top:12px;border-top:1px solid var(--sand);">Read Article →</span>
+      </a>
+      <a href="blog/protective-styles-for-natural-hair.html" style="background:var(--cream);border:1px solid var(--sand);padding:24px;display:flex;flex-direction:column;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(61,43,31,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--caramel);margin-bottom:10px;">Natural Hair · Length Retention</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">Best Protective Styles for Natural Hair — 10 Styles</span>
+        <span style="font-size:12px;color:var(--muted);margin-top:auto;padding-top:12px;border-top:1px solid var(--sand);">Read Article →</span>
+      </a>
+      <a href="blog/how-to-wash-4c-hair.html" style="background:var(--cream);border:1px solid var(--sand);padding:24px;display:flex;flex-direction:column;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(61,43,31,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--caramel);margin-bottom:10px;">Wash Day</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">How to Wash 4C Hair Without Breakage — Complete Routine</span>
+        <span style="font-size:12px;color:var(--muted);margin-top:auto;padding-top:12px;border-top:1px solid var(--sand);">Read Article →</span>
+      </a>
+      <a href="blog/loc-method-beginners-guide.html" style="background:var(--cream);border:1px solid var(--sand);padding:24px;display:flex;flex-direction:column;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(61,43,31,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--caramel);margin-bottom:10px;">Natural Hair · Technique</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">The LOC Method for Natural Hair — Beginner's Guide</span>
+        <span style="font-size:12px;color:var(--muted);margin-top:auto;padding-top:12px;border-top:1px solid var(--sand);">Read Article →</span>
+      </a>
+      <a href="blog/protein-treatment-for-natural-hair.html" style="background:var(--cream);border:1px solid var(--sand);padding:24px;display:flex;flex-direction:column;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(61,43,31,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--caramel);margin-bottom:10px;">Natural Hair · Strength</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">Protein Treatment for Natural Hair — Light, Medium &amp; Heavy</span>
+        <span style="font-size:12px;color:var(--muted);margin-top:auto;padding-top:12px;border-top:1px solid var(--sand);">Read Article →</span>
+      </a>
+      <a href="blog/best-diffusers-for-curly-hair.html" style="background:var(--cream);border:1px solid var(--sand);padding:24px;display:flex;flex-direction:column;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(61,43,31,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--caramel);margin-bottom:10px;">Curly Hair · Tools</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--espresso);line-height:1.3;margin-bottom:10px;">Best Diffusers for Curly Hair — Top Picks &amp; Techniques</span>
+        <span style="font-size:12px;color:var(--muted);margin-top:auto;padding-top:12px;border-top:1px solid var(--sand);">Read Article →</span>
+      </a>
+    </div>
+    <div style="text-align:center;">
+      <a href="blog/" style="display:inline-block;padding:14px 40px;border:1px solid var(--espresso);color:var(--espresso);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.background='var(--espresso)';this.style.color='var(--cream)'" onmouseout="this.style.background='';this.style.color='var(--espresso)'">View All 10 Articles →</a>
+    </div>
+  </div>
+</section>
 <footer role="contentinfo">
   <div class="footer-grid">
     <div class="footer-brand">
@@ -1170,15 +1291,16 @@ footer {
       <p>The free hair type quiz and personalized product routine builder. From pin-straight 1A to tightly coiled 4C — every texture, finally understood.</p>
     </div>
     <div class="footer-col">
-      <h4>Explore</h4>
+      <h3>Explore</h3>
       <ul>
         <li><a href="#selector">Hair Type Quiz</a></li>
         <li><a href="#about">Hair Type Guide</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="blog/">Blog</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Hair Types</h4>
+      <h3>Hair Types</h3>
       <ul>
         <li><a href="#selector">Type 1 — Straight</a></li>
         <li><a href="#selector">Type 2 — Wavy</a></li>
@@ -1191,297 +1313,55 @@ footer {
     <p class="footer-legal" id="disclosure-full">
       <strong style="color:rgba(250,247,242,0.5)">Affiliate Disclosure:</strong> Strand is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, Strand earns from qualifying purchases. Product prices and availability are accurate as of the date of publication and may change at any time. Strand does not accept payment from brands to feature their products. All recommendations are based on publicly available review data.
     </p>
-    <p class="footer-copy">© 2025 Strand. All rights reserved.</p>
+    <p class="footer-copy">© 2026 Strand. All rights reserved.</p>
   </div>
 </footer>
 
 <script>
-// ─── CONFIG ───────────────────────────────────────
-// ⚠️  Replace 'yourtag-20' with your Amazon Associates tag before publishing
-const AFFILIATE_TAG = 'strand01-20';
-function amzLink(asin) {
-  return `https://www.amazon.com/dp/${asin}?tag=${AFFILIATE_TAG}&linkCode=ogi&th=1&psc=1`;
+function toggleNav(btn) {
+  const nav = btn.closest('nav');
+  const isOpen = nav.classList.toggle('nav-open');
+  btn.setAttribute('aria-expanded', isOpen);
 }
-
-// ─── VIDEO DATA ───────────────────────────────────
-// Real YouTube video IDs for each hair type + step
-// Format: { videoId, title }
-const videos = {
-  '1A': {
-    shampoo:   [{ id:'8DdoE7FKFWA', t:'Fine Hair Washing Routine' }, { id:'p0RzQmpVkXo', t:'Volumizing Fine Hair Tips' }, { id:'B5GsXy1xHUo', t:'Flat Fine Hair Fix' }],
-    condition: [{ id:'1o1QCMbVqpg', t:'Lightweight Conditioner for Fine Hair' }, { id:'v3kbTNHRgas', t:'Fine Hair Moisture Without Weight' }, { id:'r_3oLV-rYHQ', t:'Conditioner Guide — Straight Hair' }],
-    style:     [{ id:'MwfV4gGNwCE', t:'Volume Blow-Out for Fine Hair' }, { id:'p0RzQmpVkXo', t:'Fine Hair Styling Routine' }, { id:'9GjHUZl-o2Y', t:'Flat-to-Fabulous Styling Tricks' }]
-  },
-  '2B': {
-    shampoo:   [{ id:'W8e7WLKK2m8', t:'Wavy Hair Wash Day Routine' }, { id:'T7WpnBXuSpo', t:'Sulfate-Free Shampoo for Waves' }, { id:'LW0CobFQiR8', t:'Wavy Hair Care Basics' }],
-    condition: [{ id:'T7WpnBXuSpo', t:'Wavy Hair Conditioner Tips' }, { id:'W8e7WLKK2m8', t:'Leave-In for 2B Waves' }, { id:'LW0CobFQiR8', t:'Detangling Wavy Hair' }],
-    style:     [{ id:'jgpOqHR3Kh8', t:'Enhance Your Natural Waves — No Heat' }, { id:'W8e7WLKK2m8', t:'Gel Routine for 2B Wavy Hair' }, { id:'T7WpnBXuSpo', t:'Scrunching Technique for Waves' }]
-  },
-  '3B': {
-    shampoo:   [{ id:'3DLJR2QI3-Q', t:'3B Curly Hair Wash Day' }, { id:'Vk-7fS1dLoE', t:'Co-Wash vs Shampoo for Curls' }, { id:'y2ZpCYR2B9o', t:'Sulfate-Free Routine for 3B' }],
-    condition: [{ id:'Vk-7fS1dLoE', t:'Deep Conditioning 3B Curls' }, { id:'3DLJR2QI3-Q', t:'Leave-In Conditioner Application' }, { id:'y2ZpCYR2B9o', t:'Detangling Curly Hair With Ease' }],
-    style:     [{ id:'DkM_R3lCH2k', t:'Curl Cream Application for 3B' }, { id:'3DLJR2QI3-Q', t:'Defining 3B Curls — Full Routine' }, { id:'Vk-7fS1dLoE', t:'Diffusing Curly Hair Tutorial' }]
-  },
-  '4C': {
-    shampoo:   [{ id:'sPl65jRwAJs', t:'4C Natural Hair Wash Day Routine' }, { id:'ZM0lS_0MrSw', t:'Pre-Poo for 4C Hair' }, { id:'YD8s6SBUE6A', t:'Scalp Care for Natural Hair' }],
-    condition: [{ id:'ZM0lS_0MrSw', t:'Deep Conditioning 4C Hair' }, { id:'sPl65jRwAJs', t:'LOC Method Explained — 4C Hair' }, { id:'YD8s6SBUE6A', t:'Leave-In Conditioner for 4C' }],
-    style:     [{ id:'6bntKMz4c3k', t:'4C Moisturizing & Sealing Tutorial' }, { id:'sPl65jRwAJs', t:'Twist-Out on 4C Natural Hair' }, { id:'ZM0lS_0MrSw', t:'Protective Styles for 4C Retention' }]
-  }
-};
-// Map unmapped types to nearest
-const videoMap = { '1B':'1A','1C':'1A','2A':'2B','2C':'2B','3A':'3B','3C':'3B','4A':'4C','4B':'4C' };
-function getVideos(type, step) {
-  const key = videos[type] ? type : (videoMap[type] || '3B');
-  const stepKey = step === 0 ? 'shampoo' : step === 1 ? 'condition' : 'style';
-  return videos[key][stepKey] || videos[key]['shampoo'];
-}
-
-// ─── PRODUCT DATA ──────────────────────────────────
-const routines = {
-  '1A': {
-    name: 'Pin-Straight, Fine Hair',
-    desc: 'Ultra-fine hair needs weightless cleansing and volumizing support without any heaviness that would flatten your strands.',
-    steps: [
-      { step:'Shampoo', why:'Clarifying or volumizing shampoo — removes buildup without stripping fine strands', products:[
-        { brand:'Kérastase', name:'Bain Divalent Balancing Shampoo', stars:4.6, reviews:'12.4k', price:'$38', why:'Rebalances oily roots while preserving ends — beloved by fine hair communities', asin:'B07K8P5TH6', emoji:'🧴' },
-        { brand:'OGX', name:'Bodifying Bamboo Fiber-Full Shampoo', stars:4.4, reviews:'8.2k', price:'$9', why:'Budget volumizer with bamboo extract — drugstore fan-favorite', asin:'B07GJ4LSNK', emoji:'🧴' },
-        { brand:'Living Proof', name:'Full Shampoo', stars:4.5, reviews:'6.7k', price:'$32', why:'HEALTHY HAIR Molecule lifts roots without weighing strands down', asin:'B00B5HMFJ6', emoji:'🧴' }
-      ]},
-      { step:'Conditioner', why:'Lightweight only — mid-lengths to ends, never at roots', products:[
-        { brand:'Pantene', name:'Aqua Light Conditioner', stars:4.3, reviews:'5.1k', price:'$7', why:'Micro-light formula won\'t flatten fine strands — huge value', asin:'B00BKQP0SO', emoji:'🫙' },
-        { brand:'Briogeo', name:'Don\'t Despair, Repair! Conditioner', stars:4.6, reviews:'9.3k', price:'$28', why:'Clean ingredients, strengthens without adding weight', asin:'B00Z5X72XO', emoji:'🫙' },
-        { brand:'Kérastase', name:'Nutritive Lait Vital Conditioner', stars:4.7, reviews:'4.8k', price:'$42', why:'Luxury pick — feather-light nourishment, salon-grade results', asin:'B001PUCMX4', emoji:'🫙' }
-      ]},
-      { step:'Volumizing Spray', why:'Apply to damp roots before blow-drying for all-day lift', products:[
-        { brand:'Kenra', name:'Platinum Silkening Mist', stars:4.5, reviews:'3.2k', price:'$26', why:'Thermal protection + shine without crunch — pro stylist favorite', asin:'B00DPGXBCS', emoji:'✨' },
-        { brand:'Bumble and bumble', name:'Thickening Spray', stars:4.4, reviews:'7.1k', price:'$31', why:'Cult classic — instantly boosts body at roots', asin:'B000FBIYZO', emoji:'✨' },
-        { brand:'Not Your Mother\'s', name:'Curl Talk Frizz Control Spray', stars:4.2, reviews:'11k', price:'$8', why:'Best budget pick, widely available, loved on TikTok', asin:'B07MQ2XHWS', emoji:'✨' }
-      ]}
-    ]
-  },
-  '2B': {
-    name: 'Defined Wavy Hair',
-    desc: 'Medium waves need frizz control and definition without heaviness that would drag your waves flat.',
-    steps: [
-      { step:'Sulfate-Free Shampoo', why:'Preserves your wave pattern and natural oils', products:[
-        { brand:'SheaMoisture', name:'Coconut & Hibiscus Curl & Shine Shampoo', stars:4.5, reviews:'18.3k', price:'$11', why:'Massive reviews, beloved by the wavy community for definition and moisture', asin:'B004YJQFOU', emoji:'🧴' },
-        { brand:'Maui Moisture', name:'Curl Quench + Coconut Oil Shampoo', stars:4.4, reviews:'9.5k', price:'$8', why:'Drugstore hero — clean formula, outstanding value for wavies', asin:'B07B2VQMD3', emoji:'🧴' },
-        { brand:'Ouai', name:'Thick Hair Shampoo', stars:4.4, reviews:'6.9k', price:'$30', why:'Weightless hydration with biotin — smells incredible', asin:'B073WFRLNB', emoji:'🧴' }
-      ]},
-      { step:'Conditioner', why:'Finger-detangle while in, rinse 80% — leave a little in', products:[
-        { brand:'Aussie', name:'Miracle Moist Conditioner', stars:4.5, reviews:'22k', price:'$6', why:'Legendary budget conditioner — one of the most reviewed on Amazon', asin:'B00JJZZ2EW', emoji:'🫙' },
-        { brand:'SheaMoisture', name:'Coconut & Hibiscus Curl & Shine Conditioner', stars:4.6, reviews:'15.2k', price:'$11', why:'Pairs with the shampoo — moisture without weight, cult status', asin:'B004YJQFPE', emoji:'🫙' },
-        { brand:'Briogeo', name:'Curl Charisma Rice Amino + Avocado Leave-In', stars:4.5, reviews:'3.8k', price:'$22', why:'Works as rinse-out or leave-in — premium clean beauty option', asin:'B01I0VBLHQ', emoji:'🫙' }
-      ]},
-      { step:'Leave-In Conditioner', why:'Apply to soaking wet hair before any stylers', products:[
-        { brand:'Not Your Mother\'s', name:'Curl Talk Leave-In Conditioner', stars:4.4, reviews:'14.7k', price:'$8', why:'#1 drugstore wavy pick — lightweight, no crunch, viral on TikTok', asin:'B07MQ3BQLZ', emoji:'💧' },
-        { brand:'Garnier', name:'Fructis Sleek & Shine Leave-In', stars:4.3, reviews:'19.1k', price:'$5', why:'Ultra-affordable staple loved by millions, controls frizz beautifully', asin:'B000052YQQ', emoji:'💧' },
-        { brand:'Kinky-Curly', name:'Knot Today Leave-In / Detangler', stars:4.4, reviews:'7.2k', price:'$12', why:'Natural ingredients, detangles and moisturizes in one step', asin:'B000KKNQBE', emoji:'💧' }
-      ]},
-      { step:'Wave Mousse or Gel', why:'Scrunch in while soaking wet — air dry or diffuse on low', products:[
-        { brand:'Aussie', name:'Instant Freeze Sculpting Gel', stars:4.4, reviews:'6.3k', price:'$5', why:'Iconic budget gel — beloved by wave communities for hold + definition', asin:'B00189CPRS', emoji:'💨' },
-        { brand:'Herbal Essences', name:'bio:renew Curl Boosting Mousse', stars:4.3, reviews:'8.9k', price:'$7', why:'Lightweight mousse for soft, bouncy waves without stiffness', asin:'B06XWZSP45', emoji:'💨' },
-        { brand:'Moroccanoil', name:'Curl Defining Cream', stars:4.5, reviews:'5.8k', price:'$32', why:'Premium argan oil formula — reduces frizz, gorgeous shine', asin:'B00BF94OD4', emoji:'💨' }
-      ]}
-    ]
-  },
-  '3B': {
-    name: 'Springy, Defined Curls',
-    desc: 'Defined corkscrews need deep moisture, anti-frizz protection, and strong curl-clumping products.',
-    steps: [
-      { step:'Co-Wash or Shampoo', why:'Co-wash 1–2x weekly; clarifying shampoo every 1–2 weeks', products:[
-        { brand:'As I Am', name:'Coconut CoWash Cleansing Conditioner', stars:4.5, reviews:'16.8k', price:'$9', why:'The co-wash standard — cult favorite in the natural hair community', asin:'B004VD4FWY', emoji:'🧴' },
-        { brand:'Cantu', name:'Sulfate-Free Cleansing Cream Shampoo', stars:4.6, reviews:'21.4k', price:'$9', why:'Massive ratings, shea butter formula, Amazon\'s top curly shampoo', asin:'B00GQCLBF0', emoji:'🧴' },
-        { brand:'DevaCurl', name:'No-Poo Zero Lather Shampoo', stars:4.3, reviews:'8.2k', price:'$24', why:'The original curl-method shampoo, huge cult following', asin:'B001TCO5EI', emoji:'🧴' }
-      ]},
-      { step:'Deep Conditioner', why:'Weekly — leave 15–30 min under a shower cap with heat', products:[
-        { brand:'Briogeo', name:'Don\'t Despair, Repair! Deep Mask', stars:4.6, reviews:'11.2k', price:'$38', why:'Top-rated clean deep conditioner — transforms curl health in one use', asin:'B00XPIFPUA', emoji:'🎭' },
-        { brand:'SheaMoisture', name:'Manuka Honey & Mafura Oil Masque', stars:4.5, reviews:'13.6k', price:'$13', why:'Outstanding moisture-to-price ratio, #1 budget deep conditioner', asin:'B074P77QJM', emoji:'🎭' },
-        { brand:'Camille Rose', name:'Algae Renew Deep Conditioning Mask', stars:4.5, reviews:'5.7k', price:'$16', why:'Natural, clean formula beloved for softness and curl definition', asin:'B07FKJRNHH', emoji:'🎭' }
-      ]},
-      { step:'Leave-In Conditioner', why:'Apply to sopping wet hair — your moisture base layer', products:[
-        { brand:'SheaMoisture', name:'JBCO Strengthen & Restore Leave-In', stars:4.6, reviews:'9.8k', price:'$12', why:'Jamaican Black Castor Oil strengthens while leaving curls soft', asin:'B073XVF1MM', emoji:'💧' },
-        { brand:'Mielle Organics', name:'Pomegranate & Honey Leave-In', stars:4.5, reviews:'12.3k', price:'$10', why:'Viral on TikTok/Reels, lightweight but ultra-moisturizing', asin:'B075CMWWVL', emoji:'💧' },
-        { brand:'Kinky-Curly', name:'Knot Today Leave-In', stars:4.4, reviews:'7.2k', price:'$12', why:'Natural staple — detangles and primes curls for styling', asin:'B000KKNQBE', emoji:'💧' }
-      ]},
-      { step:'Curl Cream', why:'Rake and smooth through sections, then scrunch for clumping', products:[
-        { brand:'SheaMoisture', name:'Coconut & Hibiscus Curl Enhancing Smoothie', stars:4.6, reviews:'34.2k', price:'$13', why:'Amazon\'s #1 curl cream — 34k+ reviews, the definitive crowd favorite', asin:'B004YJQFOO', emoji:'🌀' },
-        { brand:'Cantu', name:'Shea Butter Coconut Curling Cream', stars:4.5, reviews:'19.7k', price:'$7', why:'Best budget curl cream available, widely accessible', asin:'B00EM6HHN0', emoji:'🌀' },
-        { brand:'Ouidad', name:'Curl Quencher Moisturizing Gel', stars:4.4, reviews:'4.1k', price:'$26', why:'Professional curl brand, humidity-resistant formula', asin:'B000I50Y2S', emoji:'🌀' }
-      ]},
-      { step:'Styling Gel', why:'Layer on top of curl cream — scrunch out the crunch once dry', products:[
-        { brand:'LA Looks', name:'Extreme Sport Gel', stars:4.5, reviews:'7.8k', price:'$4', why:'Cheapest effective curl gel — massive curl community following', asin:'B003DUVNMC', emoji:'✨' },
-        { brand:'Ecoslay', name:'Orange Marmalade Gel', stars:4.6, reviews:'3.4k', price:'$16', why:'Black-owned brand, clean ingredients, natural hair community darling', asin:'B07N9YJHZS', emoji:'✨' },
-        { brand:'Aunt Jackie\'s', name:'Don\'t Shrink Flaxseed Curl Gel', stars:4.5, reviews:'8.6k', price:'$9', why:'Combats shrinkage, defined clumps, popular across 3B–4A types', asin:'B00AE0I1LY', emoji:'✨' }
-      ]}
-    ]
-  },
-  '4C': {
-    name: 'Tight Coily, Natural Hair',
-    desc: 'Type 4C needs maximum moisture retention, the gentlest possible handling, and a consistent LOC/LCO layering routine.',
-    steps: [
-      { step:'Pre-Poo Oil Treatment', why:'Apply before shampoo — prevents moisture loss and breakage', products:[
-        { brand:'Mielle Organics', name:'Rosemary Mint Scalp & Hair Oil', stars:4.5, reviews:'47.2k', price:'$10', why:'Amazon bestseller — went mega-viral on TikTok for growth and moisture', asin:'B07GVSYL1S', emoji:'🛢️' },
-        { brand:'Jamaican Mango & Lime', name:'Pure Black Castor Oil', stars:4.7, reviews:'8.9k', price:'$10', why:'4C staple — strengthens, reduces breakage, promotes growth', asin:'B00CTTCF0M', emoji:'🛢️' },
-        { brand:'Cliganic', name:'100% Pure Jojoba Oil', stars:4.7, reviews:'34.6k', price:'$14', why:'Fragrance-free jojoba — mimics scalp\'s natural sebum, deeply nourishing', asin:'B07NQPPDTT', emoji:'🛢️' }
-      ]},
-      { step:'Cleansing Shampoo', why:'Shampoo in sections — only 2–4x per month to protect moisture', products:[
-        { brand:'SheaMoisture', name:'African Black Soap Deep Cleansing Shampoo', stars:4.5, reviews:'14.3k', price:'$12', why:'Deep cleanses without over-stripping — 4C community\'s top shampoo pick', asin:'B01CYT2SIM', emoji:'🧴' },
-        { brand:'Cantu', name:'Sulfate-Free Cleansing Cream Shampoo', stars:4.6, reviews:'21.4k', price:'$9', why:'Top-reviewed affordable option — gentle and moisturizing', asin:'B00GQCLBF0', emoji:'🧴' },
-        { brand:'Design Essentials', name:'Natural Almond & Avocado Detangling Shampoo', stars:4.6, reviews:'5.2k', price:'$14', why:'Salon-quality, extremely gentle — premium 4C pick', asin:'B004BJDVPW', emoji:'🧴' }
-      ]},
-      { step:'Deep Conditioner', why:'Non-negotiable weekly step — use heat for penetration', products:[
-        { brand:'Aussie', name:'3 Minute Miracle Moist Deep Conditioner', stars:4.6, reviews:'31.8k', price:'$7', why:'31k+ reviews — shockingly effective budget hero for 4C moisture', asin:'B00189HW4G', emoji:'🎭' },
-        { brand:'SheaMoisture', name:'JBCO Strengthen & Restore Masque', stars:4.6, reviews:'12.7k', price:'$13', why:'Protein + moisture balance — rebuilds 4C strands from within', asin:'B00XCBPGUI', emoji:'🎭' },
-        { brand:'Camille Rose', name:'Curl Maker Whipped Jelly', stars:4.4, reviews:'4.9k', price:'$14', why:'Natural, lightweight treatment — popular for softness and definition', asin:'B076MFRLZG', emoji:'🎭' }
-      ]},
-      { step:'Leave-In Conditioner (L in LOC)', why:'Saturate hair — 4C needs more product than other types', products:[
-        { brand:'Cantu', name:'Shea Butter Leave-In Conditioning Repair Cream', stars:4.6, reviews:'28.4k', price:'$8', why:'Amazon\'s best-reviewed leave-in — 28k reviews, top seller for Type 4', asin:'B00AE0I1QE', emoji:'💧' },
-        { brand:'SheaMoisture', name:'JBCO Strengthen & Restore Leave-In', stars:4.6, reviews:'9.8k', price:'$12', why:'The 4C community\'s most-recommended leave-in conditioner', asin:'B073XVF1MM', emoji:'💧' },
-        { brand:'Olaplex', name:'No.6 Bond Smoother', stars:4.4, reviews:'22.6k', price:'$28', why:'Bond-repair technology — protects fragile 4C strands from future damage', asin:'B08QHL2RVH', emoji:'💧' }
-      ]},
-      { step:'Moisturizing Cream (C in LOC)', why:'Layer cream over leave-in to seal in moisture', products:[
-        { brand:'SheaMoisture', name:'Raw Shea Butter Extra-Moisture Transitioning Milk', stars:4.5, reviews:'7.6k', price:'$12', why:'Perfect LOC cream — seals moisture without excessive weight', asin:'B00BQWQIOO', emoji:'🌀' },
-        { brand:'Cantu', name:'Shea Butter Coconut Curling Cream', stars:4.5, reviews:'19.7k', price:'$7', why:'Most accessible moisture cream — best value for high-porosity 4C hair', asin:'B00EM6HHN0', emoji:'🌀' },
-        { brand:'Mielle Organics', name:'Babassu Oil & Mint Deep Conditioner', stars:4.6, reviews:'6.1k', price:'$12', why:'Black-owned, clean formula, doubles as moisturizer and treatment', asin:'B074X13HC7', emoji:'🌀' }
-      ]},
-      { step:'Sealing Oil (O in LOC)', why:'Final step — seal everything in, focus on ends', products:[
-        { brand:'Jamaican Mango & Lime', name:'Pure Black Castor Oil', stars:4.7, reviews:'8.9k', price:'$10', why:'Gold standard sealing oil for 4C — reduces breakage, adds shine', asin:'B00CTTCF0M', emoji:'🛢️' },
-        { brand:'Mielle Organics', name:'Rosemary Mint Scalp & Hair Oil', stars:4.5, reviews:'47.2k', price:'$10', why:'Viral bestseller — lightweight sealing + promotes healthy growth', asin:'B07GVSYL1S', emoji:'🛢️' },
-        { brand:'Cliganic', name:'100% Pure Jojoba Oil', stars:4.7, reviews:'34.6k', price:'$14', why:'Clean, fragrance-free — mimics scalp\'s natural sebum perfectly', asin:'B07NQPPDTT', emoji:'🛢️' }
-      ]}
-    ]
-  }
-};
-
-const defaultFor = { '1B':'1A','1C':'1A','2A':'2B','2C':'2B','3A':'3B','3C':'3B','4A':'4C','4B':'4C' };
-
-let selectedType = null;
-
-function selectHair(el, type) {
-  document.querySelectorAll('.hair-card').forEach(c => c.classList.remove('selected'));
-  el.classList.add('selected');
-  selectedType = type;
-  const btn = document.getElementById('findBtn');
-  btn.disabled = false;
-  btn.textContent = `→ Build Type ${type} Routine`;
-  document.getElementById('stickyFind').classList.add('visible');
-}
-
-function buildVideoBlock(type, stepIndex) {
-  const vids = getVideos(type, stepIndex);
-  return `
-    <div class="tutorials-block" aria-label="Video tutorials for this step">
-      <h4>▶ Video Tutorials</h4>
-      <p class="tut-sub">Watch how to apply this step correctly for your hair type</p>
-      <div class="videos-row">
-        ${vids.map(v => `
-          <div>
-            <div class="yt-thumb" onclick="loadVideo(this,'${v.id}')" role="button" tabindex="0" aria-label="Play: ${v.t}" onkeypress="if(event.key==='Enter')loadVideo(this,'${v.id}')">
-              <img src="https://img.youtube.com/vi/${v.id}/mqdefault.jpg" alt="YouTube tutorial: ${v.t}" loading="lazy" width="320" height="180">
-              <div class="yt-play">
-                <div class="yt-play-btn">
-                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-                <p class="yt-title">${v.t}</p>
-              </div>
-            </div>
-            <iframe class="yt-frame" title="${v.t}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        `).join('')}
-      </div>
-    </div>
-  `;
-}
-
-function loadVideo(thumb, videoId) {
-  const wrapper = thumb.parentElement;
-  const iframe = wrapper.querySelector('.yt-frame');
-  thumb.style.display = 'none';
-  iframe.style.display = 'block';
-  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-}
-
-function showResults() {
-  if (!selectedType) return;
-  const key = routines[selectedType] ? selectedType : (defaultFor[selectedType] || '3B');
-  const data = routines[key];
-
-  document.getElementById('resultBadge').textContent = selectedType;
-  document.getElementById('resultTitle').textContent = `Type ${selectedType} — ${data.name}`;
-  document.getElementById('resultDesc').textContent = data.desc;
-
-  const container = document.getElementById('routineSteps');
-  container.innerHTML = '';
-
-  data.steps.forEach((step, i) => {
-    const div = document.createElement('div');
-    div.className = 'product-step';
-    const rankLabels = ['⭐ Top Pick', 'Best Value', '✦ Premium'];
-    div.innerHTML = `
-      <div class="routine-label">Step ${i + 1}</div>
-      <div class="step-header">
-        <div class="step-number">0${i + 1}</div>
-        <div class="step-info">
-          <h3>${step.step}</h3>
-          <p>${step.why}</p>
-        </div>
-      </div>
-      <div class="products-row">
-        ${step.products.map((p, pi) => `
-          <article class="product-card" style="animation: fadeUp 0.4s ${0.1 + pi * 0.1}s ease both">
-            <div class="rank-badge">${rankLabels[pi]}</div>
-            <div class="product-emoji" aria-hidden="true">${p.emoji}</div>
-            <div class="product-brand">${p.brand}</div>
-            <h4 class="product-name">${p.name}</h4>
-            <div class="stars" aria-label="${p.stars} out of 5 stars">${'★'.repeat(Math.round(p.stars))}${'☆'.repeat(5-Math.round(p.stars))}</div>
-            <div class="review-count">${p.reviews} reviews · ${p.stars}/5</div>
-            <div class="price-range">${p.price}</div>
-            <p class="product-why">${p.why}</p>
-            <a href="${amzLink(p.asin)}" target="_blank" rel="noopener sponsored" class="amazon-btn" aria-label="View ${p.name} on Amazon (affiliate link)">
-              View on Amazon →
-            </a>
-          </article>
-        `).join('')}
-      </div>
-      ${buildVideoBlock(key, i < 1 ? 0 : i < 3 ? 1 : 2)}
-    `;
-    container.appendChild(div);
+// Close mobile nav when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    const nav = document.querySelector('nav');
+    nav.classList.remove('nav-open');
+    const btn = nav.querySelector('.nav-toggle');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
   });
-
-  const resultsEl = document.getElementById('results');
-  resultsEl.classList.add('active');
-  // Update page title and meta for SEO shareability
-  document.title = `Type ${selectedType} Hair Routine — Best Products & Tutorials | Strand`;
-
-  setTimeout(() => resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
-}
+});
 
 function toggleFaq(el) {
   el.classList.toggle('open');
 }
 
-function shareResult() {
-  const url = `${window.location.origin}${window.location.pathname}?type=${selectedType}`;
-  if (navigator.share) {
-    navigator.share({ title: `My Type ${selectedType} Hair Routine — Strand`, url });
-  } else {
-    navigator.clipboard.writeText(url).then(() => alert(`Link copied! Share your Type ${selectedType} routine 💛`));
-  }
+// ─── LAZY LOAD QUIZ MODULE ────────────────────────
+// The 44KB product data + interaction functions are only
+// fetched when the user first touches the quiz.
+let _quizReady = false, _quizQ = [];
+function _loadQuiz(cb) {
+  if (_quizReady) { cb(); return; }
+  _quizQ.push(cb);
+  if (_quizQ.length > 1) return;
+  const s = document.createElement('script');
+  s.src = '/js/quiz.js';
+  s.onload = function() { _quizReady = true; _quizQ.splice(0).forEach(fn => fn()); };
+  document.head.appendChild(s);
 }
 
-function shareTwitter() {
-  const url = encodeURIComponent(`${window.location.origin}${window.location.pathname}?type=${selectedType}`);
-  const text = encodeURIComponent(`Just found my perfect hair routine for Type ${selectedType} hair 💛 Check yours out on Strand:`);
-  window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
-}
+// Proxy stubs — keep the same names so existing onclick= attrs work
+function selectHair(el, type) { _loadQuiz(() => _selectHair(el, type)); }
+function showResults(skip)    { _loadQuiz(() => _showResults(skip)); }
 
 // Auto-load from URL param (for shared links + SEO friendly URLs)
-const params = new URLSearchParams(window.location.search);
-const typeParam = params.get('type');
-if (typeParam) {
-  const card = document.querySelector(`[data-type="${typeParam}"]`);
-  if (card) { selectHair(card, typeParam); showResults(); }
+const _tp = new URLSearchParams(window.location.search).get('type');
+if (_tp) {
+  _loadQuiz(() => {
+    const card = document.querySelector(`[data-type="${_tp}"]`);
+    if (card) { _selectHair(card, _tp); _showResults(true); }
+  });
 }
 </script>
 </body>

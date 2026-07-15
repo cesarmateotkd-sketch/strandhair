@@ -82,7 +82,8 @@ h1{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,6vw,54px);font-we
 .below a{color:var(--caramel-text);font-weight:500;}
 footer{background:var(--espresso);color:rgba(250,247,242,.6);padding:24px;text-align:center;font-size:12px;}
 footer a{color:rgba(250,247,242,.6);}
-@media(max-width:720px){.grid{grid-template-columns:1fr;gap:36px;}.preview{max-width:340px;margin:0 auto;}}
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid #8B5E1A; outline-offset: 2px; }
+@media(max-width:720px){.grid{grid-template-columns:1fr;gap:36px;}.inside{order:1;}.preview{order:2;max-width:340px;margin:0 auto;}.preview img{max-height:420px;width:auto;margin:0 auto;display:block;}}
 </style>
 </head>
 <body>

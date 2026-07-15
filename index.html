@@ -870,6 +870,10 @@ footer {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0s !important; transition-duration: 0.01ms !important; }
+}
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid #8B5E1A; outline-offset: 2px; }
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {

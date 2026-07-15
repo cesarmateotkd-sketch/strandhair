@@ -136,6 +136,14 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: rotate(-45deg); }
 .post-meta { font-size: 11px; color: var(--muted); margin-bottom: 16px; }
 .read-more { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--espresso); text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--caramel); padding-bottom: 2px; align-self: flex-start; transition: color 0.2s; }
 .read-more:hover { color: var(--caramel); }
+.filter-bar { max-width: 900px; margin: 0 auto; padding: 40px 48px 0; display: flex; gap: 10px; flex-wrap: wrap; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.filter-chip { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mocha); background: var(--cream); border: 1px solid var(--sand); padding: 9px 16px; cursor: pointer; white-space: nowrap; transition: background 0.2s, color 0.2s, border-color 0.2s; }
+.filter-chip:hover { border-color: var(--caramel); color: var(--espresso); }
+.filter-chip[aria-pressed="true"] { background: var(--espresso); color: var(--cream); border-color: var(--espresso); }
+.post-card.featured { grid-column: 1 / -1; padding: 40px; }
+.post-card.featured .latest-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #8B5E1A; font-weight: 600; margin-bottom: 6px; }
+.post-card.featured h2 { font-size: clamp(28px, 4vw, 32px); }
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid #8B5E1A; outline-offset: 2px; }
 .cta-strip { background: var(--espresso); padding: 72px 48px; text-align: center; }
 .cta-strip h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 42px); font-weight: 300; color: var(--cream); margin-bottom: 12px; }
 .cta-strip p { font-size: 15px; color: rgba(250,247,242,0.65); margin-bottom: 28px; }
@@ -161,7 +169,7 @@ footer { background: var(--espresso); padding: 48px 48px 28px; }
   .nav-links li { border-bottom: 1px solid var(--sand); }
   .nav-links li:last-child { border-bottom: none; }
   .nav-links a { display: block; padding: 14px 0; font-size: 14px; }
-  .breadcrumb, .hero, .posts-grid, .cta-strip, footer { padding-left: 24px; padding-right: 24px; }
+  .breadcrumb, .hero, .filter-bar, .posts-grid, .cta-strip, footer { padding-left: 24px; padding-right: 24px; }
   .posts-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .footer-bottom { flex-direction: column; }
@@ -195,372 +203,383 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1>Hair care, <em>demystified.</em></h1>
     <p class="hero-sub">Guides, techniques, and product science for every hair type — from pin-straight to tightly coiled.</p>
   </div>
+  <div class="filter-bar" role="toolbar" aria-label="Filter posts by category" hidden>
+    <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">All</button>
+    <button class="filter-chip" type="button" data-filter="types" aria-pressed="false">Hair Types</button>
+    <button class="filter-chip" type="button" data-filter="wash" aria-pressed="false">Wash Day</button>
+    <button class="filter-chip" type="button" data-filter="moisture" aria-pressed="false">Moisture &amp; Repair</button>
+    <button class="filter-chip" type="button" data-filter="styling" aria-pressed="false">Styling</button>
+    <button class="filter-chip" type="button" data-filter="growth" aria-pressed="false">Growth &amp; Scalp</button>
+    <button class="filter-chip" type="button" data-filter="products" aria-pressed="false">Products &amp; Tools</button>
+    <button class="filter-chip" type="button" data-filter="basics" aria-pressed="false">Basics</button>
+  </div>
   <div class="posts-grid" aria-label="Blog posts">
-    <article class="post-card">
+    <article class="post-card featured" data-cat="wash">
+      <p class="latest-label">Latest</p>
       <p class="post-tag">Natural Hair &middot; Cleansing</p>
       <h2>Best Clarifying Shampoos for Natural Hair: Reset Without Stripping</h2>
       <p class="post-excerpt">When your holy grail products "stop working," it's usually six weeks of invisible buildup. What actually accumulates on natural hair, the clarifying vs. chelating difference hard water makes essential, and 6 reset options.</p>
       <p class="post-meta">May 2026 &middot; 8 min read</p>
       <a href="best-clarifying-shampoos-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="styling">
       <p class="post-tag">Natural Hair &middot; Heat Styling</p>
       <h2>Best Heat Protectants for Natural Hair: Silk Press to Blowout</h2>
       <p class="post-excerpt">What heat actually does to keratin, why the 450°F flat iron setting is a tool capability and not a recommendation, safe temperature ranges by texture, and 6 protectants from drugstore to silk-press grade.</p>
       <p class="post-meta">May 2026 &middot; 9 min read</p>
       <a href="best-heat-protectants-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="styling">
       <p class="post-tag">Natural Hair &middot; Styling</p>
       <h2>Best Edge Control for Natural Hair: Hold Without Damage</h2>
       <p class="post-excerpt">Ebin vs. Mielle vs. The Doux — 6 edge controls ranked by hold and edge safety, why product flakes or turns white, and the traction alopecia warning signs to catch before thinning becomes permanent.</p>
       <p class="post-meta">May 2026 &middot; 8 min read</p>
       <a href="best-edge-control-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="moisture">
       <p class="post-tag">Natural Hair &middot; Moisture &amp; Sealing</p>
       <h2>Best Oils for Natural Hair: Penetrating vs. Sealing Explained</h2>
       <p class="post-excerpt">Coconut oil enters the hair shaft; jojoba physically can't. That one distinction explains most oil failures — here's the science, the porosity matching table, and 6 picks by role from pre-poo to finishing.</p>
       <p class="post-meta">May 2026 &middot; 9 min read</p>
       <a href="best-oils-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="moisture">
       <p class="post-tag">Natural Hair &middot; Hair Repair</p>
       <h2>Best Bond Builders for Natural Hair: Olaplex, K18 &amp; More</h2>
       <p class="post-excerpt">Bond builders repair broken disulfide bonds inside the hair shaft — something protein treatments can't do. The science, the wet strand test, and 6 picks from Olaplex to K18 to drugstore options.</p>
       <p class="post-meta">May 2026 &middot; 9 min read</p>
       <a href="best-bond-builders-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="products">
       <p class="post-tag">Natural Hair &middot; Tools &amp; Techniques</p>
       <h2>Best Hair Steamer for Natural Hair: Deeper Conditioning &amp; Less Dryness</h2>
       <p class="post-excerpt">Steam opens the cuticle so deep conditioner actually penetrates instead of sitting on the surface. Essential for low porosity hair — here's the science, the types, and the 5 best steamers for natural hair.</p>
       <p class="post-meta">May 2026 &middot; 8 min read</p>
       <a href="best-hair-steamer-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="styling">
       <p class="post-tag">Natural Hair &middot; Styling</p>
       <h2>Best Gels for Natural Hair: Hold, Definition &amp; No Flaking</h2>
       <p class="post-excerpt">Eco Styler vs. Aunt Jackie's vs. Mielle — what makes each work, why glycerin and dew point determine whether your gel fights frizz or causes it, and how to SOTC for soft curls without crunch.</p>
       <p class="post-meta">May 2026 &middot; 8 min read</p>
       <a href="best-gels-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="growth">
       <p class="post-tag">Natural Hair &middot; Hair Growth</p>
       <h2>Best Hair Growth Serums for Natural Hair: What Actually Works</h2>
       <p class="post-excerpt">Rosemary oil matched 2% minoxidil in a clinical trial. Caffeine blocks DHT at the follicle. Peptides signal growth factors. Here's what the research actually says — and the 6 best serums for natural hair textures from 3C to 4C.</p>
       <p class="post-meta">May 2026 &middot; 9 min read</p>
       <a href="best-hair-growth-serums-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="products">
       <p class="post-tag">Natural Hair &middot; Product Guide</p>
       <h2>Best Shampoos for Natural Hair: Sulfate-Free, Clarifying &amp; Co-Wash Options Ranked</h2>
       <p class="post-excerpt">The wrong shampoo strips natural hair of everything it needs. Here's how to choose between sulfate-free, clarifying, and co-wash options based on your porosity and texture — and the 6 best picks at every price point.</p>
       <p class="post-meta">May 2026 &middot; 8 min read</p>
       <a href="best-shampoos-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="moisture">
       <p class="post-tag">Natural Hair &middot; Hair Care</p>
       <h2>Moisture vs. Protein Balance for Natural Hair: The Complete Guide</h2>
       <p class="post-excerpt">Too much protein makes hair brittle. Too much moisture makes it mushy. The wet strand elasticity test tells you exactly which side you're on — and the complete protocol for getting back to balance.</p>
       <p class="post-meta">May 2026 &middot; 9 min read</p>
       <a href="moisture-vs-protein-balance.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="moisture">
       <p class="post-tag">Natural Hair &middot; Hair Health</p>
       <h2>Hair Breakage vs. Shedding: How to Tell the Difference and Fix Each One</h2>
       <p class="post-excerpt">Breakage and shedding look identical in the drain but need completely different fixes. Here's the 30-second bulb check to diagnose which one you have — and the exact treatments for each, including when K18 is actually worth it.</p>
       <p class="post-meta">May 2026 &middot; 9 min read</p>
       <a href="hair-breakage-vs-shedding.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="basics">
       <p class="post-tag">Natural Hair &middot; Sleep Protection</p>
       <h2>Silk Bonnet vs. Satin Pillowcase for Natural Hair: Honest Guide</h2>
       <p class="post-excerpt">The real material difference between silk and satin, which protects better by hair type, when a pillowcase alone is enough, and why using both is the answer for 4C and high-porosity hair — with no brand bias.</p>
       <p class="post-meta">May 2026 &middot; 9 min read</p>
       <a href="silk-bonnet-vs-satin-pillowcase.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">Hair Type &middot; Type 3A Curls</p>
       <h2>3A Hair Care Routine: Products, Wash Day &amp; Styling Guide</h2>
       <p class="post-excerpt">Complete 3A hair care routine — how to identify type 3A curls, why lighter products outperform heavier creams for loose spirals, a 6-step wash day, diffuse vs air dry, and the scrunch-out-the-crunch technique for all-day definition.</p>
       <p class="post-meta">May 2026 &middot; 10 min read</p>
       <a href="3a-hair-care-routine.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="basics">
       <p class="post-tag">Natural Hair &middot; Beginners</p>
       <h2>Natural Hair Care for Beginners: Complete Starter Guide</h2>
       <p class="post-excerpt">Everything you need to start a natural hair care routine from scratch — hair typing, porosity, a 6-step wash day, a 5-product starter kit, the 7 mistakes that cause most beginners to quit, and a 3-month roadmap to healthy growth.</p>
       <p class="post-meta">May 2026 &middot; 12 min read</p>
       <a href="natural-hair-care-beginners.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">4C &amp; Coily Hair</p>
       <h2>Natural Hair Shrinkage: Why It Happens &amp; 6 Ways to Stretch It</h2>
       <p class="post-excerpt">The science behind why coily hair shrinks up to 75%, how much is normal by hair type, how to tell shrinkage from breakage, and 6 proven stretching methods — from banding and African threading to blowouts and roller sets.</p>
       <p class="post-meta">May 2026 &middot; 10 min read</p>
       <a href="natural-hair-shrinkage.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="wash">
       <p class="post-tag">Natural Hair &middot; Wash Day</p>
       <h2>ACV Rinse for Natural Hair: Dilution, Method &amp; Benefits</h2>
       <p class="post-excerpt">The pH science behind apple cider vinegar rinses, correct dilution ratios by hair type, step-by-step wash day method, how often to use it, and 5 clarifying products for a complete buildup-removal routine.</p>
       <p class="post-meta">May 2026 &middot; 9 min read</p>
       <a href="acv-rinse-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="moisture">
       <p class="post-tag">Natural Hair &middot; Treatments</p>
       <h2>Hot Oil Treatment for Natural Hair: Complete Guide</h2>
       <p class="post-excerpt">Which oils to use by hair type, the step-by-step method, how often to treat, and why heat matters — plus 6 product picks from $9 coconut oil to a hair steamer, with the science behind penetrating vs sealing oils.</p>
       <p class="post-meta">May 2026 &middot; 10 min read</p>
       <a href="hot-oil-treatment-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="products">
       <p class="post-tag">Natural Hair &middot; Products</p>
       <h2>Best Deep Conditioners for Natural Hair — 8 Picks by Hair Type</h2>
       <p class="post-excerpt">The 8 best deep conditioners for natural hair in 2026, ranked by hair type, porosity, and concern. Includes budget picks under $15 and premium options for 4C, 4B, 4A, wavy, and color-treated hair — with a selection guide table so you always pick the right one.</p>
       <p class="post-meta">May 2026 &middot; 11 min read</p>
       <a href="best-deep-conditioners-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">Hair Type &middot; Type 2B Wavy Hair</p>
       <h2>2B Hair Care Routine: Complete Guide for Defined S-Waves</h2>
       <p class="post-excerpt">Lightweight product layering, plopping technique, mousse vs gel for 2B, air dry or diffuse, CGM modifications for fine wavy hair, and why 2B waves go flat &mdash; plus 5 product picks calibrated for fine strands.</p>
       <p class="post-meta">May 2026 &middot; 10 min read</p>
       <a href="2b-hair-care-routine.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">Hair Type &middot; Type 2C Wavy Hair</p>
       <h2>2C Hair Care Routine: The Complete Guide for Tight S-Waves</h2>
       <p class="post-excerpt">Wash day steps, the gel + mousse layering method, plopping technique, how to diffuse without frizz, and 6 product picks for the most defined wavy type &mdash; plus why 2C waves go flat and how to stop it.</p>
       <p class="post-meta">May 2026 &middot; 11 min read</p>
       <a href="2c-hair-care-routine.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="styling">
       <p class="post-tag">Natural Hair &middot; Technique</p>
       <h2>How to Detangle Natural Hair Without Breakage — Complete Guide</h2>
       <p class="post-excerpt">The right order, tools, and products for detangling every curl type from 2C to 4C &mdash; dry vs conditioner methods, ends-to-roots technique, after protective style takedown, and 6 product picks.</p>
       <p class="post-meta">May 2026 &middot; 11 min read</p>
       <a href="detangling-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="wash">
       <p class="post-tag">Natural Hair &middot; Wash Day</p>
       <h2>Pre-Poo Treatment for Natural Hair: How and Why It Works</h2>
       <p class="post-excerpt">What pre-poo actually does for your hair, the science of hygral fatigue, oil vs conditioner pre-poo, how long to leave it on, and a full step-by-step guide for every texture from wavy to 4C.</p>
       <p class="post-meta">May 2026 &middot; 10 min read</p>
       <a href="pre-poo-treatment-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="growth">
       <p class="post-tag">Hair Growth &middot; Natural Hair</p>
       <h2>Castor Oil for Hair Growth: Does It Actually Work?</h2>
       <p class="post-excerpt">The honest science on castor oil &mdash; what ricinoleic acid actually does, JBCO vs regular castor oil, how to use it by hair type, and why you should never apply it straight without diluting.</p>
       <p class="post-meta">May 2026 &middot; 11 min read</p>
       <a href="castor-oil-for-hair-growth.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">4C Natural Hair &middot; Type 4 Hair Care</p>
       <h2>4C Hair Care Routine: The Complete Guide for Tight Coils</h2>
       <p class="post-excerpt">Full wash day routine for 4C hair &mdash; pre-poo, sectioned shampoo, deep conditioning with heat, LOC method with heavy sealants, stretching techniques, and length retention for the tightest coil type.</p>
       <p class="post-meta">May 2026 &middot; 12 min read</p>
       <a href="4c-hair-care-routine.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="moisture">
       <p class="post-tag">Natural Hair &middot; Moisture Technique</p>
       <h2>The Baggy Method for Natural Hair: How to Use It for Maximum Moisture</h2>
       <p class="post-excerpt">The greenhouse moisture technique explained &mdash; how it works, ends-only vs full-head, step-by-step routine, how often by hair type, and the best products for maximum hydration without over-moisturizing.</p>
       <p class="post-meta">May 2026 &middot; 9 min read</p>
       <a href="baggy-method-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="styling">
       <p class="post-tag">Natural Hair &middot; Styling Technique</p>
       <h2>How to Do Finger Coils on Natural Hair: Step-by-Step Guide</h2>
       <p class="post-excerpt">Complete finger coil technique for 3C&ndash;4C hair &mdash; product layering, forward vs backward coiling, diffusing, 5&ndash;10 day wear, refresh method, and a full troubleshooting table.</p>
       <p class="post-meta">May 2026 &middot; 10 min read</p>
       <a href="finger-coils-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">Hair Type &middot; Type 3B Curls</p>
       <h2>3B Hair Care Routine: The Complete Guide for Defined Spirals</h2>
       <p class="post-excerpt">The complete 3B wash day routine &mdash; sulfate-free shampoo, deep conditioning, plopping technique, diffusing on low heat, weekly schedule, and 6 product picks for tight S-shaped spirals.</p>
       <p class="post-meta">April 2026 &middot; 11 min read</p>
       <a href="3b-hair-care-routine.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">Hair Type &middot; Type 3C Curls</p>
       <h2>3C Hair Care Routine: Complete Guide for Type 3C Curls</h2>
       <p class="post-excerpt">Full wash day routine, LOC vs LCO by porosity, wash and go vs twist out compared, weekly schedule, and the 6 best products for tight spiral 3C curls.</p>
       <p class="post-meta">April 2026 &middot; 10 min read</p>
       <a href="3c-hair-care-routine.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="growth">
       <p class="post-tag">Natural Hair &middot; Hair Growth</p>
       <h2>Rice Water for Hair Growth: Does It Work + How to Use It</h2>
       <p class="post-excerpt">The science behind rice water for natural hair &mdash; what inositol and amino acids actually do, plain vs fermented compared, how to make it, and how to avoid protein overload by hair type.</p>
       <p class="post-meta">April 2026 &middot; 9 min read</p>
       <a href="rice-water-for-hair-growth.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="styling">
       <p class="post-tag">Natural Hair &middot; Styling</p>
       <h2>How to Do a Twist Out on Natural Hair: Complete Guide</h2>
       <p class="post-excerpt">Two-strand twist technique for types 3A through 4C &mdash; when to twist, how long to leave in, how to unravel without frizz, and how to make the style last 7 days with nighttime care.</p>
       <p class="post-meta">April 2026 &middot; 10 min read</p>
       <a href="twist-out-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="styling">
       <p class="post-tag">Natural Hair &middot; Styling</p>
       <h2>Wash and Go Natural Hair: Step-by-Step Guide for Curls &amp; Coils</h2>
       <p class="post-excerpt">The fastest styling method for natural hair — done right. Step-by-step technique for 3A through 4C curls, application methods compared, how to make it last 5 days, and why yours gets frizzy.</p>
       <p class="post-meta">April 2026 &middot; 11 min read</p>
       <a href="wash-and-go-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="wash">
       <p class="post-tag">Natural Hair &middot; Wash Day</p>
       <h2>Co-Washing Natural Hair &mdash; Complete Guide + Best Products</h2>
       <p class="post-excerpt">Co-washing replaces shampoo with a conditioning cleanser that hydrates while it cleanses. Learn which hair types benefit most, a 6-step technique, how often to co-wash, and the best cleansing conditioners by curl type.</p>
       <p class="post-meta">April 2026 &middot; 10 min read</p>
       <a href="co-washing-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">Natural Hair &middot; High Porosity</p>
       <h2>High Porosity Hair Care &mdash; Complete Routine &amp; Product Guide</h2>
       <p class="post-excerpt">High porosity hair absorbs moisture instantly and loses it just as fast. The complete routine: protein every 4&ndash;6 weeks, heavy sealants, LOC method with richer products, and an ACV rinse to temporarily close the cuticle.</p>
       <p class="post-meta">April 2026 &middot; 10 min read</p>
       <a href="high-porosity-hair-care.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="products">
       <p class="post-tag">Natural Hair &middot; Styling Products</p>
       <h2>Best Curl Creams for Natural Hair &mdash; Top Picks by Hair Type</h2>
       <p class="post-excerpt">Curl cream is the C in LOC &mdash; the final styling layer that defines curl pattern and seals moisture. Here are the best picks for 4C, 4B, 4A, Type 3, and wavy hair, ranked by formula weight and porosity fit.</p>
       <p class="post-meta">April 2026 &middot; 10 min read</p>
       <a href="best-curl-creams-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">Natural Hair &middot; Low Porosity</p>
       <h2>Low Porosity Hair Care &mdash; The Complete Routine Guide</h2>
       <p class="post-excerpt">Low porosity hair is not damaged &mdash; it is resistant. The tightly closed cuticle that blocks moisture also blocks damage. Here is the science-backed routine: clarifying, heat application, LCO method, and the lightweight products that actually absorb.</p>
       <p class="post-meta">April 2026 &middot; 11 min read</p>
       <a href="low-porosity-hair-care.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">Wavy Hair &middot; 2A &middot; 2B &middot; 2C</p>
       <h2>Wavy Hair Routine for Beginners &mdash; The Complete 2A, 2B &amp; 2C Guide</h2>
       <p class="post-excerpt">Most wavy hair has been treated like straight hair for years. Three changes &mdash; sulfate-free shampoo, no dry brushing, styling on wet hair &mdash; reveal the waves that have been there all along. Here is the full routine.</p>
       <p class="post-meta">April 2026 &middot; 10 min read</p>
       <a href="wavy-hair-routine-beginners.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="basics">
       <p class="post-tag">Natural Hair &middot; TWA &middot; Big Chop</p>
       <h2>TWA Hairstyles &mdash; 10 Styles for Every Stage of Growth</h2>
       <p class="post-excerpt">From the big chop to a full afro puff &mdash; ten TWA hairstyles with step-by-step technique guides, the best styling products, and the complete TWA moisture routine for every growth stage.</p>
       <p class="post-meta">April 2026 &middot; 11 min read</p>
       <a href="twa-hairstyles.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="products">
       <p class="post-tag">4C Natural Hair &middot; Leave-In Conditioners</p>
       <h2>Best Leave-In Conditioners for 4C Hair &mdash; Top Picks for Maximum Moisture</h2>
       <p class="post-excerpt">The leave-in is the L in LOC &mdash; every other product depends on it. Here are the best leave-in conditioners for 4C hair ranked by formula type and porosity fit, from lightweight mists to rich butters.</p>
       <p class="post-meta">April 2026 &middot; 10 min read</p>
       <a href="best-leave-in-conditioners-4c-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">4B Natural Hair &middot; Type 4 Hair Care</p>
       <h2>4B Hair Care Routine &mdash; The Complete Guide for Z-Coil Hair</h2>
       <p class="post-excerpt">4B hair has tight Z-coils and is mostly high porosity &mdash; which means moisture escapes fast. Here&rsquo;s the complete wash day, LOC method, and styling guide that actually works for 4B texture.</p>
       <p class="post-meta">April 2026 &middot; 11 min read</p>
       <a href="4b-hair-care-routine.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="moisture">
       <p class="post-tag">Natural Hair &middot; Deep Conditioning</p>
       <h2>How to Deep Condition Natural Hair &mdash; The Science-Backed Complete Guide</h2>
       <p class="post-excerpt">Deep conditioning penetrates the cortex &mdash; regular conditioning just coats the cuticle. Learn the moisture vs protein decision, the strand test, heat application, and the exact 5-step process for every porosity type.</p>
       <p class="post-meta">April 2026 &middot; 10 min read</p>
       <a href="deep-conditioning-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="growth">
       <p class="post-tag">Natural Hair &middot; Scalp Health</p>
       <h2>Scalp Care Routine for Natural Hair &mdash; The Foundation of Healthy Growth</h2>
       <p class="post-excerpt">Your scalp is skin &mdash; it needs cleansing, exfoliation, and circulation just like your face. Here&rsquo;s the science-backed routine for natural hair, covering massage, the best scalp oils, and when to see a dermatologist.</p>
       <p class="post-meta">April 2026 &middot; 10 min read</p>
       <a href="scalp-care-routine-natural-hair.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">4A Natural Hair &middot; Type 4 Hair Care</p>
       <h2>4A Hair Care Routine &mdash; The Complete Guide for Soft, Defined Coils</h2>
       <p class="post-excerpt">4A hair has tight S-coils that need moisture, protein balance, and the right technique. Here&rsquo;s the complete science-backed routine covering wash day, the LOC method, styling, and the most common mistakes.</p>
       <p class="post-meta">April 2026 &middot; 11 min read</p>
       <a href="4a-hair-care-routine.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">Natural Hair &middot; Hair Science</p>
       <h2>Hair Porosity Test &mdash; How to Know Your Hair&rsquo;s Porosity at Home</h2>
       <p class="post-excerpt">The float test, spray bottle test, and slide test explained &mdash; plus what low, medium, and high porosity means for your products, your LOC or LCO order, and every step of your routine.</p>
       <p class="post-meta">April 2026 &middot; 10 min read</p>
       <a href="hair-porosity-test.html" class="read-more">Read Article &rarr;</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="moisture">
       <p class="post-tag">Natural Hair · Technique</p>
       <h2>The LOC Method for Natural Hair — Beginner's Complete Guide</h2>
       <p class="post-excerpt">Learn how the Liquid–Oil–Cream layering technique seals moisture into natural hair — step-by-step instructions, product picks, and tips for LOC vs LCO based on your porosity.</p>
       <p class="post-meta">June 2025 · 9 min read</p>
       <a href="loc-method-beginners-guide.html" class="read-more">Read Article →</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">All Hair Types</p>
       <h2>How to Find Your Hair Type (1A to 4C) — Complete Guide</h2>
       <p class="post-excerpt">Learn exactly how to identify your hair type with our step-by-step guide. Understand curl patterns, porosity, and density so you can finally build a routine that works.</p>
       <p class="post-meta">June 2025 · 8 min read</p>
       <a href="how-to-find-your-hair-type.html" class="read-more">Read Article →</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">Wavy Hair · CGM</p>
       <h2>The Curly Girl Method for Wavy Hair — Complete Beginner's Guide</h2>
       <p class="post-excerpt">Everything you need to know to start CGM for wavy hair (2A, 2B, 2C) — what products to use, what to avoid, and how to modify the method so it actually works for waves.</p>
       <p class="post-meta">June 2025 · 9 min read</p>
       <a href="curly-girl-method-wavy-hair.html" class="read-more">Read Article →</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="products">
       <p class="post-tag">Type 4C Hair · Products</p>
       <h2>Best Products for 4C Hair — Ranked by Real Reviews</h2>
       <p class="post-excerpt">The best shampoos, deep conditioners, leave-ins, curl creams, and sealing oils for 4C natural hair. Every pick ranked by real Amazon review data — no paid placements.</p>
       <p class="post-meta">June 2025 · 10 min read</p>
       <a href="best-products-for-4c-hair.html" class="read-more">Read Article →</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">Type 3 Curls</p>
       <h2>3B vs 3C Curls: What's the Difference and How to Care for Each</h2>
       <p class="post-excerpt">Not sure if you have 3B or 3C curls? Learn the key differences, how to identify yours, and exactly what products and routines work best for each curl type.</p>
       <p class="post-meta">June 2025 · 8 min read</p>
       <a href="3b-vs-3c-curls.html" class="read-more">Read Article →</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="wash">
       <p class="post-tag">Wash Day</p>
       <h2>How to Wash 4C Hair Without Breakage — The Complete Wash Day Routine</h2>
       <p class="post-excerpt">The 5-step wash day routine that stops breakage before it starts. Pre-poo, detangle, cleanse, deep condition, and seal — done in the right order.</p>
       <p class="post-meta">April 2026 · 12 min read</p>
       <a href="how-to-wash-4c-hair.html" class="read-more">Read Article →</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="moisture">
       <p class="post-tag">Natural Hair · Strength</p>
       <h2>Protein Treatment for Natural Hair — Light, Medium &amp; Heavy Guide</h2>
       <p class="post-excerpt">How to diagnose protein deficiency vs overload with the stretch test, then choose the right treatment level — from weekly leave-ins to monthly reconstruction treatments.</p>
       <p class="post-meta">April 2026 · 11 min read</p>
       <a href="protein-treatment-for-natural-hair.html" class="read-more">Read Article →</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="products">
       <p class="post-tag">Curly Hair · Tools</p>
       <h2>Best Diffusers for Curly Hair — Top Picks &amp; Technique Guide</h2>
       <p class="post-excerpt">The best diffusers at every price point — from $12 budget picks to the Dyson — plus the hover, pixie, and combination techniques that give you defined curls without frizz.</p>
       <p class="post-meta">April 2026 · 10 min read</p>
       <a href="best-diffusers-for-curly-hair.html" class="read-more">Read Article →</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="growth">
       <p class="post-tag">Natural Hair · Length Retention</p>
       <h2>Best Protective Styles for Natural Hair — 10 Styles for Length Retention</h2>
       <p class="post-excerpt">The 10 best protective styles for 4C hair with a duration guide, step-by-step prep routine, the 5 mistakes that cause damage, and products that support healthy protective styling.</p>
       <p class="post-meta">April 2026 · 11 min read</p>
       <a href="protective-styles-for-natural-hair.html" class="read-more">Read Article →</a>
     </article>
-    <article class="post-card">
+    <article class="post-card" data-cat="types">
       <p class="post-tag">4C Natural Hair · Growth</p>
       <h2>How to Grow 4C Hair Faster — Science-Backed Length Retention Guide</h2>
       <p class="post-excerpt">4C hair grows at the same rate as all hair — the problem is retention. The science behind scalp massage, rosemary oil, iron, vitamin D, and the care practices that maximize visible growth.</p>
@@ -638,6 +657,22 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     if (btn) btn.setAttribute('aria-expanded', 'false');
   });
 });
+(function() {
+  var bar = document.querySelector('.filter-bar');
+  if (!bar) return;
+  bar.hidden = false;
+  var chips = bar.querySelectorAll('.filter-chip');
+  var cards = document.querySelectorAll('.posts-grid .post-card');
+  bar.addEventListener('click', function(e) {
+    var chip = e.target.closest('.filter-chip');
+    if (!chip) return;
+    var cat = chip.getAttribute('data-filter');
+    chips.forEach(function(c) { c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'); });
+    cards.forEach(function(card) {
+      card.style.display = (cat === 'all' || card.getAttribute('data-cat') === cat) ? '' : 'none';
+    });
+  });
+})();
 </script>
 </body>
 </html>

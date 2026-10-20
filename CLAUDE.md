@@ -251,6 +251,10 @@ Standing feedback from the site owner. Apply it without being reminded, and add 
 - Avoid templated looks. The first serum ad (dark background, centered serif stack, fake button) was replaced by the "evidence ledger" design: paper/document feel, monospace data rows, structure that encodes real findings.
 - Lead with evidence and science. That's the site's differentiator in articles, ads, and pins.
 - Keep the brand palette (espresso / caramel / cream) and `--caramel-text` for text on light backgrounds.
+- **Approved pattern: "Quick picks" block** near the top of roundup posts, plus a one-line "Best for + View on Amazon" summary under each product. Reference implementation: `blog/best-hair-growth-serums-natural-hair.html` (`.quick-picks`, `.qp-*`, `.card-summary`). The data column must come from the post's own content (evidence grade, hold level, heat stage, etc.); never invent ratings, and no dollar prices.
+
+### Testing
+- **Block analytics in test browsers.** Any Playwright/headless run against the site must abort all non-localhost requests first, or real GA4 events and Google Ads conversions fire.
 
 ### Copy & platforms
 - Quora answers should be genuinely useful and drive traffic to the site, usually via the quiz link where it fits naturally. Don't force links.

@@ -440,6 +440,9 @@ function _showResults(skipScroll) {
 
   const resultsEl = document.getElementById('results');
   resultsEl.classList.add('active');
+  // Hide the floating CTA once results are on screen so it can't cover product cards.
+  // Selecting a different hair type later re-shows it (see _selectHair) so the user can rebuild.
+  document.getElementById('stickyFind').classList.remove('visible');
   // Update page title and meta for SEO shareability
   document.title = `Type ${selectedType} Hair Routine — Best Products & Tutorials | Strand`;
   // Conversion events — GA4 + Google Ads

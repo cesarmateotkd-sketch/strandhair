@@ -147,6 +147,50 @@ tr:nth-child(even) td{background:var(--warm-white);}
 .product-body h3{margin-top:0;}
 .product-tag{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--sand);color:var(--espresso);padding:3px 8px;border-radius:2px;margin-bottom:10px;}
 .product-link{display:inline-block;margin-top:12px;font-size:13px;font-weight:500;color:var(--caramel-text);text-decoration:none;border-bottom:1px solid var(--caramel);padding-bottom:2px;letter-spacing:.04em;}
+/* ─── Quick picks: evidence ledger ─── */
+.quick-picks{margin:8px 0 44px;background:var(--warm-white);border:1px solid var(--sand);border-top:3px solid var(--espresso);padding:22px 24px 8px;}
+.qp-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;padding-bottom:14px;border-bottom:1px solid var(--espresso);}
+.quick-picks h2{margin:0;font-size:clamp(24px,3.2vw,30px);}
+.qp-key{margin:0;font-size:12px;line-height:1.6;color:var(--muted);max-width:380px;}
+.qp-legend{display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em;margin-top:4px;}
+.qp-legend .qp-pips{margin:0 5px 0 0;vertical-align:-1px;}
+.qp-legend .qp-pips:not(:first-child){margin-left:12px;}
+.qp-list{list-style:none;margin:0;padding:0;}
+.qp-row{display:grid;grid-template-columns:30px minmax(0,1fr) 210px auto;gap:4px 18px;align-items:baseline;padding:14px 0;border-bottom:1px dashed var(--sand);}
+.qp-row:last-child{border-bottom:0;}
+.qp-no{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12px;color:var(--caramel-text);}
+.qp-id{display:flex;flex-direction:column;min-width:0;}
+.qp-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.25;color:var(--espresso);text-decoration:none;}
+.qp-name:hover{text-decoration:underline;text-decoration-color:var(--caramel);text-underline-offset:3px;}
+.qp-for{font-size:13px;line-height:1.45;color:var(--mocha);margin-top:2px;}
+.qp-ev{display:flex;flex-direction:column;gap:3px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:11.5px;line-height:1.4;}
+.qp-active{color:var(--text);}
+.qp-grade{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;}
+.qp-pips{display:inline-flex;gap:3px;flex-shrink:0;}
+.qp-pips i{display:block;width:9px;height:9px;border:1.5px solid var(--caramel-text);border-radius:50%;}
+.qp-pips i.on{background:var(--caramel-text);}
+.qp-pips--na i{border-style:dashed;border-color:var(--muted);}
+.qp-act{display:flex;flex-direction:column;align-items:flex-end;gap:4px;white-space:nowrap;}
+.qp-buy{font-size:13px;font-weight:500;color:var(--cream);background:var(--espresso);text-decoration:none;padding:6px 12px;border-radius:2px;letter-spacing:.03em;}
+.qp-buy:hover{background:#2A1F1A;}
+.qp-jump{font-size:12px;color:var(--caramel-text);text-decoration:none;}
+.qp-jump:hover{text-decoration:underline;}
+.quick-picks a:focus-visible,.card-summary a:focus-visible{outline:2px solid var(--espresso);outline-offset:3px;border-radius:2px;}
+.product-card{scroll-margin-top:16px;}
+.card-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;margin:-4px 0 14px;font-size:13px;line-height:1.5;color:var(--muted);}
+.card-summary b{font-weight:500;color:var(--espresso);}
+.card-summary-link{font-weight:500;color:var(--caramel-text);text-decoration:none;white-space:nowrap;}
+.card-summary-link:hover{text-decoration:underline;}
+@media(max-width:640px){
+  .quick-picks{padding:18px 16px 4px;margin-left:-8px;margin-right:-8px;}
+  .qp-row{grid-template-columns:24px minmax(0,1fr);gap:6px 10px;padding:12px 0;}
+  .qp-no{grid-row:1;}
+  .qp-ev,.qp-act{grid-column:2;}
+  .qp-name{font-size:18px;}
+  .qp-act{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;}
+  .qp-buy{padding:5px 11px;font-size:12.5px;}
+  .qp-key{max-width:none;}
+}
 footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 .footer-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;}
 .footer-brand .logo-f{font-family:'Cormorant Garamond',serif;font-size:20px;color:#FAF7F2;text-decoration:none;display:inline-block;margin-bottom:12px;}
@@ -190,6 +234,106 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <p>This guide covers what hair growth serums can and cannot do, which ingredients have actual clinical or mechanistic evidence behind them, and the best options for natural hair textures from 3C through 4C &mdash; at every price point from $10 to $68.</p>
 
+    <section class="quick-picks" aria-labelledby="qp-heading">
+      <div class="qp-head">
+        <h2 id="qp-heading">Quick picks</h2>
+        <p class="qp-key">Graded by each product&rsquo;s main active, using the <a href="#evidence-table">evidence table</a> below.
+          <span class="qp-legend"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>strong <span class="qp-pips" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span>weak <span class="qp-pips qp-pips--na" aria-hidden="true"><i></i><i></i><i></i><i></i></span>not graded</span></p>
+      </div>
+      <ol class="qp-list">
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">01</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-1">Mielle Rosemary &amp; Mint Oil</a>
+            <span class="qp-for">A budget rosemary-oil routine</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Rosemary oil</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span>Strong &middot; RCT</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Mielle+Rosemary+Mint+Scalp+Hair+Strengthening+Oil&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Mielle Rosemary &amp; Mint Oil on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-1" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">02</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-2">Vegamour GRO Hair Serum</a>
+            <span class="qp-for">A lightweight, non-oil serum</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Phyto-active complex</span>
+            <span class="qp-grade"><span class="qp-pips qp-pips--na" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Brand-funded trials</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Vegamour+GRO+Hair+Serum&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Vegamour GRO Hair Serum on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-2" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">03</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-3">The Ordinary Multi-Peptide Serum</a>
+            <span class="qp-for">Peptides + caffeine on a budget</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Peptides + caffeine</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span>Moderate &middot; clinical</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=The+Ordinary+Multi-Peptide+Serum+Hair+Density&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View The Ordinary Multi-Peptide Serum on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-3" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">04</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-4">Briogeo Scalp Revival Treatment</a>
+            <span class="qp-for">Clearing scalp buildup before serums</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Charcoal scalp scrub</span>
+            <span class="qp-grade"><span class="qp-pips qp-pips--na" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Prep step</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Briogeo+Scalp+Revival+Charcoal+Coconut+Oil+Micro-Exfoliating+Treatment&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Briogeo Scalp Revival Treatment on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-4" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">05</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-5">Wild Growth Hair Oil</a>
+            <span class="qp-for">A daily scalp oil for 4B&ndash;4C</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Olive, jojoba, coconut oils</span>
+            <span class="qp-grade"><span class="qp-pips qp-pips--na" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Not graded</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Wild+Growth+Hair+Oil&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Wild Growth Hair Oil on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-5" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">06</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-6">Jamaican Mango &amp; Lime JBCO</a>
+            <span class="qp-for">Edges and hairline</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Castor oil (JBCO)</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Anecdotal</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Jamaican+Mango+Lime+Black+Castor+Oil&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Jamaican Mango &amp; Lime JBCO on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-6" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
     <h2>What Hair Growth Serums Actually Do</h2>
 
     <p>All hair grows from follicles embedded in the scalp. Each follicle cycles through three phases: anagen (active growth, lasting 2&ndash;7 years), catagen (transition, 2&ndash;3 weeks), and telogen (resting and shedding, 3&ndash;4 months). Hair growth serums work &mdash; when they work &mdash; by influencing this cycle at the scalp level:</p>
@@ -210,7 +354,7 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <h2>Ingredients That Actually Work</h2>
 
-    <table>
+    <table id="evidence-table">
       <thead><tr><th>Ingredient</th><th>Evidence Level</th><th>Mechanism</th><th>What to Expect</th></tr></thead>
       <tbody>
         <tr><td><strong>Rosemary oil</strong></td><td>Strong (RCT)</td><td>Scalp circulation + DHT inhibition</td><td>Hair count parity with 2% minoxidil at 6 months</td></tr>
@@ -226,61 +370,67 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <h2>The 6 Best Hair Growth Serums for Natural Hair</h2>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-1">
       <div class="product-num">1</div>
       <div class="product-body">
         <span class="product-tag">Best Budget · Most Used in Community</span>
         <h3>Mielle Rosemary &amp; Mint Scalp &amp; Hair Strengthening Oil</h3>
+        <p class="card-summary"><span><b>Best for:</b> a budget rosemary-oil routine</span> <a href="https://www.amazon.com/s?k=Mielle+Rosemary+Mint+Scalp+Hair+Strengthening+Oil&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>The most widely used and independently validated growth oil in the natural hair community at the $10 price point. Mielle&rsquo;s formula positions rosemary oil as the primary active alongside peppermint (vasodilation), biotin (follicle support), and coconut oil as the carrier &mdash; a formulation that aligns with the available clinical evidence on rosemary&rsquo;s DHT-inhibiting and circulation-improving mechanisms. The oil texture makes it easy to part densely coiled 4C hair into sections and apply directly to the scalp, where the active ingredients can reach the follicle. Use 2&ndash;3 drops per section, massage with fingertips for 3&ndash;5 minutes, and leave in overnight or under a steam cap for enhanced absorption. The peppermint creates a noticeable tingling sensation that confirms scalp contact and blood flow stimulation. One bottle covers 30+ applications when used at the scalp only. This went viral for a reason &mdash; it is the most accessible entry point to a rosemary-based growth protocol for natural hair.</p>
         <a href="https://www.amazon.com/s?k=Mielle+Rosemary+Mint+Scalp+Hair+Strengthening+Oil&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-2">
       <div class="product-num">2</div>
       <div class="product-body">
         <span class="product-tag">Best Premium Serum · Lightweight Formula</span>
         <h3>Vegamour GRO Hair Serum</h3>
+        <p class="card-summary"><span><b>Best for:</b> a lightweight, non-oil serum</span> <a href="https://www.amazon.com/s?k=Vegamour+GRO+Hair+Serum&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>The premium alternative to oil-based growth products &mdash; a lightweight water-based serum that applies cleanly to the scalp without the heaviness or greasiness of oil formulas. Vegamour&rsquo;s GRO uses a proprietary phyto-active complex derived from mung bean sprout, red clover, and Nicotiana benthamiana to target the DHT pathway and support follicle cycling. The brand&rsquo;s internal clinical data shows a 52% increase in hair density and 76% reduction in shedding at 120 days of consistent use &mdash; numbers consistent with what rosemary oil studies produce, though Vegamour&rsquo;s trials are brand-funded rather than independent. The serum format is genuinely useful for 4C hair that finds oil-based products too heavy on the scalp, and it does not cause the initial shedding phase that minoxidil users often experience. Apply along the part line and at the hairline daily using the dropper, massage in, then style as normal. At $48&ndash;$68 it is the highest-priced option on this list, but it is the strongest non-oil growth protocol for natural hair that avoids silicones, synthetic fragrances, and hormone-disrupting ingredients entirely.</p>
         <a href="https://www.amazon.com/s?k=Vegamour+GRO+Hair+Serum&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-3">
       <div class="product-num">3</div>
       <div class="product-body">
         <span class="product-tag">Best Peptide Serum · Under $20</span>
         <h3>The Ordinary Multi-Peptide Serum for Hair Density</h3>
+        <p class="card-summary"><span><b>Best for:</b> peptides + caffeine on a budget</span> <a href="https://www.amazon.com/s?k=The+Ordinary+Multi-Peptide+Serum+Hair+Density&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>The most evidence-backed peptide option at an accessible price. The Ordinary&rsquo;s formulation includes Biotinoyl Tripeptide-1 (which activates follicle cycling via keratinocyte growth factor signaling), Myristoyl Pentapeptide-17 (promotes keratin gene expression in the follicle), GHK-Cu (copper peptide that stimulates anagen re-entry and reduces follicle miniaturization), and caffeine (5-alpha-reductase inhibition). This is the most mechanistically sophisticated formula on this list short of prescription options &mdash; each peptide targets a distinct phase of the follicle cycle for cumulative effect. The serum is water-based and lightweight, applying cleanly to the scalp without residue. Apply twice daily to the dry or damp scalp using the included dropper, focus on areas of thinning or slow growth, massage in, and do not rinse. The formula absorbs within 5&ndash;10 minutes and leaves no detectable coating on the scalp. Compatible with oil-based growth serums &mdash; apply The Ordinary first, let absorb, then layer a rosemary oil on top for a combined approach targeting multiple growth mechanisms simultaneously.</p>
         <a href="https://www.amazon.com/s?k=The+Ordinary+Multi-Peptide+Serum+Hair+Density&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-4">
       <div class="product-num">4</div>
       <div class="product-body">
         <span class="product-tag">Best for Scalp + Growth · Premium</span>
         <h3>Briogeo Scalp Revival Charcoal + Coconut Oil Micro-Exfoliating Scalp Scrub Treatment</h3>
+        <p class="card-summary"><span><b>Best for:</b> clearing scalp buildup before serums</span> <a href="https://www.amazon.com/s?k=Briogeo+Scalp+Revival+Charcoal+Coconut+Oil+Micro-Exfoliating+Treatment&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Briogeo&rsquo;s Scalp Revival Treatment addresses the foundational barrier to hair growth that most dedicated growth serums ignore: follicle congestion. On 4A&ndash;4C hair that uses multiple styling products, sebum, dead skin cells, and product residue can accumulate around the follicle opening and physically restrict growth. Briogeo&rsquo;s charcoal draws impurities from the follicle while micro-exfoliating beads remove surface buildup &mdash; creating the clean follicle environment where growth actives can actually penetrate. It is not a primary growth serum but functions as the prerequisite step that makes other growth products work better. Use once a week on the scalp before shampooing: apply in sections, massage for 2&ndash;3 minutes, let sit for 5 minutes, then shampoo out. Pair with a dedicated growth serum (Mielle Rosemary Oil or Vegamour) applied to the freshly exfoliated scalp post-wash for maximum absorption. Free of sulfates, silicones, parabens, phthalates, and artificial dyes. Qualifies as Luxury Beauty on Amazon for enhanced commission rates.</p>
         <a href="https://www.amazon.com/s?k=Briogeo+Scalp+Revival+Charcoal+Coconut+Oil+Micro-Exfoliating+Treatment&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-5">
       <div class="product-num">5</div>
       <div class="product-body">
         <span class="product-tag">Best Natural Oil Blend · Strengthening</span>
         <h3>Wild Growth Hair Oil</h3>
+        <p class="card-summary"><span><b>Best for:</b> a daily scalp oil for 4B&ndash;4C</span> <a href="https://www.amazon.com/s?k=Wild+Growth+Hair+Oil&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>A long-running staple in the Black natural hair community with a loyal following built on real results rather than marketing spend. Wild Growth Hair Oil uses a concentrated blend of olive oil, jojoba oil, coconut oil, and vitamins D and E alongside a proprietary blend of growth-supporting plant extracts. The formula is heavier than modern lightweight serums, making it best suited for 4B&ndash;4C hair that responds well to oil-based scalp treatments. Apply 3&ndash;5 drops to the scalp in sections and massage thoroughly &mdash; the heavier oil texture requires more work to distribute but provides excellent slip and stays on the scalp longer than lighter formulas. Particularly effective for edges and thinning areas that need sustained attention. The accessible price point makes it practical for consistent daily use without cost concern. Not suitable for 2A&ndash;3A textures that tend toward scalp sensitivity to heavy oils, but for coily natural hair it remains one of the most cost-effective options for a daily scalp oil routine.</p>
         <a href="https://www.amazon.com/s?k=Wild+Growth+Hair+Oil&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-6">
       <div class="product-num">6</div>
       <div class="product-body">
         <span class="product-tag">Best for Edges &amp; Hairline</span>
         <h3>Jamaican Mango &amp; Lime Jamaican Black Castor Oil Original</h3>
+        <p class="card-summary"><span><b>Best for:</b> edges and hairline</span> <a href="https://www.amazon.com/s?k=Jamaican+Mango+Lime+Black+Castor+Oil&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Jamaican Black Castor Oil (JBCO) &mdash; made by roasting and pressing castor seeds, giving it its distinctive dark color and ashy texture &mdash; has been the cornerstone of the natural hair growth stack for decades. The roasting process increases the pH, which is believed to increase the oil&rsquo;s penetration and its ricinoleic acid content &mdash; a hydroxy fatty acid that research suggests may stimulate prostaglandin E2 (a vasodilator) in scalp tissue. Jamaican Mango &amp; Lime&rsquo;s JBCO is one of the most consistent formulations available, with strong quality control and authentic roasted JBCO rather than refined castor oil dyed dark. Apply a small amount to the edges and hairline nightly using a toothbrush-style edge brush for precision application, and to the scalp in thinning areas. JBCO is too thick for full scalp application on most natural hair &mdash; use it targeted rather than all-over. Particularly effective for postpartum hair loss, tension-thinned edges from tight styles, and any traction alopecia at early stages. Pair with Mielle Rosemary Oil or The Ordinary Multi-Peptide for a complete growth stack targeting multiple mechanisms.</p>
         <a href="https://www.amazon.com/s?k=Jamaican+Mango+Lime+Black+Castor+Oil&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>

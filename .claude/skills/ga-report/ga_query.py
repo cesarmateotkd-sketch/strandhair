@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Read-only GA4 Data API query for hairtypequiz.hair.
 
-Needs env vars GA_PROPERTY_ID and GA_SERVICE_ACCOUNT_JSON (service account
-with Viewer access on the property). Uses only the stdlib plus the openssl CLI
+Needs env var GA_PROPERTY_ID. Auth: GA_SERVICE_ACCOUNT_JSON (service account
+with Viewer access) if set; otherwise requests go out without credentials for a
+Google-type network secret on the environment to authenticate. Uses only the stdlib plus the openssl CLI
 (the system python cryptography package is broken in this environment).
 
 Usage:
@@ -20,10 +21,14 @@ def b64(data):
 
 
 def load_creds():
+    """Return (property_id, key). key is None when no JSON key is set; requests
+    then go out unauthenticated so a Google-type network secret on the
+    environment (attached by the agent proxy) can authenticate them."""
     pid, raw = os.environ.get("GA_PROPERTY_ID"), os.environ.get("GA_SERVICE_ACCOUNT_JSON")
-    missing = [n for n, v in (("GA_PROPERTY_ID", pid), ("GA_SERVICE_ACCOUNT_JSON", raw)) if not v]
-    if missing:
-        sys.exit(f"Missing env vars: {', '.join(missing)}. They load at session start; add them in the environment settings and start a new session.")
+    if not pid:
+        sys.exit("Missing env var GA_PROPERTY_ID. Env vars load at session start; add it in the environment settings and start a new session.")
+    if not raw:
+        return pid.strip(), None
     raw = raw.strip()
     if raw[:1] == "'" and raw[-1:] == "'":
         raw = raw[1:-1]
@@ -63,7 +68,11 @@ def post(url, body, headers):
         with urllib.request.urlopen(req, timeout=30) as r:
             return json.load(r)
     except urllib.error.HTTPError as e:
-        sys.exit(f"HTTP {e.code} from {url.split('/')[2]}: {e.read().decode()[:600]}")
+        hint = ""
+        if e.code in (401, 403) and "analyticsdata" in url:
+            hint = ("\nHint: 401 = no valid credentials (no JSON key set, and no network secret attached for "
+                    "analyticsdata.googleapis.com). 403 = the service account isn't a Viewer on this property.")
+        sys.exit(f"HTTP {e.code} from {url.split('/')[2]}: {e.read().decode()[:600]}{hint}")
 
 
 def run_report(pid, token, start, end, dims, mets, flt=None, limit=50):
@@ -74,9 +83,11 @@ def run_report(pid, token, start, end, dims, mets, flt=None, limit=50):
         field, value = flt.split("=", 1)
         body["dimensionFilter"] = {"filter": {"fieldName": field,
                                               "stringFilter": {"matchType": "BEGINS_WITH", "value": value}}}
+    headers = {"Content-Type": "application/json"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
     return post(f"https://analyticsdata.googleapis.com/v1beta/properties/{pid}:runReport",
-                json.dumps(body).encode(),
-                {"Authorization": f"Bearer {token}", "Content-Type": "application/json"})
+                json.dumps(body).encode(), headers)
 
 
 def print_table(res, dims, mets):
@@ -98,10 +109,11 @@ if __name__ == "__main__":
     rp.add_argument("--filter"); rp.add_argument("--limit", type=int, default=50)
     a = ap.parse_args()
     pid, key = load_creds()
-    tok = access_token(key)
+    tok = access_token(key) if key else None
     if a.cmd == "test":
         res = run_report(pid, tok, "7daysAgo", "yesterday", ["date"], ["sessions", "screenPageViews"])
-        print(f"Connected to GA4 property {pid} as {key['client_email']}")
+        who = key["client_email"] if key else "proxy-attached network secret"
+        print(f"Connected to GA4 property {pid} via {who}")
         print_table(res, ["date"], ["sessions", "screenPageViews"])
     else:
         dims, mets = a.dimensions.split(","), a.metrics.split(",")

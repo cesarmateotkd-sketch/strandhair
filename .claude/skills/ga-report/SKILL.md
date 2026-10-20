@@ -6,8 +6,8 @@ description: Read Google Analytics (GA4) data for hairtypequiz.hair — sessions
 # GA4 reporting for Strand
 
 Read-only access through the GA4 Data API, property `533457768` (StrandHairQuiz).
-Credentials come from env vars `GA_PROPERTY_ID` and `GA_SERVICE_ACCOUNT_JSON`
-(service account with Viewer role). They load at session start.
+Needs env var `GA_PROPERTY_ID`. Auth: `GA_SERVICE_ACCOUNT_JSON` if set, otherwise a
+Google-type network secret for analyticsdata.googleapis.com attached by the proxy. Env vars load at session start.
 
 ## Commands
 ```bash

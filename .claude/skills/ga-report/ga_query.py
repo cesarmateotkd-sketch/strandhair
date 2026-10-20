@@ -68,11 +68,16 @@ def post(url, body, headers):
         with urllib.request.urlopen(req, timeout=30) as r:
             return json.load(r)
     except urllib.error.HTTPError as e:
-        hint = ""
-        if e.code in (401, 403) and "analyticsdata" in url:
-            hint = ("\nHint: 401 = no valid credentials (no JSON key set, and no network secret attached for "
-                    "analyticsdata.googleapis.com). 403 = the service account isn't a Viewer on this property.")
-        sys.exit(f"HTTP {e.code} from {url.split('/')[2]}: {e.read().decode()[:600]}{hint}")
+        text, hint = e.read().decode(), ""
+        if "analyticsdata" in url:
+            if "ACCESS_TOKEN_SCOPE_INSUFFICIENT" in text:
+                hint = ("\nHint: a credential was sent but lacks the scope "
+                        "https://www.googleapis.com/auth/analytics.readonly (check the network secret's scopes).")
+            elif e.code == 401:
+                hint = "\nHint: no valid credentials (no JSON key set, and no network secret attached for this host)."
+            elif e.code == 403:
+                hint = "\nHint: the service account isn't a Viewer on this GA4 property, or the Data API isn't enabled."
+        sys.exit(f"HTTP {e.code} from {url.split('/')[2]}: {text[:600]}{hint}")
 
 
 def run_report(pid, token, start, end, dims, mets, flt=None, limit=50):

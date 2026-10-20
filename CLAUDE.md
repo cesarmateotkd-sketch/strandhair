@@ -234,3 +234,25 @@ git commit -m "description"
 git push origin main
 ```
 GitHub Pages deploys automatically. Cloudflare cache for static assets is 1 year — if updating a font or JS file, rename it or append `?v=2` to bust the cache.
+
+---
+
+## Owner Preferences & Feedback Log
+
+Standing feedback from the site owner. Apply it without being reminded, and add new feedback here as it's given.
+
+### Approval before anything goes out
+- **Preview first, always.** Show designs, pins, ads, and site changes before posting or pushing. Site changes: screenshot desktop + mobile, wait for approval, then push.
+- **Social posts are approved in batches.** Prepare 5–7 pins (image, title, description, link) per batch. Only pins marked approved in the queue get posted; scheduled runs never post unapproved items.
+- **Use Opus for implementation work on the site** when the owner asks for changes to be made.
+
+### Design direction
+- Use the `frontend-design` skill (`.claude/skills/`) for any visual work: pins, ads, page changes.
+- Avoid templated looks. The first serum ad (dark background, centered serif stack, fake button) was replaced by the "evidence ledger" design: paper/document feel, monospace data rows, structure that encodes real findings.
+- Lead with evidence and science. That's the site's differentiator in articles, ads, and pins.
+- Keep the brand palette (espresso / caramel / cream) and `--caramel-text` for text on light backgrounds.
+
+### Copy & platforms
+- Quora answers should be genuinely useful and drive traffic to the site, usually via the quiz link where it fits naturally. Don't force links.
+- Meta ads: never "you/your hair" personal-attribute framing or health claims. Talk about the research and the products.
+- Pinterest is the priority channel; post 1–3 pins/day, never in bursts. Facebook is a later, light test. Instagram and X are not automated.

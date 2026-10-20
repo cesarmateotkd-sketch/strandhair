@@ -146,6 +146,50 @@ tr:nth-child(even) td{background:var(--warm-white);}
 .product-body h3{margin-top:0;}
 .product-tag{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--sand);color:var(--espresso);padding:3px 8px;border-radius:2px;margin-bottom:10px;}
 .product-link{display:inline-block;margin-top:12px;font-size:13px;font-weight:500;color:var(--caramel-text);text-decoration:none;border-bottom:1px solid var(--caramel);padding-bottom:2px;letter-spacing:.04em;}
+/* ─── Quick picks: evidence ledger ─── */
+.quick-picks{margin:8px 0 44px;background:var(--warm-white);border:1px solid var(--sand);border-top:3px solid var(--espresso);padding:22px 24px 8px;}
+.qp-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;padding-bottom:14px;border-bottom:1px solid var(--espresso);}
+.quick-picks h2{margin:0;font-size:clamp(24px,3.2vw,30px);}
+.qp-key{margin:0;font-size:12px;line-height:1.6;color:var(--muted);max-width:380px;}
+.qp-legend{display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em;margin-top:4px;}
+.qp-legend .qp-pips{margin:0 5px 0 0;vertical-align:-1px;}
+.qp-legend .qp-pips:not(:first-child){margin-left:12px;}
+.qp-list{list-style:none;margin:0;padding:0;}
+.qp-row{display:grid;grid-template-columns:30px minmax(0,1fr) 210px auto;gap:4px 18px;align-items:baseline;padding:14px 0;border-bottom:1px dashed var(--sand);}
+.qp-row:last-child{border-bottom:0;}
+.qp-no{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12px;color:var(--caramel-text);}
+.qp-id{display:flex;flex-direction:column;min-width:0;}
+.qp-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.25;color:var(--espresso);text-decoration:none;}
+.qp-name:hover{text-decoration:underline;text-decoration-color:var(--caramel);text-underline-offset:3px;}
+.qp-for{font-size:13px;line-height:1.45;color:var(--mocha);margin-top:2px;}
+.qp-ev{display:flex;flex-direction:column;gap:3px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:11.5px;line-height:1.4;}
+.qp-active{color:var(--text);}
+.qp-grade{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;}
+.qp-pips{display:inline-flex;gap:3px;flex-shrink:0;}
+.qp-pips i{display:block;width:9px;height:9px;border:1.5px solid var(--caramel-text);border-radius:50%;}
+.qp-pips i.on{background:var(--caramel-text);}
+.qp-pips--na i{border-style:dashed;border-color:var(--muted);}
+.qp-act{display:flex;flex-direction:column;align-items:flex-end;gap:4px;white-space:nowrap;}
+.qp-buy{font-size:13px;font-weight:500;color:var(--cream);background:var(--espresso);text-decoration:none;padding:6px 12px;border-radius:2px;letter-spacing:.03em;}
+.qp-buy:hover{background:#2A1F1A;}
+.qp-jump{font-size:12px;color:var(--caramel-text);text-decoration:none;}
+.qp-jump:hover{text-decoration:underline;}
+.quick-picks a:focus-visible,.card-summary a:focus-visible{outline:2px solid var(--espresso);outline-offset:3px;border-radius:2px;}
+.product-card{scroll-margin-top:16px;}
+.card-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;margin:-4px 0 14px;font-size:13px;line-height:1.5;color:var(--muted);}
+.card-summary b{font-weight:500;color:var(--espresso);}
+.card-summary-link{font-weight:500;color:var(--caramel-text);text-decoration:none;white-space:nowrap;}
+.card-summary-link:hover{text-decoration:underline;}
+@media(max-width:640px){
+  .quick-picks{padding:18px 16px 4px;margin-left:-8px;margin-right:-8px;}
+  .qp-row{grid-template-columns:24px minmax(0,1fr);gap:6px 10px;padding:12px 0;}
+  .qp-no{grid-row:1;}
+  .qp-ev,.qp-act{grid-column:2;}
+  .qp-name{font-size:18px;}
+  .qp-act{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;}
+  .qp-buy{padding:5px 11px;font-size:12.5px;}
+  .qp-key{max-width:none;}
+}
 footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 .footer-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;}
 .footer-brand .logo-f{font-family:'Cormorant Garamond',serif;font-size:20px;color:#FAF7F2;text-decoration:none;display:inline-block;margin-bottom:12px;}
@@ -191,6 +235,105 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <p>The difference between those outcomes is mostly knowledge, not luck. Most heat damage is not caused by heat styling itself &mdash; it is caused by too-high temperatures, hair that was not fully dry, skipped protectant, and repeated passes. This guide covers what heat actually does to curly hair at the protein level, what a heat protectant can and cannot do, the safe temperature ranges by texture, and the six best protectants for natural hair by use case.</p>
 
+    <section class="quick-picks" aria-labelledby="qp-heading">
+      <div class="qp-head">
+        <h2 id="qp-heading">Quick picks</h2>
+        <p class="qp-key">Format and the heat stage each one is built for, from the reviews below. No protectant makes 450&deg;F safe.</p>
+      </div>
+      <ol class="qp-list">
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">01</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-1">CHI 44 Iron Guard</a>
+            <span class="qp-for">The flat-iron stage of a silk press</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Spray &middot; flat iron</span>
+            <span class="qp-grade"><span>Rated for high heat</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=CHI+44+Iron+Guard+Thermal+Protection+Spray&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View CHI 44 Iron Guard on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-1" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">02</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-2">Mielle Mongongo Oil Thermal Spray</a>
+            <span class="qp-for">Blow-drying or diffusing curls</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Mist &middot; blow-dry / diffuse</span>
+            <span class="qp-grade"><span>Apply to damp hair</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Mielle+Organics+Mongongo+Oil+Thermal+Heat+Protectant+Spray&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Mielle Mongongo Oil Thermal Spray on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-2" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">03</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-3">Design Essentials Agave &amp; Lavender Cream</a>
+            <span class="qp-for">4B&ndash;4C blowouts before a press</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Cream &middot; blow-dry</span>
+            <span class="qp-grade"><span>Preps a 1-pass 350&deg;F press</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Design+Essentials+Agave+Lavender+Blow+Dry+Silk+Press+Cream&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Design Essentials Agave &amp; Lavender Cream on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-3" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">04</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-4">Kenra Platinum Blow-Dry Spray</a>
+            <span class="qp-for">Cutting blow-dry time on thick hair</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Spray &middot; blow-dry</span>
+            <span class="qp-grade"><span>Label: up to 450&deg;F</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Kenra+Platinum+Blow+Dry+Spray&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Kenra Platinum Blow-Dry Spray on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-4" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">05</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-5">Tresemm&eacute; Heat Tamer Spray</a>
+            <span class="qp-for">Occasional heat on a budget</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Spray &middot; blow-dry + iron</span>
+            <span class="qp-grade"><span>Low-to-mid iron temps</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Tresemme+Thermal+Creations+Heat+Tamer+Spray&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Tresemm&eacute; Heat Tamer Spray on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-5" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">06</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-6">Grapeseed Oil (Cold-Pressed)</a>
+            <span class="qp-for">Low heat with minimal ingredients</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Oil &middot; blow-dry / diffuse</span>
+            <span class="qp-grade"><span>Not for irons over 300&deg;F</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=cold+pressed+grapeseed+oil+hair&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Grapeseed Oil (Cold-Pressed) on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-6" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
     <h2>What Heat Actually Does to Curly Hair</h2>
 
     <p>Your curl pattern exists because of protein structure: keratin chains cross-linked by disulfide and hydrogen bonds, arranged in a way that makes the strand bend and coil. Heat attacks this structure through three mechanisms:</p>
@@ -235,66 +378,72 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <h2>The 6 Best Heat Protectants for Natural Hair</h2>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-1">
       <div class="product-num">1</div>
       <div class="product-body">
         <span class="product-tag">Best for Silk Press &middot; The Standard</span>
         <h3>CHI 44 Iron Guard Thermal Protection Spray</h3>
+        <p class="card-summary"><span><b>Best for:</b> the flat-iron stage of a silk press</span> <a href="https://www.amazon.com/s?k=CHI+44+Iron+Guard+Thermal+Protection+Spray&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>CHI 44 Iron Guard is the protectant most silk press stylists reach for, and it earns the default status. The formula is built specifically for flat iron temperatures: a silicone-polymer blend that forms a dry, weightless film rated for high heat, with none of the wet residue that makes some sprays sizzle on the plates. Sprayed lightly on each fully dry section immediately before the pass, it adds visible slip &mdash; the iron glides rather than tugs &mdash; and leaves a glassy finish without the stiffness of heavier serums.</p>
         <p>For natural hair, its greatest strength is how little it weighs down the press: 4A&ndash;4C silk presses hold their swing and movement instead of falling flat under product. It layers cleanly over a blow-dry protectant cream without buildup, which matches how a proper silk press is actually done (protectant cream for the blow-dry, Iron Guard for the iron). One bottle lasts many presses. If you heat style more than occasionally, this is the flat-iron-stage product to standardize on.</p>
         <a href="https://www.amazon.com/s?k=CHI+44+Iron+Guard+Thermal+Protection+Spray&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-2">
       <div class="product-num">2</div>
       <div class="product-body">
         <span class="product-tag">Best for Natural Textures &middot; Blow-Dry Stage</span>
         <h3>Mielle Organics Mongongo Oil Thermal &amp; Heat Protectant Spray</h3>
+        <p class="card-summary"><span><b>Best for:</b> blow-drying or diffusing, then wearing curls</span> <a href="https://www.amazon.com/s?k=Mielle+Organics+Mongongo+Oil+Thermal+Heat+Protectant+Spray&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Mielle&rsquo;s thermal spray is formulated for textured hair specifically &mdash; a lightweight mist combining mongongo oil (a high-linoleic African oil with natural thermal-buffering properties) with film-forming protectants and moisture-retaining humectants. It is the right choice for the blow-dry stage of natural hair heat styling: applied to damp, freshly conditioned hair before diffusing or blow-drying, it protects during the highest-moisture-loss phase while adding enough slip to make tension blow-drying (the stretch-as-you-dry technique) noticeably gentler.</p>
         <p>Unlike salon-brand protectants developed for straight hair, the formula respects what comes after: it does not coat the hair so heavily that curls collapse if you decide to diffuse and wear your natural pattern instead of pressing. That makes it the most versatile protectant on this list for naturals who alternate between stretched styles and wash-and-gos. Use it every time heat of any kind touches your hair &mdash; including &ldquo;just diffusing.&rdquo; Low direct heat is still heat, and cumulative damage does not distinguish between styling intentions.</p>
         <a href="https://www.amazon.com/s?k=Mielle+Organics+Mongongo+Oil+Thermal+Heat+Protectant+Spray&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-3">
       <div class="product-num">3</div>
       <div class="product-body">
         <span class="product-tag">Best Cream &middot; 4B&ndash;4C Blowouts</span>
         <h3>Design Essentials Agave &amp; Lavender Blow-Dry &amp; Silk Press Cream</h3>
+        <p class="card-summary"><span><b>Best for:</b> 4B&ndash;4C blowouts before a press</span> <a href="https://www.amazon.com/s?k=Design+Essentials+Agave+Lavender+Blow+Dry+Silk+Press+Cream&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Design Essentials&rsquo; Agave &amp; Lavender line was developed for professional silk press services on type 4 hair, and the blow-dry cream is its cornerstone. Unlike spray protectants, the cream format coats dense, tightly coiled hair thoroughly and evenly &mdash; the coverage problem that makes sprays underperform on 4B&ndash;4C density. Applied section by section to damp hair, it provides heat protection through the blow-dry, dramatically improves detangling slip, and pre-smooths the cuticle so the flat iron stage needs fewer passes at lower temperature.</p>
         <p>That last effect is the real damage reduction: a well-executed blow-dry with this cream leaves hair smooth enough that one iron pass at 350&deg;F finishes the press &mdash; versus the multiple 425&deg;F passes that under-prepped hair demands. The result is a silk press with more body, longer hold, and a curl pattern that reverts fully at the next wash. Pair it with CHI Iron Guard at the iron stage for the complete professional protocol at home. For 4C naturals who have struggled to get salon-quality presses without salon-level damage, this cream is usually the missing piece.</p>
         <a href="https://www.amazon.com/s?k=Design+Essentials+Agave+Lavender+Blow+Dry+Silk+Press+Cream&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-4">
       <div class="product-num">4</div>
       <div class="product-body">
         <span class="product-tag">Best Premium &middot; Fastest Blow-Dry</span>
         <h3>Kenra Platinum Blow-Dry Spray</h3>
+        <p class="card-summary"><span><b>Best for:</b> cutting blow-dry time on thick hair</span> <a href="https://www.amazon.com/s?k=Kenra+Platinum+Blow+Dry+Spray&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Kenra Platinum Blow-Dry Spray attacks heat damage from a different angle: reducing how long the heat is on your hair at all. Its silicone blend decreases blow-dry time by up to 50% in Kenra&rsquo;s testing &mdash; and meaningfully in everyone else&rsquo;s experience &mdash; by helping water sheet off the strand while the film protects what remains. Less drying time means less total heat exposure, which for thick, dense natural hair that normally takes 45+ minutes under a dryer is a bigger damage reduction than any film alone provides.</p>
         <p>The finish is where it earns the premium price: exceptional smoothness and shine with zero crunch or weight, and noticeably less friction during round-brush or tension styling. It protects up to 450&deg;F per the label &mdash; though per everything above, you should never need that headroom. Best for naturals who blow-dry regularly (stretched styles, braid preps, twist-out foundations) rather than occasional flat-iron users. On fine natural hair that heavier creams overwhelm, this is the protectant that adds polish instead of weight.</p>
         <a href="https://www.amazon.com/s?k=Kenra+Platinum+Blow+Dry+Spray&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-5">
       <div class="product-num">5</div>
       <div class="product-body">
         <span class="product-tag">Best Budget &middot; Drugstore Reliable</span>
         <h3>Tresemm&eacute; Thermal Creations Heat Tamer Spray</h3>
+        <p class="card-summary"><span><b>Best for:</b> occasional heat styling on a budget</span> <a href="https://www.amazon.com/s?k=Tresemme+Thermal+Creations+Heat+Tamer+Spray&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>At a drugstore price, Tresemm&eacute;&rsquo;s Heat Tamer delivers the core function of a heat protectant &mdash; a heat-activated polymer film with moisture-loss protection &mdash; without the refinements of pricier formulas. Independent consumer testing has repeatedly ranked it among the most effective protectants regardless of price, which makes it the rational starting point for anyone building a heat routine on a budget or heat styling only a few times a year.</p>
         <p>The trade-offs are real but livable: the mist is wetter than salon sprays (let it dry fully before ironing), the film adds less slip, and on very dense 4B&ndash;4C hair, even coverage takes more effort than a cream provides. For blowouts and occasional low-to-mid temperature flat iron sessions on any texture, it does the essential job. If your heat styling escalates to regular silk presses, upgrade the iron stage to CHI Iron Guard &mdash; but there is no need to spend more than this for a twice-a-year blowout.</p>
         <a href="https://www.amazon.com/s?k=Tresemme+Thermal+Creations+Heat+Tamer+Spray&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-6">
       <div class="product-num">6</div>
       <div class="product-body">
         <span class="product-tag">Best Natural Option &middot; Low-Heat Only</span>
         <h3>Grapeseed Oil (Cold-Pressed)</h3>
+        <p class="card-summary"><span><b>Best for:</b> low heat with minimal ingredients</span> <a href="https://www.amazon.com/s?k=cold+pressed+grapeseed+oil+hair&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>For naturals who prefer a minimal-ingredient routine, grapeseed oil is the most defensible natural heat buffer &mdash; with strict limits. Its high smoke point (around 420&deg;F) means it will not scorch on the strand at blow-dry temperatures, and a light coating reduces moisture flash-loss while adding slip for tension drying. It is the traditional pre-blow-dry oil in many natural hair routines for good reason, and it doubles as a <a href="/blog/best-oils-natural-hair.html">lightweight sealing oil</a> the rest of the week.</p>
         <p>The limits matter: oil provides a thermal buffer, not a polymer film &mdash; it slows moisture loss but does far less to slow heat transfer into the strand than a dedicated protectant. Use it for diffusing and low-to-medium blow-drying only. For flat ironing above 300&deg;F, a polymer-based protectant is not optional &mdash; and never substitute low-smoke-point oils (unrefined coconut scorches at 350&deg;F, right at iron temperature) which effectively fry the hair they were meant to protect. A drop or two per section is enough; more creates sizzle, not safety.</p>
         <a href="https://www.amazon.com/s?k=cold+pressed+grapeseed+oil+hair&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>

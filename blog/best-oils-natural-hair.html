@@ -146,6 +146,50 @@ tr:nth-child(even) td{background:var(--warm-white);}
 .product-body h3{margin-top:0;}
 .product-tag{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--sand);color:var(--espresso);padding:3px 8px;border-radius:2px;margin-bottom:10px;}
 .product-link{display:inline-block;margin-top:12px;font-size:13px;font-weight:500;color:var(--caramel-text);text-decoration:none;border-bottom:1px solid var(--caramel);padding-bottom:2px;letter-spacing:.04em;}
+/* ─── Quick picks: evidence ledger ─── */
+.quick-picks{margin:8px 0 44px;background:var(--warm-white);border:1px solid var(--sand);border-top:3px solid var(--espresso);padding:22px 24px 8px;}
+.qp-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;padding-bottom:14px;border-bottom:1px solid var(--espresso);}
+.quick-picks h2{margin:0;font-size:clamp(24px,3.2vw,30px);}
+.qp-key{margin:0;font-size:12px;line-height:1.6;color:var(--muted);max-width:380px;}
+.qp-legend{display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em;margin-top:4px;}
+.qp-legend .qp-pips{margin:0 5px 0 0;vertical-align:-1px;}
+.qp-legend .qp-pips:not(:first-child){margin-left:12px;}
+.qp-list{list-style:none;margin:0;padding:0;}
+.qp-row{display:grid;grid-template-columns:30px minmax(0,1fr) 210px auto;gap:4px 18px;align-items:baseline;padding:14px 0;border-bottom:1px dashed var(--sand);}
+.qp-row:last-child{border-bottom:0;}
+.qp-no{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12px;color:var(--caramel-text);}
+.qp-id{display:flex;flex-direction:column;min-width:0;}
+.qp-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.25;color:var(--espresso);text-decoration:none;}
+.qp-name:hover{text-decoration:underline;text-decoration-color:var(--caramel);text-underline-offset:3px;}
+.qp-for{font-size:13px;line-height:1.45;color:var(--mocha);margin-top:2px;}
+.qp-ev{display:flex;flex-direction:column;gap:3px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:11.5px;line-height:1.4;}
+.qp-active{color:var(--text);}
+.qp-grade{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;}
+.qp-pips{display:inline-flex;gap:3px;flex-shrink:0;}
+.qp-pips i{display:block;width:9px;height:9px;border:1.5px solid var(--caramel-text);border-radius:50%;}
+.qp-pips i.on{background:var(--caramel-text);}
+.qp-pips--na i{border-style:dashed;border-color:var(--muted);}
+.qp-act{display:flex;flex-direction:column;align-items:flex-end;gap:4px;white-space:nowrap;}
+.qp-buy{font-size:13px;font-weight:500;color:var(--cream);background:var(--espresso);text-decoration:none;padding:6px 12px;border-radius:2px;letter-spacing:.03em;}
+.qp-buy:hover{background:#2A1F1A;}
+.qp-jump{font-size:12px;color:var(--caramel-text);text-decoration:none;}
+.qp-jump:hover{text-decoration:underline;}
+.quick-picks a:focus-visible,.card-summary a:focus-visible{outline:2px solid var(--espresso);outline-offset:3px;border-radius:2px;}
+.product-card{scroll-margin-top:16px;}
+.card-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;margin:-4px 0 14px;font-size:13px;line-height:1.5;color:var(--muted);}
+.card-summary b{font-weight:500;color:var(--espresso);}
+.card-summary-link{font-weight:500;color:var(--caramel-text);text-decoration:none;white-space:nowrap;}
+.card-summary-link:hover{text-decoration:underline;}
+@media(max-width:640px){
+  .quick-picks{padding:18px 16px 4px;margin-left:-8px;margin-right:-8px;}
+  .qp-row{grid-template-columns:24px minmax(0,1fr);gap:6px 10px;padding:12px 0;}
+  .qp-no{grid-row:1;}
+  .qp-ev,.qp-act{grid-column:2;}
+  .qp-name{font-size:18px;}
+  .qp-act{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;}
+  .qp-buy{padding:5px 11px;font-size:12.5px;}
+  .qp-key{max-width:none;}
+}
 footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 .footer-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;}
 .footer-brand .logo-f{font-family:'Cormorant Garamond',serif;font-size:20px;color:#FAF7F2;text-decoration:none;display:inline-block;margin-bottom:12px;}
@@ -191,6 +235,105 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <p>This is not a subtle difference. A penetrating oil used as a pre-wash treatment conditions the hair from inside the cortex. A sealing oil layered over a leave-in locks moisture in for days. Swap them &mdash; seal with coconut oil on dry hair, pre-poo with jojoba &mdash; and you get most of the grease with little of the benefit. This guide covers the science, matches oils to porosity, and picks the six best oils for natural hair by role.</p>
 
+    <section class="quick-picks" aria-labelledby="qp-heading">
+      <div class="qp-head">
+        <h2 id="qp-heading">Quick picks</h2>
+        <p class="qp-key">Penetrating oils enter the strand; sealing oils film the surface. Weight and role as described in each review.</p>
+      </div>
+      <ol class="qp-list">
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">01</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-1">Viva Naturals Coconut Oil</a>
+            <span class="qp-for">Pre-poo protein protection</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Penetrating</span>
+            <span class="qp-grade"><span>Pre-poo &middot; on dry hair</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Viva+Naturals+Organic+Extra+Virgin+Coconut+Oil&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Viva Naturals Coconut Oil on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-1" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">02</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-2">Tropic Isle Living JBCO</a>
+            <span class="qp-for">Sealing 4B&ndash;4C ends</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Sealing</span>
+            <span class="qp-grade"><span>Heaviest &middot; LOC seal</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Tropic+Isle+Living+Jamaican+Black+Castor+Oil&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Tropic Isle Living JBCO on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-2" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">03</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-3">Kate Blanc Grapeseed Oil</a>
+            <span class="qp-for">Low porosity hair</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Sealing</span>
+            <span class="qp-grade"><span>Light &middot; low buildup</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Kate+Blanc+Grapeseed+Oil+cold+pressed&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Kate Blanc Grapeseed Oil on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-3" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">04</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-4">Cliganic Jojoba Oil</a>
+            <span class="qp-for">Scalp massage and light sealing</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Sealing (wax ester)</span>
+            <span class="qp-grade"><span>Light&ndash;medium &middot; scalp</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Cliganic+Organic+Jojoba+Oil&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Cliganic Jojoba Oil on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-4" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">05</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-5">Maple Holistics Avocado Oil</a>
+            <span class="qp-for">Protein-sensitive hair, hot oil</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Penetrating</span>
+            <span class="qp-grade"><span>Mid-weight &middot; hot oil</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Maple+Holistics+Avocado+Oil+hair&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Maple Holistics Avocado Oil on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-5" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">06</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-6">Moroccanoil Treatment</a>
+            <span class="qp-for">Finishing shine and frizz control</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Partial &middot; finishing</span>
+            <span class="qp-grade"><span>Light &middot; not for sealing</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Moroccanoil+Treatment+Original&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Moroccanoil Treatment on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-6" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
     <h2>Penetrating vs. Sealing: The Science</h2>
 
     <p>Whether an oil can enter the hair shaft comes down to molecular structure. The cuticle allows small, straight-chain fatty acid molecules to slip through; large or branched molecules stay outside no matter how long you leave them on.</p>
@@ -209,7 +352,8 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <h2>Matching Oil to Porosity</h2>
 
-    <table>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:28px 0;">
+    <table style="margin:0;">
       <thead><tr><th>Porosity</th><th>What the Hair Needs</th><th>Best Oils</th><th>Avoid</th></tr></thead>
       <tbody>
         <tr><td><strong>Low porosity</strong></td><td>Lightweight oils that won&rsquo;t sit and build up on the closed cuticle</td><td>Grapeseed, jojoba, argan, sweet almond</td><td>Heavy castor, unrefined coconut, butters</td></tr>
@@ -217,71 +361,78 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
         <tr><td><strong>High porosity</strong></td><td>Heavier sealants to slow rapid moisture loss through the raised cuticle</td><td>Castor, olive, avocado, JBCO</td><td>Relying on light oils alone to seal</td></tr>
       </tbody>
     </table>
+    </div>
 
     <p>If you are not sure of your porosity, take two minutes for the <a href="/blog/hair-porosity-test.html">float and slip tests</a> before buying anything &mdash; porosity determines which half of this article applies to you. Low porosity naturals can also dramatically improve oil absorption by applying to warm, damp hair or after a <a href="/blog/best-hair-steamer-natural-hair.html">steam session</a>, when the cuticle is most receptive.</p>
 
     <h2>The 6 Best Oils for Natural Hair</h2>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-1">
       <div class="product-num">1</div>
       <div class="product-body">
         <span class="product-tag">Best Penetrating Oil &middot; Pre-Poo Standard</span>
         <h3>Viva Naturals Organic Extra Virgin Coconut Oil</h3>
+        <p class="card-summary"><span><b>Best for:</b> a pre-poo that reduces protein loss</span> <a href="https://www.amazon.com/s?k=Viva+Naturals+Organic+Extra+Virgin+Coconut+Oil&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Coconut oil is the most researched oil in hair science, and the findings are unambiguous: its lauric acid triglycerides penetrate the hair shaft and reduce protein loss during washing &mdash; in damaged and undamaged hair alike. No other oil has this level of documented protein-preserving effect. The mechanism also limits hygral fatigue: by occupying space in the cortex, coconut oil reduces how much the strand swells with water and contracts as it dries, which is a slow-motion source of cumulative damage on every wash day.</p>
         <p>Use it as a <a href="/blog/pre-poo-treatment-natural-hair.html">pre-poo</a>: apply to dry hair in sections 30 minutes to overnight before shampooing, then wash as normal. A food-grade, cold-pressed jar like Viva Naturals costs a fraction of &ldquo;hair market&rdquo; coconut oils and is the identical substance. One honest caveat: a meaningful minority of naturals &mdash; typically protein-sensitive or very low porosity hair &mdash; find coconut oil leaves their hair stiff or straw-like. That is a real interaction, not user error. If that is you, move to avocado oil (below) for penetration without the stiffness.</p>
         <a href="https://www.amazon.com/s?k=Viva+Naturals+Organic+Extra+Virgin+Coconut+Oil&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-2">
       <div class="product-num">2</div>
       <div class="product-body">
         <span class="product-tag">Best Sealing Oil &middot; 4B&ndash;4C Length Retention</span>
         <h3>Tropic Isle Living Jamaican Black Castor Oil</h3>
+        <p class="card-summary"><span><b>Best for:</b> sealing 4B&ndash;4C ends for days</span> <a href="https://www.amazon.com/s?k=Tropic+Isle+Living+Jamaican+Black+Castor+Oil&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Jamaican black castor oil is the heaviest commonly used sealing oil, and for dense, tightly coiled 4B&ndash;4C hair that is precisely the point: lighter oils evaporate their benefit within a day on high-shrinkage coils, while JBCO&rsquo;s thick ricinoleic acid film keeps moisture locked against the strand for days. The traditional roasting process that gives JBCO its dark color and ash content also gives it a slightly alkaline character that many naturals credit for scalp benefits, though the sealing performance is what earns its place here.</p>
         <p>Use it as the O in your <a href="/blog/loc-method-beginners-guide.html">LOC routine</a> over a water-based leave-in, concentrating on the ends &mdash; the oldest, driest, most breakage-prone inches of your hair. It is also the standard oil for sealing the hairline and nape under protective styles. On fine or low porosity hair, full-strength JBCO is usually too heavy; dilute it 1:1 with grapeseed oil or reserve it for ends only. For the growth-adjacent claims around castor oil, see our full <a href="/blog/castor-oil-for-hair-growth.html">castor oil for hair growth</a> breakdown &mdash; the sealing benefit is proven; the growth benefit is circumstantial.</p>
         <a href="https://www.amazon.com/s?k=Tropic+Isle+Living+Jamaican+Black+Castor+Oil&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-3">
       <div class="product-num">3</div>
       <div class="product-body">
         <span class="product-tag">Best for Low Porosity &middot; Lightweight Seal</span>
         <h3>Kate Blanc Cosmetics Grapeseed Oil</h3>
+        <p class="card-summary"><span><b>Best for:</b> low porosity hair</span> <a href="https://www.amazon.com/s?k=Kate+Blanc+Grapeseed+Oil+cold+pressed&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Grapeseed oil is the workhorse for low porosity naturals: light enough that it will not accumulate into the coated, greasy buildup that heavier oils cause on a tightly closed cuticle, while still forming enough of a film to slow moisture loss. It is nearly odorless, absorbs cleanly, adds a low-gloss shine rather than a wet look, and is one of the least comedogenic oils available &mdash; which also makes it the safest choice for oiling near the hairline and scalp without triggering breakouts.</p>
         <p>Grapeseed&rsquo;s high smoke point (around 420&deg;F) gives it a second role: it is the best natural heat-protectant-adjacent oil for naturals who occasionally blow-dry or stretch their hair, offering thermal buffering that low-smoke-point oils like unrefined coconut (350&deg;F) cannot safely provide. Use a cold-pressed, hexane-free bottle; the Kate Blanc version is USDA-certified organic and comes with a dropper that makes the light-handed application this oil rewards easy to control. For low porosity naturals who have concluded that &ldquo;oils just don&rsquo;t work for my hair,&rdquo; this is the one to retry &mdash; applied to damp hair in small amounts.</p>
         <a href="https://www.amazon.com/s?k=Kate+Blanc+Grapeseed+Oil+cold+pressed&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-4">
       <div class="product-num">4</div>
       <div class="product-body">
         <span class="product-tag">Best Scalp Oil &middot; Sebum Mimic</span>
         <h3>Cliganic Organic Jojoba Oil</h3>
+        <p class="card-summary"><span><b>Best for:</b> scalp massage and light sealing</span> <a href="https://www.amazon.com/s?k=Cliganic+Organic+Jojoba+Oil&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Jojoba is chemically unique on this list: it is not a triglyceride oil at all but a liquid wax ester &mdash; the same molecular family as human sebum. That similarity means it spreads and behaves on the scalp the way your natural oils do, absorbing into the skin without the pore-clogging heaviness of true oils, which makes it the default choice for scalp massage and for naturals whose scalps underproduce sebum (tight, flaky, itchy between wash days). On the hair shaft it functions as a light-to-medium sealant, comparable to grapeseed but with slightly more slip and sheen.</p>
         <p>Its wax ester structure also makes jojoba exceptionally shelf-stable &mdash; it does not go rancid the way polyunsaturated oils (grapeseed included) eventually do, so a bottle lasts as long as it takes to use it. Use it for scalp massage 1&ndash;2 times weekly as part of a <a href="/blog/scalp-care-routine-natural-hair.html">scalp care routine</a>, as a light sealant on fine or wavy textures that heavier oils overwhelm, and as the SOTC oil for breaking a gel cast without weighing down curls. Cliganic&rsquo;s is cold-pressed, unrefined, and USDA organic in a dark bottle that protects it from light degradation.</p>
         <a href="https://www.amazon.com/s?k=Cliganic+Organic+Jojoba+Oil&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-5">
       <div class="product-num">5</div>
       <div class="product-body">
         <span class="product-tag">Best Coconut Alternative &middot; Penetrating</span>
         <h3>Maple Holistics Avocado Oil</h3>
+        <p class="card-summary"><span><b>Best for:</b> protein-sensitive hair and hot oil treatments</span> <a href="https://www.amazon.com/s?k=Maple+Holistics+Avocado+Oil+hair&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Avocado oil is the penetrating oil for everyone coconut oil fails. Its high oleic acid content gives it genuine cuticle penetration &mdash; among plant oils, only coconut and olive absorb comparably &mdash; but without coconut&rsquo;s protein-preserving stiffness, which makes it the right pre-poo and hot oil treatment base for protein-sensitive naturals and for low porosity hair that coconut oil sits on top of. It also carries meaningful levels of vitamin E and monounsaturated fats that support the lipid layer of the cuticle itself.</p>
         <p>Avocado oil shines in a warm application: as the base of a <a href="/blog/hot-oil-treatment-natural-hair.html">hot oil treatment</a>, gently warmed and applied to damp hair for 20&ndash;30 minutes under a cap, it penetrates deeper than at room temperature and leaves the hair noticeably more pliable &mdash; a real advantage before a detangling session on tightly coiled hair, where added slip and internal flexibility directly reduce breakage. It is mid-weight: heavier than grapeseed, far lighter than castor, workable across nearly every porosity when used purposefully rather than daily.</p>
         <a href="https://www.amazon.com/s?k=Maple+Holistics+Avocado+Oil+hair&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-6">
       <div class="product-num">6</div>
       <div class="product-body">
         <span class="product-tag">Best Finishing Oil &middot; Shine &amp; Frizz Control</span>
         <h3>Moroccanoil Treatment Original (Argan Blend)</h3>
+        <p class="card-summary"><span><b>Best for:</b> finishing shine and frizz control</span> <a href="https://www.amazon.com/s?k=Moroccanoil+Treatment+Original&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Argan oil sits between categories &mdash; partial penetration, light sealing &mdash; but its real value is as a finishing oil: a few drops over a completed style adds shine, smooths surface frizz, and softens the feel of the hair without disturbing definition or adding weight. Moroccanoil&rsquo;s Treatment, the product that started the argan wave, blends argan with lightweight silicones that boost the immediate smoothing and detangling effect; purists can substitute a pure cold-pressed argan oil for a silicone-free version of the same step at a lower price.</p>
         <p>For natural hair, use it in two places: a couple of drops smoothed over a finished twist-out, wash-and-go, or blowout for gloss and humidity buffering, and a drop rubbed between palms for taming halo frizz on days two through four without re-wetting. It is not the oil for sealing in the LOC sense &mdash; too light, too quickly absorbed &mdash; and not a pre-poo. It is the polish step, and it does that better than anything else on this list. A little goes far; the small bottle lasts months with normal use.</p>
         <a href="https://www.amazon.com/s?k=Moroccanoil+Treatment+Original&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>

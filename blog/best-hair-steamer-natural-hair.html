@@ -146,6 +146,51 @@ tr:nth-child(even) td{background:var(--warm-white);}
 .product-body h3{margin-top:0;}
 .product-tag{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--sand);color:var(--espresso);padding:3px 8px;border-radius:2px;margin-bottom:10px;}
 .product-link{display:inline-block;margin-top:12px;font-size:13px;font-weight:500;color:var(--caramel-text);text-decoration:none;border-bottom:1px solid var(--caramel);padding-bottom:2px;letter-spacing:.04em;}
+/* ─── Quick picks: evidence ledger ─── */
+.quick-picks{margin:8px 0 44px;background:var(--warm-white);border:1px solid var(--sand);border-top:3px solid var(--espresso);padding:22px 24px 8px;}
+.qp-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;padding-bottom:14px;border-bottom:1px solid var(--espresso);}
+.quick-picks h2{margin:0;font-size:clamp(24px,3.2vw,30px);}
+.qp-key{margin:0;font-size:12px;line-height:1.6;color:var(--muted);max-width:380px;}
+.qp-legend{display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em;margin-top:4px;}
+.qp-legend .qp-pips{margin:0 5px 0 0;vertical-align:-1px;}
+.qp-legend .qp-pips:not(:first-child){margin-left:12px;}
+.qp-list{list-style:none;margin:0;padding:0;}
+.qp-row{display:grid;grid-template-columns:30px minmax(0,1fr) 210px auto;gap:4px 18px;align-items:baseline;padding:14px 0;border-bottom:1px dashed var(--sand);}
+.qp-row:last-child{border-bottom:0;}
+.qp-no{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12px;color:var(--caramel-text);}
+.qp-id{display:flex;flex-direction:column;min-width:0;}
+.qp-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.25;color:var(--espresso);text-decoration:none;}
+.qp-name:hover{text-decoration:underline;text-decoration-color:var(--caramel);text-underline-offset:3px;}
+.qp-for{font-size:13px;line-height:1.45;color:var(--mocha);margin-top:2px;}
+.qp-ev{display:flex;flex-direction:column;gap:3px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:11.5px;line-height:1.4;}
+.qp-active{color:var(--text);}
+.qp-grade{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;}
+.qp-pips{display:inline-flex;gap:3px;flex-shrink:0;}
+.qp-pips i{display:block;width:9px;height:9px;border:1.5px solid var(--caramel-text);border-radius:50%;}
+.qp-pips i.on{background:var(--caramel-text);}
+.qp-pips--na i{border-style:dashed;border-color:var(--muted);}
+.qp-act{display:flex;flex-direction:column;align-items:flex-end;gap:4px;white-space:nowrap;}
+.qp-buy{font-size:13px;font-weight:500;color:var(--cream);background:var(--espresso);text-decoration:none;padding:6px 12px;border-radius:2px;letter-spacing:.03em;}
+.qp-buy:hover{background:#2A1F1A;}
+.qp-jump{font-size:12px;color:var(--caramel-text);text-decoration:none;}
+.qp-jump:hover{text-decoration:underline;}
+.quick-picks a:focus-visible,.card-summary a:focus-visible{outline:2px solid var(--espresso);outline-offset:3px;border-radius:2px;}
+.product-card{scroll-margin-top:16px;}
+.card-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;margin:-4px 0 14px;font-size:13px;line-height:1.5;color:var(--muted);}
+.card-summary b{font-weight:500;color:var(--espresso);}
+.card-summary-link{font-weight:500;color:var(--caramel-text);text-decoration:none;white-space:nowrap;}
+.card-summary-link:hover{text-decoration:underline;}
+@media(max-width:640px){
+  .quick-picks{padding:18px 16px 4px;margin-left:-8px;margin-right:-8px;}
+  .qp-row{grid-template-columns:24px minmax(0,1fr);gap:6px 10px;padding:12px 0;}
+  .qp-no{grid-row:1;}
+  .qp-ev,.qp-act{grid-column:2;}
+  .qp-name{font-size:18px;}
+  .qp-act{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;}
+  .qp-buy{padding:5px 11px;font-size:12.5px;}
+  .qp-key{max-width:none;}
+}
+.qp-none{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);}
 footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 .footer-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;}
 .footer-brand .logo-f{font-family:'Cormorant Garamond',serif;font-size:20px;color:#FAF7F2;text-decoration:none;display:inline-block;margin-bottom:12px;}
@@ -193,6 +238,90 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <p>This guide covers the science, the types, and the five best hair steamers for natural hair at every price point.</p>
 
+    <section class="quick-picks" aria-labelledby="qp-heading">
+      <div class="qp-head">
+        <h2 id="qp-heading">Quick picks</h2>
+        <p class="qp-key">Steamer type and how much of your head it steams at once, from the reviews below.</p>
+      </div>
+      <ol class="qp-list">
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">01</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-1">Q-Redew Handheld Steamer</a>
+            <span class="qp-for">Refreshing styles and spot-steaming</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Handheld wand</span>
+            <span class="qp-grade"><span>Section by section</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Q-Redew+handheld+hair+steamer&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Q-Redew Handheld Steamer on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-1" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">02</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-2">Huetiful Hair Steamer</a>
+            <span class="qp-for">Hands-free wash day conditioning</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Hooded tabletop</span>
+            <span class="qp-grade"><span>Full head &middot; timer</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Huetiful+hair+steamer&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Huetiful Hair Steamer on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-2" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">03</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-3">Bonnet Steamer with Reservoir</a>
+            <span class="qp-for">Full coverage in a small space</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Bonnet + reservoir</span>
+            <span class="qp-grade"><span>Full head</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=bonnet+hair+steamer+natural+hair&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Bonnet Steamer with Reservoir on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-3" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">04</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-4">Nano Ionic Facial Steamer</a>
+            <span class="qp-for">Trying steam on a budget</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Facial steamer</span>
+            <span class="qp-grade"><span>Section by section</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=nano+ionic+facial+steamer&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Nano Ionic Facial Steamer on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-4" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">05</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-5">Hot Towel Method</a>
+            <span class="qp-for">A backup when no steamer is on hand</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">DIY &middot; towel + cap</span>
+            <span class="qp-grade"><span>Partial &middot; cools in 5&ndash;10 min</span></span>
+          </div>
+          <div class="qp-act">
+            <span class="qp-none">No purchase needed</span>
+            <a href="#pick-5" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
     <h2>Why Steam Works: The Cuticle Science</h2>
 
     <p>The hair strand is protected by overlapping cuticle scales &mdash; flat plates that lie flat in healthy hair and lifted in damaged hair. These scales are the gatekeepers of moisture: when they are closed, very little can get in or out. When they are open, conditioning ingredients can penetrate to the cortex, the inner layer where moisture is actually stored and where elasticity and strength live.</p>
@@ -210,7 +339,8 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <h2>Who Benefits Most from Steaming</h2>
 
-    <table>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:28px 0;">
+    <table style="margin:0;">
       <thead><tr><th>Hair Type / Condition</th><th>Steam Benefit</th><th>Recommended Frequency</th></tr></thead>
       <tbody>
         <tr><td><strong>Low porosity hair</strong></td><td>Opens resistant cuticle, enables absorption that would otherwise not happen</td><td>Every wash day</td></tr>
@@ -220,6 +350,7 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
         <tr><td><strong>Normal porosity, healthy</strong></td><td>Enhances depth of conditioning; not strictly necessary</td><td>Bi-weekly or monthly</td></tr>
       </tbody>
     </table>
+    </div>
 
     <div class="tip-box">
       <strong>Low porosity and steam</strong>
@@ -256,55 +387,60 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <h2>The 5 Best Hair Steamers for Natural Hair</h2>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-1">
       <div class="product-num">1</div>
       <div class="product-body">
         <span class="product-tag">Best Handheld &middot; Most Versatile</span>
         <h3>Q-Redew Handheld Hair Steamer</h3>
+        <p class="card-summary"><span><b>Best for:</b> refreshing styles and spot-steaming</span> <a href="https://www.amazon.com/s?k=Q-Redew+handheld+hair+steamer&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>The Q-Redew is the most widely used handheld hair steamer in the natural hair community &mdash; designed specifically for textured hair, not adapted from a garment or facial tool. The wand delivers a focused stream of warm ionic steam that penetrates the cuticle without the blasting pressure that damages fragile strands. The nozzle is wide enough to cover a 2&ndash;3 inch section per pass, making full-head treatments manageable rather than tedious.</p>
         <p>Beyond deep conditioning, the Q-Redew excels at style refreshing: spritzing water on second-day hair activates the shrinkage of dried gel and disrupts the curl definition, but a light pass of steam reactivates moisture without disturbing the curl pattern. For braids, twists, and protective styles, the Q-Redew delivers moisture directly to the scalp and roots without requiring you to take the style down. It is the most practical daily-use steamer for natural hair across every texture. Fill time is minimal, heat-up time is under 30 seconds, and the compact form factor fits in a travel bag.</p>
         <a href="https://www.amazon.com/s?k=Q-Redew+handheld+hair+steamer&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-2">
       <div class="product-num">2</div>
       <div class="product-body">
         <span class="product-tag">Best Hooded &middot; Full Salon Experience</span>
         <h3>Huetiful Hair Steamer</h3>
+        <p class="card-summary"><span><b>Best for:</b> hands-free wash day deep conditioning</span> <a href="https://www.amazon.com/s?k=Huetiful+hair+steamer&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>The Huetiful is the most well-known tabletop hooded steamer designed for natural and textured hair. The dome hood provides full-head coverage, delivering consistent steam to every section simultaneously &mdash; the result is an even deep conditioning treatment with no dry patches or missed sections. A built-in timer lets you set your session length and walk away; a water reservoir tray below the hood generates the steam that circulates inside the dome. The experience is as close to a professional salon steam treatment as you can get at home.</p>
         <p>The Huetiful is particularly effective for 4A through 4C hair that benefits from extended conditioning sessions. Because the steam surrounds the entire head evenly, you do not need to work section by section as with a handheld. Sit under it for 20&ndash;30 minutes while the deep conditioner works, then rinse with cool water. The unit takes 5&ndash;8 minutes to heat up to steaming temperature. It is larger and heavier than a handheld, making it a home-station purchase rather than a travel one &mdash; but for weekly wash day use, the hands-free operation and full coverage make it worth the investment for serious naturals.</p>
         <a href="https://www.amazon.com/s?k=Huetiful+hair+steamer&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-3">
       <div class="product-num">3</div>
       <div class="product-body">
         <span class="product-tag">Best Bonnet Steamer &middot; Mid-Range</span>
         <h3>Bonnet Hair Steamer with Water Reservoir</h3>
+        <p class="card-summary"><span><b>Best for:</b> full coverage in a small space</span> <a href="https://www.amazon.com/s?k=bonnet+hair+steamer+natural+hair&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Bonnet steamers thread the needle between hooded tabletop units and handheld wands: a fabric bonnet worn like a processing cap, connected by a tube to a water reservoir that generates steam. You fill the reservoir, put on the bonnet, and sit for 15&ndash;30 minutes while steam circulates around the full head. The bonnet style provides full coverage (unlike handheld) without the tabletop footprint (unlike hooded units), making it a practical choice for smaller spaces or naturals who want a step up from plastic caps without committing to a full salon-style unit.</p>
         <p>The main limitation of bonnet steamers is steam distribution consistency &mdash; the bonnet must seal reasonably well around the hairline to maintain heat and humidity inside. On shorter hair or very high-volume hair, gaps can let steam escape and reduce effectiveness. For medium to long hair that fills the bonnet well, they work reliably. Look for models with an adjustable bonnet opening and a reservoir capacity that covers a full session without needing refilling. Steam output quality varies significantly across brands at this price point &mdash; prioritize units with ionic steam delivery over basic steam-only models.</p>
         <a href="https://www.amazon.com/s?k=bonnet+hair+steamer+natural+hair&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-4">
       <div class="product-num">4</div>
       <div class="product-body">
         <span class="product-tag">Best Budget &middot; Nano Ionic Facial Steamer</span>
         <h3>Nano Ionic Facial Steamer (Repurposed for Hair)</h3>
+        <p class="card-summary"><span><b>Best for:</b> trying steam on a budget</span> <a href="https://www.amazon.com/s?k=nano+ionic+facial+steamer&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>The most affordable entry point into steaming is a nano ionic facial steamer repurposed for hair use &mdash; a practice with a long history in the natural hair community. These units generate the same warm moist ionic steam as dedicated hair tools, at a fraction of the cost. The steam mechanism is identical; only the delivery nozzle differs. To use on hair: apply your deep conditioner, then hold the steamer&rsquo;s nozzle 3&ndash;4 inches from each section of hair, spending 45&ndash;60 seconds per section and working through the full head systematically. Alternatively, lean forward over the steamer with your hair hanging down if the unit produces enough output to create a steam environment without direct targeting.</p>
         <p>The tradeoff is convenience, not effectiveness. A dedicated hair steamer with a wider nozzle and more output makes the process easier and faster &mdash; but for naturals testing steaming for the first time or working with a tight budget, a nano ionic facial steamer lets you experience the benefit before committing to a more expensive tool. Look for units labeled &ldquo;nano ionic&rdquo; &mdash; they produce finer water particles that penetrate the cuticle more effectively than basic steam-only models. Many units sell for $25&ndash;$40 and double for both skincare and hair treatments.</p>
         <a href="https://www.amazon.com/s?k=nano+ionic+facial+steamer&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-5">
       <div class="product-num">5</div>
       <div class="product-body">
         <span class="product-tag">Best DIY Alternative &middot; No Equipment Needed</span>
         <h3>Hot Towel Method</h3>
+        <p class="card-summary"><span><b>Best for:</b> a backup when no steamer is on hand</span> <span>No purchase needed</span></p>
         <p>Before steamers were widely available, naturals were achieving the same cuticle-opening effect with a hot damp towel &mdash; and the method still works. Apply your deep conditioner, then wrap the hair in a towel that has been soaked in hot water and wrung out. Cover the warm towel with a plastic processing cap to trap the heat and moisture inside. The trapped steam from the hot towel produces a mild but genuine steaming effect that improves conditioner penetration compared to a dry plastic cap alone.</p>
         <p>The limitation is that the towel cools within 5&ndash;10 minutes, after which the effect largely stops. For best results, re-wet and re-heat the towel halfway through your conditioning session, or follow the towel wrap with 10 minutes under a heat cap to maintain temperature. This method works consistently on normal to high porosity hair. For low porosity hair that genuinely needs extended cuticle opening, the hot towel provides a partial benefit &mdash; useful as a backup when a steamer is unavailable, but not a full substitute for a dedicated steamer on resistant cuticles. There is no link to share for this one &mdash; you already have everything you need in your bathroom.</p>
       </div>
@@ -312,7 +448,8 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <h2>Steam vs. Heat Cap vs. Plastic Cap: What&rsquo;s Actually Different</h2>
 
-    <table>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:28px 0;">
+    <table style="margin:0;">
       <thead><tr><th>Method</th><th>Heat Type</th><th>Moisture Added</th><th>Cuticle Opening</th><th>Best For</th></tr></thead>
       <tbody>
         <tr><td><strong>Hair steamer</strong></td><td>Moist heat</td><td>Yes &mdash; directly</td><td>Strong</td><td>Low porosity, maximum absorption</td></tr>
@@ -322,6 +459,7 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
         <tr><td><strong>Hooded dryer</strong></td><td>Dry heat</td><td>No &mdash; dehydrating</td><td>Moderate (dehydrates)</td><td>Styling, drying &mdash; not conditioning</td></tr>
       </tbody>
     </table>
+    </div>
 
     <p>The table above makes the core trade-off clear: a plastic processing cap at room temperature is the least effective option despite being the most widely used. It relies entirely on body heat and the moisture already in the conditioner, neither of which is sufficient to significantly open the cuticle. If you are currently plastic-capping your deep conditioner and wondering why results are underwhelming, this is why.</p>
 

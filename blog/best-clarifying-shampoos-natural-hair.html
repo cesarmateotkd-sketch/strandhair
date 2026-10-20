@@ -146,6 +146,50 @@ tr:nth-child(even) td{background:var(--warm-white);}
 .product-body h3{margin-top:0;}
 .product-tag{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--sand);color:var(--espresso);padding:3px 8px;border-radius:2px;margin-bottom:10px;}
 .product-link{display:inline-block;margin-top:12px;font-size:13px;font-weight:500;color:var(--caramel-text);text-decoration:none;border-bottom:1px solid var(--caramel);padding-bottom:2px;letter-spacing:.04em;}
+/* ─── Quick picks: evidence ledger ─── */
+.quick-picks{margin:8px 0 44px;background:var(--warm-white);border:1px solid var(--sand);border-top:3px solid var(--espresso);padding:22px 24px 8px;}
+.qp-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;padding-bottom:14px;border-bottom:1px solid var(--espresso);}
+.quick-picks h2{margin:0;font-size:clamp(24px,3.2vw,30px);}
+.qp-key{margin:0;font-size:12px;line-height:1.6;color:var(--muted);max-width:380px;}
+.qp-legend{display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em;margin-top:4px;}
+.qp-legend .qp-pips{margin:0 5px 0 0;vertical-align:-1px;}
+.qp-legend .qp-pips:not(:first-child){margin-left:12px;}
+.qp-list{list-style:none;margin:0;padding:0;}
+.qp-row{display:grid;grid-template-columns:30px minmax(0,1fr) 210px auto;gap:4px 18px;align-items:baseline;padding:14px 0;border-bottom:1px dashed var(--sand);}
+.qp-row:last-child{border-bottom:0;}
+.qp-no{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12px;color:var(--caramel-text);}
+.qp-id{display:flex;flex-direction:column;min-width:0;}
+.qp-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.25;color:var(--espresso);text-decoration:none;}
+.qp-name:hover{text-decoration:underline;text-decoration-color:var(--caramel);text-underline-offset:3px;}
+.qp-for{font-size:13px;line-height:1.45;color:var(--mocha);margin-top:2px;}
+.qp-ev{display:flex;flex-direction:column;gap:3px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:11.5px;line-height:1.4;}
+.qp-active{color:var(--text);}
+.qp-grade{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;}
+.qp-pips{display:inline-flex;gap:3px;flex-shrink:0;}
+.qp-pips i{display:block;width:9px;height:9px;border:1.5px solid var(--caramel-text);border-radius:50%;}
+.qp-pips i.on{background:var(--caramel-text);}
+.qp-pips--na i{border-style:dashed;border-color:var(--muted);}
+.qp-act{display:flex;flex-direction:column;align-items:flex-end;gap:4px;white-space:nowrap;}
+.qp-buy{font-size:13px;font-weight:500;color:var(--cream);background:var(--espresso);text-decoration:none;padding:6px 12px;border-radius:2px;letter-spacing:.03em;}
+.qp-buy:hover{background:#2A1F1A;}
+.qp-jump{font-size:12px;color:var(--caramel-text);text-decoration:none;}
+.qp-jump:hover{text-decoration:underline;}
+.quick-picks a:focus-visible,.card-summary a:focus-visible{outline:2px solid var(--espresso);outline-offset:3px;border-radius:2px;}
+.product-card{scroll-margin-top:16px;}
+.card-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;margin:-4px 0 14px;font-size:13px;line-height:1.5;color:var(--muted);}
+.card-summary b{font-weight:500;color:var(--espresso);}
+.card-summary-link{font-weight:500;color:var(--caramel-text);text-decoration:none;white-space:nowrap;}
+.card-summary-link:hover{text-decoration:underline;}
+@media(max-width:640px){
+  .quick-picks{padding:18px 16px 4px;margin-left:-8px;margin-right:-8px;}
+  .qp-row{grid-template-columns:24px minmax(0,1fr);gap:6px 10px;padding:12px 0;}
+  .qp-no{grid-row:1;}
+  .qp-ev,.qp-act{grid-column:2;}
+  .qp-name{font-size:18px;}
+  .qp-act{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;}
+  .qp-buy{padding:5px 11px;font-size:12.5px;}
+  .qp-key{max-width:none;}
+}
 footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 .footer-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;}
 .footer-brand .logo-f{font-family:'Cormorant Garamond',serif;font-size:20px;color:#FAF7F2;text-decoration:none;display:inline-block;margin-bottom:12px;}
@@ -191,6 +235,106 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <p>Nothing is wrong with your hair. It is wearing six weeks of product residue, and no amount of additional moisture can get through it. The fix is a clarifying wash &mdash; the periodic reset that strips the film, returns your hair to bare strands, and makes every product in your routine work like it did the first time. This guide covers what actually builds up, the clarifying-versus-chelating distinction that hard water makes essential, how often your specific routine needs a reset, and the six best clarifying options for natural hair.</p>
 
+    <section class="quick-picks" aria-labelledby="qp-heading">
+      <div class="qp-head">
+        <h2 id="qp-heading">Quick picks</h2>
+        <p class="qp-key">Graded by how hard each one strips, as described in its review. Chelating formulas remove hard water minerals, which surfactants cannot.
+          <span class="qp-legend"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>deep strip <span class="qp-pips" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span>gentle <span class="qp-pips qp-pips--na" aria-hidden="true"><i></i><i></i><i></i><i></i></span>chelating</span></p>
+      </div>
+      <ol class="qp-list">
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">01</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-1">Kinky-Curly Come Clean</a>
+            <span class="qp-for">A monthly reset on 3C&ndash;4C hair</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Sulfate-derived surfactant</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span>Strong &middot; curl-safe</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Kinky-Curly+Come+Clean+Shampoo&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Kinky-Curly Come Clean on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-1" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">02</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-2">Malibu C Hard Water Wellness</a>
+            <span class="qp-for">Hard water mineral buildup</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Vitamin C chelation</span>
+            <span class="qp-grade"><span class="qp-pips qp-pips--na" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Chelating &middot; minerals</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Malibu+C+Hard+Water+Wellness+Remedy&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Malibu C Hard Water Wellness on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-2" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">03</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-3">Neutrogena Anti-Residue</a>
+            <span class="qp-for">A full reset on a budget</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Strong anionic surfactants</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span>Deep strip</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Neutrogena+Anti-Residue+Clarifying+Shampoo&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Neutrogena Anti-Residue on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-3" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">04</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-4">Ouidad Water Works</a>
+            <span class="qp-for">Fine or fragile curls, frequent use</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Sulfate-free clarifier</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span><span>Gentle &middot; maintenance</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Ouidad+Water+Works+Clarifying+Shampoo&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Ouidad Water Works on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-4" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">05</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-5">SheaMoisture African Black Soap</a>
+            <span class="qp-for">Scalp buildup under protective styles</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Black soap + willow bark</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span><span>Moderate &middot; scalp</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=SheaMoisture+African+Black+Soap+Deep+Cleansing+Shampoo&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View SheaMoisture African Black Soap on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-5" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">06</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-6">Apple Cider Vinegar Rinse</a>
+            <span class="qp-for">Light buildup between clarifying washes</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Diluted acetic acid</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span><span>Mild &middot; rinse</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Bragg+raw+apple+cider+vinegar&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Apple Cider Vinegar Rinse on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-6" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
     <h2>What Actually Builds Up on Natural Hair</h2>
 
     <p>&ldquo;Buildup&rdquo; is four distinct problems, and they do not all wash out the same way:</p>
@@ -225,66 +369,72 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <h2>The 6 Best Clarifying Shampoos for Natural Hair</h2>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-1">
       <div class="product-num">1</div>
       <div class="product-body">
         <span class="product-tag">Best Overall &middot; Curl-Safe Standard</span>
         <h3>Kinky-Curly Come Clean Natural Moisturizing Shampoo</h3>
+        <p class="card-summary"><span><b>Best for:</b> a monthly reset on 3C&ndash;4C hair</span> <a href="https://www.amazon.com/s?k=Kinky-Curly+Come+Clean+Shampoo&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Come Clean is the rare clarifying shampoo designed by and for the natural hair community rather than adapted from general-market formulas. It pairs a sulfate-derived surfactant strong enough to break down silicone film, polymer residue, and butter layers with mandarin orange extract and sea kelp in a formula that stops short of the squeaky, straw-like strip harsher clarifiers leave behind. It is the standard first move of the Curly Girl Method &mdash; the reset wash that removes years of silicone buildup before starting a CGM routine &mdash; and the maintenance clarifier the method keeps monthly.</p>
         <p>On 3C&ndash;4C hair loaded with LOC-method products, one wash restores the slip, absorbency, and curl clumping that buildup quietly erodes. Use it in place of your regular shampoo on reset day: two lathers (the first breaks the film, the second cleans the hair), then follow immediately with a deep conditioner while the cuticle is bare and receptive. For most naturals, this is the only clarifying product the routine needs &mdash; the rest of this list handles the special cases.</p>
         <a href="https://www.amazon.com/s?k=Kinky-Curly+Come+Clean+Shampoo&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-2">
       <div class="product-num">2</div>
       <div class="product-body">
         <span class="product-tag">Best Chelating &middot; Hard Water Fix</span>
         <h3>Malibu C Hard Water Wellness Remedy + Shampoo</h3>
+        <p class="card-summary"><span><b>Best for:</b> hard water mineral buildup</span> <a href="https://www.amazon.com/s?k=Malibu+C+Hard+Water+Wellness+Remedy&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Malibu C is the answer to buildup that clarifying cannot fix. Its Hard Water Wellness line &mdash; the shampoo for maintenance, the single-use crystal Remedy sachets for deep resets &mdash; is built around chelation: activated vitamin C (ascorbic acid) and complexing agents that bind dissolved calcium, magnesium, iron, and copper and rinse them out of the hair. These mineral deposits are what make hair in hard water areas feel permanently coated, rough, tangly, and resistant to every moisture treatment &mdash; and no surfactant-based shampoo, however strong, removes them.</p>
         <p>The telltale signs you need this instead of (or alongside) a standard clarifier: scale on your shower fixtures, hair that feels stiff and straw-like despite consistent deep conditioning, color that turns brassy fast, and a coated feeling that survives clarifying washes. Use a Remedy sachet monthly &mdash; sprinkle the crystals into wet hair, work through, let sit five minutes, rinse, then deep condition. Naturals who move from soft to hard water areas and watch their routine mysteriously collapse usually need exactly this product; the first treatment is frequently described as getting your old hair back.</p>
         <a href="https://www.amazon.com/s?k=Malibu+C+Hard+Water+Wellness+Remedy&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-3">
       <div class="product-num">3</div>
       <div class="product-body">
         <span class="product-tag">Best Budget &middot; Drugstore Classic</span>
         <h3>Neutrogena Anti-Residue Clarifying Shampoo</h3>
+        <p class="card-summary"><span><b>Best for:</b> a full reset on a budget</span> <a href="https://www.amazon.com/s?k=Neutrogena+Anti-Residue+Clarifying+Shampoo&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>The Neutrogena Anti-Residue formula has been the drugstore clarifying benchmark for decades for one reason: it removes practically everything, cheaply. The strong anionic surfactant blend dissolves silicone film, polymer residue, and oil layers in a single wash &mdash; Neutrogena&rsquo;s own positioning as a &ldquo;once-a-week&rdquo; shampoo is honest about its strength. For naturals, that power is both the value and the caution: this is a true deep strip, and on coily, moisture-hungry textures it should be used sparingly and followed by serious deep conditioning every single time.</p>
         <p>Where it earns its place in a natural routine: the periodic full reset when heavy butter-and-gel routines have accumulated past what gentler clarifiers clear, the pre-treatment strip before a protein treatment or henna (which need bare hair to bond), and the budget answer for anyone unwilling to spend salon prices on a product used once a month. Dilute it 1:1 with water for a gentler wash on fine or high-porosity hair. It is not the clarifier to reach for casually &mdash; it is the one that guarantees the job is done.</p>
         <a href="https://www.amazon.com/s?k=Neutrogena+Anti-Residue+Clarifying+Shampoo&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-4">
       <div class="product-num">4</div>
       <div class="product-body">
         <span class="product-tag">Gentlest Clarifier &middot; Frequent Use</span>
         <h3>Ouidad Water Works Clarifying Shampoo</h3>
+        <p class="card-summary"><span><b>Best for:</b> fine or fragile curls and frequent use</span> <a href="https://www.amazon.com/s?k=Ouidad+Water+Works+Clarifying+Shampoo&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Ouidad&rsquo;s Water Works occupies the gentle end of the clarifying spectrum: a sulfate-free clarifying formula that lifts styling residue and light mineral film while wheat protein and grape seed extract buffer the strip. It will not achieve the single-wash deep reset of Come Clean or Neutrogena on months of heavy buildup &mdash; and it is not trying to. Its role is maintenance clarifying: frequent-enough use that buildup never reaches crisis levels, on textures too fragile or too dry for regular strong stripping.</p>
         <p>This is the right clarifier for fine 2C&ndash;3B curls that collapse under heavy products but also cannot tolerate harsh surfactants, for high-porosity and color-treated naturals who need residue control without accelerating moisture loss, and for weekly-wash routines where a strong clarifier would be overkill at that frequency. Used every second or third wash, it keeps hair permanently near its clean baseline &mdash; the strategy where no single wash ever needs to be dramatic. Pair it with an occasional stronger reset if your styler load is heavy.</p>
         <a href="https://www.amazon.com/s?k=Ouidad+Water+Works+Clarifying+Shampoo&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-5">
       <div class="product-num">5</div>
       <div class="product-body">
         <span class="product-tag">Best for Scalp + Buildup &middot; 4A&ndash;4C</span>
         <h3>SheaMoisture African Black Soap Deep Cleansing Shampoo</h3>
+        <p class="card-summary"><span><b>Best for:</b> scalp buildup under protective styles</span> <a href="https://www.amazon.com/s?k=SheaMoisture+African+Black+Soap+Deep+Cleansing+Shampoo&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>SheaMoisture&rsquo;s African Black Soap shampoo approaches clarifying from the scalp down. Built around traditional black soap (a centuries-old West African cleanser of plantain ash and palm derivatives) with tea tree oil and willow bark extract (a natural source of salicylate that loosens dead skin and flake buildup), it deep-cleans the scalp environment &mdash; residue at the roots, sebum accumulation, flake-forming films &mdash; while clearing moderate product buildup along the length. Shea butter in the base keeps the wash from stripping coily hair raw.</p>
         <p>It is the clarifier of choice when the buildup problem shows up as scalp symptoms first: itching, flaking, and congestion under protective styles, braids, and wig regimens where the scalp goes weeks between direct washes. As a takedown-day wash after removing braids or a sew-in, it clears weeks of accumulated product, oil, and lint in one session while calming the scalp for the next install. For pure product-film removal on the lengths, Come Clean is stronger; for the scalp-plus-strand reset that protective-style naturals actually need, this is the better tool.</p>
         <a href="https://www.amazon.com/s?k=SheaMoisture+African+Black+Soap+Deep+Cleansing+Shampoo&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-6">
       <div class="product-num">6</div>
       <div class="product-body">
         <span class="product-tag">Best DIY Option &middot; Mild Reset</span>
         <h3>Apple Cider Vinegar Rinse</h3>
+        <p class="card-summary"><span><b>Best for:</b> light buildup between clarifying washes</span> <a href="https://www.amazon.com/s?k=Bragg+raw+apple+cider+vinegar&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Before clarifying shampoos, there was vinegar &mdash; and a properly diluted ACV rinse remains a legitimate mild clarifier. The acetic acid dissolves light product residue and mineral film, flattens the cuticle (which restores shine), and rebalances scalp pH after alkaline products. The dilution is the whole game: 2&ndash;4 tablespoons of raw ACV in two cups of water, poured through wet hair after shampooing, left for two to three minutes, rinsed with cool water. Stronger is not better &mdash; undiluted vinegar is acidic enough to irritate the scalp and stress the strand.</p>
         <p>Its honest limits: an ACV rinse handles light, recent buildup and works well as a between-clarifier maintenance step every couple of weeks, but it cannot break down months of silicone and polymer film or meaningful mineral deposits &mdash; that still requires the surfactant and chelating formulas above. Think of it as the routine-extender that stretches the time between true clarifying washes, not the replacement for them. Full method, ratios, and cautions in our <a href="/blog/acv-rinse-natural-hair.html">complete ACV rinse guide</a>.</p>
         <a href="https://www.amazon.com/s?k=Bragg+raw+apple+cider+vinegar&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>

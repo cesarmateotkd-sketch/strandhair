@@ -146,6 +146,52 @@ tr:nth-child(even) td{background:var(--warm-white);}
 .product-body h3{margin-top:0;}
 .product-tag{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--sand);color:var(--espresso);padding:3px 8px;border-radius:2px;margin-bottom:10px;}
 .product-link{display:inline-block;margin-top:12px;font-size:13px;font-weight:500;color:var(--caramel-text);text-decoration:none;border-bottom:1px solid var(--caramel);padding-bottom:2px;letter-spacing:.04em;}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:28px 0;}
+.table-scroll table{margin:0;}
+/* ─── Quick picks: hold ledger ─── */
+.quick-picks{margin:8px 0 44px;background:var(--warm-white);border:1px solid var(--sand);border-top:3px solid var(--espresso);padding:22px 24px 8px;}
+.qp-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;padding-bottom:14px;border-bottom:1px solid var(--espresso);}
+.quick-picks h2{margin:0;font-size:clamp(24px,3.2vw,30px);}
+.qp-key{margin:0;font-size:12px;line-height:1.6;color:var(--muted);max-width:380px;}
+.qp-legend{display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em;margin-top:4px;}
+.qp-legend .qp-pips{margin:0 5px 0 0;vertical-align:-1px;}
+.qp-legend .qp-pips:not(:first-child){margin-left:12px;}
+.qp-list{list-style:none;margin:0;padding:0;}
+.qp-row{display:grid;grid-template-columns:30px minmax(0,1fr) 210px auto;gap:4px 18px;align-items:baseline;padding:14px 0;border-bottom:1px dashed var(--sand);}
+.qp-row:last-child{border-bottom:0;}
+.qp-no{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12px;color:var(--caramel-text);}
+.qp-id{display:flex;flex-direction:column;min-width:0;}
+.qp-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.25;color:var(--espresso);text-decoration:none;}
+.qp-name:hover{text-decoration:underline;text-decoration-color:var(--caramel);text-underline-offset:3px;}
+.qp-for{font-size:13px;line-height:1.45;color:var(--mocha);margin-top:2px;}
+.qp-ev{display:flex;flex-direction:column;gap:3px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:11.5px;line-height:1.4;}
+.qp-active{color:var(--text);}
+.qp-grade{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;}
+.qp-pips{display:inline-flex;gap:3px;flex-shrink:0;}
+.qp-pips i{display:block;width:9px;height:9px;border:1.5px solid var(--caramel-text);border-radius:50%;}
+.qp-pips i.on{background:var(--caramel-text);}
+.qp-pips--na i{border-style:dashed;border-color:var(--muted);}
+.qp-act{display:flex;flex-direction:column;align-items:flex-end;gap:4px;white-space:nowrap;}
+.qp-buy{font-size:13px;font-weight:500;color:var(--cream);background:var(--espresso);text-decoration:none;padding:6px 12px;border-radius:2px;letter-spacing:.03em;}
+.qp-buy:hover{background:#2A1F1A;}
+.qp-jump{font-size:12px;color:var(--caramel-text);text-decoration:none;}
+.qp-jump:hover{text-decoration:underline;}
+.quick-picks a:focus-visible,.card-summary a:focus-visible{outline:2px solid var(--espresso);outline-offset:3px;border-radius:2px;}
+.product-card{scroll-margin-top:16px;}
+.card-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;margin:-4px 0 14px;font-size:13px;line-height:1.5;color:var(--muted);}
+.card-summary b{font-weight:500;color:var(--espresso);}
+.card-summary-link{font-weight:500;color:var(--caramel-text);text-decoration:none;white-space:nowrap;}
+.card-summary-link:hover{text-decoration:underline;}
+@media(max-width:640px){
+  .quick-picks{padding:18px 16px 4px;margin-left:-8px;margin-right:-8px;}
+  .qp-row{grid-template-columns:24px minmax(0,1fr);gap:6px 10px;padding:12px 0;}
+  .qp-no{grid-row:1;}
+  .qp-ev,.qp-act{grid-column:2;}
+  .qp-name{font-size:18px;}
+  .qp-act{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;}
+  .qp-buy{padding:5px 11px;font-size:12.5px;}
+  .qp-key{max-width:none;}
+}
 footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 .footer-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;}
 .footer-brand .logo-f{font-family:'Cormorant Garamond',serif;font-size:20px;color:#FAF7F2;text-decoration:none;display:inline-block;margin-bottom:12px;}
@@ -191,6 +237,106 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <p>Most natural hair guides treat gel like a one-size-fits-all product. It is not. The right gel depends on your hair&rsquo;s texture, porosity, the weather where you live, and the style you are creating. A firm synthetic polymer gel that gives a 4C wash-and-go all-day hold will flatten a 3A curl to nothing. A botanical flaxseed gel that gives 3C hair soft definition won&rsquo;t last two hours on dense 4B coils. This guide covers the types, the science, and the six best gels for natural hair across every texture and use case.</p>
 
+    <section class="quick-picks" aria-labelledby="qp-heading">
+      <div class="qp-head">
+        <h2 id="qp-heading">Quick picks</h2>
+        <p class="qp-key">Rated by hold, as described in each review below.
+          <span class="qp-legend"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>extra&#8209;firm <span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>medium&#8209;firm <span class="qp-pips" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></span>light</span></p>
+      </div>
+      <ol class="qp-list">
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">01</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-1">Eco Styler Olive Oil Gel</a>
+            <span class="qp-for">All-day wash-and-gos, 3B&ndash;4C</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Carbomer</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span>Firm</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Eco+Styler+Olive+Oil+Styling+Gel&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Eco Styler Olive Oil Gel on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-1" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">02</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-2">Aunt Jackie&rsquo;s Don&rsquo;t Shrink</a>
+            <span class="qp-for">Elongated twist-outs and braid-outs</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Flaxseed extract</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span>Medium-firm &middot; flexible</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Aunt+Jackie%27s+Don%27t+Shrink+Flaxseed+Curling+Gel&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Aunt Jackie&rsquo;s Don&rsquo;t Shrink on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-2" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">03</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-3">Mielle Honey &amp; Ginger Gel</a>
+            <span class="qp-for">Moisture plus light hold, 3C&ndash;4B</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Acrylates + humectants</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></span><span>Light</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Mielle+Organics+Honey+Ginger+Styling+Gel&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Mielle Honey &amp; Ginger Gel on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-3" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">04</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-4">Kinky-Curly Curl Custard</a>
+            <span class="qp-for">Clean-ingredient routines, 3B&ndash;4A</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Tapioca starch</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span><span>Medium</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Kinky-Curly+Curl+Custard+Natural+Styling+Gel&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Kinky-Curly Curl Custard on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-4" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">05</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-5">Pattern Beauty Strong Hold Gel</a>
+            <span class="qp-for">Maximum hold on 4B&ndash;4C</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">PVP dual-polymer</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span>Extra-firm</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Pattern+Beauty+Strong+Hold+Gel&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Pattern Beauty Strong Hold Gel on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-5" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">06</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-6">Uncle Funky&rsquo;s Daughter Curly Magic</a>
+            <span class="qp-for">Soft wash-and-go definition, 3C&ndash;4A</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Agave nectar</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span><span>Medium &middot; soft cast</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Uncle+Funky%27s+Daughter+Curly+Magic+Curl+Stimulator&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Uncle Funky&rsquo;s Daughter Curly Magic on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-6" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
     <h2>Why Natural Hair Needs Gel Specifically</h2>
 
     <p>Natural hair &mdash; especially 4A through 4C &mdash; has a structural characteristic that makes it uniquely vulnerable to humidity: a raised or irregular cuticle surface that allows moisture to enter and exit the strand easily. On wash day, this is an advantage (the cuticle opens to accept deep conditioner). Every other day, it is the mechanism behind frizz.</p>
@@ -205,14 +351,16 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <h2>Types of Gel: Synthetic Polymer vs. Botanical vs. Custard</h2>
 
-    <table>
-      <thead><tr><th>Type</th><th>Primary Hold Agent</th><th>Hold Level</th><th>Best For</th><th>Texture Feel</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Synthetic polymer gel</strong></td><td>Carbomer, PVP, Acrylates</td><td>Firm&ndash;Extra firm</td><td>Wash-and-go, sleek styles, all-day hold on 4C</td><td>Hard cast; scrunch out when dry</td></tr>
-        <tr><td><strong>Botanical gel</strong></td><td>Flaxseed extract, aloe vera</td><td>Light&ndash;Medium</td><td>Twist-outs, elongation, second-day refreshing</td><td>Soft cast; flexible hold</td></tr>
-        <tr><td><strong>Curl custard</strong></td><td>Pectin, xanthan gum, honey</td><td>Light&ndash;Medium</td><td>Coil definition with added moisture, 3C&ndash;4B</td><td>No cast; soft and touchable</td></tr>
-      </tbody>
-    </table>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Type</th><th>Primary Hold Agent</th><th>Hold Level</th><th>Best For</th><th>Texture Feel</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Synthetic polymer gel</strong></td><td>Carbomer, PVP, Acrylates</td><td>Firm&ndash;Extra firm</td><td>Wash-and-go, sleek styles, all-day hold on 4C</td><td>Hard cast; scrunch out when dry</td></tr>
+          <tr><td><strong>Botanical gel</strong></td><td>Flaxseed extract, aloe vera</td><td>Light&ndash;Medium</td><td>Twist-outs, elongation, second-day refreshing</td><td>Soft cast; flexible hold</td></tr>
+          <tr><td><strong>Curl custard</strong></td><td>Pectin, xanthan gum, honey</td><td>Light&ndash;Medium</td><td>Coil definition with added moisture, 3C&ndash;4B</td><td>No cast; soft and touchable</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <p>The distinction matters because each type behaves differently when it dries. Synthetic polymer gels form a firm protective cast that holds the curl shape rigidly until you intentionally break it (the &ldquo;scrunch out the crunch&rdquo; step). Botanical gels set more loosely and can be touched while damp without disrupting the style. Custards do not cast at all, leaving hair touchable from the start &mdash; which means less protection against frizz in humid conditions but a softer feel for everyday wear.</p>
 
@@ -231,66 +379,72 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <h2>The 6 Best Gels for Natural Hair</h2>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-1">
       <div class="product-num">1</div>
       <div class="product-body">
         <span class="product-tag">Best Overall · Most Versatile</span>
         <h3>Eco Styler Olive Oil Styling Gel</h3>
+        <p class="card-summary"><span><b>Best for:</b> all-day wash-and-gos, 3B&ndash;4C</span> <a href="https://www.amazon.com/s?k=Eco+Styler+Olive+Oil+Styling+Gel&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>The most widely used natural hair gel in the world &mdash; and for good reason. Eco Styler&rsquo;s Olive Oil formula uses carbomer as its primary hold agent: a synthetic polymer that creates a firm, clean cast with zero flaking on all textures from 3B through 4C. Olive oil and vitamin E provide conditioning without the greasiness of heavier oils; the formula contains no drying alcohols. The hold is strong enough to last 24&ndash;72 hours on a wash-and-go or sleek updo, flexible enough to scrunch into soft definition once completely dry.</p>
         <p>The most important application note: use on soaking wet hair only. Eco Styler applied to damp hair dries too fast for the polymer to coat each strand evenly, resulting in patchy definition and a stiff texture that will not SOTC smoothly. Apply on dripping wet, freshly detangled hair in sections, distributing with a wide-tooth comb or praying-hands method before scrunching. One jar at the price point covers weeks of use &mdash; it is by a wide margin the best value on this list.</p>
         <a href="https://www.amazon.com/s?k=Eco+Styler+Olive+Oil+Styling+Gel&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-2">
       <div class="product-num">2</div>
       <div class="product-body">
         <span class="product-tag">Best Botanical Gel · Elongation &amp; Twist-Outs</span>
         <h3>Aunt Jackie&rsquo;s Don&rsquo;t Shrink Flaxseed Elongating Curling Gel</h3>
+        <p class="card-summary"><span><b>Best for:</b> elongated twist-outs and braid-outs</span> <a href="https://www.amazon.com/s?k=Aunt+Jackie%27s+Don%27t+Shrink+Flaxseed+Curling+Gel&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>The best alternative to synthetic polymer gels for naturals who want definition without stiffness. Aunt Jackie&rsquo;s Don&rsquo;t Shrink uses flaxseed extract &mdash; a natural biopolymer that provides flexible, medium-firm hold &mdash; alongside hydrolyzed wheat protein (strengthens the strand), glycerin (humectant), and shea butter and olive oil for conditioning. The result is a gel that elongates coils as they set, creating a stretched curl pattern rather than the compact, tight definition of carbomer-based gels.</p>
         <p>This makes Don&rsquo;t Shrink the first choice for twist-outs, braid-outs, and any style where you want the curls to show length rather than shrink. The cast is softer than Eco Styler and breaks more easily &mdash; the SOTC step requires less force, and the hair feels softer when dry. On 4C hair that can shrink 75&ndash;90% of its actual length, this gel&rsquo;s elongating effect shows real results. Note: because flaxseed extract is a humectant like glycerin, this gel is best used in optimal dew point conditions (35&ndash;60&deg;F) rather than high-humidity summer weather.</p>
         <a href="https://www.amazon.com/s?k=Aunt+Jackie%27s+Don%27t+Shrink+Flaxseed+Curling+Gel&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-3">
       <div class="product-num">3</div>
       <div class="product-body">
         <span class="product-tag">Best for Moisture + Light Hold · 3C&ndash;4B</span>
         <h3>Mielle Organics Honey &amp; Ginger Styling Gel</h3>
+        <p class="card-summary"><span><b>Best for:</b> moisture plus light hold, 3C&ndash;4B</span> <a href="https://www.amazon.com/s?k=Mielle+Organics+Honey+Ginger+Styling+Gel&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Mielle&rsquo;s Honey and Ginger Styling Gel occupies the space between a curl custard and a traditional gel &mdash; lighter hold than Eco Styler, more definition than a leave-in alone. The formula leads with glycerin and honey (both humectants) alongside aloe vera (light slip and hold), babassu oil (a lighter substitute for coconut oil), and ginger root oil as the active ingredient. The acrylates copolymer provides the film-forming hold, but at a lower concentration than Eco Styler&rsquo;s carbomer, making the cast softer and the finish more moisturized-looking rather than glossy.</p>
         <p>This gel works best layered over a water-based leave-in on 3C through 4B hair as a single styling product, or used as the moisture layer under a firmer gel on 4C hair that needs more hold than Mielle alone provides. The honey draws moisture into the strand during styling and keeps the curl feeling supple rather than crunchy. Best results on second-day curl refreshing: spray with water, scrunch in Mielle, let air dry, SOTC.</p>
         <a href="https://www.amazon.com/s?k=Mielle+Organics+Honey+Ginger+Styling+Gel&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-4">
       <div class="product-num">4</div>
       <div class="product-body">
         <span class="product-tag">Best Clean Ingredients · Curl Custard</span>
         <h3>Kinky-Curly Curl Custard Natural Styling Gel</h3>
+        <p class="card-summary"><span><b>Best for:</b> clean-ingredient routines, 3B&ndash;4A</span> <a href="https://www.amazon.com/s?k=Kinky-Curly+Curl+Custard+Natural+Styling+Gel&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Kinky-Curly Curl Custard is the closest thing to a universally clean-ingredient gel in the natural hair space. The formula uses organic tapioca starch for hold, aloe vera leaf juice as the base (rather than water, giving it more slip and conditioning activity), agave nectar as a natural humectant, and a minimal preservative system. No synthetic polymers, no silicones, no drying alcohols, no parabens &mdash; the entire formula is built from recognizable plant-derived ingredients. It is compatible with the Curly Girl Method and most porosity-conscious natural hair routines.</p>
         <p>The hold is medium &mdash; strong enough for 3B through 4A curl types on a wash-and-go, lighter than what most 4B&ndash;4C hair needs for all-day definition. The texture is a thick custard that distributes easily through wet curls without the stringy application drag of thin gels. The best result comes from applying generously on soaking wet hair in sections, finger-coiling or raking through, then leaving undisturbed until completely dry before SOTC. Kinky-Curly Curl Custard is one of the few natural hair products that genuinely delivers on its ingredient promises without compromise on performance.</p>
         <a href="https://www.amazon.com/s?k=Kinky-Curly+Curl+Custard+Natural+Styling+Gel&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-5">
       <div class="product-num">5</div>
       <div class="product-body">
         <span class="product-tag">Best Premium · Tightest Textures 4B&ndash;4C</span>
         <h3>Pattern Beauty Strong Hold Gel</h3>
+        <p class="card-summary"><span><b>Best for:</b> maximum hold on 4B&ndash;4C</span> <a href="https://www.amazon.com/s?k=Pattern+Beauty+Strong+Hold+Gel&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Pattern Beauty&rsquo;s Strong Hold Gel was specifically formulated for 3C through 4C textures &mdash; not adapted from a wavy-hair product, but built from scratch for the tighter end of the curl spectrum. The formula uses a dual-polymer system (PVP and VP/Dimethylaminoethylmethacrylate Copolymer) that provides extra-firm hold with a flexible cast &mdash; the curls are locked in but not brittle. Aloe vera and humectants keep the cast from cracking or flaking as the hair moves. Black seed oil and coconut oil add conditioning without weighing down the coils.</p>
         <p>Pattern gels are concentrated: a quarter-sized amount applied to one section of wet hair distributes further than it looks. The hold outlasts most mid-range gels by several hours &mdash; styles set with Pattern Strong Hold on 4C hair in normal humidity hold definition for 2&ndash;3 days without refreshing. The price is higher than Eco Styler or Aunt Jackie&rsquo;s, but the formula is specifically calibrated for textures that other premium gels never had in mind. Excellent for wash-and-go styles, slicked ponytails, and any 4C style that needs professional-level hold without the alcohol content of salon gels.</p>
         <a href="https://www.amazon.com/s?k=Pattern+Beauty+Strong+Hold+Gel&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-6">
       <div class="product-num">6</div>
       <div class="product-body">
         <span class="product-tag">Best for Wash-and-Go Definition · 3C&ndash;4A</span>
         <h3>Uncle Funky&rsquo;s Daughter Curly Magic Curl Stimulator</h3>
+        <p class="card-summary"><span><b>Best for:</b> soft wash-and-go definition, 3C&ndash;4A</span> <a href="https://www.amazon.com/s?k=Uncle+Funky%27s+Daughter+Curly+Magic+Curl+Stimulator&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Uncle Funky&rsquo;s Daughter Curly Magic is a gel-custard hybrid built around agave nectar as its hold and humectant base &mdash; a thick, viscous natural sugar that provides medium hold with exceptional slip and a soft, flexible cast. The formula also contains vegetable glycerin, aloe vera, and a light acrylates polymer that adds a modest degree of humidity resistance without making the formula stiff. The result is a gel that defines 3C and 4A curl patterns with an almost soft-set quality &mdash; curls are defined but touchable, glossy but not crunchy.</p>
         <p>Curly Magic is particularly effective for naturals who find that synthetic polymer gels (Eco Styler, Pattern) feel too stiff or produce a high-shine finish they don&rsquo;t want. The agave base gives a natural-looking definition rather than a wet-look finish. Apply in sections on soaking wet hair, rake through with fingers to distribute through each curl clump, then do not touch until fully dry. SOTC is minimal &mdash; the cast breaks easily with light scrunching. For 4B&ndash;4C hair that needs more hold than Curly Magic alone provides, layer it under Eco Styler for a moisture-and-hold combination: Curly Magic for slip and hydration, Eco Styler on top to lock in the style.</p>
         <a href="https://www.amazon.com/s?k=Uncle+Funky%27s+Daughter+Curly+Magic+Curl+Stimulator&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>

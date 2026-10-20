@@ -139,6 +139,52 @@ strong { color: var(--espresso); font-weight: 500; }
 .faq-item { margin: 24px 0; border-bottom: 1px solid var(--sand); padding-bottom: 24px; }
 .faq-item:last-child { border-bottom: none; }
 .faq-item h3 { margin: 0 0 10px; font-size: 18px; }
+/* ─── Quick picks: hair-type ledger (palette tokens scoped: this post's :root predates --caramel-text and the darkened --mocha/--muted) ─── */
+.quick-picks,.card-summary{--caramel-text:#8B5E1A;--mocha:#7A5848;--muted:#6B5B53;}
+.quick-picks{margin:8px 0 44px;background:var(--warm-white);border:1px solid var(--sand);border-top:3px solid var(--espresso);padding:22px 24px 8px;}
+.qp-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;padding-bottom:14px;border-bottom:1px solid var(--espresso);}
+.quick-picks h2{margin:0;font-size:clamp(24px,3.2vw,30px);}
+.qp-key{margin:0;font-size:12px;line-height:1.6;color:var(--muted);max-width:380px;}
+.qp-legend{display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em;margin-top:4px;}
+.qp-legend .qp-pips{margin:0 5px 0 0;vertical-align:-1px;}
+.qp-legend .qp-pips:not(:first-child){margin-left:12px;}
+.qp-list{list-style:none;margin:0;padding:0;}
+.qp-row{display:grid;grid-template-columns:30px minmax(0,1fr) 168px auto;gap:4px 18px;align-items:baseline;padding:14px 0;border-bottom:1px dashed var(--sand);}
+.quick-picks .qp-row{margin:0;font-size:14px;line-height:1.5;color:var(--text);}
+.qp-row:last-child{border-bottom:0;}
+.qp-no{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12px;color:var(--caramel-text);}
+.qp-id{display:flex;flex-direction:column;min-width:0;}
+.qp-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.25;color:var(--espresso);text-decoration:none;}
+.qp-name:hover{text-decoration:underline;text-decoration-color:var(--caramel);text-underline-offset:3px;}
+.qp-for{font-size:13px;line-height:1.45;color:var(--mocha);margin-top:2px;}
+.qp-ev{display:flex;flex-direction:column;gap:3px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:11.5px;line-height:1.4;}
+.qp-active{color:var(--text);}
+.qp-grade{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;}
+.qp-pips{display:inline-flex;gap:3px;flex-shrink:0;}
+.qp-pips i{display:block;width:9px;height:9px;border:1.5px solid var(--caramel-text);border-radius:50%;}
+.qp-pips i.on{background:var(--caramel-text);}
+.qp-pips--na i{border-style:dashed;border-color:var(--muted);}
+.qp-act{display:flex;flex-direction:column;align-items:flex-end;gap:4px;white-space:nowrap;}
+.qp-buy{font-size:13px;font-weight:500;color:var(--cream);background:var(--espresso);text-decoration:none;padding:6px 12px;border-radius:2px;letter-spacing:.03em;}
+.qp-buy:hover{background:#2A1F1A;}
+.qp-jump{font-size:12px;color:var(--caramel-text);text-decoration:none;}
+.qp-jump:hover{text-decoration:underline;}
+.quick-picks a:focus-visible,.card-summary a:focus-visible{outline:2px solid var(--espresso);outline-offset:3px;border-radius:2px;}
+.product-pick{scroll-margin-top:96px;}
+.product-info .card-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;margin:0 0 8px;font-size:13px;line-height:1.5;color:var(--muted);}
+.card-summary b{font-weight:500;color:var(--espresso);}
+.card-summary-link{font-weight:500;color:var(--caramel-text);text-decoration:none;white-space:nowrap;}
+.card-summary-link:hover{text-decoration:underline;}
+@media(max-width:640px){
+  .quick-picks{padding:18px 16px 4px;margin-left:-8px;margin-right:-8px;}
+  .qp-row{grid-template-columns:24px minmax(0,1fr);gap:6px 10px;padding:12px 0;}
+  .qp-no{grid-row:1;}
+  .qp-ev,.qp-act{grid-column:2;}
+  .qp-name{font-size:18px;}
+  .qp-act{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;}
+  .qp-buy{padding:5px 11px;font-size:12.5px;}
+  .qp-key{max-width:none;}
+}
 footer { background: var(--espresso); padding: 48px 48px 28px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; max-width: 900px; margin: 0 auto 40px; }
 .logo-f { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; letter-spacing: 0.12em; color: var(--cream); display: block; margin-bottom: 10px; text-decoration: none; }
@@ -195,6 +241,106 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="post-intro">Curl cream is the C in the LOC method &mdash; the final styling layer that defines the curl pattern, seals in moisture, and holds everything in place without the crunch of a gel. The problem is that most naturals are using the wrong formula for their hair type. A cream that transforms 4C hair can make 4A curls limp and weighed down. Here is how to match curl cream to your hair type, and the best picks at every price point.</p>
   </div>
 
+
+  <section class="quick-picks" aria-labelledby="qp-heading">
+      <div class="qp-head">
+        <h2 id="qp-heading">Quick picks</h2>
+        <p class="qp-key">Matched by hair type and weight, as described in each review below.</p>
+      </div>
+      <ol class="qp-list">
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">01</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-1">SheaMoisture Curl Enhancing Smoothie</a>
+            <span class="qp-for">Serious moisture on 4A&ndash;4C</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">4A&ndash;4C</span>
+            <span class="qp-grade"><span>Rich &middot; butter-based</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=SheaMoisture+Coconut+Hibiscus+Curl+Enhancing+Smoothie&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View SheaMoisture Curl Enhancing Smoothie on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-1" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">02</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-2">Mielle Pomegranate &amp; Honey Twist Souffle</a>
+            <span class="qp-for">Low-porosity hair that weighs down easily</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">4A, 4C &middot; low porosity</span>
+            <span class="qp-grade"><span>Lighter than butter creams</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Mielle+Organics+Pomegranate+Honey+Twist+Souffle&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Mielle Pomegranate &amp; Honey Twist Souffle on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-2" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">03</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-3">As I Am Twist Defining Cream</a>
+            <span class="qp-for">Multi-day twist-outs</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">4A&ndash;4B</span>
+            <span class="qp-grade"><span>Medium weight</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=As+I+Am+Twist+Defining+Cream&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View As I Am Twist Defining Cream on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-3" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">04</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-4">Cantu Coconut Curling Cream</a>
+            <span class="qp-for">Drugstore value on 4B&ndash;4C</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">4B&ndash;4C</span>
+            <span class="qp-grade"><span>Rich emulsion</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Cantu+Shea+Butter+Coconut+Curling+Cream&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Cantu Coconut Curling Cream on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-4" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">05</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-5">Ouidad Curl Immersion Triple Treat</a>
+            <span class="qp-for">Light definition on Type 3 curls</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">3A&ndash;3C</span>
+            <span class="qp-grade"><span>Lightweight &middot; gel-like</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Ouidad+Curl+Immersion+Triple+Treat&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Ouidad Curl Immersion Triple Treat on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-5" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">06</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-6">DevaCurl SuperCream</a>
+            <span class="qp-for">Naturals who find butters too heavy</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">3B&ndash;4B</span>
+            <span class="qp-grade"><span>Rich &middot; longer hold</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=DevaCurl+SuperCream+Coconut+Curl+Styler&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View DevaCurl SuperCream on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-6" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
   <div class="stat-callout">
     <p><strong>Curl cream is not a leave-in conditioner substitute.</strong> The two serve different functions. Leave-in delivers moisture into the strand (the L in LOC). Curl cream seals that moisture in and defines the curl pattern (the C in LOC). Using curl cream without a leave-in underneath means you are defining dry hair &mdash; you get shape but no softness, and the strand stays dehydrated underneath the cream layer.</p>
   </div>
@@ -237,28 +383,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h2>Best Curl Creams for Natural Hair</h2>
   <p class="disclaimer">This post contains affiliate links. If you purchase through them, we earn a small commission at no extra cost to you. All picks are independent recommendations.</p>
-  <div class="product-pick">
-    <div class="product-info"><strong>SheaMoisture Coconut &amp; Hibiscus Curl Enhancing Smoothie</strong><p>The most widely recommended curl cream in the 4C and 4B community. Coconut oil, shea butter, and silk protein deliver rich moisture and slip for dense, tightly coiled hair. Defines twist-outs and braid-outs beautifully. Apply generously to damp hair in sections. Too heavy for Type 3 curls or fine strands &mdash; best for 4A through 4C hair types that need serious moisture alongside definition.</p></div>
+  <div class="product-pick" id="pick-1">
+    <div class="product-info"><strong>SheaMoisture Coconut &amp; Hibiscus Curl Enhancing Smoothie</strong><p class="card-summary"><span><b>Best for:</b> serious moisture on 4A&ndash;4C</span> <a href="https://www.amazon.com/s?k=SheaMoisture+Coconut+Hibiscus+Curl+Enhancing+Smoothie&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p><p>The most widely recommended curl cream in the 4C and 4B community. Coconut oil, shea butter, and silk protein deliver rich moisture and slip for dense, tightly coiled hair. Defines twist-outs and braid-outs beautifully. Apply generously to damp hair in sections. Too heavy for Type 3 curls or fine strands &mdash; best for 4A through 4C hair types that need serious moisture alongside definition.</p></div>
     <a href="https://www.amazon.com/s?k=SheaMoisture+Coconut+Hibiscus+Curl+Enhancing+Smoothie&tag=strand01-20" class="affiliate-btn" target="_blank" rel="noopener sponsored">View on Amazon</a>
   </div>
-  <div class="product-pick">
-    <div class="product-info"><strong>Mielle Organics Pomegranate &amp; Honey Twist Souffle</strong><p>A lighter alternative to butter-heavy curl creams for 4C hair. Pomegranate seed oil, honey, and babassu oil provide moisture and definition without the weight. Works for wash-and-gos and twist-outs. Well-formulated for low-porosity 4C and 4A hair that gets weighed down by richer creams. One of the best value-to-performance curl creams in the natural hair market.</p></div>
+  <div class="product-pick" id="pick-2">
+    <div class="product-info"><strong>Mielle Organics Pomegranate &amp; Honey Twist Souffle</strong><p class="card-summary"><span><b>Best for:</b> low-porosity hair that weighs down easily</span> <a href="https://www.amazon.com/s?k=Mielle+Organics+Pomegranate+Honey+Twist+Souffle&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p><p>A lighter alternative to butter-heavy curl creams for 4C hair. Pomegranate seed oil, honey, and babassu oil provide moisture and definition without the weight. Works for wash-and-gos and twist-outs. Well-formulated for low-porosity 4C and 4A hair that gets weighed down by richer creams. One of the best value-to-performance curl creams in the natural hair market.</p></div>
     <a href="https://www.amazon.com/s?k=Mielle+Organics+Pomegranate+Honey+Twist+Souffle&tag=strand01-20" class="affiliate-btn" target="_blank" rel="noopener sponsored">View on Amazon</a>
   </div>
-  <div class="product-pick">
-    <div class="product-info"><strong>As I Am Twist Defining Cream</strong><p>A medium-weight cream for 4A and 4B hair that defines twist-outs with a natural, non-greasy finish. Castor oil and shea butter provide moisture; silk amino acids add shine and smoothness. Lighter than the SheaMoisture Smoothie but richer than gel-cream hybrids. Reliable for multi-day styles &mdash; refresh with a water mist and a tiny re-application on the second and third day.</p></div>
+  <div class="product-pick" id="pick-3">
+    <div class="product-info"><strong>As I Am Twist Defining Cream</strong><p class="card-summary"><span><b>Best for:</b> multi-day twist-outs</span> <a href="https://www.amazon.com/s?k=As+I+Am+Twist+Defining+Cream&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p><p>A medium-weight cream for 4A and 4B hair that defines twist-outs with a natural, non-greasy finish. Castor oil and shea butter provide moisture; silk amino acids add shine and smoothness. Lighter than the SheaMoisture Smoothie but richer than gel-cream hybrids. Reliable for multi-day styles &mdash; refresh with a water mist and a tiny re-application on the second and third day.</p></div>
     <a href="https://www.amazon.com/s?k=As+I+Am+Twist+Defining+Cream&tag=strand01-20" class="affiliate-btn" target="_blank" rel="noopener sponsored">View on Amazon</a>
   </div>
-  <div class="product-pick">
-    <div class="product-info"><strong>Cantu Shea Butter for Natural Hair Coconut Curling Cream</strong><p>The best-value curl cream for 4C and 4B hair at the drugstore price point. Pure shea butter and coconut oil in a rich emulsion that works for wash-and-gos, twist-outs, and protective styling prep. Apply to soaking wet hair for maximum definition. Can feel heavy on fine strands &mdash; mix with a small amount of water in your palm before applying if your hair is fine or low porosity.</p></div>
+  <div class="product-pick" id="pick-4">
+    <div class="product-info"><strong>Cantu Shea Butter for Natural Hair Coconut Curling Cream</strong><p class="card-summary"><span><b>Best for:</b> drugstore value on 4B&ndash;4C</span> <a href="https://www.amazon.com/s?k=Cantu+Shea+Butter+Coconut+Curling+Cream&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p><p>The best-value curl cream for 4C and 4B hair at the drugstore price point. Pure shea butter and coconut oil in a rich emulsion that works for wash-and-gos, twist-outs, and protective styling prep. Apply to soaking wet hair for maximum definition. Can feel heavy on fine strands &mdash; mix with a small amount of water in your palm before applying if your hair is fine or low porosity.</p></div>
     <a href="https://www.amazon.com/s?k=Cantu+Shea+Butter+Coconut+Curling+Cream&tag=strand01-20" class="affiliate-btn" target="_blank" rel="noopener sponsored">View on Amazon</a>
   </div>
-  <div class="product-pick">
-    <div class="product-info"><strong>Ouidad Curl Immersion Triple Treat Deep Conditioner (as curl cream)</strong><p>Technically a rinse-out deep conditioner, but Ouidad&rsquo;s lightweight formula is used by Type 3A&ndash;3C naturals as a leave-in curl cream in very small amounts. The gel-like consistency defines curls without weight. Apply a dime-sized amount to each section after your dedicated leave-in for additional curl definition and anti-frizz protection. Works best for medium-porosity curly hair that needs definition without heaviness.</p></div>
+  <div class="product-pick" id="pick-5">
+    <div class="product-info"><strong>Ouidad Curl Immersion Triple Treat Deep Conditioner (as curl cream)</strong><p class="card-summary"><span><b>Best for:</b> light definition on Type 3 curls</span> <a href="https://www.amazon.com/s?k=Ouidad+Curl+Immersion+Triple+Treat&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p><p>Technically a rinse-out deep conditioner, but Ouidad&rsquo;s lightweight formula is used by Type 3A&ndash;3C naturals as a leave-in curl cream in very small amounts. The gel-like consistency defines curls without weight. Apply a dime-sized amount to each section after your dedicated leave-in for additional curl definition and anti-frizz protection. Works best for medium-porosity curly hair that needs definition without heaviness.</p></div>
     <a href="https://www.amazon.com/s?k=Ouidad+Curl+Immersion+Triple+Treat&tag=strand01-20" class="affiliate-btn" target="_blank" rel="noopener sponsored">View on Amazon</a>
   </div>
-  <div class="product-pick">
-    <div class="product-info"><strong>DevaCurl SuperCream Coconut Curl Styler</strong><p>A rich curl cream designed for Type 3 and Type 4 natural hair. Coconut oil, jojoba oil, and a micro-diffusion technology provide definition and frizz control for 3B through 4B hair. Holds styles longer than most curl creams without the crunch of gel. Apply in sections to damp hair before air drying or diffusing. Works well as the C in LOC for naturals who find butter-based creams too heavy.</p></div>
+  <div class="product-pick" id="pick-6">
+    <div class="product-info"><strong>DevaCurl SuperCream Coconut Curl Styler</strong><p class="card-summary"><span><b>Best for:</b> naturals who find butters too heavy</span> <a href="https://www.amazon.com/s?k=DevaCurl+SuperCream+Coconut+Curl+Styler&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p><p>A rich curl cream designed for Type 3 and Type 4 natural hair. Coconut oil, jojoba oil, and a micro-diffusion technology provide definition and frizz control for 3B through 4B hair. Holds styles longer than most curl creams without the crunch of gel. Apply in sections to damp hair before air drying or diffusing. Works well as the C in LOC for naturals who find butter-based creams too heavy.</p></div>
     <a href="https://www.amazon.com/s?k=DevaCurl+SuperCream+Coconut+Curl+Styler&tag=strand01-20" class="affiliate-btn" target="_blank" rel="noopener sponsored">View on Amazon</a>
   </div>
   <h2>Frequently Asked Questions</h2>

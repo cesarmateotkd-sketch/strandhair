@@ -146,6 +146,50 @@ tr:nth-child(even) td{background:var(--warm-white);}
 .product-body h3{margin-top:0;}
 .product-tag{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--sand);color:var(--espresso);padding:3px 8px;border-radius:2px;margin-bottom:10px;}
 .product-link{display:inline-block;margin-top:12px;font-size:13px;font-weight:500;color:var(--caramel-text);text-decoration:none;border-bottom:1px solid var(--caramel);padding-bottom:2px;letter-spacing:.04em;}
+/* ─── Quick picks: hold ledger ─── */
+.quick-picks{margin:8px 0 44px;background:var(--warm-white);border:1px solid var(--sand);border-top:3px solid var(--espresso);padding:22px 24px 8px;}
+.qp-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;padding-bottom:14px;border-bottom:1px solid var(--espresso);}
+.quick-picks h2{margin:0;font-size:clamp(24px,3.2vw,30px);}
+.qp-key{margin:0;font-size:12px;line-height:1.6;color:var(--muted);max-width:380px;}
+.qp-legend{display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em;margin-top:4px;}
+.qp-legend .qp-pips{margin:0 5px 0 0;vertical-align:-1px;}
+.qp-legend .qp-pips:not(:first-child){margin-left:12px;}
+.qp-list{list-style:none;margin:0;padding:0;}
+.qp-row{display:grid;grid-template-columns:30px minmax(0,1fr) 210px auto;gap:4px 18px;align-items:baseline;padding:14px 0;border-bottom:1px dashed var(--sand);}
+.qp-row:last-child{border-bottom:0;}
+.qp-no{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12px;color:var(--caramel-text);}
+.qp-id{display:flex;flex-direction:column;min-width:0;}
+.qp-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.25;color:var(--espresso);text-decoration:none;}
+.qp-name:hover{text-decoration:underline;text-decoration-color:var(--caramel);text-underline-offset:3px;}
+.qp-for{font-size:13px;line-height:1.45;color:var(--mocha);margin-top:2px;}
+.qp-ev{display:flex;flex-direction:column;gap:3px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:11.5px;line-height:1.4;}
+.qp-active{color:var(--text);}
+.qp-grade{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;}
+.qp-pips{display:inline-flex;gap:3px;flex-shrink:0;}
+.qp-pips i{display:block;width:9px;height:9px;border:1.5px solid var(--caramel-text);border-radius:50%;}
+.qp-pips i.on{background:var(--caramel-text);}
+.qp-pips--na i{border-style:dashed;border-color:var(--muted);}
+.qp-act{display:flex;flex-direction:column;align-items:flex-end;gap:4px;white-space:nowrap;}
+.qp-buy{font-size:13px;font-weight:500;color:var(--cream);background:var(--espresso);text-decoration:none;padding:6px 12px;border-radius:2px;letter-spacing:.03em;}
+.qp-buy:hover{background:#2A1F1A;}
+.qp-jump{font-size:12px;color:var(--caramel-text);text-decoration:none;}
+.qp-jump:hover{text-decoration:underline;}
+.quick-picks a:focus-visible,.card-summary a:focus-visible{outline:2px solid var(--espresso);outline-offset:3px;border-radius:2px;}
+.product-card{scroll-margin-top:16px;}
+.card-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;margin:-4px 0 14px;font-size:13px;line-height:1.5;color:var(--muted);}
+.card-summary b{font-weight:500;color:var(--espresso);}
+.card-summary-link{font-weight:500;color:var(--caramel-text);text-decoration:none;white-space:nowrap;}
+.card-summary-link:hover{text-decoration:underline;}
+@media(max-width:640px){
+  .quick-picks{padding:18px 16px 4px;margin-left:-8px;margin-right:-8px;}
+  .qp-row{grid-template-columns:24px minmax(0,1fr);gap:6px 10px;padding:12px 0;}
+  .qp-no{grid-row:1;}
+  .qp-ev,.qp-act{grid-column:2;}
+  .qp-name{font-size:18px;}
+  .qp-act{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;}
+  .qp-buy{padding:5px 11px;font-size:12.5px;}
+  .qp-key{max-width:none;}
+}
 footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 .footer-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;}
 .footer-brand .logo-f{font-family:'Cormorant Garamond',serif;font-size:20px;color:#FAF7F2;text-decoration:none;display:inline-block;margin-bottom:12px;}
@@ -191,6 +235,106 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <p>Which means the question &ldquo;what is the best edge control?&rdquo; is really two questions: which products actually hold through a day of humidity without flaking or turning white &mdash; and which habits let you use them for years without watching your hairline migrate backward. Most guides answer only the first. This one answers both.</p>
 
+    <section class="quick-picks" aria-labelledby="qp-heading">
+      <div class="qp-head">
+        <h2 id="qp-heading">Quick picks</h2>
+        <p class="qp-key">Rated by hold, as described in each review below.
+          <span class="qp-legend"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span>extreme <span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span>firm <span class="qp-pips" aria-hidden="true"><i class="on"></i><i></i><i></i></span>medium</span></p>
+      </div>
+      <ol class="qp-list">
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">01</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-1">Ebin 24 Hour Edge Tamer</a>
+            <span class="qp-for">Events, humidity, all-day hold</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Firm wax tamer &middot; shampoo out</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span>Extreme firm</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Ebin+New+York+24+Hour+Edge+Tamer+Extreme+Firm&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Ebin 24 Hour Edge Tamer on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-1" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">02</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-2">Mielle Honey &amp; Ginger Edge Gel</a>
+            <span class="qp-for">Everyday styling with conditioning</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Conditioning gel &middot; rinses out</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i></i><i></i></span><span>Medium</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Mielle+Organics+Honey+Ginger+Edge+Gel&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Mielle Honey &amp; Ginger Edge Gel on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-2" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">03</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-3">The Doux Anonymous Edge Brilliantine</a>
+            <span class="qp-for">Fine or sparse edges</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Pliable brilliantine</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i></i><i></i></span><span>Flexible medium</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=The+Doux+Anonymous+Rock+Star+Edge+Brilliantine&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View The Doux Anonymous Edge Brilliantine on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-3" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">04</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-4">Creme of Nature Perfect Edges</a>
+            <span class="qp-for">A budget first edge kit</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Argan-oil wax formula</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span><span>Firm</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Creme+of+Nature+Argan+Oil+Perfect+Edges&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Creme of Nature Perfect Edges on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-4" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">05</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-5">Camille Rose Rosemary Mint Edge Pomade</a>
+            <span class="qp-for">Recovering thinning edges</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Rosemary, biotin, castor oil</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i></i><i></i></span><span>Soft-set medium</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Camille+Rose+Rosemary+Mint+Edge+Pomade&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Camille Rose Rosemary Mint Edge Pomade on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-5" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">06</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-6">Got2b Glued Spiking Gel</a>
+            <span class="qp-for">Braids, wigs, and installs</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Water-based spiking gel</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span>Extreme &middot; multi-day</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Got2b+Glued+Styling+Spiking+Gel&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Got2b Glued Spiking Gel on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-6" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
     <h2>Why Edges Are Different (and More Fragile)</h2>
 
     <p>The hairs along your hairline &mdash; the ones edge control is designed to smooth &mdash; are structurally distinct from the rest of your hair:</p>
@@ -224,66 +368,72 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <h2>The 6 Best Edge Controls for Natural Hair</h2>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-1">
       <div class="product-num">1</div>
       <div class="product-body">
         <span class="product-tag">Best Overall &middot; Strongest Hold</span>
         <h3>Ebin New York 24 Hour Edge Tamer (Extreme Firm Hold)</h3>
+        <p class="card-summary"><span><b>Best for:</b> events, humidity, all-day hold</span> <a href="https://www.amazon.com/s?k=Ebin+New+York+24+Hour+Edge+Tamer+Extreme+Firm&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Ebin&rsquo;s 24 Hour Edge Tamer is the benchmark for maximum hold &mdash; the product stylists reach for when edges need to stay laid through a wedding, a workday, and the humidity in between. The formula dries to a firm, glossy set that does not turn white under brushing and does not revert at the first sign of moisture in the air, and it accomplishes this without drying alcohols. On dense 4B&ndash;4C edges that push back against lighter pomades within an hour, this is the difference between edges that hold and edges that need a midday redo.</p>
         <p>The technique matters more with firm-hold formulas: use a rice-grain amount, work fast (it begins setting quickly), smooth once with the brush, and tie down with a scarf for five minutes. It requires shampoo to fully remove &mdash; which is exactly why it should be an occasion product or every-other-day product rather than a daily default. Multiple hold levels are available; the Extreme Firm (purple) is the one that earns the reputation. The price-to-size ratio is among the best in the category, and a single tub lasts months.</p>
         <a href="https://www.amazon.com/s?k=Ebin+New+York+24+Hour+Edge+Tamer+Extreme+Firm&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-2">
       <div class="product-num">2</div>
       <div class="product-body">
         <span class="product-tag">Best Conditioning &middot; Daily Wear</span>
         <h3>Mielle Organics Honey &amp; Ginger Edge Gel</h3>
+        <p class="card-summary"><span><b>Best for:</b> everyday styling with conditioning</span> <a href="https://www.amazon.com/s?k=Mielle+Organics+Honey+Ginger+Edge+Gel&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Mielle&rsquo;s edge gel is the opposite philosophy from Ebin: medium hold with a formula that treats the hairline while styling it. Honey (humectant), ginger root, and a blend of lightweight oils keep the film flexible and the fragile perimeter hairs moisturized rather than shellacked. The finish is a soft, natural sheen rather than a hard gloss, and it rinses out with water and a little conditioner &mdash; no shampoo required &mdash; which makes it the right choice for edges that get styled most days of the week.</p>
         <p>The hold is honest medium: it lays 3A&ndash;4A edges all day, holds 4B&ndash;4C edges for most of a day in normal humidity, and will not survive a rainstorm the way a wax-heavy tamer will. That trade is the point. If your hairline is showing early stress signs &mdash; thinning, short broken hairs, tenderness after styling &mdash; switching your daily product from a firm-hold wax to this while reserving the heavy hitter for occasions is one of the easiest edge-preserving changes you can make.</p>
         <a href="https://www.amazon.com/s?k=Mielle+Organics+Honey+Ginger+Edge+Gel&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-3">
       <div class="product-num">3</div>
       <div class="product-body">
         <span class="product-tag">Best for Fine Edges &middot; No Buildup</span>
         <h3>The Doux Anonymous Rock Star Edge Brilliantine</h3>
+        <p class="card-summary"><span><b>Best for:</b> fine or sparse edges</span> <a href="https://www.amazon.com/s?k=The+Doux+Anonymous+Rock+Star+Edge+Brilliantine&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>The Doux&rsquo;s Anonymous edge brilliantine is built for the hairlines that heavy waxes overwhelm: fine, low-density, or transitioning edges where a thick pomade looks greasy and weighs the baby hairs flat into the skin. The texture is lighter and more pliable than a standard tamer, delivering a flexible medium hold with a high-shine finish that reads polished rather than stiff. Because the film stays pliable, it re-smooths without flaking &mdash; a rare quality in this category and the reason it works for styles you touch up through the day.</p>
         <p>It layers more forgivingly over leave-ins and light oils than wax-based formulas, making it the most compatible option for naturals who lay edges over an already-styled look rather than on bare hair. The hold ceiling is real: dense 4C edges in high humidity will out-muscle it by afternoon. But for wavy through 4A textures, fine hairlines, and anyone whose current edge control constantly flakes white, this is the fix.</p>
         <a href="https://www.amazon.com/s?k=The+Doux+Anonymous+Rock+Star+Edge+Brilliantine&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-4">
       <div class="product-num">4</div>
       <div class="product-body">
         <span class="product-tag">Best Budget &middot; Drugstore Staple</span>
         <h3>Creme of Nature Argan Oil Perfect Edges</h3>
+        <p class="card-summary"><span><b>Best for:</b> a budget first edge kit</span> <a href="https://www.amazon.com/s?k=Creme+of+Nature+Argan+Oil+Perfect+Edges&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Perfect Edges has been the drugstore default for a decade for a simple reason: it does 85% of what premium tamers do at half the price, and it is stocked everywhere. The argan-oil-infused formula delivers a firm hold with a glossy finish, resists flaking when applied thin, and holds most textures through a full day in moderate humidity. The Extra Hold version narrows the gap with Ebin further for dense edges.</p>
         <p>Its weaknesses are the standard wax-formula ones: apply too much and it feels tacky for an hour; layer it over silicone-heavy leave-ins and it can ball up; and peak summer humidity will loosen it by evening on 4C edges. Applied correctly &mdash; thin, on clean edges, scarf-set &mdash; it is reliable enough that many naturals never feel the need to upgrade. If you are building a first edge kit on a budget: this, a soft-bristle edge brush, and a satin scarf cover everything.</p>
         <a href="https://www.amazon.com/s?k=Creme+of+Nature+Argan+Oil+Perfect+Edges&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-5">
       <div class="product-num">5</div>
       <div class="product-body">
         <span class="product-tag">Best Edge-Health Hybrid &middot; Growth Support</span>
         <h3>Camille Rose Rosemary Mint Edge Serum Pomade</h3>
+        <p class="card-summary"><span><b>Best for:</b> recovering thinning edges</span> <a href="https://www.amazon.com/s?k=Camille+Rose+Rosemary+Mint+Edge+Pomade&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Camille Rose&rsquo;s edge pomade splits the difference between styler and treatment: a medium-hold formula built around rosemary and mint &mdash; the same rosemary with clinical evidence for stimulating growth at the follicle &mdash; plus biotin and castor oil, aimed squarely at naturals trying to lay their edges and recover them at the same time. The mint gives a mild tingle at application (circulation stimulation, and a signal you have used enough), and the hold is a soft-set medium comparable to Mielle&rsquo;s.</p>
         <p>To be clear about expectations: no edge control regrows hair by itself, and a pomade&rsquo;s contact time with the follicle is limited. But if you are in the recovery phase &mdash; resting your edges from tension, massaging the hairline at night, using rosemary oil on off days &mdash; this lets your styled days work with that effort instead of against it. It is the product for the natural who caught the thinning early and is being deliberate about reversing it.</p>
         <a href="https://www.amazon.com/s?k=Camille+Rose+Rosemary+Mint+Edge+Pomade&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-6">
       <div class="product-num">6</div>
       <div class="product-body">
         <span class="product-tag">Best for Braids &amp; Protective Styles</span>
         <h3>Got2b Glued Styling Spiking Gel</h3>
+        <p class="card-summary"><span><b>Best for:</b> braids, wigs, and installs</span> <a href="https://www.amazon.com/s?k=Got2b+Glued+Styling+Spiking+Gel&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Not an edge control by design &mdash; Got2b Glued is a maximum-hold spiking gel &mdash; but it has been adopted so universally by braiders and protective stylists that leaving it off the list would be dishonest. For laying edges around box braids, knotless braids, locs, and wig installs, its water-based, extreme-hold film outlasts every wax-based tamer, holding for days rather than hours. Because it is a gel rather than a wax, it also will not transfer onto wig lace or braid roots the way pomades can.</p>
         <p>The strength is also the caution: this level of hold on the hairline every day is exactly the kind of stress fragile edges do not need. Use it for installs and multi-day styles where edges are laid once and left alone &mdash; its actual best use case &mdash; and remove it fully with a proper wash rather than picking at the dried film, which takes hairs with it. For daily wear, stay with a true edge control. For a two-week protective style where you want the perimeter set once and forgotten, nothing on this list beats it.</p>
         <a href="https://www.amazon.com/s?k=Got2b+Glued+Styling+Spiking+Gel&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>

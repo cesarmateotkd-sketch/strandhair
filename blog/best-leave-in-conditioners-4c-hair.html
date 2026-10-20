@@ -165,6 +165,51 @@ footer { background: var(--espresso); padding: 48px 48px 28px; }
   .product-pick { flex-direction: column; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
 }
+
+/* ─── Quick picks: ledger (shared system with best-hair-growth-serums) ─── */
+.quick-picks,.card-summary{--warm-white:#F5F0E8;--caramel-text:#8B5E1A;--mocha:#7A5848;--muted:#6B5B53;--text:#2A1F1A;}
+.quick-picks{margin:8px 0 44px;background:var(--warm-white);border:1px solid var(--sand);border-top:3px solid var(--espresso);padding:22px 24px 8px;}
+.qp-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;padding-bottom:14px;border-bottom:1px solid var(--espresso);}
+.quick-picks h2{margin:0;font-size:clamp(24px,3.2vw,30px);}
+.qp-key{margin:0;font-size:12px;line-height:1.6;color:var(--muted);max-width:380px;}
+.qp-legend{display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em;margin-top:4px;}
+.qp-legend .qp-pips{margin:0 5px 0 0;vertical-align:-1px;}
+.qp-legend .qp-pips:not(:first-child){margin-left:12px;}
+.qp-list{list-style:none;margin:0;padding:0;}
+.qp-row{display:grid;grid-template-columns:30px minmax(0,1fr) 210px auto;gap:4px 18px;align-items:baseline;margin:0;padding:14px 0;border-bottom:1px dashed var(--sand);font-size:inherit;line-height:inherit;}
+.qp-row:last-child{border-bottom:0;}
+.qp-no{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12px;color:var(--caramel-text);}
+.qp-id{display:flex;flex-direction:column;min-width:0;}
+.qp-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:500;line-height:1.25;color:var(--espresso);text-decoration:none;}
+.qp-name:hover{text-decoration:underline;text-decoration-color:var(--caramel);text-underline-offset:3px;}
+.qp-for{font-size:13px;line-height:1.45;color:var(--mocha);margin-top:2px;}
+.qp-ev{display:flex;flex-direction:column;gap:3px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:11.5px;line-height:1.4;}
+.qp-active{color:var(--text);}
+.qp-grade{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;}
+.qp-pips{display:inline-flex;gap:3px;flex-shrink:0;}
+.qp-pips i{display:block;width:9px;height:9px;border:1.5px solid var(--caramel-text);border-radius:50%;}
+.qp-pips i.on{background:var(--caramel-text);}
+.qp-act{display:flex;flex-direction:column;align-items:flex-end;gap:4px;white-space:nowrap;}
+.qp-buy{font-size:13px;font-weight:500;color:var(--cream);background:var(--espresso);text-decoration:none;padding:6px 12px;border-radius:2px;letter-spacing:.03em;}
+.qp-buy:hover{background:#2A1F1A;}
+.qp-jump{font-size:12px;color:var(--caramel-text);text-decoration:none;}
+.qp-jump:hover{text-decoration:underline;}
+.quick-picks a:focus-visible,.card-summary a:focus-visible{outline:2px solid var(--espresso);outline-offset:3px;border-radius:2px;}
+.product-pick{scroll-margin-top:88px;}
+article p.card-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;margin:-4px 0 14px;font-size:13px;line-height:1.5;color:var(--muted);}
+.card-summary b{font-weight:500;color:var(--espresso);}
+.card-summary-link{font-weight:500;color:var(--caramel-text);text-decoration:none;white-space:nowrap;}
+.card-summary-link:hover{text-decoration:underline;}
+@media(max-width:640px){
+  .quick-picks{padding:18px 16px 4px;margin-left:-8px;margin-right:-8px;}
+  .qp-row{grid-template-columns:24px minmax(0,1fr);gap:6px 10px;padding:12px 0;}
+  .qp-no{grid-row:1;}
+  .qp-ev,.qp-act{grid-column:2;}
+  .qp-name{font-size:18px;}
+  .qp-act{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;}
+  .qp-buy{padding:5px 11px;font-size:12.5px;}
+  .qp-key{max-width:none;}
+}
 </style>
 </head>
 <body>
@@ -201,12 +246,112 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p><strong>The &ldquo;L&rdquo; in LOC is not optional.</strong> LOC stands for Liquid (leave-in), Oil, Cream. Each layer serves a specific function: the leave-in delivers moisture, the oil slows evaporation, and the cream seals and defines. If you skip the leave-in and go straight to oil, you are sealing in dry hair &mdash; the oil locks in dryness, not moisture. Every step in the LOC method depends on the one before it.</p>
   </div>
 
+  <section class="quick-picks" aria-labelledby="qp-heading">
+      <div class="qp-head">
+        <h2 id="qp-heading">Quick picks</h2>
+        <p class="qp-key">Matched by porosity and formula weight, using the <a href="#porosity-guide">porosity guide</a> below. Links are Amazon affiliate links; Strand earns a commission at no extra cost to you.<span class="qp-legend"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span>liquid <span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>rich</span></p>
+      </div>
+      <ol class="qp-list">
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">01</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-1">SheaMoisture JBCO Strengthen &amp; Restore</a>
+            <span class="qp-for">High-porosity or damaged 4C</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">High porosity</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span>Rich</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=SheaMoisture+JBCO+Strengthen+Restore+Leave-In+Conditioner&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View SheaMoisture JBCO Strengthen &amp; Restore on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-1" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">02</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-2">Kinky-Curly Knot Today</a>
+            <span class="qp-for">Low porosity and detangling</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Low porosity</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span><span>Liquid</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Kinky-Curly+Knot+Today+Leave-In+Detangler&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Kinky-Curly Knot Today on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-2" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">03</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-3">As I Am Leave-In Conditioner</a>
+            <span class="qp-for">Any porosity, before LOC</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">All porosities</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span>Medium cream</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=As+I+Am+Leave-In+Conditioner&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View As I Am Leave-In Conditioner on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-3" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">04</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-4">Mielle Babassu &amp; Mint (as leave-in)</a>
+            <span class="qp-for">Extra conditioning, used sparingly</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">High porosity</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span>Rich &middot; rinse-out</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Mielle+Organics+Babassu+Mint+Deep+Conditioner&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Mielle Babassu &amp; Mint (as leave-in) on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-4" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">05</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-5">Cantu Shea Butter Leave-In</a>
+            <span class="qp-for">Dense 4C on a budget</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">High porosity</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span>Thick cream</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Cantu+Shea+Butter+Leave-In+Conditioning+Repair+Cream&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Cantu Shea Butter Leave-In on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-5" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">06</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-6">Camille Rose Curl Love Moisture Milk</a>
+            <span class="qp-for">A lighter feel than cream</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Medium porosity</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span><span>Milk</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Camille+Rose+Naturals+Curl+Love+Moisture+Milk&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Camille Rose Curl Love Moisture Milk on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-6" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
   <h2>How Leave-In Conditioners Work</h2>
   <p>Leave-in conditioners are formulated to remain on the hair shaft without rinsing. They work through three primary mechanisms. <strong>Humectants</strong> &mdash; glycerin, aloe vera, panthenol &mdash; draw water molecules from the air and from inside the product into the hair cortex, increasing moisture content. <strong>Film-formers</strong> &mdash; lightweight silicones, plant-based polymers &mdash; coat the cuticle to reduce moisture evaporation between applications. <strong>Proteins</strong> &mdash; hydrolyzed keratin, silk, wheat &mdash; temporarily fill gaps in damaged cuticle scales, reducing porosity and strengthening the strand.</p>
   <p>4C hair needs leave-in conditioner more than any other type. The tight Z-coil curl pattern makes it nearly impossible for the scalp&rsquo;s natural sebum to travel down the length of the strand &mdash; the same oil that keeps straight hair naturally conditioned never reaches the ends of 4C hair. Every moisture application is manual. This is why the leave-in is non-negotiable.</p>
 
   <h2>How to Choose by Porosity</h2>
-  <table class="growth-table" aria-label="Leave-in conditioner selection by porosity">
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+  <table id="porosity-guide" class="growth-table" aria-label="Leave-in conditioner selection by porosity">
     <thead><tr><th>Porosity</th><th>Best Formula</th><th>Key Ingredients to Look For</th><th>Avoid</th></tr></thead>
     <tbody>
       <tr><td><strong>High porosity</strong></td><td>Rich cream or butter leave-in</td><td>Proteins, shea butter, avocado oil, glycerin</td><td>Light watery mists alone</td></tr>
@@ -214,6 +359,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <tr><td><strong>Medium porosity</strong></td><td>Cream leave-in</td><td>Balanced humectants + emollients + light protein</td><td>Very heavy butter formulas</td></tr>
     </tbody>
   </table>
+  </div>
   <p>If you are unsure of your porosity, the spray bottle test tells you quickly: mist a small section of clean, dry hair with water. If the water beads up and sits on the surface, you have low porosity. If it absorbs immediately, you have high porosity. Medium porosity absorbs steadily within a few seconds. <a href="hair-porosity-test.html" style="color: var(--espresso); border-bottom: 1px solid var(--caramel);">Full porosity guide here.</a></p>
 
   <h2>Three Leave-In Categories &mdash; and When to Use Each</h2>
@@ -244,28 +390,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h2>Best Leave-In Conditioners for 4C Hair</h2>
   <p class="disclaimer">This post contains affiliate links. If you purchase through them, we earn a small commission at no extra cost to you. All picks are independent recommendations.</p>
-  <div class="product-pick">
-    <div class="product-info"><strong>SheaMoisture JBCO Strengthen &amp; Restore Leave-In Conditioner</strong><p>Jamaican black castor oil, shea butter, and peppermint oil. Rich enough for high-porosity and damaged 4C hair without leaving residue. The protein from hydrolyzed keratin temporarily fills cuticle gaps to slow moisture loss. Apply generously to damp hair before sealing with an oil. One of the best-selling leave-ins in the 4C community for good reason.</p></div>
+  <div id="pick-1" class="product-pick">
+    <div class="product-info"><strong>SheaMoisture JBCO Strengthen &amp; Restore Leave-In Conditioner</strong><p class="card-summary"><span><b>Best for:</b> high-porosity and damaged 4C hair</span> <a href="https://www.amazon.com/s?k=SheaMoisture+JBCO+Strengthen+Restore+Leave-In+Conditioner&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p><p>Jamaican black castor oil, shea butter, and peppermint oil. Rich enough for high-porosity and damaged 4C hair without leaving residue. The protein from hydrolyzed keratin temporarily fills cuticle gaps to slow moisture loss. Apply generously to damp hair before sealing with an oil. One of the best-selling leave-ins in the 4C community for good reason.</p></div>
     <a href="https://www.amazon.com/s?k=SheaMoisture+JBCO+Strengthen+Restore+Leave-In+Conditioner&tag=strand01-20" class="affiliate-btn" target="_blank" rel="noopener sponsored">View on Amazon</a>
   </div>
-  <div class="product-pick">
-    <div class="product-info"><strong>Kinky-Curly Knot Today Leave-In Detangler</strong><p>A lightweight, marshmallow root and organic extracts formula that works as both leave-in and detangler. The thinner consistency makes it ideal for low-porosity 4C hair that struggles with product absorption. Excellent for wash-and-go prep and mid-week refreshing. Apply to soaking wet hair for maximum slip during detangling.</p></div>
+  <div id="pick-2" class="product-pick">
+    <div class="product-info"><strong>Kinky-Curly Knot Today Leave-In Detangler</strong><p class="card-summary"><span><b>Best for:</b> low-porosity 4C hair and detangling</span> <a href="https://www.amazon.com/s?k=Kinky-Curly+Knot+Today+Leave-In+Detangler&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p><p>A lightweight, marshmallow root and organic extracts formula that works as both leave-in and detangler. The thinner consistency makes it ideal for low-porosity 4C hair that struggles with product absorption. Excellent for wash-and-go prep and mid-week refreshing. Apply to soaking wet hair for maximum slip during detangling.</p></div>
     <a href="https://www.amazon.com/s?k=Kinky-Curly+Knot+Today+Leave-In+Detangler&tag=strand01-20" class="affiliate-btn" target="_blank" rel="noopener sponsored">View on Amazon</a>
   </div>
-  <div class="product-pick">
-    <div class="product-info"><strong>As I Am Leave-In Conditioner</strong><p>A balanced, medium-weight cream with castor oil, phytosterols, and pro-vitamin B5. Works across all 4C porosity types. The formula is designed to be used before the LOC method &mdash; it delivers moisture without the heaviness of butter-based products. Consistent community favorite for its versatility and accessible price point.</p></div>
+  <div id="pick-3" class="product-pick">
+    <div class="product-info"><strong>As I Am Leave-In Conditioner</strong><p class="card-summary"><span><b>Best for:</b> any 4C porosity, as the first LOC layer</span> <a href="https://www.amazon.com/s?k=As+I+Am+Leave-In+Conditioner&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p><p>A balanced, medium-weight cream with castor oil, phytosterols, and pro-vitamin B5. Works across all 4C porosity types. The formula is designed to be used before the LOC method &mdash; it delivers moisture without the heaviness of butter-based products. Consistent community favorite for its versatility and accessible price point.</p></div>
     <a href="https://www.amazon.com/s?k=As+I+Am+Leave-In+Conditioner&tag=strand01-20" class="affiliate-btn" target="_blank" rel="noopener sponsored">View on Amazon</a>
   </div>
-  <div class="product-pick">
-    <div class="product-info"><strong>Mielle Organics Babassu &amp; Mint Deep Conditioner (used as leave-in)</strong><p>Technically a rinse-out, but many 4C naturals use a small amount as a rich leave-in for extra conditioning on high-porosity hair. Babassu oil mimics the lightweight feel of coconut oil with better penetration. The mint stimulates the scalp. Use sparingly &mdash; a dime-sized amount per section is enough when used as a leave-in.</p></div>
+  <div id="pick-4" class="product-pick">
+    <div class="product-info"><strong>Mielle Organics Babassu &amp; Mint Deep Conditioner (used as leave-in)</strong><p class="card-summary"><span><b>Best for:</b> extra conditioning on high-porosity hair (use sparingly)</span> <a href="https://www.amazon.com/s?k=Mielle+Organics+Babassu+Mint+Deep+Conditioner&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p><p>Technically a rinse-out, but many 4C naturals use a small amount as a rich leave-in for extra conditioning on high-porosity hair. Babassu oil mimics the lightweight feel of coconut oil with better penetration. The mint stimulates the scalp. Use sparingly &mdash; a dime-sized amount per section is enough when used as a leave-in.</p></div>
     <a href="https://www.amazon.com/s?k=Mielle+Organics+Babassu+Mint+Deep+Conditioner&tag=strand01-20" class="affiliate-btn" target="_blank" rel="noopener sponsored">View on Amazon</a>
   </div>
-  <div class="product-pick">
-    <div class="product-info"><strong>Cantu Shea Butter Leave-In Conditioning Repair Cream</strong><p>The budget-friendly powerhouse. Pure shea butter, hydrolyzed collagen, and natural oils in a thick cream that punches above its price point. Best for high-porosity and dense 4C hair that needs serious moisture. Can be heavy for fine 4C strands &mdash; if your hair feels weighed down, mix half a pump with water in your palm before applying.</p></div>
+  <div id="pick-5" class="product-pick">
+    <div class="product-info"><strong>Cantu Shea Butter Leave-In Conditioning Repair Cream</strong><p class="card-summary"><span><b>Best for:</b> dense, high-porosity 4C hair on a budget</span> <a href="https://www.amazon.com/s?k=Cantu+Shea+Butter+Leave-In+Conditioning+Repair+Cream&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p><p>The budget-friendly powerhouse. Pure shea butter, hydrolyzed collagen, and natural oils in a thick cream that punches above its price point. Best for high-porosity and dense 4C hair that needs serious moisture. Can be heavy for fine 4C strands &mdash; if your hair feels weighed down, mix half a pump with water in your palm before applying.</p></div>
     <a href="https://www.amazon.com/s?k=Cantu+Shea+Butter+Leave-In+Conditioning+Repair+Cream&tag=strand01-20" class="affiliate-btn" target="_blank" rel="noopener sponsored">View on Amazon</a>
   </div>
-  <div class="product-pick">
-    <div class="product-info"><strong>Camille Rose Naturals Curl Love Moisture Milk</strong><p>A lightweight milk-formula leave-in with babassu oil, honey, and marshmallow root. Sits between a liquid and cream &mdash; ideal for medium-porosity 4C hair or 4C naturals who find cream leave-ins too heavy. Absorbs quickly without requiring much raking. The honey acts as a humectant to draw and hold moisture throughout the day.</p></div>
+  <div id="pick-6" class="product-pick">
+    <div class="product-info"><strong>Camille Rose Naturals Curl Love Moisture Milk</strong><p class="card-summary"><span><b>Best for:</b> medium-porosity 4C hair that finds creams too heavy</span> <a href="https://www.amazon.com/s?k=Camille+Rose+Naturals+Curl+Love+Moisture+Milk&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p><p>A lightweight milk-formula leave-in with babassu oil, honey, and marshmallow root. Sits between a liquid and cream &mdash; ideal for medium-porosity 4C hair or 4C naturals who find cream leave-ins too heavy. Absorbs quickly without requiring much raking. The honey acts as a humectant to draw and hold moisture throughout the day.</p></div>
     <a href="https://www.amazon.com/s?k=Camille+Rose+Naturals+Curl+Love+Moisture+Milk&tag=strand01-20" class="affiliate-btn" target="_blank" rel="noopener sponsored">View on Amazon</a>
   </div>
   <h2>Frequently Asked Questions</h2>

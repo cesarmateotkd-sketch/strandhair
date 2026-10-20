@@ -160,6 +160,51 @@ li{font-size:16px;color:#4A3728;line-height:1.8;margin-bottom:8px;}
 footer{background:var(--espresso);padding:32px 48px;text-align:center;}
 footer p{font-size:12px;color:rgba(255,255,255,.4);}
 footer a{color:rgba(255,255,255,.5);text-decoration:none;}
+
+/* ─── Quick picks: ledger (shared system with best-hair-growth-serums) ─── */
+.quick-picks,.card-summary{--warm-white:#F5F0E8;--caramel-text:#8B5E1A;--mocha:#7A5848;--muted:#6B5B53;--text:#2A1F1A;}
+.quick-picks{margin:8px 0 44px;background:var(--warm-white);border:1px solid var(--sand);border-top:3px solid var(--espresso);padding:22px 24px 8px;}
+.qp-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;padding-bottom:14px;border-bottom:1px solid var(--espresso);}
+.quick-picks h2{margin:0;font-size:clamp(24px,3.2vw,30px);}
+.qp-key{margin:0;font-size:12px;line-height:1.6;color:var(--muted);max-width:380px;}
+.qp-legend{display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em;margin-top:4px;}
+.qp-legend .qp-pips{margin:0 5px 0 0;vertical-align:-1px;}
+.qp-legend .qp-pips:not(:first-child){margin-left:12px;}
+.qp-list{list-style:none;margin:0;padding:0;}
+.qp-row{display:grid;grid-template-columns:30px minmax(0,1fr) 210px auto;gap:4px 18px;align-items:baseline;margin:0;padding:14px 0;border-bottom:1px dashed var(--sand);font-size:inherit;line-height:inherit;}
+.qp-row:last-child{border-bottom:0;}
+.qp-no{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12px;color:var(--caramel-text);}
+.qp-id{display:flex;flex-direction:column;min-width:0;}
+.qp-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:500;line-height:1.25;color:var(--espresso);text-decoration:none;}
+.qp-name:hover{text-decoration:underline;text-decoration-color:var(--caramel);text-underline-offset:3px;}
+.qp-for{font-size:13px;line-height:1.45;color:var(--mocha);margin-top:2px;}
+.qp-ev{display:flex;flex-direction:column;gap:3px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:11.5px;line-height:1.4;}
+.qp-active{color:var(--text);}
+.qp-grade{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;}
+.qp-pips{display:inline-flex;gap:3px;flex-shrink:0;}
+.qp-pips i{display:block;width:9px;height:9px;border:1.5px solid var(--caramel-text);border-radius:50%;}
+.qp-pips i.on{background:var(--caramel-text);}
+.qp-act{display:flex;flex-direction:column;align-items:flex-end;gap:4px;white-space:nowrap;}
+.qp-buy{font-size:13px;font-weight:500;color:var(--cream);background:var(--espresso);text-decoration:none;padding:6px 12px;border-radius:2px;letter-spacing:.03em;}
+.qp-buy:hover{background:#2A1F1A;}
+.qp-jump{font-size:12px;color:var(--caramel-text);text-decoration:none;}
+.qp-jump:hover{text-decoration:underline;}
+.quick-picks a:focus-visible,.card-summary a:focus-visible{outline:2px solid var(--espresso);outline-offset:3px;border-radius:2px;}
+.product-pick{scroll-margin-top:88px;}
+article p.card-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;margin:-4px 0 14px;font-size:13px;line-height:1.5;color:var(--muted);}
+.card-summary b{font-weight:500;color:var(--espresso);}
+.card-summary-link{font-weight:500;color:var(--caramel-text);text-decoration:none;white-space:nowrap;}
+.card-summary-link:hover{text-decoration:underline;}
+@media(max-width:640px){
+  .quick-picks{padding:18px 16px 4px;margin-left:-8px;margin-right:-8px;}
+  .qp-row{grid-template-columns:24px minmax(0,1fr);gap:6px 10px;padding:12px 0;}
+  .qp-no{grid-row:1;}
+  .qp-ev,.qp-act{grid-column:2;}
+  .qp-name{font-size:18px;}
+  .qp-act{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;}
+  .qp-buy{padding:5px 11px;font-size:12.5px;}
+  .qp-key{max-width:none;}
+}
 </style>
 </head>
 <body>
@@ -194,6 +239,165 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p><strong>Affiliate Disclosure:</strong> Some links in this article are Amazon affiliate links. If you purchase through them, Strand earns a small commission at no extra cost to you. This helps keep the site free. All picks are based entirely on review data and community reputation.</p>
   </div>
 
+  <section class="quick-picks" aria-labelledby="qp-heading">
+      <div class="qp-head">
+        <h2 id="qp-heading">Quick picks</h2>
+        <p class="qp-key">Ordered by routine step, pre-poo to sealing oil. One product covers two steps.</p>
+      </div>
+      <ol class="qp-list">
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">01</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-1">Mielle Rosemary Mint Oil</a>
+            <span class="qp-for">Pre-poo with scalp stimulation</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">01 Pre-poo</span>
+            <span class="qp-grade"><span>Top pick</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Mielle+Organics+Rosemary+Mint+Scalp+Hair+Oil&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Mielle Rosemary Mint Oil on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-1" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">02</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-2">Jamaican Mango &amp; Lime Black Castor Oil</a>
+            <span class="qp-for">Pre-poo strength and sealing ends</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">01 Pre-poo + 06 Seal</span>
+            <span class="qp-grade"><span>Best value &middot; top seal</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Jamaican+Mango+Lime+Pure+Black+Castor+Oil&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Jamaican Mango &amp; Lime Black Castor Oil on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-2" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">03</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-3">SheaMoisture African Black Soap Shampoo</a>
+            <span class="qp-for">Buildup without sulfates</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">02 Shampoo</span>
+            <span class="qp-grade"><span>Top pick</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=SheaMoisture+African+Black+Soap+Deep+Cleansing+Shampoo&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View SheaMoisture African Black Soap Shampoo on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-3" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">04</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-4">Cantu Sulfate-Free Cleansing Cream</a>
+            <span class="qp-for">Cleanse and condition at once</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">02 Shampoo</span>
+            <span class="qp-grade"><span>Best value</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Cantu+Sulfate-Free+Cleansing+Cream+Shampoo&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Cantu Sulfate-Free Cleansing Cream on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-4" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">05</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-5">SheaMoisture JBCO Masque</a>
+            <span class="qp-for">Protein-moisture balance</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">03 Deep condition</span>
+            <span class="qp-grade"><span>Top pick</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=SheaMoisture+Jamaican+Black+Castor+Oil+Strengthen+Restore+Masque&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View SheaMoisture JBCO Masque on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-5" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">06</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-6">Aussie 3 Minute Miracle Moist</a>
+            <span class="qp-for">A budget first routine</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">03 Deep condition</span>
+            <span class="qp-grade"><span>Best value</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Aussie+3+Minute+Miracle+Moist+Deep+Conditioner&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Aussie 3 Minute Miracle Moist on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-6" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">07</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-7">Cantu Leave-In Repair Cream</a>
+            <span class="qp-for">The rich L in LOC</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">04 Leave-in</span>
+            <span class="qp-grade"><span>Top pick</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Cantu+Shea+Butter+Leave-In+Conditioning+Repair+Cream&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Cantu Leave-In Repair Cream on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-7" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">08</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-8">Olaplex No.6 Bond Smoother</a>
+            <span class="qp-for">Breakage or chemical damage</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">04 Leave-in</span>
+            <span class="qp-grade"><span>Premium pick</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Olaplex+No+6+Bond+Smoother&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Olaplex No.6 Bond Smoother on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-8" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">09</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-9">Cantu Coconut Curling Cream</a>
+            <span class="qp-for">The C in LOC or LCO</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">05 Cream</span>
+            <span class="qp-grade"><span>Top pick</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Cantu+Shea+Butter+Coconut+Curling+Cream&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Cantu Coconut Curling Cream on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-9" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">10</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-11">Cliganic Pure Jojoba Oil</a>
+            <span class="qp-for">Sealing without heaviness</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">06 Seal</span>
+            <span class="qp-grade"><span>Best value</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Cliganic+100%25+Pure+Jojoba+Oil&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Cliganic Pure Jojoba Oil on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-11" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
   <h2>What 4C Hair Actually Needs</h2>
   <p>Before we get into specific products, here's the logic that should guide every purchase decision for 4C hair:</p>
   <ul>
@@ -213,22 +417,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <div class="product-pick">
+  <div id="pick-1" class="product-pick">
     <div class="pick-rank">1</div>
     <div class="pick-body">
       <div class="pick-label">⭐ Top Pick</div>
       <div class="pick-name">Mielle Organics Rosemary Mint Scalp & Hair Oil</div>
+      <p class="card-summary"><span><b>Best for:</b> pre-poo with scalp stimulation</span> <a href="https://www.amazon.com/s?k=Mielle+Organics+Rosemary+Mint+Scalp+Hair+Oil&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">⭐⭐⭐⭐⭐ 4.5 · 47,200+ reviews · $10</div>
       <p class="pick-why">Amazon's #1 hair oil and a TikTok phenomenon — for good reason. This lightweight rosemary and mint formula penetrates the hair shaft to pre-poo effectively while also stimulating scalp circulation. The community's most recommended pre-poo for 4C naturals.</p>
       <a href="https://www.amazon.com/s?k=Mielle+Organics+Rosemary+Mint+Scalp+Hair+Oil&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>
     </div>
   </div>
 
-  <div class="product-pick">
+  <div id="pick-2" class="product-pick">
     <div class="pick-rank">2</div>
     <div class="pick-body">
       <div class="pick-label">Best Value</div>
       <div class="pick-name">Jamaican Mango & Lime Pure Black Castor Oil</div>
+      <p class="card-summary"><span><b>Best for:</b> a strengthening pre-poo that penetrates the cortex</span> <a href="https://www.amazon.com/s?k=Jamaican+Mango+Lime+Pure+Black+Castor+Oil&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">⭐⭐⭐⭐⭐ 4.7 · 8,900+ reviews · $10</div>
       <p class="pick-why">Black castor oil is a 4C staple that has earned its legendary status. Rich in ricinoleic acid, it strengthens the hair shaft from within, reduces breakage, and is one of the few oils that genuinely penetrates the cortex rather than just coating the strand.</p>
       <a href="https://www.amazon.com/s?k=Jamaican+Mango+Lime+Pure+Black+Castor+Oil&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>
@@ -244,22 +450,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <div class="product-pick">
+  <div id="pick-3" class="product-pick">
     <div class="pick-rank">1</div>
     <div class="pick-body">
       <div class="pick-label">⭐ Top Pick</div>
       <div class="pick-name">SheaMoisture African Black Soap Deep Cleansing Shampoo</div>
+      <p class="card-summary"><span><b>Best for:</b> clearing scalp buildup without sulfates</span> <a href="https://www.amazon.com/s?k=SheaMoisture+African+Black+Soap+Deep+Cleansing+Shampoo&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">⭐⭐⭐⭐⭐ 4.5 · 14,300+ reviews · $12</div>
       <p class="pick-why">African black soap is a traditional cleanser that deep-cleans without the stripping harshness of sulfates. This formula adds willow bark and tea tree to tackle scalp buildup while leaving coils moisturized. The 4C community's most-recommended shampoo by a wide margin.</p>
       <a href="https://www.amazon.com/s?k=SheaMoisture+African+Black+Soap+Deep+Cleansing+Shampoo&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>
     </div>
   </div>
 
-  <div class="product-pick">
+  <div id="pick-4" class="product-pick">
     <div class="pick-rank">2</div>
     <div class="pick-body">
       <div class="pick-label">Best Value</div>
       <div class="pick-name">Cantu Sulfate-Free Cleansing Cream Shampoo</div>
+      <p class="card-summary"><span><b>Best for:</b> cleansing and conditioning in one step</span> <a href="https://www.amazon.com/s?k=Cantu+Sulfate-Free+Cleansing+Cream+Shampoo&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">⭐⭐⭐⭐⭐ 4.6 · 21,400+ reviews · $9</div>
       <p class="pick-why">One of the most reviewed shampoos for Type 4 hair on Amazon. The shea butter base means you're cleansing and conditioning simultaneously — a practical advantage for hair that can't afford moisture loss. Available at virtually every drugstore and mass retailer.</p>
       <a href="https://www.amazon.com/s?k=Cantu+Sulfate-Free+Cleansing+Cream+Shampoo&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>
@@ -275,22 +483,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <div class="product-pick">
+  <div id="pick-5" class="product-pick">
     <div class="pick-rank">1</div>
     <div class="pick-body">
       <div class="pick-label">⭐ Top Pick</div>
       <div class="pick-name">SheaMoisture Jamaican Black Castor Oil Strengthen & Restore Masque</div>
+      <p class="card-summary"><span><b>Best for:</b> protein-moisture balance in one weekly mask</span> <a href="https://www.amazon.com/s?k=SheaMoisture+Jamaican+Black+Castor+Oil+Strengthen+Restore+Masque&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">⭐⭐⭐⭐⭐ 4.6 · 12,700+ reviews · $13</div>
       <p class="pick-why">This mask strikes the ideal protein-moisture balance that 4C hair needs — protein strengthens fragile strands, moisture restores suppleness. The shea butter and castor oil base delivers results you'll feel immediately. A 4C routine staple with consistent, near-universal praise.</p>
       <a href="https://www.amazon.com/s?k=SheaMoisture+Jamaican+Black+Castor+Oil+Strengthen+Restore+Masque&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>
     </div>
   </div>
 
-  <div class="product-pick">
+  <div id="pick-6" class="product-pick">
     <div class="pick-rank">2</div>
     <div class="pick-body">
       <div class="pick-label">Best Value</div>
       <div class="pick-name">Aussie 3 Minute Miracle Moist Deep Conditioner</div>
+      <p class="card-summary"><span><b>Best for:</b> a first 4C routine on a budget</span> <a href="https://www.amazon.com/s?k=Aussie+3+Minute+Miracle+Moist+Deep+Conditioner&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">⭐⭐⭐⭐⭐ 4.6 · 31,800+ reviews · $7</div>
       <p class="pick-why">One of the most surprising products in the natural hair community — a $7 drugstore find with over 31,000 reviews that consistently delivers softness and slip. A budget hero for anyone building their first 4C routine who doesn't want to spend $30+ on a single mask.</p>
       <a href="https://www.amazon.com/s?k=Aussie+3+Minute+Miracle+Moist+Deep+Conditioner&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>
@@ -306,22 +516,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <div class="product-pick">
+  <div id="pick-7" class="product-pick">
     <div class="pick-rank">1</div>
     <div class="pick-body">
       <div class="pick-label">⭐ Top Pick</div>
       <div class="pick-name">Cantu Shea Butter Leave-In Conditioning Repair Cream</div>
+      <p class="card-summary"><span><b>Best for:</b> the rich first layer of LOC</span> <a href="https://www.amazon.com/s?k=Cantu+Shea+Butter+Leave-In+Conditioning+Repair+Cream&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">⭐⭐⭐⭐⭐ 4.6 · 28,400+ reviews · $8</div>
       <p class="pick-why">Amazon's best-reviewed leave-in conditioner across all hair types. The shea butter and coconut oil formula provides the rich moisture layer that 4C hair needs as its first LOC step. Genuinely one of the most universally loved products in the natural hair space.</p>
       <a href="https://www.amazon.com/s?k=Cantu+Shea+Butter+Leave-In+Conditioning+Repair+Cream&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>
     </div>
   </div>
 
-  <div class="product-pick">
+  <div id="pick-8" class="product-pick">
     <div class="pick-rank">2</div>
     <div class="pick-body">
       <div class="pick-label">Premium Pick</div>
       <div class="pick-name">Olaplex No.6 Bond Smoother</div>
+      <p class="card-summary"><span><b>Best for:</b> breakage, chemical processing, or heat damage</span> <a href="https://www.amazon.com/s?k=Olaplex+No+6+Bond+Smoother&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">⭐⭐⭐⭐½ 4.4 · 22,600+ reviews · $28</div>
       <p class="pick-why">The premium option for 4C hair that has experienced breakage, chemical processing, or heat damage. Olaplex's bond-repair technology works differently from standard leave-ins — it rebuilds broken disulfide bonds within the hair shaft, addressing damage at a structural level that moisturizers alone can't reach.</p>
       <a href="https://www.amazon.com/s?k=Olaplex+No+6+Bond+Smoother&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>
@@ -337,11 +549,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <div class="product-pick">
+  <div id="pick-9" class="product-pick">
     <div class="pick-rank">1</div>
     <div class="pick-body">
       <div class="pick-label">⭐ Top Pick</div>
       <div class="pick-name">Cantu Shea Butter Coconut Curling Cream</div>
+      <p class="card-summary"><span><b>Best for:</b> the C in LOC or LCO</span> <a href="https://www.amazon.com/s?k=Cantu+Shea+Butter+Coconut+Curling+Cream&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">⭐⭐⭐⭐⭐ 4.5 · 19,700+ reviews · $7</div>
       <p class="pick-why">The most-used moisture cream in the natural hair community for a reason. Rich enough to provide real moisture depth to 4C coils without creating heaviness. Works as the C in both LOC and LCO layering methods. Nearly universally accessible and affordable.</p>
       <a href="https://www.amazon.com/s?k=Cantu+Shea+Butter+Coconut+Curling+Cream&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>
@@ -357,22 +570,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <div class="product-pick">
+  <div id="pick-10" class="product-pick">
     <div class="pick-rank">1</div>
     <div class="pick-body">
       <div class="pick-label">⭐ Top Pick</div>
       <div class="pick-name">Jamaican Mango & Lime Pure Black Castor Oil</div>
+      <p class="card-summary"><span><b>Best for:</b> sealing the LOC stack, plus edges</span> <a href="https://www.amazon.com/s?k=Jamaican+Mango+Lime+Pure+Black+Castor+Oil&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">⭐⭐⭐⭐⭐ 4.7 · 8,900+ reviews · $10</div>
       <p class="pick-why">Black castor oil has been the sealing oil of choice for 4C naturals for over a decade. Its thick viscosity and high fatty acid content make it exceptional at locking the entire LOC stack in place and preventing moisture from escaping the coil. Also excellent for edges.</p>
       <a href="https://www.amazon.com/s?k=Jamaican+Mango+Lime+Pure+Black+Castor+Oil&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>
     </div>
   </div>
 
-  <div class="product-pick">
+  <div id="pick-11" class="product-pick">
     <div class="pick-rank">2</div>
     <div class="pick-body">
       <div class="pick-label">Best Value</div>
       <div class="pick-name">Cliganic 100% Pure Jojoba Oil</div>
+      <p class="card-summary"><span><b>Best for:</b> sealing without heaviness, or in warmer months</span> <a href="https://www.amazon.com/s?k=Cliganic+100%25+Pure+Jojoba+Oil&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">⭐⭐⭐⭐⭐ 4.7 · 34,600+ reviews · $14</div>
       <p class="pick-why">Jojoba oil is technically a liquid wax that closely mimics your scalp's natural sebum, making it one of the most effective sealing oils for any hair type. It's lighter than castor oil — better for those who want to seal without heaviness or for use during warmer months.</p>
       <a href="https://www.amazon.com/s?k=Cliganic+100%25+Pure+Jojoba+Oil&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>

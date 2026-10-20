@@ -138,6 +138,51 @@ var _aTimer=setTimeout(_loadAnalytics,30000);
     .product-pick{flex-direction:column;gap:12px;}
     .cta-box{padding:32px 24px;}
   }
+
+/* ─── Quick picks: ledger (shared system with best-hair-growth-serums) ─── */
+.quick-picks,.card-summary{--warm-white:#F5F0E8;--caramel-text:#8B5E1A;--mocha:#7A5848;--muted:#6B5B53;--text:#2A1F1A;}
+.quick-picks{margin:8px 0 44px;background:var(--warm-white);border:1px solid var(--sand);border-top:3px solid var(--espresso);padding:22px 24px 8px;}
+.qp-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;padding-bottom:14px;border-bottom:1px solid var(--espresso);}
+.quick-picks h2{margin:0;font-size:clamp(24px,3.2vw,30px);}
+.qp-key{margin:0;font-size:12px;line-height:1.6;color:var(--muted);max-width:380px;}
+.qp-legend{display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em;margin-top:4px;}
+.qp-legend .qp-pips{margin:0 5px 0 0;vertical-align:-1px;}
+.qp-legend .qp-pips:not(:first-child){margin-left:12px;}
+.qp-list{list-style:none;margin:0;padding:0;}
+.qp-row{display:grid;grid-template-columns:30px minmax(0,1fr) 210px auto;gap:4px 18px;align-items:baseline;margin:0;padding:14px 0;border-bottom:1px dashed var(--sand);font-size:inherit;line-height:inherit;}
+.qp-row:last-child{border-bottom:0;}
+.qp-no{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12px;color:var(--caramel-text);}
+.qp-id{display:flex;flex-direction:column;min-width:0;}
+.qp-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:500;line-height:1.25;color:var(--espresso);text-decoration:none;}
+.qp-name:hover{text-decoration:underline;text-decoration-color:var(--caramel);text-underline-offset:3px;}
+.qp-for{font-size:13px;line-height:1.45;color:var(--mocha);margin-top:2px;}
+.qp-ev{display:flex;flex-direction:column;gap:3px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:11.5px;line-height:1.4;}
+.qp-active{color:var(--text);}
+.qp-grade{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;}
+.qp-pips{display:inline-flex;gap:3px;flex-shrink:0;}
+.qp-pips i{display:block;width:9px;height:9px;border:1.5px solid var(--caramel-text);border-radius:50%;}
+.qp-pips i.on{background:var(--caramel-text);}
+.qp-act{display:flex;flex-direction:column;align-items:flex-end;gap:4px;white-space:nowrap;}
+.qp-buy{font-size:13px;font-weight:500;color:var(--cream);background:var(--espresso);text-decoration:none;padding:6px 12px;border-radius:2px;letter-spacing:.03em;}
+.qp-buy:hover{background:#2A1F1A;}
+.qp-jump{font-size:12px;color:var(--caramel-text);text-decoration:none;}
+.qp-jump:hover{text-decoration:underline;}
+.quick-picks a:focus-visible,.card-summary a:focus-visible{outline:2px solid var(--espresso);outline-offset:3px;border-radius:2px;}
+.product-pick{scroll-margin-top:88px;}
+article p.card-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;margin:-4px 0 14px;font-size:13px;line-height:1.5;color:var(--muted);}
+.card-summary b{font-weight:500;color:var(--espresso);}
+.card-summary-link{font-weight:500;color:var(--caramel-text);text-decoration:none;white-space:nowrap;}
+.card-summary-link:hover{text-decoration:underline;}
+@media(max-width:640px){
+  .quick-picks{padding:18px 16px 4px;margin-left:-8px;margin-right:-8px;}
+  .qp-row{grid-template-columns:24px minmax(0,1fr);gap:6px 10px;padding:12px 0;}
+  .qp-no{grid-row:1;}
+  .qp-ev,.qp-act{grid-column:2;}
+  .qp-name{font-size:18px;}
+  .qp-act{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;}
+  .qp-buy{padding:5px 11px;font-size:12.5px;}
+  .qp-key{max-width:none;}
+}
 </style>
 </head>
 <body>
@@ -162,6 +207,105 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p>A standard blow-dryer is one of the worst tools you can use on curly hair. The concentrated, high-velocity heat blast scatters curl clumps apart, blasts the cuticle open, and produces the triangle-shaped poof that makes most curly-haired people swear off heat entirely. A diffuser solves all three problems — by dispersing the same airflow across dozens of small vents, it dries curls gently without disturbing the clumps that define your pattern.</p>
   <p>This guide covers how diffusing actually works, seven real product picks across every price range, and the technique difference that separates frizzy results from defined ones.</p>
   <div class="callout"><p><strong>Affiliate Disclosure:</strong> Some links are Amazon affiliate links. We earn a small commission at no extra cost to you. All picks are based on community track record, editorial testing, and real specifications — not sponsorships.</p></div>
+  <section class="quick-picks" aria-labelledby="qp-heading">
+      <div class="qp-head">
+        <h2 id="qp-heading">Quick picks</h2>
+        <p class="qp-key">Attachment or full dryer, with the fit or spec that matters, from each review below.</p>
+      </div>
+      <ol class="qp-list">
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">01</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-1">Xtava Black Orchid</a>
+            <span class="qp-for">Most curl types, 2B&ndash;4A</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Universal attachment</span>
+            <span class="qp-grade"><span>1.8&Prime; barrel &middot; 90+ vents</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Xtava+Black+Orchid+Hair+Diffuser&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Xtava Black Orchid on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-1" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">02</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-2">DevaCurl DevaFuser</a>
+            <span class="qp-for">Tight curls and coils, 3B&ndash;4C</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Universal attachment</span>
+            <span class="qp-grade"><span>Fits 2&ndash;2.5&Prime; nozzles</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=DevaCurl+DevaFuser+Universal+Diffuser&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View DevaCurl DevaFuser on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-2" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">03</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-3">Conair Volumizing Diffuser</a>
+            <span class="qp-for">A first diffuser for 2A&ndash;3A</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Universal attachment</span>
+            <span class="qp-grade"><span>Fits 1.75&ndash;2.3&Prime; nozzles</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Conair+Volumizing+Universal+Diffuser&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Conair Volumizing Diffuser on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-3" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">04</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-4">Bed Head Curls in Check</a>
+            <span class="qp-for">Faster drying on a budget</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Dryer + diffuser</span>
+            <span class="qp-grade"><span>1875W &middot; ionic</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Bed+Head+Curls+in+Check+Diffuser+Hair+Dryer&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Bed Head Curls in Check on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-4" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">05</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-5">Conair InfinitiPro + Diffuser</a>
+            <span class="qp-for">A secure, no-wobble attachment</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Dryer + diffuser</span>
+            <span class="qp-grade"><span>3 heat settings</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Conair+InfinitiPro+Hair+Dryer+Diffuser&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Conair InfinitiPro + Diffuser on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-5" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">06</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-6">Dyson Supersonic + Wave+Curl</a>
+            <span class="qp-for">Maximum clump preservation</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Dryer + diffuser</span>
+            <span class="qp-grade"><span>Dome Mode &middot; heat control</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Dyson+Supersonic+Hair+Dryer+Diffuser&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Dyson Supersonic + Wave+Curl on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-6" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
   <h2>Why Diffusing Is Better Than Regular Blow-Drying for Curls</h2>
   <p>A standard dryer concentrates a single stream of hot air at one spot. That blast physically forces the hair cuticle — the outermost scaly layer of each strand — to open and rough up, which is the primary mechanical cause of frizz. It also separates curl clumps by pushing individual strands in different directions as they dry, producing stringy, undefined results.</p>
   <p>A diffuser is a bowl-shaped attachment that redistributes that same airflow across dozens of small vents and finger prongs, spreading it over a much wider surface at reduced velocity. The result is that no single part of the hair receives an aggressive localized blast. Curls stay clumped together as they dry — the same way they'd clump during air-drying — but in a fraction of the time.</p>
@@ -179,31 +323,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Universal Diffuser Attachments</h2>
   <p>If you already own a hair dryer, a universal attachment is the most affordable entry point. Most fit dryer nozzles between 1.75" and 2.5" in diameter — check your dryer's nozzle size before ordering.</p>
 
-  <div class="product-pick">
+  <div id="pick-1" class="product-pick">
     <div class="pick-rank">1</div>
     <div class="pick-body">
       <div class="pick-label">⭐ Best Overall Universal</div>
       <div class="pick-name">Xtava Black Orchid Hair Diffuser</div>
+      <p class="card-summary"><span><b>Best for:</b> most curl types from 2b to 4a, medium to long hair</span> <a href="https://www.amazon.com/s?k=Xtava+Black+Orchid+Hair+Diffuser&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">Universal attachment · 90+ air vents · Fits most dryers · ~$20–25</div>
       <p class="pick-why">One of the most reviewed diffusers on Amazon (12,000+ ratings) and consistently recommended across the curly hair community. The deep bowl with 90+ air vents and long finger prongs reaches both roots and ends without disturbing curl clumps. Works on all curl types from 2b to 4a and handles medium to long hair well. The 1.8-inch barrel fits the vast majority of consumer and salon dryers.</p>
       <a href="https://www.amazon.com/s?k=Xtava+Black+Orchid+Hair+Diffuser&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>
     </div>
   </div>
-  <div class="product-pick">
+  <div id="pick-2" class="product-pick">
     <div class="pick-rank">2</div>
     <div class="pick-body">
       <div class="pick-label">Best for Tight Curls & Coils</div>
       <div class="pick-name">DevaCurl DevaFuser Universal Diffuser</div>
+      <p class="card-summary"><span><b>Best for:</b> tight curls and coils, 3b&ndash;4c</span> <a href="https://www.amazon.com/s?k=DevaCurl+DevaFuser+Universal+Diffuser&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">Universal attachment · Wide deep bowl · Flexible finger prongs · ~$35–45</div>
       <p class="pick-why">Designed specifically for coily and tightly coiled hair (3b–4c), the DevaFuser's wide, deep bowl and flexible finger prongs cradle large curl clumps without compression or distortion. Fits dryers with 2"–2.5" barrel diameters. A longtime staple of the Curly Girl Method community for its ability to dry dense, thick hair without frizz.</p>
       <a href="https://www.amazon.com/s?k=DevaCurl+DevaFuser+Universal+Diffuser&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>
     </div>
   </div>
-  <div class="product-pick">
+  <div id="pick-3" class="product-pick">
     <div class="pick-rank">3</div>
     <div class="pick-body">
       <div class="pick-label">Budget Starter Pick</div>
       <div class="pick-name">Conair Volumizing Universal Diffuser</div>
+      <p class="card-summary"><span><b>Best for:</b> a low-risk first diffuser for 2a&ndash;3a waves and loose curls</span> <a href="https://www.amazon.com/s?k=Conair+Volumizing+Universal+Diffuser&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">Universal attachment · Fits 1.75"–2.3" nozzles · ~$10–15</div>
       <p class="pick-why">The lowest-risk entry point for anyone unsure whether diffusing will work for their hair type before committing to a pricier attachment. Basic bowl design but functional — fits most standard dryers and consistently rated reliable for its price. An excellent first diffuser for 2a–3a wavy and loose curls.</p>
       <a href="https://www.amazon.com/s?k=Conair+Volumizing+Universal+Diffuser&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>
@@ -213,31 +360,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Hair Dryer + Diffuser Combos</h2>
   <p>If you don't own a dryer or want a purpose-built setup, combo units are designed with curl drying in mind and remove the compatibility guesswork.</p>
 
-  <div class="product-pick">
+  <div id="pick-4" class="product-pick">
     <div class="pick-rank">1</div>
     <div class="pick-body">
       <div class="pick-label">⭐ Best Budget Combo</div>
       <div class="pick-name">Bed Head by TIGI Curls in Check Diffuser Hair Dryer</div>
+      <p class="card-summary"><span><b>Best for:</b> cutting dry time on a budget</span> <a href="https://www.amazon.com/s?k=Bed+Head+Curls+in+Check+Diffuser+Hair+Dryer&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">Dryer + diffuser combo · 1875W · Built-in ionic technology · ~$25–35</div>
       <p class="pick-why">A purpose-built curly hair dryer with the diffuser bowl configured for curl drying from the ground up. At 1875 watts it has enough power to meaningfully cut dry time, and the built-in ionic technology reduces static and seals the cuticle. Reviewers with thick 3a curls report noticeably faster dry times than standard dryers at a price most budgets can handle.</p>
       <a href="https://www.amazon.com/s?k=Bed+Head+Curls+in+Check+Diffuser+Hair+Dryer&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>
     </div>
   </div>
-  <div class="product-pick">
+  <div id="pick-5" class="product-pick">
     <div class="pick-rank">2</div>
     <div class="pick-body">
       <div class="pick-label">Best Mid-Range Combo</div>
       <div class="pick-name">Conair InfinitiPro Hair Dryer with Diffuser</div>
+      <p class="card-summary"><span><b>Best for:</b> a secure, no-wobble attachment at mid-range price</span> <a href="https://www.amazon.com/s?k=Conair+InfinitiPro+Hair+Dryer+Diffuser&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">Dryer + diffuser combo · 3 heat settings · Secure attachment · ~$40–55</div>
       <p class="pick-why">A reliable mid-budget combo noted for its secure diffuser attachment — no wobbling or detaching mid-session — and even airflow. The generously sized matte diffuser bowl handles thick sections without cramming. Three heat settings give you control over fine versus dense hair. A solid choice for anyone ready to spend a bit more than the budget tier without going premium.</p>
       <a href="https://www.amazon.com/s?k=Conair+InfinitiPro+Hair+Dryer+Diffuser&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>
     </div>
   </div>
-  <div class="product-pick">
+  <div id="pick-6" class="product-pick">
     <div class="pick-rank">3</div>
     <div class="pick-body">
       <div class="pick-label">Premium Pick</div>
       <div class="pick-name">Dyson Supersonic Hair Dryer with Wave+Curl Diffuser</div>
+      <p class="card-summary"><span><b>Best for:</b> maximum clump preservation (Dome Mode)</span> <a href="https://www.amazon.com/s?k=Dyson+Supersonic+Hair+Dryer+Diffuser&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
       <div class="pick-meta">Dryer + diffuser combo · Dual-mode diffuser · Intelligent heat control · ~$430–500</div>
       <p class="pick-why">The gold standard. The Dyson Supersonic's motor sits in the handle rather than the head, dramatically reducing weight where you hold it. The included Wave+Curl diffuser is dual-mode: install the pronged insert for standard curl diffusing, or remove it to activate Dome Mode — which draws hair gently into the bowl by air pressure alone, with zero contact, for maximum clump preservation. Intelligent heat control measures outlet temperature 40 times per second to prevent heat damage. A serious investment, but the best diffusing result available at any price.</p>
       <a href="https://www.amazon.com/s?k=Dyson+Supersonic+Hair+Dryer+Diffuser&tag=strand01-20" target="_blank" rel="noopener sponsored" class="pick-link">View on Amazon →</a>

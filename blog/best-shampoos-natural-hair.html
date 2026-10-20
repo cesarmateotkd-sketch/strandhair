@@ -147,6 +147,52 @@ tr:nth-child(even) td{background:var(--warm-white);}
 .product-body h3{margin-top:0;}
 .product-tag{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--sand);color:var(--espresso);padding:3px 8px;border-radius:2px;margin-bottom:10px;}
 .product-link{display:inline-block;margin-top:12px;font-size:13px;font-weight:500;color:var(--caramel-text);text-decoration:none;border-bottom:1px solid var(--caramel);padding-bottom:2px;letter-spacing:.04em;}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:28px 0;}
+.table-scroll table{margin:0;}
+/* ─── Quick picks: cleanser ledger ─── */
+.quick-picks{margin:8px 0 44px;background:var(--warm-white);border:1px solid var(--sand);border-top:3px solid var(--espresso);padding:22px 24px 8px;}
+.qp-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;padding-bottom:14px;border-bottom:1px solid var(--espresso);}
+.quick-picks h2{margin:0;font-size:clamp(24px,3.2vw,30px);}
+.qp-key{margin:0;font-size:12px;line-height:1.6;color:var(--muted);max-width:380px;}
+.qp-legend{display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em;margin-top:4px;}
+.qp-legend .qp-pips{margin:0 5px 0 0;vertical-align:-1px;}
+.qp-legend .qp-pips:not(:first-child){margin-left:12px;}
+.qp-list{list-style:none;margin:0;padding:0;}
+.qp-row{display:grid;grid-template-columns:30px minmax(0,1fr) 210px auto;gap:4px 18px;align-items:baseline;padding:14px 0;border-bottom:1px dashed var(--sand);}
+.qp-row:last-child{border-bottom:0;}
+.qp-no{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12px;color:var(--caramel-text);}
+.qp-id{display:flex;flex-direction:column;min-width:0;}
+.qp-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.25;color:var(--espresso);text-decoration:none;}
+.qp-name:hover{text-decoration:underline;text-decoration-color:var(--caramel);text-underline-offset:3px;}
+.qp-for{font-size:13px;line-height:1.45;color:var(--mocha);margin-top:2px;}
+.qp-ev{display:flex;flex-direction:column;gap:3px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:11.5px;line-height:1.4;}
+.qp-active{color:var(--text);}
+.qp-grade{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;}
+.qp-pips{display:inline-flex;gap:3px;flex-shrink:0;}
+.qp-pips i{display:block;width:9px;height:9px;border:1.5px solid var(--caramel-text);border-radius:50%;}
+.qp-pips i.on{background:var(--caramel-text);}
+.qp-pips--na i{border-style:dashed;border-color:var(--muted);}
+.qp-act{display:flex;flex-direction:column;align-items:flex-end;gap:4px;white-space:nowrap;}
+.qp-buy{font-size:13px;font-weight:500;color:var(--cream);background:var(--espresso);text-decoration:none;padding:6px 12px;border-radius:2px;letter-spacing:.03em;}
+.qp-buy:hover{background:#2A1F1A;}
+.qp-jump{font-size:12px;color:var(--caramel-text);text-decoration:none;}
+.qp-jump:hover{text-decoration:underline;}
+.quick-picks a:focus-visible,.card-summary a:focus-visible{outline:2px solid var(--espresso);outline-offset:3px;border-radius:2px;}
+.product-card{scroll-margin-top:16px;}
+.card-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;margin:-4px 0 14px;font-size:13px;line-height:1.5;color:var(--muted);}
+.card-summary b{font-weight:500;color:var(--espresso);}
+.card-summary-link{font-weight:500;color:var(--caramel-text);text-decoration:none;white-space:nowrap;}
+.card-summary-link:hover{text-decoration:underline;}
+@media(max-width:640px){
+  .quick-picks{padding:18px 16px 4px;margin-left:-8px;margin-right:-8px;}
+  .qp-row{grid-template-columns:24px minmax(0,1fr);gap:6px 10px;padding:12px 0;}
+  .qp-no{grid-row:1;}
+  .qp-ev,.qp-act{grid-column:2;}
+  .qp-name{font-size:18px;}
+  .qp-act{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;}
+  .qp-buy{padding:5px 11px;font-size:12.5px;}
+  .qp-key{max-width:none;}
+}
 footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 .footer-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;}
 .footer-brand .logo-f{font-family:'Cormorant Garamond',serif;font-size:20px;color:#FAF7F2;text-decoration:none;display:inline-block;margin-bottom:12px;}
@@ -190,18 +236,120 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <p>Natural hair has a specific set of needs at the cleanse step that most mainstream shampoos are not designed for. This guide covers the three types of cleansers used in natural hair routines, how to choose based on your texture, porosity, and product habits, and the best options at every price point.</p>
 
+    <section class="quick-picks" aria-labelledby="qp-heading">
+      <div class="qp-head">
+        <h2 id="qp-heading">Quick picks</h2>
+        <p class="qp-key">Graded by cleanser type, from the <a href="#cleanser-types">table below</a>.
+          <span class="qp-legend"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span>clarifying <span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span>sulfate&#8209;free <span class="qp-pips" aria-hidden="true"><i class="on"></i><i></i><i></i></span>co&#8209;wash</span></p>
+      </div>
+      <ol class="qp-list">
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">01</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-1">Briogeo Scalp Revival Scrub Shampoo</a>
+            <span class="qp-for">A scalp reset without sulfates</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Charcoal + micro-exfoliant</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span>Clarifying &middot; sulfate-free</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Briogeo+Scalp+Revival+Charcoal+Coconut+Oil+Shampoo&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Briogeo Scalp Revival Scrub Shampoo on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-1" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">02</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-2">SheaMoisture JBCO Shampoo</a>
+            <span class="qp-for">Weekly wash days on 4A&ndash;4C</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Sulfate-free + ACV</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span><span>Sulfate-free</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=SheaMoisture+Jamaican+Black+Castor+Oil+Shampoo&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View SheaMoisture JBCO Shampoo on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-2" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">03</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-3">Pattern Beauty Hydration Shampoo</a>
+            <span class="qp-for">Moisture-first cleansing, 3B&ndash;4A</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Amphoteric surfactants</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span><span>Gentle &middot; moisture-first</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Pattern+Beauty+Hydration+Shampoo&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Pattern Beauty Hydration Shampoo on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-3" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">04</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-4">Kinky-Curly Come Clean</a>
+            <span class="qp-for">Monthly clarifying without sulfates</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Sea kelp + mandarin</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span>Clarifying &middot; chelating</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Kinky-Curly+Come+Clean+Moisturizing+Shampoo&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Kinky-Curly Come Clean on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-4" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">05</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-5">As I Am Curl Clarity</a>
+            <span class="qp-for">Low-porosity hair</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Coconut cleansers, acidic pH</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span><span>Sulfate-free &middot; buildup</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=As+I+Am+Curl+Clarity+Shampoo&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View As I Am Curl Clarity on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-5" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+        <li class="qp-row">
+          <span class="qp-no" aria-hidden="true">06</span>
+          <div class="qp-id">
+            <a class="qp-name" href="#pick-6">Camille Rose Spiked Honey Mousse</a>
+            <span class="qp-for">Refreshing between wash days</span>
+          </div>
+          <div class="qp-ev">
+            <span class="qp-active">Honey mousse</span>
+            <span class="qp-grade"><span class="qp-pips" aria-hidden="true"><i class="on"></i><i></i><i></i></span><span>Co-wash</span></span>
+          </div>
+          <div class="qp-act">
+            <a href="https://www.amazon.com/s?k=Camille+Rose+Spiked+Honey+Mousse&tag=strand01-20" class="qp-buy" rel="nofollow noopener" target="_blank" aria-label="View Camille Rose Spiked Honey Mousse on Amazon (opens in a new tab)">View on Amazon &rarr;</a>
+            <a href="#pick-6" class="qp-jump">Full review &darr;</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
     <h2>The Three Types of Cleanser for Natural Hair</h2>
 
     <p>Not all cleansers work the same way. The difference comes down to the surfactants &mdash; the active cleaning molecules that lift dirt, oil, and product residue from the hair shaft and scalp.</p>
 
-    <table>
-      <thead><tr><th>Type</th><th>Surfactant Strength</th><th>Best For</th><th>How Often</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Co-wash</strong></td><td>Very mild (conditioner-based)</td><td>Refreshing curls between wash days, very dry 4B&ndash;4C hair</td><td>Every 3&ndash;5 days between shampoo sessions</td></tr>
-        <tr><td><strong>Sulfate-free shampoo</strong></td><td>Mild (coco betaine, glucosides)</td><td>Regular weekly or bi-weekly wash day on natural hair</td><td>Every 7&ndash;14 days</td></tr>
-        <tr><td><strong>Clarifying shampoo</strong></td><td>Strong (sulfates, or sulfate-free + exfoliants)</td><td>Removing heavy buildup, silicones, hard water deposits</td><td>Once a month or when products stop absorbing</td></tr>
-      </tbody>
-    </table>
+    <div class="table-scroll">
+      <table id="cleanser-types">
+        <thead><tr><th>Type</th><th>Surfactant Strength</th><th>Best For</th><th>How Often</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Co-wash</strong></td><td>Very mild (conditioner-based)</td><td>Refreshing curls between wash days, very dry 4B&ndash;4C hair</td><td>Every 3&ndash;5 days between shampoo sessions</td></tr>
+          <tr><td><strong>Sulfate-free shampoo</strong></td><td>Mild (coco betaine, glucosides)</td><td>Regular weekly or bi-weekly wash day on natural hair</td><td>Every 7&ndash;14 days</td></tr>
+          <tr><td><strong>Clarifying shampoo</strong></td><td>Strong (sulfates, or sulfate-free + exfoliants)</td><td>Removing heavy buildup, silicones, hard water deposits</td><td>Once a month or when products stop absorbing</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <p>The most common mistake in natural hair care is using only a co-wash and skipping shampoo entirely. Co-washing conditions and refreshes but does not lift buildup. Over weeks, residue accumulates on the scalp and cuticle, blocking moisture from entering the shaft &mdash; the exact opposite of what the co-wash was supposed to achieve. A proper shampoo with mild surfactants is non-negotiable for a healthy natural hair routine.</p>
 
@@ -228,61 +376,67 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <h2>The 6 Best Shampoos for Natural Hair</h2>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-1">
       <div class="product-num">1</div>
       <div class="product-body">
         <span class="product-tag">Best Overall · Scalp + Strand</span>
         <h3>Briogeo Scalp Revival Charcoal + Coconut Oil Micro-Exfoliating Scalp Scrub Shampoo</h3>
+        <p class="card-summary"><span><b>Best for:</b> a scalp reset without sulfates</span> <a href="https://www.amazon.com/s?k=Briogeo+Scalp+Revival+Charcoal+Coconut+Oil+Shampoo&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>The standout for naturals who need a proper scalp reset without a sulfate shampoo. Briogeo&rsquo;s Scalp Revival uses binchotan charcoal to draw impurities from the follicle, micro-exfoliating beads to physically lift product buildup and dead skin cells from the scalp, and coconut oil to simultaneously condition the strands during cleanse. It is the rare shampoo that functions as both a clarifier and a moisturizer &mdash; genuinely useful for naturals who have been relying on co-wash and need to reset without the dryness of a traditional clarifying shampoo. Free of sulfates, silicones, parabens, phthalates, and artificial dyes. Apply directly to the scalp (not the length), massage for 2&ndash;3 minutes, then let the rinse distribute through the ends. One bottle covers 4&ndash;6 wash sessions when applied at the scalp only. The higher price point reflects a genuinely differentiated formula rather than packaging.</p>
         <a href="https://www.amazon.com/s?k=Briogeo+Scalp+Revival+Charcoal+Coconut+Oil+Shampoo&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-2">
       <div class="product-num">2</div>
       <div class="product-body">
         <span class="product-tag">Best Budget · 4A&ndash;4C Hair</span>
         <h3>SheaMoisture Jamaican Black Castor Oil Strengthen &amp; Restore Shampoo</h3>
+        <p class="card-summary"><span><b>Best for:</b> weekly wash days on 4A&ndash;4C</span> <a href="https://www.amazon.com/s?k=SheaMoisture+Jamaican+Black+Castor+Oil+Shampoo&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>The most-used shampoo in the 4C hair community for good reason. SheaMoisture&rsquo;s Jamaican Black Castor Oil formula uses a sulfate-free surfactant base with JBCO (a penetrating oil that strengthens the hair shaft), shea butter (a sealing emollient), and apple cider vinegar (a mild pH-balancing clarifier) to cleanse, condition, and lightly exfoliate in one step. It does not provide the same level of scalp reset as a dedicated clarifying product, but for weekly wash days on 4A&ndash;4C hair that primarily uses water-based and oil-based products without silicones, it is the most effective combination of price and function available. Lather it once for cleansing, rinse, then deep condition immediately &mdash; the surfactant base is mild enough that a single lather is usually sufficient on hair that was <a href="pre-poo-treatment-natural-hair.html">pre-pooed</a> before washing.</p>
         <a href="https://www.amazon.com/s?k=SheaMoisture+Jamaican+Black+Castor+Oil+Shampoo&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-3">
       <div class="product-num">3</div>
       <div class="product-body">
         <span class="product-tag">Best for Type 3 Curls</span>
         <h3>Pattern Beauty Hydration Shampoo</h3>
+        <p class="card-summary"><span><b>Best for:</b> moisture-first cleansing, 3B&ndash;4A</span> <a href="https://www.amazon.com/s?k=Pattern+Beauty+Hydration+Shampoo&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Tracee Ellis Ross&rsquo;s Pattern Beauty line was formulated specifically for curly, coily, and tight-textured hair, and the Hydration Shampoo is designed for wash days where moisture retention is the priority. The formula uses a gentle amphoteric surfactant system &mdash; the kind that adjusts to the hair&rsquo;s condition rather than stripping indiscriminately &mdash; alongside avocado oil, aloe vera, and glycerin to cleanse and hydrate simultaneously. Works particularly well for 3B&ndash;4A textures with medium-to-high porosity that respond well to moisture-forward cleansing. Apply to soaking wet hair to distribute the lather without tangling, focus cleansing on the scalp, and allow the rinse to carry the product through the length. Follow with the Pattern Beauty Deep Conditioner for a matched wash-day system. Pattern Beauty products are concentrated, so less is more with initial application.</p>
         <a href="https://www.amazon.com/s?k=Pattern+Beauty+Hydration+Shampoo&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-4">
       <div class="product-num">4</div>
       <div class="product-body">
         <span class="product-tag">Best Clarifying (Sulfate-Free)</span>
         <h3>Kinky-Curly Come Clean Moisturizing Shampoo</h3>
+        <p class="card-summary"><span><b>Best for:</b> monthly clarifying without sulfates</span> <a href="https://www.amazon.com/s?k=Kinky-Curly+Come+Clean+Moisturizing+Shampoo&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>The best clarifying option for naturals who want a genuine reset without sulfates. Kinky-Curly&rsquo;s Come Clean uses sea kelp and mandarin orange as its primary active ingredients &mdash; natural chelating and clarifying agents that break down mineral deposits, hard water buildup, and product residue without the drying effect of sulfates. It lathers less than sulfate formulas but removes more than standard moisturizing sulfate-free shampoos. Ideal for monthly clarifying sessions, for low-porosity hair that accumulates buildup quickly, or after extended protective styles where product has sat on the scalp for weeks. Because it cleanses more aggressively than other sulfate-free options, always follow with a <a href="deep-conditioning-natural-hair.html">deep conditioning treatment</a> rather than a rinse-out conditioner. Available in an 8 oz bottle that lasts 6&ndash;8 clarifying sessions with concentrated application to the scalp.</p>
         <a href="https://www.amazon.com/s?k=Kinky-Curly+Come+Clean+Moisturizing+Shampoo&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-5">
       <div class="product-num">5</div>
       <div class="product-body">
         <span class="product-tag">Best for Low Porosity Hair</span>
         <h3>As I Am Curl Clarity Shampoo</h3>
+        <p class="card-summary"><span><b>Best for:</b> low-porosity hair</span> <a href="https://www.amazon.com/s?k=As+I+Am+Curl+Clarity+Shampoo&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>Formulated specifically for wash days where buildup is a primary concern without using sulfates. As I Am&rsquo;s Curl Clarity uses coconut-derived cleansers alongside phytosterols and green tea extract to lift residue from the cuticle while the formula&rsquo;s slightly acidic pH keeps the cuticle layer closed. This is particularly relevant for low-porosity hair, where a high-pH shampoo can swell the already-resistant cuticle and make subsequent product absorption even harder. The phytosterols mimic the structure of sebum and replenish the protective lipid layer on the hair shaft after cleansing &mdash; a thoughtful formulation detail that distinguishes it from generic sulfate-free options. Apply to damp hair in sections, massage gently at the scalp, and rinse with warm (not hot) water. Do not pile hair on top of the head during washing &mdash; detangle first, cleanse in sections, and let water flow downward.</p>
         <a href="https://www.amazon.com/s?k=As+I+Am+Curl+Clarity+Shampoo&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="pick-6">
       <div class="product-num">6</div>
       <div class="product-body">
         <span class="product-tag">Best Co-Wash · Between Wash Days</span>
         <h3>Camille Rose Spiked Honey Mousse Cleansing Treatment</h3>
+        <p class="card-summary"><span><b>Best for:</b> refreshing between wash days</span> <a href="https://www.amazon.com/s?k=Camille+Rose+Spiked+Honey+Mousse&tag=strand01-20" class="card-summary-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a></p>
         <p>The most effective co-wash for naturals who need between-wash-day refreshing without the dryness that comes from shampoo. Camille Rose&rsquo;s Spiked Honey Mousse uses raw honey (a humectant that draws moisture into the strand), chamomile extract (anti-inflammatory, scalp-soothing), and coconut milk (protein-rich conditioning) in a light mousse consistency that distributes easily through wet curls without product drag or breakage. It removes light buildup and refreshes curl definition between shampoo wash days &mdash; but it is not a replacement for shampoo. Best used on 4A&ndash;4C hair 3&ndash;5 days after a shampoo wash day, or on 3B&ndash;3C hair as a mid-week refresh. Apply to dripping wet hair, distribute through each section, let sit for 2&ndash;3 minutes, rinse, and follow with a light leave-in. Eliminates the &ldquo;second-day frizz&rdquo; problem on coily textures without stripping the moisture deposited on wash day.</p>
         <a href="https://www.amazon.com/s?k=Camille+Rose+Spiked+Honey+Mousse&tag=strand01-20" class="product-link" rel="nofollow noopener" target="_blank">View on Amazon &rarr;</a>
       </div>

@@ -1,2 +1,6 @@
 .claude/*
 !.claude/skills/
+
+# Python bytecode
+__pycache__/
+*.pyc

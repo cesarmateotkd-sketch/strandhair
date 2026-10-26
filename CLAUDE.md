@@ -3,9 +3,9 @@
 ## What This Is
 **Strand** (`hairtypequiz.hair`) is a static hair care site on GitHub Pages, proxied through Cloudflare. It has two main functions:
 1. A **hair type quiz** (1A–4C) that outputs a personalized product routine with Amazon affiliate links and YouTube tutorial cards
-2. A **blog** of 10 SEO-optimized posts targeting natural hair keywords
+2. A **blog** of 55 SEO-optimized posts on natural, curly, coily, and wavy hair (routines by type, technique guides, evidence-led product roundups)
 
-Monetization: Amazon Associates affiliate commissions + Google AdSense (pending approval — need ~100 daily sessions first).
+Monetization: Amazon Associates affiliate commissions + Google AdSense (not applied yet; the gate is traffic only, ~100 daily sessions; ~14/day as of Oct 2026).
 
 ---
 
@@ -13,63 +13,64 @@ Monetization: Amazon Associates affiliate commissions + Google AdSense (pending 
 
 ```
 /
-├── index.html          # Main quiz page (self-contained, ~1400 lines)
-├── favicon.svg         # Branded SVG favicon (espresso bg, caramel italic "s")
-├── robots.txt          # Allow all crawlers
-├── sitemap.xml         # All 12 pages, submitted to GSC
-├── CNAME               # hairtypequiz.hair
-├── fonts/              # Self-hosted WOFF2 (Cormorant Garamond normal+italic, DM Sans)
-├── images/             # OG images (1000×1500 PNG + SVG) for all pages
+├── index.html              # Main quiz page (self-contained, ~1400 lines)
+├── about.html, privacy.html
+├── wash-day-checklist.html # Public 4C Wash Day Checklist landing page (indexed)
+├── checklist.html          # Signup thank-you page (noindex) — a view = an email signup
+├── checklist-4c-wash-day.html # Printable checklist (noindex)
+├── 404.html
+├── favicon.svg             # Branded SVG favicon (espresso bg, caramel italic "s")
+├── robots.txt              # Allow all crawlers
+├── sitemap.xml             # 59 URLs; submitted to GSC as the non-www URL
+├── CNAME                   # hairtypequiz.hair
+├── fonts/                  # Self-hosted WOFF2 (see Fonts below for exact filenames)
+├── images/                 # OG/pin images (1000×1500 PNG), named og-[slug].png
 ├── js/
-│   └── quiz.js         # 50KB — lazy-loaded on first quiz interaction only
-└── blog/
-    ├── index.html
-    ├── how-to-grow-4c-hair-faster.html
-    ├── protective-styles-for-natural-hair.html
-    ├── how-to-wash-4c-hair.html
-    ├── loc-method-beginners-guide.html
-    ├── protein-treatment-for-natural-hair.html
-    ├── best-diffusers-for-curly-hair.html
-    ├── best-products-for-4c-hair.html
-    ├── 3b-vs-3c-curls.html
-    ├── curly-girl-method-wavy-hair.html
-    └── how-to-find-your-hair-type.html
+│   └── quiz.js             # 50KB — lazy-loaded on first quiz interaction only
+├── blog/
+│   ├── index.html          # Post listing with category filter + featured "Latest" card
+│   └── *.html              # 55 posts
+└── .claude/
+    ├── settings.json       # Permission allow rules (committed)
+    └── skills/             # frontend-design, ga-report
 ```
+
+List current posts with `ls blog/*.html`; the blog index is the canonical ordered list.
 
 ---
 
 ## Technical Architecture
 
 ### Fonts
-- **Self-hosted** in `/fonts/` — Cormorant Garamond (normal + italic WOFF2) and DM Sans
+- **Self-hosted** in `/fonts/`. The exact filenames are `cormorant-garamond-normal.woff2`, `cormorant-garamond-italic.woff2`, and `dm-sans.woff2`. **Use these names.** Until Oct 26, 2026, 25 pages referenced `cormorant-normal.woff2` / `cormorant-italic.woff2`, which 404, so headings silently fell back to a generic serif.
 - Preloaded via `<link rel="preload">` in `<head>`
-- Inline `@font-face` with `font-display: optional` (no CLS from font swap)
-- Eliminated the Google Fonts → gstatic.com critical request chain (was 601ms)
+- Inline `@font-face` with `font-display: optional` (no CLS from font swap). Because of `optional`, a missing font fails silently: check `document.fonts` status when testing.
 
 ### JavaScript
 - **Quiz logic** (`js/quiz.js`, 50KB) lazy-loads on first user interaction with `.hair-card`
 - A 1.6KB inline stub in `index.html` handles the load queue, URL param auto-load (`?type=3B`), and nav/FAQ toggling
 - Pattern: `_loadQuiz(cb)` queues callbacks until quiz.js is ready, handles rapid successive clicks correctly
 
-### Google Analytics (GA4 — G-WZFESSQ350)
-- **Deferred to first user interaction** (mousedown, keydown, touchstart, scroll) with a 5-second fallback timer
+### Analytics tags
+- GA4 (G-WZFESSQ350), Google Ads (AW-980643963), GTM (GTM-KCVJS3MM), Meta Pixel (1528517258881779)
+- **Deferred to first user interaction** (mousedown, keydown, touchstart, scroll) with a 30-second fallback timer
 - `gtag()` shim defined inline to queue events before the real script loads
-- Means Lighthouse never loads `gtag.js` during audits → clears "unused JS" finding
 
 ### Content Security Policy
-Current CSP (meta tag, all 12 pages):
+Live CSP (meta tag on every page):
 ```
 default-src 'self';
-script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
+script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://www.googleadservices.com;
 style-src 'self' 'unsafe-inline';
 font-src 'self';
 img-src 'self' https: data:;
-connect-src 'self' https://*.google-analytics.com https://analytics.google.com https://www.googletagmanager.com;
+connect-src 'self' https://*.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net https://www.googleadservices.com https://stats.g.doubleclick.net https://*.fbcdn.net;
+frame-src https://www.googletagmanager.com;
 object-src 'none';
 base-uri 'self';
-form-action 'self';
+form-action 'self' https://*.list-manage.com;
 ```
-Note: `upgrade-insecure-requests` was removed (Cloudflare handles HTTPS; in a meta tag it caused Chrome Issues panel warnings). `frame-src` removed (no iframes).
+`form-action` must keep `https://*.list-manage.com` or Mailchimp signups break. `upgrade-insecure-requests` is intentionally absent (Cloudflare handles HTTPS; in a meta tag it caused Chrome Issues warnings).
 
 ### CSS Color Palette
 ```css
@@ -127,113 +128,128 @@ footer
 - **Cloudflare** proxy in front (orange cloud enabled)
   - Cache Rule: `/fonts/*`, `/js/*`, `/images/*` + `/favicon.svg` → 1-year Edge + Browser TTL
   - Handles HTTPS, compression, CDN
+  - Known minor issue: `www.` redirects to `http://` then `https://` (two hops). A Redirect Rule `www.*` → `https://hairtypequiz.hair/${path}` would fix it.
+- Extensionless URLs (e.g. `/blog/loc-method-beginners-guide`) serve the page with 200; canonical tags point to the `.html` URL and Google honors them.
 
 ### Branch Strategy
-- `main` — production
-- Feature work done on `claude/review-session-*` branches, merged to main when complete
+- `main` — production (every push deploys)
+- Work happens on `claude/*` branches. Site changes are previewed (desktop + mobile screenshots) and merged to `main` only after owner approval.
 
 ---
 
 ## SEO & Analytics
 
 ### What's Set Up
-- GA4 property: G-WZFESSQ350
-- Google Search Console: verified, sitemap submitted (`/sitemap.xml`), all 10 posts indexing requested
+- **GA4** property 533457768 (G-WZFESSQ350). Read it with the `ga-report` skill (`.claude/skills/ga-report`).
+- **Google Search Console**: domain property `sc-domain:hairtypequiz.hair`. The GA service account has Full User access; Search Console API is enabled in Cloud project 946942643975. Requests to `searchconsole.googleapis.com` are authenticated by a proxy network secret (no key in code).
+  - **API reads work** (search analytics, sitemaps list, URL inspection).
+  - **API writes don't**: submitting/deleting sitemaps fails because the proxy decodes the `%2F` the API needs in the path, and Google offers no indexing-request API. The owner does these in the Search Console app.
+- **Sitemap**: the submitted one is `https://hairtypequiz.hair/sitemap.xml` (non-www). The old www sitemap (last read June 2026) was the reason 21 pages went undiscovered for months.
 - GSC alerts: enabled for manual actions + coverage issues
-- Amazon Associates: affiliate tag on all product links in `js/quiz.js`
-- Google AdSense account meta tag on all pages (pending traffic threshold for approval)
+- Amazon Associates: tag `strand01-20` on all product links (search-URL format `amazon.com/s?k=...&tag=strand01-20`)
+- Google AdSense account meta tag on all pages (pending traffic threshold)
+
+### Indexing routine
+- The owner can request ~10 indexings/day in the Search Console app. Prioritize by GA traffic and affiliate value.
+- "Discovered/unknown" pages: request indexing. "Crawled — currently not indexed" pages: Google read them and passed, so re-requesting doesn't help; they need content changes (differentiate or merge). As of Oct 25: 4A routine, how to wash 4C, protective styles, how to find your hair type, scalp care, baggy method.
+
+### Analytics to-dos
+- Mark `quiz_complete` as a GA4 key event (owner)
+- Per-placement Amazon Associates tracking IDs; monthly Associates CSV exports via a Google Drive folder
+- Optional: Microsoft Clarity (needs CSP change, preview first), Bing Webmaster Tools
 
 ### Schema Markup
 - `WebSite` + `FAQPage` + `Organization` on `index.html`
-- `Article` + `BreadcrumbList` on all blog posts
-- Pinterest Article Rich Pin meta tags on all 10 posts
-- Pinterest domain verified
+- `BlogPosting`/`Article` + `BreadcrumbList` (+ `FAQPage` on newer posts) on blog posts
+- Pinterest Article Rich Pin meta tags on posts; Pinterest domain verified
 
-### OG Images
-All 1000×1500 PNG, stored in `/images/`. Named `og-[slug].png`.
-
----
-
-## Content
-
-### 10 Blog Posts (Published)
-| Slug | Topic |
-|---|---|
-| `how-to-grow-4c-hair-faster` | Science-backed 4C growth guide |
-| `protective-styles-for-natural-hair` | 10 protective styles |
-| `how-to-wash-4c-hair` | 5-step wash day routine |
-| `loc-method-beginners-guide` | LOC method explainer |
-| `protein-treatment-for-natural-hair` | Light/medium/heavy protein |
-| `best-diffusers-for-curly-hair` | Diffuser picks + technique |
-| `best-products-for-4c-hair` | Full 4C product roundup |
-| `3b-vs-3c-curls` | Type 3 subtype comparison |
-| `curly-girl-method-wavy-hair` | CGM for wavy hair |
-| `how-to-find-your-hair-type` | Hair type identification guide |
-
-### Content Roadmap (Priority Order)
-1. 4A hair care routine — underserved, high intent
-2. Hair porosity test at home — evergreen, links to every post
-3. Scalp care routine for natural hair — connects to growth post
-4. TWA hairstyles and tips — growing search volume
-5. Best leave-in conditioners for 4C hair — high affiliate value
-6. Wavy hair routine for beginners — broadens beyond 4C audience
-
-Target: 20 posts before applying for AdSense.
+### OG / Pin Images
+All 1000×1500 PNG in `/images/`, named `og-[slug].png`. The OG image doubles as the pin Pinterest uses when a reader saves the post.
 
 ---
 
-## Growth Priorities (Current State)
-
-### Done
-- [x] 10 blog posts with affiliate links
-- [x] GA4 on all pages
-- [x] GSC verified, sitemap submitted, indexing requested
-- [x] GSC alerts configured
-- [x] OG images, FAQPage schema, BreadcrumbList
-- [x] Internal link graph complete
-- [x] Blog section on homepage
-- [x] Core Web Vitals — all green (PSI)
-- [x] Robots.txt
-- [x] 404.html
-- [x] Pinterest boards created (5 boards)
-- [x] Pinterest Rich Pin meta tags on all posts
-
-### In Progress / Next
-- [ ] **Email capture** — Mailchimp (free to 500 contacts). Embed form on blog index, bottom of every post, and homepage. Lead magnet idea: "Hair Type Cheat Sheet" PDF or "4C Wash Day Checklist"
-- [ ] **Pinterest** — claim website, pin all 10 posts (1–2/day), enable Rich Pins via Pinterest URL debugger
-- [ ] **Write 2 new blog posts** (Week 2 target)
-- [ ] **Apply for AdSense** once hitting ~100 daily sessions
-- [ ] **Amazon Associates audit** — check which links are getting clicks, double down on those topics
-
-### Monetization Stack
-1. Amazon Associates (active) — affiliate commissions
-2. Google AdSense (pending) — display ads once traffic threshold hit
-3. Direct affiliate programs (future) — SheaMoisture, Mielle Organics, Cantu via ShareASale/Impact
+## Email
+- **Mailchimp** form on 52 pages: `https://hair.us10.list-manage.com/subscribe/post?u=d1b239b37b6c1105dd901b721&id=4220e3e234&f_id=0046e0e1f0`, with the honeypot field `b_d1b239b37b6c1105dd901b721_4220e3e234`.
+- The only lead magnet is the **4C Wash Day Checklist**. Copy the standard dark "Get the 4C Wash Day Checklist" block from any recent post; never invent a lead magnet. (Three posts promised a nonexistent "Hair Type Cheat Sheet" and posted to a placeholder list until Oct 26.)
+- A signup = a view of `/checklist.html` (thank-you page). After any form change, the owner sends one test signup.
+- Idea for later: a general wash day checklist for all hair types (the 4C one is a mismatch on type 2–3 posts).
 
 ---
 
 ## Common Tasks
 
 ### Adding a new blog post
-1. Copy an existing blog post as a template
-2. Update: title, description, canonical URL, OG tags, article schema (headline, datePublished, dateModified)
-3. Add to `sitemap.xml`
-4. Add to `blog/index.html` post listing
-5. Add link from `index.html` blog section
-6. Cross-link from 2–3 relevant existing posts
-7. Create OG image (1000×1500) in `/images/og-[slug].png`
-8. Request indexing in GSC
+1. Copy the most recent roundup post as a template (correct font filenames, quick picks, CSP)
+2. Update: title, description, canonical URL, OG tags, schema (headline, datePublished, dateModified, FAQ)
+3. Add to `sitemap.xml` (and bump home/blog `lastmod`)
+4. Add to `blog/index.html` as the featured "Latest" card (demote the previous one)
+5. Add a card to the `index.html` blog section and bump "View All N Articles"
+6. Cross-link from 2–3 relevant existing posts (Related Reading + an in-text link)
+7. Create the pin/OG image (1000×1500) at `/images/og-[slug].png`
+8. Preview on a `claude/*` branch → owner approval → merge to `main`
+9. Owner requests indexing in GSC and posts the pin
 
 ### Updating quiz product data
 All product routines live in `js/quiz.js` in the `routines` object, keyed by hair type (e.g., `"3B"`). Each routine has steps with `step`, `why`, `products[]`, and `videos[]` arrays.
 
 ### Deploying changes
-```bash
-git add .
-git commit -m "description"
-git push origin main
-```
-GitHub Pages deploys automatically. Cloudflare cache for static assets is 1 year — if updating a font or JS file, rename it or append `?v=2` to bust the cache.
+Merge the approved branch into `main` and push. GitHub Pages deploys in about a minute. Cloudflare caches fonts, JS, and images for 1 year: if updating an existing font, JS, or image file, rename it or append `?v=2` to bust the cache (new filenames are fine).
+
+### Pins via Canva
+- Canva `create-design` makes good photographic pins but check: (1) apostrophes — some Canva display fonts draw ’ as an acute-looking wedge; straight `'` renders cleanly; (2) size — resize to custom 1000×1500; (3) export PNG and compress (a 256-color quantize took 1.3 MB → 440 KB with no visible change).
+- Canva requires showing the owner a preview before committing edits.
+
+---
+
+## Planned: Automated Content Pipeline ("CEO system")
+**Not built. Don't build the approval queue until the owner says "start the queue."**
+- The owner runs everything from an iPhone (Claude app + Safari).
+- A "CEO" Claude session the owner chats with, which starts helpers as needed: **Analyst** (GA4 + GSC), **Strategist** (vidIQ, Firecrawl search + research papers, Semrush when available), **Creator** (articles, pins via `frontend-design` or Canva).
+- A mobile approval-queue page where the owner approves/edits/rejects items; a scheduled **Publisher** posts only approved items: Pinterest 1–3 pins/day, Facebook ~3 posts/week (following the Meta rules below).
+- A weekly analyst report. Time zone: America/New_York.
+- Tokens pending: Pinterest developer app (scopes boards:read, pins:read, pins:write, user_accounts:read; network secret for api.pinterest.com; expires every 30 days — needs a renewal reminder) and a long-lived Meta Page token (pages_manage_posts, pages_read_engagement, pages_show_list, read_insights; network secret for graph.facebook.com).
+- First manual run: Post 55 (Oct 25–26, 2026): GSC/GA gap analysis → vidIQ + Firecrawl validation → PubMed evidence → article + pin → preview → deploy.
+
+### Connectors status (Oct 2026)
+- Working: GA4 and Search Console (via proxy), Gmail, Google Drive/Docs/Sheets/Calendar, Canva, Firecrawl, vidIQ, GitHub.
+- Blocked: Semrush (out of API units), Ahrefs (connection not finished). Firecrawl can't read Pinterest's newsroom/trend report.
+
+---
+
+## Content
+
+### Roadmap (from the original list, all published)
+4A routine, hair porosity test, scalp care, TWA hairstyles, best leave-ins for 4C, wavy routine for beginners. Pick new topics from GSC query gaps + GA clicks + vidIQ/Pinterest demand rather than a fixed list.
+
+---
+
+## Growth Priorities (Current State)
+
+### Done
+- [x] 55 blog posts with affiliate links; quick picks on roundup posts
+- [x] GA4 on all pages; ga-report skill
+- [x] GSC verified; correct sitemap submitted (Oct 25, 2026); Search Console API reads connected
+- [x] GSC alerts configured
+- [x] OG images, FAQPage schema, BreadcrumbList
+- [x] Internal link graph, blog section on homepage
+- [x] Core Web Vitals — all green (PSI)
+- [x] Robots.txt, 404.html
+- [x] Mailchimp email capture with 4C Wash Day Checklist
+- [x] Pinterest boards (5), Rich Pin meta tags
+
+### In Progress / Next
+- [ ] **Indexing**: work through unindexed pages ~10/day (see Indexing routine)
+- [ ] **Backlinks**: the main ranking weakness (the site ranks ~#73 for "hair type quiz")
+- [ ] **Near-page-1 posts**: tune titles/intros for "3b vs 3c", "does 4c hair grow slower", protein-treatment frequency, sulfate-free shampoo questions
+- [ ] **"Crawled, not indexed" posts**: differentiate or merge
+- [ ] **Pinterest**: 1–3 pins/day; enable Rich Pins via URL debugger
+- [ ] **Apply for AdSense** at ~100 daily sessions
+- [ ] **Amazon Associates audit** — most clicks come from the quiz (45 of 63 Amazon clicks in 60 days)
+
+### Monetization Stack
+1. Amazon Associates (active) — affiliate commissions
+2. Google AdSense (pending) — display ads once traffic threshold hit
+3. Direct affiliate programs (future) — SheaMoisture, Mielle Organics, Cantu via ShareASale/Impact
 
 ---
 
@@ -252,11 +268,17 @@ Standing feedback from the site owner. Apply it without being reminded, and add 
 - Lead with evidence and science. That's the site's differentiator in articles, ads, and pins.
 - Keep the brand palette (espresso / caramel / cream) and `--caramel-text` for text on light backgrounds.
 - **Approved pattern: "Quick picks" block** near the top of roundup posts, plus a one-line "Best for + View on Amazon" summary under each product. Reference implementation: `blog/best-hair-growth-serums-natural-hair.html` (`.quick-picks`, `.qp-*`, `.card-summary`). The data column must come from the post's own content (evidence grade, hold level, heat stage, etc.); never invent ratings, and no dollar prices.
+- **Evidence tables cite real studies** (PubMed links) and mark ungraded steps "not studied" rather than guessing. On mobile, wide tables stack into labeled cards (see `.ev-table` in `blog/best-products-low-porosity-hair.html`).
+- **Pins (Oct 26, 2026):** for Post 55 the owner chose the Canva photographic creative over the hand-built `frontend-design` pin, and asked to use only that one. Offer a Canva option for future pins.
 
 ### Testing
 - **Block analytics in test browsers.** Any Playwright/headless run against the site must abort all non-localhost requests first, or real GA4 events and Google Ads conversions fire.
+- Don't submit test signups to the real Mailchimp list; ask the owner to send one.
 
 ### Copy & platforms
 - Quora answers should be genuinely useful and drive traffic to the site, usually via the quiz link where it fits naturally. Don't force links.
 - Meta ads: never "you/your hair" personal-attribute framing or health claims. Talk about the research and the products.
 - Pinterest is the priority channel; post 1–3 pins/day, never in bursts. Facebook is a later, light test. Instagram and X are not automated.
+
+### Gmail
+- `mcp__Gmail__trash_thread` is pre-approved in `.claude/settings.json` for inbox cleanup (trash only; never send or permanently delete without asking).

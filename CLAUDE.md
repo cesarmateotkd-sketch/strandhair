@@ -169,7 +169,7 @@ All 1000×1500 PNG in `/images/`, named `og-[slug].png`. The OG image doubles as
 ---
 
 ## Email
-- **Mailchimp** form on 52 pages: `https://hair.us10.list-manage.com/subscribe/post?u=d1b239b37b6c1105dd901b721&id=4220e3e234&f_id=0046e0e1f0`, with the honeypot field `b_d1b239b37b6c1105dd901b721_4220e3e234`.
+- **Mailchimp** form on 54 pages: `https://hair.us10.list-manage.com/subscribe/post?u=d1b239b37b6c1105dd901b721&id=4220e3e234&f_id=0046e0e1f0`, with the honeypot field `b_d1b239b37b6c1105dd901b721_4220e3e234`.
 - The only lead magnet is the **4C Wash Day Checklist**. Copy the standard dark "Get the 4C Wash Day Checklist" block from any recent post; never invent a lead magnet. (Three posts promised a nonexistent "Hair Type Cheat Sheet" and posted to a placeholder list until Oct 26.)
 - A signup = a view of `/checklist.html` (thank-you page). After any form change, the owner sends one test signup.
 - Idea for later: a general wash day checklist for all hair types (the 4C one is a mismatch on type 2–3 posts).

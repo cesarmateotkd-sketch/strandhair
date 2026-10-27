@@ -3,7 +3,7 @@
 ## What This Is
 **Strand** (`hairtypequiz.hair`) is a static hair care site on GitHub Pages, proxied through Cloudflare. It has two main functions:
 1. A **hair type quiz** (1A–4C) that outputs a personalized product routine with Amazon affiliate links and YouTube tutorial cards
-2. A **blog** of 55 SEO-optimized posts on natural, curly, coily, and wavy hair (routines by type, technique guides, evidence-led product roundups)
+2. A **blog** of 56 SEO-optimized posts on natural, curly, coily, and wavy hair (routines by type, technique guides, evidence-led product roundups)
 
 Monetization: Amazon Associates affiliate commissions + Google AdSense (not applied yet; the gate is traffic only, ~100 daily sessions; ~14/day as of Oct 2026).
 
@@ -21,7 +21,7 @@ Monetization: Amazon Associates affiliate commissions + Google AdSense (not appl
 ├── 404.html
 ├── favicon.svg             # Branded SVG favicon (espresso bg, caramel italic "s")
 ├── robots.txt              # Allow all crawlers
-├── sitemap.xml             # 59 URLs; submitted to GSC as the non-www URL
+├── sitemap.xml             # 60 URLs; submitted to GSC as the non-www URL
 ├── CNAME                   # hairtypequiz.hair
 ├── fonts/                  # Self-hosted WOFF2 (see Fonts below for exact filenames)
 ├── images/                 # OG/pin images (1000×1500 PNG), named og-[slug].png
@@ -29,7 +29,7 @@ Monetization: Amazon Associates affiliate commissions + Google AdSense (not appl
 │   └── quiz.js             # 50KB — lazy-loaded on first quiz interaction only
 ├── blog/
 │   ├── index.html          # Post listing with category filter + featured "Latest" card
-│   └── *.html              # 55 posts
+│   └── *.html              # 56 posts
 └── .claude/
     ├── settings.json       # Permission allow rules (committed)
     └── skills/             # frontend-design, ga-report
@@ -223,10 +223,21 @@ Merge the approved branch into `main` and push. GitHub Pages deploys in about a 
 
 ---
 
+## Open Items (as of Oct 27, 2026)
+Start here in a new session. Update this list as items close.
+
+- [ ] **Post 57: best curl creams for type 4 hair** (queued). Analyst pick: curl creams convert best on the blog (0.40 Amazon clicks/view) and 185 GSC impressions for "best curl cream for 4c/4b/4a" land on the general `best-curl-creams-natural-hair` page at ~pos 36. Keep that page on "natural hair" broadly and cross-link the two.
+- [ ] **Mobile table overflow on older posts**: the 4C routine page's 4A/4B/4C comparison table clips its right column on phones. Fix by stacking into labeled cards on mobile (see `.ev-table` in `blog/best-products-low-porosity-hair.html`), and check other older posts for the same issue. Preview first.
+- [ ] **Owner: request indexing for Post 56** (`silk-press-4c-hair-at-home`) in GSC and post its Canva pin.
+- [ ] **Owner: register `hair_type` as a GA4 custom dimension** (Admin → Custom definitions). `quiz_complete` already sends it; needed to see which hair types quiz-takers get.
+- [ ] **Owner: Pinterest developer app token and Meta long-lived Page token** — still pending; the Publisher can't run without them.
+- [ ] **Scheduled GSC check, Wed Oct 28, 9:00 AM ET** — re-inspects indexing (baseline Oct 25: 31 indexed / 21 unknown / 6 crawled-not-indexed; by Oct 26, 10 of the unknown were indexed) and compares weekly performance. Should also cover Posts 55 and 56.
+- [x] Oct 26–27: Post 56 live; low-porosity product links routed to Post 55; breadcrumb fixed on 17 older posts (it inherited the sticky flex `nav` styles).
+
 ## Growth Priorities (Current State)
 
 ### Done
-- [x] 55 blog posts with affiliate links; quick picks on roundup posts
+- [x] 56 blog posts with affiliate links; quick picks on roundup posts
 - [x] GA4 on all pages; ga-report skill
 - [x] GSC verified; correct sitemap submitted (Oct 25, 2026); Search Console API reads connected
 - [x] GSC alerts configured

@@ -226,7 +226,7 @@ Merge the approved branch into `main` and push. GitHub Pages deploys in about a 
 ## Open Items (as of Oct 27, 2026)
 Start here in a new session. Update this list as items close.
 
-- [ ] **Post 57: best curl creams for type 4 hair** (preview on `claude/post-57`, Oct 27; waiting for approval, then factcheck/compliance jobs). Analyst pick: curl creams convert best on the blog (0.40 Amazon clicks/view) and 185 GSC impressions for "best curl cream for 4c/4b/4a" land on the general `best-curl-creams-natural-hair` page at ~pos 36. Keep that page on "natural hair" broadly and cross-link the two.
+- [ ] **Post 57: best curl creams for type 4 hair**: live Oct 27 (`blog/best-curl-creams-4c-hair.html`). Fact-check fixes on `claude/post57-factcheck` (Curl La La has no flaxseed; survey and coconut-oil wording); then a `compliance` job. Owner: request indexing and post its pin. Analyst pick: curl creams convert best on the blog (0.40 Amazon clicks/view) and 185 GSC impressions for "best curl cream for 4c/4b/4a" land on the general `best-curl-creams-natural-hair` page at ~pos 36. Keep that page on "natural hair" broadly and cross-link the two.
 - [ ] **Mobile table overflow on older posts**: the 4C routine page's 4A/4B/4C comparison table clips its right column on phones. Fix by stacking into labeled cards on mobile (see `.ev-table` in `blog/best-products-low-porosity-hair.html`), and check other older posts for the same issue. Preview first.
 - [ ] **Owner: request indexing for Post 56** (`silk-press-4c-hair-at-home`) in GSC and post its Canva pin.
 - [ ] **Owner: register `hair_type` as a GA4 custom dimension** (Admin → Custom definitions). `quiz_complete` already sends it; needed to see which hair types quiz-takers get.

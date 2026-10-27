@@ -226,7 +226,7 @@ Merge the approved branch into `main` and push. GitHub Pages deploys in about a 
 ## Open Items (as of Oct 27, 2026)
 Start here in a new session. Update this list as items close.
 
-- [ ] **Post 57: best curl creams for type 4 hair** (queued). Analyst pick: curl creams convert best on the blog (0.40 Amazon clicks/view) and 185 GSC impressions for "best curl cream for 4c/4b/4a" land on the general `best-curl-creams-natural-hair` page at ~pos 36. Keep that page on "natural hair" broadly and cross-link the two.
+- [ ] **Post 57: best curl creams for type 4 hair** (preview on `claude/post-57`, Oct 27; waiting for approval, then factcheck/compliance jobs). Analyst pick: curl creams convert best on the blog (0.40 Amazon clicks/view) and 185 GSC impressions for "best curl cream for 4c/4b/4a" land on the general `best-curl-creams-natural-hair` page at ~pos 36. Keep that page on "natural hair" broadly and cross-link the two.
 - [ ] **Mobile table overflow on older posts**: the 4C routine page's 4A/4B/4C comparison table clips its right column on phones. Fix by stacking into labeled cards on mobile (see `.ev-table` in `blog/best-products-low-porosity-hair.html`), and check other older posts for the same issue. Preview first.
 - [ ] **Owner: request indexing for Post 56** (`silk-press-4c-hair-at-home`) in GSC and post its Canva pin.
 - [ ] **Owner: register `hair_type` as a GA4 custom dimension** (Admin → Custom definitions). `quiz_complete` already sends it; needed to see which hair types quiz-takers get.
@@ -279,6 +279,7 @@ Standing feedback from the site owner. Apply it without being reminded, and add 
 - Lead with evidence and science. That's the site's differentiator in articles, ads, and pins.
 - Keep the brand palette (espresso / caramel / cream) and `--caramel-text` for text on light backgrounds.
 - **Approved pattern: "Quick picks" block** near the top of roundup posts, plus a one-line "Best for + View on Amazon" summary under each product. Reference implementation: `blog/best-hair-growth-serums-natural-hair.html` (`.quick-picks`, `.qp-*`, `.card-summary`). The data column must come from the post's own content (evidence grade, hold level, heat stage, etc.); never invent ratings, and no dollar prices.
+- **"Why this article" with every article preview (Oct 27, 2026).** Each preview of a post, outline or pin batch includes a short "Why this article" section: the SEO rationale (target phrase and intent; the GSC queries, impressions, position, clicks, date range and the page currently getting them; secondary phrases; the current top 5 and how this post differs; why this topic now; cannibalization risk and internal links; SEO title and meta with lengths), plus GA/Amazon data with dates, the audience, the evidence used and what's "not studied", what the free team suggested and what was kept or dropped, and open risks.
 - **Evidence tables cite real studies** (PubMed links) and mark ungraded steps "not studied" rather than guessing. On mobile, wide tables stack into labeled cards (see `.ev-table` in `blog/best-products-low-porosity-hair.html`).
 - **Pins (Oct 26, 2026):** for Post 55 the owner chose the Canva photographic creative over the hand-built `frontend-design` pin, and asked to use only that one. Offer a Canva option for future pins.
 

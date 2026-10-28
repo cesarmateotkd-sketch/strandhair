@@ -231,7 +231,7 @@ Start here in a new session. Update this list as items close.
 - [ ] **Owner: request indexing for Post 56** (`silk-press-4c-hair-at-home`) in GSC and post its Canva pin.
 - [ ] **Owner: register `hair_type` as a GA4 custom dimension** (Admin → Custom definitions). `quiz_complete` already sends it; needed to see which hair types quiz-takers get.
 - [ ] **Owner: Pinterest developer app token and Meta long-lived Page token** — still pending; the Publisher can't run without them.
-- [ ] **Scheduled GSC check, Wed Oct 28, 9:00 AM ET** — re-inspects indexing (baseline Oct 25: 31 indexed / 21 unknown / 6 crawled-not-indexed; by Oct 26, 10 of the unknown were indexed) and compares weekly performance. Should also cover Posts 55 and 56.
+- [x] **GSC check Oct 28**: 44 of 60 indexed (from 31 of 58 on Oct 25), including Posts 55 and 56. Still out: 7 discovered-not-indexed (ACV rinse, clarifying shampoos, heat protectants, co-washing, finger coils, breakage vs shedding, wavy routine), 3 unknown (bond builders, hair steamer, rice water), 6 crawled-not-indexed (4A routine, wash 4C, protective styles, scalp care, baggy method, wash-day-checklist). Sitemap last read Oct 25 (58 URLs; now 60) — owner to resubmit and remove the old www entry. Impressions +77% week over week (625 → 1,108), clicks flat at 4, avg position 36.2 → 35.0.
 - [x] Oct 26–27: Post 56 live; low-porosity product links routed to Post 55; breadcrumb fixed on 17 older posts (it inherited the sticky flex `nav` styles).
 
 ## Growth Priorities (Current State)

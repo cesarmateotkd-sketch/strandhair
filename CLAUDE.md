@@ -151,7 +151,7 @@ footer
 
 ### Indexing routine
 - The owner can request ~10 indexings/day in the Search Console app. Prioritize by GA traffic and affiliate value.
-- "Discovered/unknown" pages: request indexing. "Crawled — currently not indexed" pages: Google read them and passed, so re-requesting doesn't help; they need content changes (differentiate or merge). As of Oct 25: 4A routine, how to wash 4C, protective styles, how to find your hair type, scalp care, baggy method.
+- "Discovered/unknown" pages: request indexing. "Crawled — currently not indexed" pages: Google read them and passed, so re-requesting doesn't help; they need content changes (differentiate or merge). As of Oct 25: 4A routine, how to wash 4C, protective styles, how to find your hair type, scalp care, baggy method. Nov 7: all but "how to find your hair type" got evidence tables and claim fixes; the owner requests indexing for them once.
 
 ### Analytics to-dos
 - Mark `quiz_complete` as a GA4 key event (owner)
@@ -171,7 +171,9 @@ All 1000×1500 PNG in `/images/`, named `og-[slug].png`. The OG image doubles as
 ## Email
 - **Mailchimp** form on 54 pages: `https://hair.us10.list-manage.com/subscribe/post?u=d1b239b37b6c1105dd901b721&id=4220e3e234&f_id=0046e0e1f0`, with the honeypot field `b_d1b239b37b6c1105dd901b721_4220e3e234`.
 - The only lead magnet is the **4C Wash Day Checklist**. Copy the standard dark "Get the 4C Wash Day Checklist" block from any recent post; never invent a lead magnet. (Three posts promised a nonexistent "Hair Type Cheat Sheet" and posted to a placeholder list until Oct 26.)
-- A signup = a view of `/checklist.html` (thank-you page). After any form change, the owner sends one test signup.
+- A signup = a view of `/checklist.html` (thank-you page), which links to the PDF `/downloads/4c-wash-day-checklist.pdf`. After any form change, the owner sends one test signup.
+- **Status Nov 8, 2026:** 19 subscribers (18 from the embed form), double opt-in off. The Mailchimp "Signup thank you page" was not redirected to `/checklist.html` (zero GA views since July), and the "Welcome new contacts" automation has been paused since May 2 ("paused due to an error"), so most subscribers never got the checklist. Fix: owner sets the redirect and repairs/resumes the automation in Mailchimp; the team drafts the welcome and catch-up emails (relay job `mailchimp-emails-nov8`); the owner sends the catch-up to the existing list.
+- The Mailchimp connector (Intuit Mailchimp) only reads reports (counts, weekly growth, signup source; no per-person dates) and drafts campaign plans. It can't read or change forms, redirects or automations, and it can't send email.
 - Idea for later: a general wash day checklist for all hair types (the 4C one is a mismatch on type 2–3 posts).
 
 ---
@@ -223,8 +225,12 @@ Merge the approved branch into `main` and push. GitHub Pages deploys in about a 
 
 ---
 
-## Open Items (as of Oct 27, 2026)
+## Open Items (as of Nov 8, 2026)
 Start here in a new session. Update this list as items close.
+
+- [ ] **Email signups (Nov 8):** fix the Mailchimp thank-you redirect and the paused welcome automation (owner, in Mailchimp), send the catch-up email to the 19 existing subscribers (team drafts it in job `mailchimp-emails-nov8`), then the owner does one test signup and Claude confirms the `/checklist.html` view in GA. Next: a signup box on 4A–4C quiz results as a preview (job `signups-nov7` idea #1; rename `js/quiz.js` to bust the 1-year Cloudflare cache).
+- [ ] **Owner: request indexing** for the 5 pages upgraded Nov 7 (how-to-wash-4c-hair, scalp-care-routine-natural-hair, baggy-method-natural-hair, protective-styles-for-natural-hair, 4a-hair-care-routine) and the 5 retitled in `titles-nov7` (3C and 2B routines, hot oil, best gels, pre-poo). Claude checks their status at the weekly GSC review.
+- [ ] **"How to find your hair type"** (crawled, not indexed): the last of the six; needs the same differentiate-or-merge work.
 
 - [ ] **Post 57: best curl creams for type 4 hair**: live Oct 27 (`blog/best-curl-creams-4c-hair.html`). Fact-check fixes on `claude/post57-factcheck` (Curl La La has no flaxseed; survey and coconut-oil wording); then a `compliance` job. Owner: request indexing and post its pin. Analyst pick: curl creams convert best on the blog (0.40 Amazon clicks/view) and 185 GSC impressions for "best curl cream for 4c/4b/4a" land on the general `best-curl-creams-natural-hair` page at ~pos 36. Keep that page on "natural hair" broadly and cross-link the two.
 - [ ] **Mobile table overflow on older posts**: the 4C routine page's 4A/4B/4C comparison table clips its right column on phones. Fix by stacking into labeled cards on mobile (see `.ev-table` in `blog/best-products-low-porosity-hair.html`), and check other older posts for the same issue. Preview first.

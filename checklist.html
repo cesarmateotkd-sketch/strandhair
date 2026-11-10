@@ -15,8 +15,8 @@ function _loadAnalytics(){
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KCVJS3MM');
   var p=document.createElement('script');p.async=true;p.src='https://connect.facebook.net/en_US/fbevents.js';document.head.appendChild(p);
 }
-var _aTimer=setTimeout(_loadAnalytics,3000);
-['mousedown','keydown','touchstart','scroll'].forEach(function(evt){window.addEventListener(evt,function h(){clearTimeout(_aTimer);_loadAnalytics();window.removeEventListener(evt,h);},{passive:true});});
+// Thank-you page: load analytics right away so every signup is counted, even when the visitor leaves within seconds (noindex page, speed doesn't matter here).
+_loadAnalytics();
 </script>
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

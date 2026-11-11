@@ -105,6 +105,19 @@ var _aTimer=setTimeout(_loadAnalytics,30000);
   });
 })();
 </script>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <style>
@@ -352,12 +365,12 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
     <h2>Types of Gel: Synthetic Polymer vs. Botanical vs. Custard</h2>
 
     <div class="table-scroll">
-      <table>
+      <table class="m-stack">
         <thead><tr><th>Type</th><th>Primary Hold Agent</th><th>Hold Level</th><th>Best For</th><th>Texture Feel</th></tr></thead>
         <tbody>
-          <tr><td><strong>Synthetic polymer gel</strong></td><td>Carbomer, PVP, Acrylates</td><td>Firm&ndash;Extra firm</td><td>Wash-and-go, sleek styles, all-day hold on 4C</td><td>Hard cast; scrunch out when dry</td></tr>
-          <tr><td><strong>Botanical gel</strong></td><td>Flaxseed extract, aloe vera</td><td>Light&ndash;Medium</td><td>Twist-outs, elongation, second-day refreshing</td><td>Soft cast; flexible hold</td></tr>
-          <tr><td><strong>Curl custard</strong></td><td>Pectin, xanthan gum, honey</td><td>Light&ndash;Medium</td><td>Coil definition with added moisture, 3C&ndash;4B</td><td>No cast; soft and touchable</td></tr>
+          <tr><td data-label="Type"><strong>Synthetic polymer gel</strong></td><td data-label="Primary Hold Agent">Carbomer, PVP, Acrylates</td><td data-label="Hold Level">Firm&ndash;Extra firm</td><td data-label="Best For">Wash-and-go, sleek styles, all-day hold on 4C</td><td data-label="Texture Feel">Hard cast; scrunch out when dry</td></tr>
+          <tr><td data-label="Type"><strong>Botanical gel</strong></td><td data-label="Primary Hold Agent">Flaxseed extract, aloe vera</td><td data-label="Hold Level">Light&ndash;Medium</td><td data-label="Best For">Twist-outs, elongation, second-day refreshing</td><td data-label="Texture Feel">Soft cast; flexible hold</td></tr>
+          <tr><td data-label="Type"><strong>Curl custard</strong></td><td data-label="Primary Hold Agent">Pectin, xanthan gum, honey</td><td data-label="Hold Level">Light&ndash;Medium</td><td data-label="Best For">Coil definition with added moisture, 3C&ndash;4B</td><td data-label="Texture Feel">No cast; soft and touchable</td></tr>
         </tbody>
       </table>
     </div>

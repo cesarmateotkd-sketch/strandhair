@@ -185,6 +185,19 @@ article p.card-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 
   .qp-key{max-width:none;}
 }
 </style>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCVJS3MM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -350,18 +363,18 @@ article p.card-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 
   <p>Deep conditioners fail for two reasons: wrong type for the concern, or wrong weight for the hair. Here is the decision framework:</p>
 
   <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
-  <table class="type-table" aria-label="Deep conditioner selection by hair type and concern">
+  <table class="m-stack type-table" aria-label="Deep conditioner selection by hair type and concern">
     <thead>
       <tr><th>Hair Type</th><th>Porosity</th><th>Primary Need</th><th>Formula to Look For</th></tr>
     </thead>
     <tbody>
-      <tr><td>2B &ndash; 2C (Wavy)</td><td>Low to normal</td><td>Frizz control, curl definition</td><td>Lightweight moisture; no heavy butters</td></tr>
-      <tr><td>3A &ndash; 3B (Loose curls)</td><td>Normal to high</td><td>Moisture + elasticity</td><td>Humectant-rich, medium weight</td></tr>
-      <tr><td>3C &ndash; 4A</td><td>Normal to high</td><td>Moisture + protein balance</td><td>Rich moisture with some protein</td></tr>
-      <tr><td>4B &ndash; 4C</td><td>Often high</td><td>Deep moisture, length retention</td><td>Rich, butter-heavy, long processing time</td></tr>
-      <tr><td>Any &mdash; color-treated</td><td>High (damage)</td><td>Protein repair + moisture</td><td>Bond-building or protein treatment</td></tr>
-      <tr><td>Any &mdash; low porosity</td><td>Low</td><td>Penetration &mdash; products sit on top</td><td>Lightweight + use with heat</td></tr>
-      <tr><td>Any &mdash; protein-sensitive</td><td>Usually low</td><td>Moisture only</td><td>Protein-free formulas explicitly</td></tr>
+      <tr><td data-label="Hair Type">2B &ndash; 2C (Wavy)</td><td data-label="Porosity">Low to normal</td><td data-label="Primary Need">Frizz control, curl definition</td><td data-label="Formula to Look For">Lightweight moisture; no heavy butters</td></tr>
+      <tr><td data-label="Hair Type">3A &ndash; 3B (Loose curls)</td><td data-label="Porosity">Normal to high</td><td data-label="Primary Need">Moisture + elasticity</td><td data-label="Formula to Look For">Humectant-rich, medium weight</td></tr>
+      <tr><td data-label="Hair Type">3C &ndash; 4A</td><td data-label="Porosity">Normal to high</td><td data-label="Primary Need">Moisture + protein balance</td><td data-label="Formula to Look For">Rich moisture with some protein</td></tr>
+      <tr><td data-label="Hair Type">4B &ndash; 4C</td><td data-label="Porosity">Often high</td><td data-label="Primary Need">Deep moisture, length retention</td><td data-label="Formula to Look For">Rich, butter-heavy, long processing time</td></tr>
+      <tr><td data-label="Hair Type">Any &mdash; color-treated</td><td data-label="Porosity">High (damage)</td><td data-label="Primary Need">Protein repair + moisture</td><td data-label="Formula to Look For">Bond-building or protein treatment</td></tr>
+      <tr><td data-label="Hair Type">Any &mdash; low porosity</td><td data-label="Porosity">Low</td><td data-label="Primary Need">Penetration &mdash; products sit on top</td><td data-label="Formula to Look For">Lightweight + use with heat</td></tr>
+      <tr><td data-label="Hair Type">Any &mdash; protein-sensitive</td><td data-label="Porosity">Usually low</td><td data-label="Primary Need">Moisture only</td><td data-label="Formula to Look For">Protein-free formulas explicitly</td></tr>
     </tbody>
   </table>
   </div>

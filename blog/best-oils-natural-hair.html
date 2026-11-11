@@ -105,6 +105,19 @@ var _aTimer=setTimeout(_loadAnalytics,30000);
   });
 })();
 </script>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <style>
@@ -353,12 +366,12 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
     <h2>Matching Oil to Porosity</h2>
 
     <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:28px 0;">
-    <table style="margin:0;">
+    <table style="margin:0;" class="m-stack">
       <thead><tr><th>Porosity</th><th>What the Hair Needs</th><th>Best Oils</th><th>Avoid</th></tr></thead>
       <tbody>
-        <tr><td><strong>Low porosity</strong></td><td>Lightweight oils that won&rsquo;t sit and build up on the closed cuticle</td><td>Grapeseed, jojoba, argan, sweet almond</td><td>Heavy castor, unrefined coconut, butters</td></tr>
-        <tr><td><strong>Normal porosity</strong></td><td>Flexibility &mdash; most oils work; match to role</td><td>Coconut or avocado (pre-poo), jojoba (seal)</td><td>Overuse of any single heavy oil</td></tr>
-        <tr><td><strong>High porosity</strong></td><td>Heavier sealants to slow rapid moisture loss through the raised cuticle</td><td>Castor, olive, avocado, JBCO</td><td>Relying on light oils alone to seal</td></tr>
+        <tr><td data-label="Porosity"><strong>Low porosity</strong></td><td data-label="What the Hair Needs">Lightweight oils that won&rsquo;t sit and build up on the closed cuticle</td><td data-label="Best Oils">Grapeseed, jojoba, argan, sweet almond</td><td data-label="Avoid">Heavy castor, unrefined coconut, butters</td></tr>
+        <tr><td data-label="Porosity"><strong>Normal porosity</strong></td><td data-label="What the Hair Needs">Flexibility &mdash; most oils work; match to role</td><td data-label="Best Oils">Coconut or avocado (pre-poo), jojoba (seal)</td><td data-label="Avoid">Overuse of any single heavy oil</td></tr>
+        <tr><td data-label="Porosity"><strong>High porosity</strong></td><td data-label="What the Hair Needs">Heavier sealants to slow rapid moisture loss through the raised cuticle</td><td data-label="Best Oils">Castor, olive, avocado, JBCO</td><td data-label="Avoid">Relying on light oils alone to seal</td></tr>
       </tbody>
     </table>
     </div>

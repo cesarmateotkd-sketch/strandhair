@@ -190,6 +190,19 @@ footer { background: var(--espresso); padding: 48px 48px 28px; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
 }
 </style>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -230,14 +243,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p>Porosity is partly genetic (determined by your hair&rsquo;s natural cuticle structure) and partly acquired (chemical processing, heat damage, and mechanical stress all raise porosity over time). This is why virgin 4C hair and color-treated 4C hair can behave very differently even on the same person.</p>
 
   <h2>The Three Porosity Types at a Glance</h2>
-  <table class="porosity-table" aria-label="Hair porosity types comparison">
+  <table class="m-stack porosity-table" aria-label="Hair porosity types comparison">
     <thead>
       <tr><th>Porosity</th><th>Cuticle State</th><th>Water Absorption</th><th>Moisture Retention</th></tr>
     </thead>
     <tbody>
-      <tr><td><strong>Low</strong></td><td>Flat, tightly packed</td><td>Slow &mdash; resists water</td><td>Excellent once saturated</td></tr>
-      <tr><td><strong>Medium</strong></td><td>Slightly raised, flexible</td><td>Normal</td><td>Good &mdash; balanced</td></tr>
-      <tr><td><strong>High</strong></td><td>Raised, lifted, or gapped</td><td>Very fast</td><td>Poor &mdash; loses moisture quickly</td></tr>
+      <tr><td data-label="Porosity"><strong>Low</strong></td><td data-label="Cuticle State">Flat, tightly packed</td><td data-label="Water Absorption">Slow &mdash; resists water</td><td data-label="Moisture Retention">Excellent once saturated</td></tr>
+      <tr><td data-label="Porosity"><strong>Medium</strong></td><td data-label="Cuticle State">Slightly raised, flexible</td><td data-label="Water Absorption">Normal</td><td data-label="Moisture Retention">Good &mdash; balanced</td></tr>
+      <tr><td data-label="Porosity"><strong>High</strong></td><td data-label="Cuticle State">Raised, lifted, or gapped</td><td data-label="Water Absorption">Very fast</td><td data-label="Moisture Retention">Poor &mdash; loses moisture quickly</td></tr>
     </tbody>
   </table>
 

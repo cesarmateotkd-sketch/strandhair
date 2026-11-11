@@ -106,6 +106,19 @@ var _aTimer=setTimeout(_loadAnalytics,30000);
   });
 })();
 </script>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <style>
@@ -341,12 +354,12 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
     <p>Not all cleansers work the same way. The difference comes down to the surfactants &mdash; the active cleaning molecules that lift dirt, oil, and product residue from the hair shaft and scalp.</p>
 
     <div class="table-scroll">
-      <table id="cleanser-types">
+      <table id="cleanser-types" class="m-stack">
         <thead><tr><th>Type</th><th>Surfactant Strength</th><th>Best For</th><th>How Often</th></tr></thead>
         <tbody>
-          <tr><td><strong>Co-wash</strong></td><td>Very mild (conditioner-based)</td><td>Refreshing curls between wash days, very dry 4B&ndash;4C hair</td><td>Every 3&ndash;5 days between shampoo sessions</td></tr>
-          <tr><td><strong>Sulfate-free shampoo</strong></td><td>Mild (coco betaine, glucosides)</td><td>Regular weekly or bi-weekly wash day on natural hair</td><td>Every 7&ndash;14 days</td></tr>
-          <tr><td><strong>Clarifying shampoo</strong></td><td>Strong (sulfates, or sulfate-free + exfoliants)</td><td>Removing heavy buildup, silicones, hard water deposits</td><td>Once a month or when products stop absorbing</td></tr>
+          <tr><td data-label="Type"><strong>Co-wash</strong></td><td data-label="Surfactant Strength">Very mild (conditioner-based)</td><td data-label="Best For">Refreshing curls between wash days, very dry 4B&ndash;4C hair</td><td data-label="How Often">Every 3&ndash;5 days between shampoo sessions</td></tr>
+          <tr><td data-label="Type"><strong>Sulfate-free shampoo</strong></td><td data-label="Surfactant Strength">Mild (coco betaine, glucosides)</td><td data-label="Best For">Regular weekly or bi-weekly wash day on natural hair</td><td data-label="How Often">Every 7&ndash;14 days</td></tr>
+          <tr><td data-label="Type"><strong>Clarifying shampoo</strong></td><td data-label="Surfactant Strength">Strong (sulfates, or sulfate-free + exfoliants)</td><td data-label="Best For">Removing heavy buildup, silicones, hard water deposits</td><td data-label="How Often">Once a month or when products stop absorbing</td></tr>
         </tbody>
       </table>
     </div>

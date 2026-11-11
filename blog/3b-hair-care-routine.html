@@ -212,6 +212,19 @@ footer ul a:hover{color:var(--caramel);}
   .footer-bottom{flex-direction:column;}
 }
 </style>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -276,17 +289,17 @@ footer ul a:hover{color:var(--caramel);}
 
   <h2>3A vs 3B vs 3C: How They Differ</h2>
   <p>Type 3 curls span a wide range. Knowing where 3B falls helps you understand why it needs its own approach rather than copying 3A or 3C routines directly.</p>
-  <table class="compare-table" role="table">
+  <table class="m-stack compare-table" role="table">
     <thead>
       <tr><th>Trait</th><th>3A</th><th>3B</th><th>3C</th></tr>
     </thead>
     <tbody>
-      <tr><td>Curl diameter</td><td>Large (sidewalk chalk)</td><td class="highlight-row">Medium (marker)</td><td>Small (pencil/straw)</td></tr>
-      <tr><td>Shrinkage</td><td>10–30%</td><td class="highlight-row">30–50%</td><td>50–70%</td></tr>
-      <tr><td>Frizz tendency</td><td>Low–medium</td><td class="highlight-row">Medium–high</td><td>High</td></tr>
-      <tr><td>Product weight</td><td>Lightweight</td><td class="highlight-row">Medium</td><td>Medium–heavy</td></tr>
-      <tr><td>Deep conditioning</td><td>Every 2 weeks</td><td class="highlight-row">Weekly</td><td>Weekly–twice/week</td></tr>
-      <tr><td>Styling technique</td><td>Rake or scrunch</td><td class="highlight-row">Scrunch + plop</td><td>Shingling or praying hands</td></tr>
+      <tr><td data-label="Trait">Curl diameter</td><td data-label="3A">Large (sidewalk chalk)</td><td class="highlight-row" data-label="3B">Medium (marker)</td><td data-label="3C">Small (pencil/straw)</td></tr>
+      <tr><td data-label="Trait">Shrinkage</td><td data-label="3A">10–30%</td><td class="highlight-row" data-label="3B">30–50%</td><td data-label="3C">50–70%</td></tr>
+      <tr><td data-label="Trait">Frizz tendency</td><td data-label="3A">Low–medium</td><td class="highlight-row" data-label="3B">Medium–high</td><td data-label="3C">High</td></tr>
+      <tr><td data-label="Trait">Product weight</td><td data-label="3A">Lightweight</td><td class="highlight-row" data-label="3B">Medium</td><td data-label="3C">Medium–heavy</td></tr>
+      <tr><td data-label="Trait">Deep conditioning</td><td data-label="3A">Every 2 weeks</td><td class="highlight-row" data-label="3B">Weekly</td><td data-label="3C">Weekly–twice/week</td></tr>
+      <tr><td data-label="Trait">Styling technique</td><td data-label="3A">Rake or scrunch</td><td class="highlight-row" data-label="3B">Scrunch + plop</td><td data-label="3C">Shingling or praying hands</td></tr>
     </tbody>
   </table>
   <p>See our full <a href="/blog/3b-vs-3c-curls.html">3B vs 3C comparison guide</a> for a deeper breakdown of these two types.</p>

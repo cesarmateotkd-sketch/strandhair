@@ -158,6 +158,19 @@ footer a{color:rgba(255,255,255,.5);text-decoration:none;}
 .skip-link{position:absolute;left:-9999px;top:auto;}
 .skip-link:focus{position:static;display:block;padding:8px;background:#3D2B1F;color:#FAF7F2;}
 </style>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -235,7 +248,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <p>You may have seen the term LCO — Liquid, Cream, Oil — which is simply the LOC method with the cream and oil steps swapped. This is not a mistake. For some hair types, LCO delivers better results than LOC. Here's how to choose:</p>
 
-  <table class="comparison-table">
+  <table class="m-stack comparison-table">
     <thead>
       <tr>
         <th>Method</th>
@@ -246,16 +259,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </thead>
     <tbody>
       <tr>
-        <td><strong>LOC</strong></td>
-        <td>Liquid → Oil → Cream</td>
-        <td>High porosity hair (Types 4B, 4C, damaged or processed hair)</td>
-        <td>Oil seals moisture in immediately before the cream adds the final protective layer. Critical for hair that loses moisture very quickly.</td>
+        <td data-label="Method"><strong>LOC</strong></td>
+        <td data-label="Order">Liquid → Oil → Cream</td>
+        <td data-label="Best For">High porosity hair (Types 4B, 4C, damaged or processed hair)</td>
+        <td data-label="Why">Oil seals moisture in immediately before the cream adds the final protective layer. Critical for hair that loses moisture very quickly.</td>
       </tr>
       <tr>
-        <td><strong>LCO</strong></td>
-        <td>Liquid → Cream → Oil</td>
-        <td>Low to medium porosity hair (Types 2C, 3A, 3B, 4A)</td>
-        <td>Cream helps moisture penetrate before the oil seals over it. Better for hair that doesn't absorb products easily — the lighter cream gets in, then the oil locks it.</td>
+        <td data-label="Method"><strong>LCO</strong></td>
+        <td data-label="Order">Liquid → Cream → Oil</td>
+        <td data-label="Best For">Low to medium porosity hair (Types 2C, 3A, 3B, 4A)</td>
+        <td data-label="Why">Cream helps moisture penetrate before the oil seals over it. Better for hair that doesn't absorb products easily — the lighter cream gets in, then the oil locks it.</td>
       </tr>
     </tbody>
   </table>

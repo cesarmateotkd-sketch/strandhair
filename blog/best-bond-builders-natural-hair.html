@@ -105,6 +105,19 @@ var _aTimer=setTimeout(_loadAnalytics,30000);
   });
 })();
 </script>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <style>
@@ -352,12 +365,12 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
     <h2>Bond Builders vs. Protein Treatments vs. Deep Conditioners</h2>
 
     <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:28px 0;">
-    <table style="margin:0;">
+    <table style="margin:0;" class="m-stack">
       <thead><tr><th>Treatment</th><th>Where It Works</th><th>What It Fixes</th><th>Limitations</th></tr></thead>
       <tbody>
-        <tr><td><strong>Bond builder</strong></td><td>Inside the cortex</td><td>Reconnects broken disulfide bonds; rebuilds internal structure</td><td>Does not add moisture; not a conditioner</td></tr>
-        <tr><td><strong>Protein treatment</strong></td><td>Cuticle layer + outer cortex</td><td>Fills gaps in the cuticle; temporarily hardens and reinforces the strand surface</td><td>Cannot reach broken bonds in the cortex; causes stiffness if overused</td></tr>
-        <tr><td><strong>Deep conditioner</strong></td><td>Cuticle layer</td><td>Restores moisture; smooths the cuticle; improves slip and softness</td><td>Does not repair structural damage; moisture is temporary</td></tr>
+        <tr><td data-label="Treatment"><strong>Bond builder</strong></td><td data-label="Where It Works">Inside the cortex</td><td data-label="What It Fixes">Reconnects broken disulfide bonds; rebuilds internal structure</td><td data-label="Limitations">Does not add moisture; not a conditioner</td></tr>
+        <tr><td data-label="Treatment"><strong>Protein treatment</strong></td><td data-label="Where It Works">Cuticle layer + outer cortex</td><td data-label="What It Fixes">Fills gaps in the cuticle; temporarily hardens and reinforces the strand surface</td><td data-label="Limitations">Cannot reach broken bonds in the cortex; causes stiffness if overused</td></tr>
+        <tr><td data-label="Treatment"><strong>Deep conditioner</strong></td><td data-label="Where It Works">Cuticle layer</td><td data-label="What It Fixes">Restores moisture; smooths the cuticle; improves slip and softness</td><td data-label="Limitations">Does not repair structural damage; moisture is temporary</td></tr>
       </tbody>
     </table>
     </div>
@@ -473,15 +486,15 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
     <p>The wet strand test described above is the most reliable home assessment, but the pattern of damage gives additional clues:</p>
 
     <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:28px 0;">
-    <table style="margin:0;">
+    <table style="margin:0;" class="m-stack">
       <thead><tr><th>Symptom</th><th>Likely Cause</th><th>Recommended Treatment</th></tr></thead>
       <tbody>
-        <tr><td>Hair stretches excessively, returns slowly or not at all</td><td>Bond damage (cortex)</td><td>Bond builder (Olaplex No. 3, K18)</td></tr>
-        <tr><td>Hair breaks immediately with no stretch</td><td>Protein deficiency</td><td>Protein treatment; add bond builder if no improvement</td></tr>
-        <tr><td>Hair feels dry, rough, frizzy but elastic</td><td>Moisture deficit, cuticle damage</td><td>Deep conditioner; <a href="/blog/best-hair-steamer-natural-hair.html">steam treatment</a></td></tr>
-        <tr><td>Hair feels stiff, hard, tangles easily</td><td>Protein overload</td><td>Deep conditioning; reduce protein frequency</td></tr>
-        <tr><td>Hair sheds excessively (60+ strands/day with bulb attached)</td><td>Scalp / follicle issue</td><td>Scalp care; see dermatologist; not a bond or protein issue</td></tr>
-        <tr><td>Breakage mid-shaft, no pattern to location</td><td>Mechanical damage, bond accumulation</td><td>Bond builder + reduce manipulation</td></tr>
+        <tr><td data-label="Symptom">Hair stretches excessively, returns slowly or not at all</td><td data-label="Likely Cause">Bond damage (cortex)</td><td data-label="Recommended Treatment">Bond builder (Olaplex No. 3, K18)</td></tr>
+        <tr><td data-label="Symptom">Hair breaks immediately with no stretch</td><td data-label="Likely Cause">Protein deficiency</td><td data-label="Recommended Treatment">Protein treatment; add bond builder if no improvement</td></tr>
+        <tr><td data-label="Symptom">Hair feels dry, rough, frizzy but elastic</td><td data-label="Likely Cause">Moisture deficit, cuticle damage</td><td data-label="Recommended Treatment">Deep conditioner; <a href="/blog/best-hair-steamer-natural-hair.html">steam treatment</a></td></tr>
+        <tr><td data-label="Symptom">Hair feels stiff, hard, tangles easily</td><td data-label="Likely Cause">Protein overload</td><td data-label="Recommended Treatment">Deep conditioning; reduce protein frequency</td></tr>
+        <tr><td data-label="Symptom">Hair sheds excessively (60+ strands/day with bulb attached)</td><td data-label="Likely Cause">Scalp / follicle issue</td><td data-label="Recommended Treatment">Scalp care; see dermatologist; not a bond or protein issue</td></tr>
+        <tr><td data-label="Symptom">Breakage mid-shaft, no pattern to location</td><td data-label="Likely Cause">Mechanical damage, bond accumulation</td><td data-label="Recommended Treatment">Bond builder + reduce manipulation</td></tr>
       </tbody>
     </table>
     </div>

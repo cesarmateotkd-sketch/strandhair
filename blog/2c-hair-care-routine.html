@@ -198,6 +198,19 @@ footer { background: var(--espresso); padding: 48px 48px 28px; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
 }
 </style>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -232,31 +245,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>What Is 2C Hair?</h2>
   <p>Type 2C is the most defined and voluminous of the three wavy subtypes. Where 2A hair forms loose beach waves mostly at the ends, and 2B forms a more consistent S-wave pattern, <strong>2C waves begin close to the root and form tight, well-defined S-waves that can start to spiral at the ends</strong>. 2C is the border between wavy and curly &mdash; some 2C wavies find their hair classified as 3A depending on the day, humidity, and how well they work the pattern.</p>
 
-  <table class="compare-table" aria-label="Wavy hair type comparison">
+  <table class="m-stack compare-table" aria-label="Wavy hair type comparison">
     <thead>
       <tr><th>Type</th><th>Wave Pattern</th><th>Starts From</th><th>Frizz Tendency</th><th>Product Weight</th></tr>
     </thead>
     <tbody>
       <tr>
-        <td>2A</td>
-        <td>Loose S or slight bend</td>
-        <td>Mid-length or ends</td>
-        <td>Low</td>
-        <td>Ultra-light</td>
+        <td data-label="Type">2A</td>
+        <td data-label="Wave Pattern">Loose S or slight bend</td>
+        <td data-label="Starts From">Mid-length or ends</td>
+        <td data-label="Frizz Tendency">Low</td>
+        <td data-label="Product Weight">Ultra-light</td>
       </tr>
       <tr>
-        <td>2B</td>
-        <td>Defined S-wave</td>
-        <td>Mid-length</td>
-        <td>Moderate</td>
-        <td>Light</td>
+        <td data-label="Type">2B</td>
+        <td data-label="Wave Pattern">Defined S-wave</td>
+        <td data-label="Starts From">Mid-length</td>
+        <td data-label="Frizz Tendency">Moderate</td>
+        <td data-label="Product Weight">Light</td>
       </tr>
       <tr class="highlight">
-        <td>2C</td>
-        <td>Tight S-wave, loose spirals at ends</td>
-        <td>Near root</td>
-        <td>High</td>
-        <td>Light to medium</td>
+        <td data-label="Type">2C</td>
+        <td data-label="Wave Pattern">Tight S-wave, loose spirals at ends</td>
+        <td data-label="Starts From">Near root</td>
+        <td data-label="Frizz Tendency">High</td>
+        <td data-label="Product Weight">Light to medium</td>
       </tr>
     </tbody>
   </table>

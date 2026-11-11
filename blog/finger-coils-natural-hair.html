@@ -195,6 +195,19 @@ footer ul a:hover{color:var(--caramel);}
   .footer-bottom{flex-direction:column;}
 }
 </style>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -245,14 +258,14 @@ footer ul a:hover{color:var(--caramel);}
 
   <h2>Finger Coils vs. Wash-and-Go vs. Twist-Out</h2>
   <p>All three are wet-set styles, but they differ in effort, longevity, and the look they produce. Understanding the tradeoffs helps you choose the right style for your day — or week.</p>
-  <table class="compare-table" role="table">
+  <table class="m-stack compare-table" role="table">
     <thead>
       <tr><th>Style</th><th>Effort</th><th>Longevity</th><th>Best for</th><th>Shrinkage</th></tr>
     </thead>
     <tbody>
-      <tr><td>Wash-and-go</td><td>Low</td><td>3–5 days</td><td>3A–4A; everyday wear</td><td>High</td></tr>
-      <tr class="highlight-row"><td>Finger coils</td><td>Medium–high</td><td>5–10 days</td><td>3C–4C; special occasions or longer wear</td><td>Medium</td></tr>
-      <tr><td>Twist-out</td><td>Medium</td><td>5–7 days</td><td>3B–4C; stretched, fuller look</td><td>Low</td></tr>
+      <tr><td data-label="Style">Wash-and-go</td><td data-label="Effort">Low</td><td data-label="Longevity">3–5 days</td><td data-label="Best for">3A–4A; everyday wear</td><td data-label="Shrinkage">High</td></tr>
+      <tr class="highlight-row"><td data-label="Style">Finger coils</td><td data-label="Effort">Medium–high</td><td data-label="Longevity">5–10 days</td><td data-label="Best for">3C–4C; special occasions or longer wear</td><td data-label="Shrinkage">Medium</td></tr>
+      <tr><td data-label="Style">Twist-out</td><td data-label="Effort">Medium</td><td data-label="Longevity">5–7 days</td><td data-label="Best for">3B–4C; stretched, fuller look</td><td data-label="Shrinkage">Low</td></tr>
     </tbody>
   </table>
   <p>The key difference: a wash-and-go follows your natural curl pattern, a twist-out stretches it, and finger coils <em>redefine</em> it by wrapping each section into a uniform spiral. See our full <a href="/blog/wash-and-go-natural-hair.html">wash-and-go guide</a> and <a href="/blog/twist-out-natural-hair.html">twist-out guide</a> for comparison.</p>

@@ -105,6 +105,19 @@ var _aTimer=setTimeout(_loadAnalytics,30000);
   });
 })();
 </script>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <style>
@@ -353,13 +366,13 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <h2>Safe Temperature Ranges by Texture</h2>
 
-    <table>
+    <table class="m-stack">
       <thead><tr><th>Hair Profile</th><th>Blow-Dry</th><th>Flat Iron / Wand</th><th>Notes</th></tr></thead>
       <tbody>
-        <tr><td><strong>Fine, color-treated, or high porosity</strong></td><td>Low&ndash;medium</td><td>250&ndash;300&deg;F</td><td>Lowest damage threshold; already-lifted cuticle transmits heat faster</td></tr>
-        <tr><td><strong>Medium texture, healthy</strong></td><td>Medium</td><td>300&ndash;350&deg;F</td><td>The sweet spot for most naturals</td></tr>
-        <tr><td><strong>Coarse, dense, resistant</strong></td><td>Medium&ndash;high</td><td>350&ndash;400&deg;F max</td><td>One slow pass; never exceed 400&deg;F</td></tr>
-        <tr><td><strong>Previously heat-damaged</strong></td><td>Low</td><td>Avoid direct heat</td><td>Damaged keratin denatures further at lower temps</td></tr>
+        <tr><td data-label="Hair Profile"><strong>Fine, color-treated, or high porosity</strong></td><td data-label="Blow-Dry">Low&ndash;medium</td><td data-label="Flat Iron / Wand">250&ndash;300&deg;F</td><td data-label="Notes">Lowest damage threshold; already-lifted cuticle transmits heat faster</td></tr>
+        <tr><td data-label="Hair Profile"><strong>Medium texture, healthy</strong></td><td data-label="Blow-Dry">Medium</td><td data-label="Flat Iron / Wand">300&ndash;350&deg;F</td><td data-label="Notes">The sweet spot for most naturals</td></tr>
+        <tr><td data-label="Hair Profile"><strong>Coarse, dense, resistant</strong></td><td data-label="Blow-Dry">Medium&ndash;high</td><td data-label="Flat Iron / Wand">350&ndash;400&deg;F max</td><td data-label="Notes">One slow pass; never exceed 400&deg;F</td></tr>
+        <tr><td data-label="Hair Profile"><strong>Previously heat-damaged</strong></td><td data-label="Blow-Dry">Low</td><td data-label="Flat Iron / Wand">Avoid direct heat</td><td data-label="Notes">Damaged keratin denatures further at lower temps</td></tr>
       </tbody>
     </table>
 

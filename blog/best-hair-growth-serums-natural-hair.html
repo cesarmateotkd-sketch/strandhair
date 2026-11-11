@@ -106,6 +106,19 @@ var _aTimer=setTimeout(_loadAnalytics,30000);
   });
 })();
 </script>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <style>
@@ -355,15 +368,15 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
     <h2>Ingredients That Actually Work</h2>
 
     <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:28px 0;">
-    <table id="evidence-table" style="margin:0;">
+    <table id="evidence-table" style="margin:0;" class="m-stack">
       <thead><tr><th>Ingredient</th><th>Evidence Level</th><th>Mechanism</th><th>What to Expect</th></tr></thead>
       <tbody>
-        <tr><td><strong>Rosemary oil</strong></td><td>Strong (RCT)</td><td>Scalp circulation + DHT inhibition</td><td>Hair count parity with 2% minoxidil at 6 months</td></tr>
-        <tr><td><strong>Caffeine</strong></td><td>Moderate (in vitro + clinical)</td><td>Blocks 5-alpha-reductase, extends anagen</td><td>Reduced shedding, extended growth phase</td></tr>
-        <tr><td><strong>Peptides</strong> (GHK-Cu, biotinoyl tripeptide)</td><td>Moderate (clinical)</td><td>Stimulates KGF and IGF-1</td><td>Improved density, reduced miniaturization</td></tr>
-        <tr><td><strong>Peppermint oil</strong></td><td>Limited (animal + in vitro)</td><td>Vasodilation, IGF-1 increase</td><td>New hair count increase in animal models; human data limited</td></tr>
-        <tr><td><strong>Biotin (topical)</strong></td><td>Weak</td><td>No established topical absorption to follicle</td><td>Minimal benefit unless biotin-deficient</td></tr>
-        <tr><td><strong>Castor oil</strong></td><td>Anecdotal</td><td>Scalp occlusion + ricinoleic acid</td><td>No clinical evidence but low-risk barrier support</td></tr>
+        <tr><td data-label="Ingredient"><strong>Rosemary oil</strong></td><td data-label="Evidence Level">Strong (RCT)</td><td data-label="Mechanism">Scalp circulation + DHT inhibition</td><td data-label="What to Expect">Hair count parity with 2% minoxidil at 6 months</td></tr>
+        <tr><td data-label="Ingredient"><strong>Caffeine</strong></td><td data-label="Evidence Level">Moderate (in vitro + clinical)</td><td data-label="Mechanism">Blocks 5-alpha-reductase, extends anagen</td><td data-label="What to Expect">Reduced shedding, extended growth phase</td></tr>
+        <tr><td data-label="Ingredient"><strong>Peptides</strong> (GHK-Cu, biotinoyl tripeptide)</td><td data-label="Evidence Level">Moderate (clinical)</td><td data-label="Mechanism">Stimulates KGF and IGF-1</td><td data-label="What to Expect">Improved density, reduced miniaturization</td></tr>
+        <tr><td data-label="Ingredient"><strong>Peppermint oil</strong></td><td data-label="Evidence Level">Limited (animal + in vitro)</td><td data-label="Mechanism">Vasodilation, IGF-1 increase</td><td data-label="What to Expect">New hair count increase in animal models; human data limited</td></tr>
+        <tr><td data-label="Ingredient"><strong>Biotin (topical)</strong></td><td data-label="Evidence Level">Weak</td><td data-label="Mechanism">No established topical absorption to follicle</td><td data-label="What to Expect">Minimal benefit unless biotin-deficient</td></tr>
+        <tr><td data-label="Ingredient"><strong>Castor oil</strong></td><td data-label="Evidence Level">Anecdotal</td><td data-label="Mechanism">Scalp occlusion + ricinoleic acid</td><td data-label="What to Expect">No clinical evidence but low-risk barrier support</td></tr>
       </tbody>
     </table>
     </div>

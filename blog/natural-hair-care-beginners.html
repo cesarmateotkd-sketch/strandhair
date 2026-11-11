@@ -198,6 +198,19 @@ footer{background:var(--espresso);color:#C4A882;padding:48px 40px 32px;margin-to
 .footer-legal a{color:#9B8070}
 @media(max-width:640px){footer{padding:40px 20px 28px}}
 </style>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCVJS3MM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -260,14 +273,14 @@ footer{background:var(--espresso);color:#C4A882;padding:48px 40px 32px;margin-to
   <h3>Porosity</h3>
   <p>Porosity describes how easily your hair absorbs and retains moisture — it's determined by the state of your cuticle layer. This matters more for product selection than hair type does.</p>
   <div class="table-wrap">
-    <table>
+    <table class="m-stack">
       <thead>
         <tr><th>Porosity</th><th>Cuticle state</th><th>Signs</th><th>Product approach</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Low</strong></td><td>Tightly closed, flat</td><td>Products sit on hair; takes long to get wet and dry; resistant to moisture</td><td>Lightweight products, heat to open cuticle, avoid heavy butters</td></tr>
-        <tr><td><strong>Medium</strong></td><td>Slightly raised, healthy</td><td>Absorbs and retains moisture easily; balanced behavior</td><td>Most products work; standard LOC method</td></tr>
-        <tr><td><strong>High</strong></td><td>Open or damaged</td><td>Absorbs moisture fast, loses it fast; frizzy, dry-feeling quickly after styling</td><td>Heavier products, protein regularly, seal with oils and butters</td></tr>
+        <tr><td data-label="Porosity"><strong>Low</strong></td><td data-label="Cuticle state">Tightly closed, flat</td><td data-label="Signs">Products sit on hair; takes long to get wet and dry; resistant to moisture</td><td data-label="Product approach">Lightweight products, heat to open cuticle, avoid heavy butters</td></tr>
+        <tr><td data-label="Porosity"><strong>Medium</strong></td><td data-label="Cuticle state">Slightly raised, healthy</td><td data-label="Signs">Absorbs and retains moisture easily; balanced behavior</td><td data-label="Product approach">Most products work; standard LOC method</td></tr>
+        <tr><td data-label="Porosity"><strong>High</strong></td><td data-label="Cuticle state">Open or damaged</td><td data-label="Signs">Absorbs moisture fast, loses it fast; frizzy, dry-feeling quickly after styling</td><td data-label="Product approach">Heavier products, protein regularly, seal with oils and butters</td></tr>
       </tbody>
     </table>
   </div>

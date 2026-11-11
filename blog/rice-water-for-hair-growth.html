@@ -107,6 +107,19 @@ var _aTimer=setTimeout(_loadAnalytics,30000);
   });
 })();
 </script>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <style>
@@ -320,15 +333,15 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
 
     <h2>How Often to Use Rice Water by Hair Type</h2>
 
-    <table>
+    <table class="m-stack">
       <thead><tr><th>Hair Type / Porosity</th><th>Rice Water Type</th><th>Frequency</th><th>Leave-on Time</th></tr></thead>
       <tbody>
-        <tr><td>Low porosity (any type)</td><td>Plain only</td><td>Once a month</td><td>5 minutes</td></tr>
-        <tr><td>Normal porosity, type 3</td><td>Plain or fermented</td><td>Every 2&ndash;3 weeks</td><td>10 minutes</td></tr>
-        <tr><td>Normal porosity, type 4</td><td>Plain first; fermented if tolerated</td><td>Every 3&ndash;4 weeks</td><td>10&ndash;15 minutes</td></tr>
-        <tr><td>High porosity, type 3</td><td>Fermented (diluted)</td><td>Every 2 weeks</td><td>15&ndash;20 minutes</td></tr>
-        <tr><td>High porosity, type 4</td><td>Plain; fermented cautiously</td><td>Every 3&ndash;4 weeks</td><td>10&ndash;15 minutes</td></tr>
-        <tr><td>Color-treated / relaxed</td><td>Plain first</td><td>Every 3&ndash;4 weeks</td><td>5&ndash;10 minutes</td></tr>
+        <tr><td data-label="Hair Type / Porosity">Low porosity (any type)</td><td data-label="Rice Water Type">Plain only</td><td data-label="Frequency">Once a month</td><td data-label="Leave-on Time">5 minutes</td></tr>
+        <tr><td data-label="Hair Type / Porosity">Normal porosity, type 3</td><td data-label="Rice Water Type">Plain or fermented</td><td data-label="Frequency">Every 2&ndash;3 weeks</td><td data-label="Leave-on Time">10 minutes</td></tr>
+        <tr><td data-label="Hair Type / Porosity">Normal porosity, type 4</td><td data-label="Rice Water Type">Plain first; fermented if tolerated</td><td data-label="Frequency">Every 3&ndash;4 weeks</td><td data-label="Leave-on Time">10&ndash;15 minutes</td></tr>
+        <tr><td data-label="Hair Type / Porosity">High porosity, type 3</td><td data-label="Rice Water Type">Fermented (diluted)</td><td data-label="Frequency">Every 2 weeks</td><td data-label="Leave-on Time">15&ndash;20 minutes</td></tr>
+        <tr><td data-label="Hair Type / Porosity">High porosity, type 4</td><td data-label="Rice Water Type">Plain; fermented cautiously</td><td data-label="Frequency">Every 3&ndash;4 weeks</td><td data-label="Leave-on Time">10&ndash;15 minutes</td></tr>
+        <tr><td data-label="Hair Type / Porosity">Color-treated / relaxed</td><td data-label="Rice Water Type">Plain first</td><td data-label="Frequency">Every 3&ndash;4 weeks</td><td data-label="Leave-on Time">5&ndash;10 minutes</td></tr>
       </tbody>
     </table>
 

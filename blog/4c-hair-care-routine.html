@@ -193,6 +193,19 @@ footer { background: var(--espresso); padding: 48px 48px 28px; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
 }
 </style>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -231,44 +244,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>4C vs 4A vs 4B: What Makes 4C Different</h2>
   <p>All type 4 textures share the same core challenge &mdash; a tightly coiled strand that cannot distribute scalp sebum from root to tip &mdash; but 4C sits at the extreme end of the spectrum in ways that change the routine meaningfully.</p>
 
-  <table class="type-table" aria-label="Type 4 hair comparison">
+  <table class="m-stack type-table" aria-label="Type 4 hair comparison">
     <thead><tr><th>Trait</th><th>4A</th><th>4B</th><th class="highlight">4C</th></tr></thead>
     <tbody>
       <tr>
-        <td>Coil pattern</td>
-        <td>Defined S-coil</td>
-        <td>Z-angle zigzag</td>
-        <td class="highlight">Very tight Z or no visible pattern</td>
+        <td data-label="Trait">Coil pattern</td>
+        <td data-label="4A">Defined S-coil</td>
+        <td data-label="4B">Z-angle zigzag</td>
+        <td class="highlight" data-label="4C">Very tight Z or no visible pattern</td>
       </tr>
       <tr>
-        <td>Shrinkage</td>
-        <td>60&ndash;70%</td>
-        <td>70&ndash;75%</td>
-        <td class="highlight">70&ndash;80%</td>
+        <td data-label="Trait">Shrinkage</td>
+        <td data-label="4A">60&ndash;70%</td>
+        <td data-label="4B">70&ndash;75%</td>
+        <td class="highlight" data-label="4C">70&ndash;80%</td>
       </tr>
       <tr>
-        <td>Natural definition</td>
-        <td>High on wash day</td>
-        <td>Low; needs styling</td>
-        <td class="highlight">Minimal; needs manipulation</td>
+        <td data-label="Trait">Natural definition</td>
+        <td data-label="4A">High on wash day</td>
+        <td data-label="4B">Low; needs styling</td>
+        <td class="highlight" data-label="4C">Minimal; needs manipulation</td>
       </tr>
       <tr>
-        <td>Strand fragility</td>
-        <td>Moderate</td>
-        <td>High</td>
-        <td class="highlight">Highest</td>
+        <td data-label="Trait">Strand fragility</td>
+        <td data-label="4A">Moderate</td>
+        <td data-label="4B">High</td>
+        <td class="highlight" data-label="4C">Highest</td>
       </tr>
       <tr>
-        <td>Ideal sealant weight</td>
-        <td>Light&ndash;medium cream</td>
-        <td>Medium&ndash;heavy cream</td>
-        <td class="highlight">Heavy butter or thick cream</td>
+        <td data-label="Trait">Ideal sealant weight</td>
+        <td data-label="4A">Light&ndash;medium cream</td>
+        <td data-label="4B">Medium&ndash;heavy cream</td>
+        <td class="highlight" data-label="4C">Heavy butter or thick cream</td>
       </tr>
       <tr>
-        <td>Wash-and-go result</td>
-        <td>Defined coils</td>
-        <td>Volume, soft puff</td>
-        <td class="highlight">Full puff, minimal definition</td>
+        <td data-label="Trait">Wash-and-go result</td>
+        <td data-label="4A">Defined coils</td>
+        <td data-label="4B">Volume, soft puff</td>
+        <td class="highlight" data-label="4C">Full puff, minimal definition</td>
       </tr>
     </tbody>
   </table>

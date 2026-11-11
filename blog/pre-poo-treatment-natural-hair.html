@@ -192,6 +192,19 @@ footer { background: var(--espresso); padding: 48px 48px 28px; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
 }
 </style>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -242,34 +255,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Oil Pre-Poo vs Conditioner Pre-Poo</h2>
   <p>The two main types of pre-poo work differently and suit different hair needs. Many naturals use both together.</p>
 
-  <table class="type-table" aria-label="Oil vs conditioner pre-poo comparison">
+  <table class="m-stack type-table" aria-label="Oil vs conditioner pre-poo comparison">
     <thead>
       <tr><th>Type</th><th>Primary Benefit</th><th>Best For</th><th>Key Limitation</th></tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>Oil pre-poo</strong><br>(coconut, olive, avocado)</td>
-        <td>Reduces hygral fatigue; limits protein loss during washing</td>
-        <td>High-porosity hair, frequent washers, color-treated hair</td>
-        <td>Less effective on low-porosity hair where oil sits on surface</td>
+        <td data-label="Type"><strong>Oil pre-poo</strong><br>(coconut, olive, avocado)</td>
+        <td data-label="Primary Benefit">Reduces hygral fatigue; limits protein loss during washing</td>
+        <td data-label="Best For">High-porosity hair, frequent washers, color-treated hair</td>
+        <td data-label="Key Limitation">Less effective on low-porosity hair where oil sits on surface</td>
       </tr>
       <tr>
-        <td><strong>Conditioner pre-poo</strong></td>
-        <td>Adds slip for detangling; deposits moisture before shampoo strips it</td>
-        <td>Low-porosity hair, fine hair, heavy tangling</td>
-        <td>Less protection against hygral fatigue than penetrating oils</td>
+        <td data-label="Type"><strong>Conditioner pre-poo</strong></td>
+        <td data-label="Primary Benefit">Adds slip for detangling; deposits moisture before shampoo strips it</td>
+        <td data-label="Best For">Low-porosity hair, fine hair, heavy tangling</td>
+        <td data-label="Key Limitation">Less protection against hygral fatigue than penetrating oils</td>
       </tr>
       <tr>
-        <td><strong>Oil + conditioner blend</strong></td>
-        <td>Both hygral protection and maximum slip</td>
-        <td>4B/4C hair, very dry or high-porosity hair, length goals</td>
-        <td>Heavier application; requires thorough shampooing to remove</td>
+        <td data-label="Type"><strong>Oil + conditioner blend</strong></td>
+        <td data-label="Primary Benefit">Both hygral protection and maximum slip</td>
+        <td data-label="Best For">4B/4C hair, very dry or high-porosity hair, length goals</td>
+        <td data-label="Key Limitation">Heavier application; requires thorough shampooing to remove</td>
       </tr>
       <tr>
-        <td><strong>Butter-based pre-poo</strong><br>(shea, mango, kokum)</td>
-        <td>Heavy occlusive seal; maximum moisture retention</td>
-        <td>4C hair, extremely dry or high-porosity ends</td>
-        <td>Requires sulfate shampoo to fully remove; can feel heavy on fine hair</td>
+        <td data-label="Type"><strong>Butter-based pre-poo</strong><br>(shea, mango, kokum)</td>
+        <td data-label="Primary Benefit">Heavy occlusive seal; maximum moisture retention</td>
+        <td data-label="Best For">4C hair, extremely dry or high-porosity ends</td>
+        <td data-label="Key Limitation">Requires sulfate shampoo to fully remove; can feel heavy on fine hair</td>
       </tr>
     </tbody>
   </table>
@@ -318,52 +331,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <h2>Pre-Poo by Hair Type</h2>
-  <table class="type-table" aria-label="Pre-poo recommendations by hair type">
+  <table class="m-stack type-table" aria-label="Pre-poo recommendations by hair type">
     <thead>
       <tr><th>Hair Type</th><th>Best Pre-Poo Type</th><th>Timing</th><th>Notes</th></tr>
     </thead>
     <tbody>
       <tr>
-        <td>2A &ndash; 2C (Wavy)</td>
-        <td>Light conditioner or diluted coconut oil (1:2 with water)</td>
-        <td>30&ndash;45 minutes</td>
-        <td>Avoid heavy oils; they weigh down wave pattern and are hard to wash out</td>
+        <td data-label="Hair Type">2A &ndash; 2C (Wavy)</td>
+        <td data-label="Best Pre-Poo Type">Light conditioner or diluted coconut oil (1:2 with water)</td>
+        <td data-label="Timing">30&ndash;45 minutes</td>
+        <td data-label="Notes">Avoid heavy oils; they weigh down wave pattern and are hard to wash out</td>
       </tr>
       <tr>
-        <td>3A &ndash; 3B (Loose curls)</td>
-        <td>Light conditioner or coconut oil</td>
-        <td>30 min &ndash; 1 hour</td>
-        <td>Focus application on ends; roots rarely need pre-poo if scalp is not dry</td>
+        <td data-label="Hair Type">3A &ndash; 3B (Loose curls)</td>
+        <td data-label="Best Pre-Poo Type">Light conditioner or coconut oil</td>
+        <td data-label="Timing">30 min &ndash; 1 hour</td>
+        <td data-label="Notes">Focus application on ends; roots rarely need pre-poo if scalp is not dry</td>
       </tr>
       <tr>
-        <td>3C &ndash; 4A (Tight curls / coils)</td>
-        <td>Coconut or olive oil, or conditioner blend</td>
-        <td>1&ndash;2 hours or overnight</td>
-        <td>Works on whole strand root to end; detangle during pre-poo for best results</td>
+        <td data-label="Hair Type">3C &ndash; 4A (Tight curls / coils)</td>
+        <td data-label="Best Pre-Poo Type">Coconut or olive oil, or conditioner blend</td>
+        <td data-label="Timing">1&ndash;2 hours or overnight</td>
+        <td data-label="Notes">Works on whole strand root to end; detangle during pre-poo for best results</td>
       </tr>
       <tr>
-        <td>4B (Z-pattern coils)</td>
-        <td>Oil blend (coconut + castor) or conditioner + oil</td>
-        <td>Overnight preferred</td>
-        <td>Generous on ends; the Z-pattern makes natural oil distribution from scalp difficult, leaving ends driest</td>
+        <td data-label="Hair Type">4B (Z-pattern coils)</td>
+        <td data-label="Best Pre-Poo Type">Oil blend (coconut + castor) or conditioner + oil</td>
+        <td data-label="Timing">Overnight preferred</td>
+        <td data-label="Notes">Generous on ends; the Z-pattern makes natural oil distribution from scalp difficult, leaving ends driest</td>
       </tr>
       <tr>
-        <td>4C (Tight Z-coil)</td>
-        <td>Oil + conditioner blend, or butter pre-poo for very dry hair</td>
-        <td>Overnight preferred</td>
-        <td>Use sulfate shampoo to fully remove butter-based pre-poo; do not skip clarifying</td>
+        <td data-label="Hair Type">4C (Tight Z-coil)</td>
+        <td data-label="Best Pre-Poo Type">Oil + conditioner blend, or butter pre-poo for very dry hair</td>
+        <td data-label="Timing">Overnight preferred</td>
+        <td data-label="Notes">Use sulfate shampoo to fully remove butter-based pre-poo; do not skip clarifying</td>
       </tr>
       <tr>
-        <td>Low porosity (any type)</td>
-        <td>Conditioner pre-poo; diluted light oils only</td>
-        <td>30 min with heat (hooded dryer or steamer)</td>
-        <td>Heavy oils on low-porosity hair sit on the surface, cause buildup, and resist washing out</td>
+        <td data-label="Hair Type">Low porosity (any type)</td>
+        <td data-label="Best Pre-Poo Type">Conditioner pre-poo; diluted light oils only</td>
+        <td data-label="Timing">30 min with heat (hooded dryer or steamer)</td>
+        <td data-label="Notes">Heavy oils on low-porosity hair sit on the surface, cause buildup, and resist washing out</td>
       </tr>
       <tr>
-        <td>High porosity (any type)</td>
-        <td>Coconut or olive oil, overnight</td>
-        <td>Overnight</td>
-        <td>High porosity means rapid water absorption and therefore highest hygral fatigue risk &mdash; most benefits from oil pre-poo</td>
+        <td data-label="Hair Type">High porosity (any type)</td>
+        <td data-label="Best Pre-Poo Type">Coconut or olive oil, overnight</td>
+        <td data-label="Timing">Overnight</td>
+        <td data-label="Notes">High porosity means rapid water absorption and therefore highest hygral fatigue risk &mdash; most benefits from oil pre-poo</td>
       </tr>
     </tbody>
   </table>

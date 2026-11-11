@@ -105,6 +105,19 @@ var _aTimer=setTimeout(_loadAnalytics,30000);
   });
 })();
 </script>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <style>
@@ -449,14 +462,14 @@ footer{background:var(--espresso);color:rgba(250,247,242,.7);padding:48px 24px;}
     <h2>Steam vs. Heat Cap vs. Plastic Cap: What&rsquo;s Actually Different</h2>
 
     <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:28px 0;">
-    <table style="margin:0;">
+    <table style="margin:0;" class="m-stack">
       <thead><tr><th>Method</th><th>Heat Type</th><th>Moisture Added</th><th>Cuticle Opening</th><th>Best For</th></tr></thead>
       <tbody>
-        <tr><td><strong>Hair steamer</strong></td><td>Moist heat</td><td>Yes &mdash; directly</td><td>Strong</td><td>Low porosity, maximum absorption</td></tr>
-        <tr><td><strong>Heat cap / thermal cap</strong></td><td>Dry heat</td><td>No</td><td>Moderate</td><td>Normal porosity; budget option</td></tr>
-        <tr><td><strong>Plastic cap + body heat</strong></td><td>Mild moist (trapped)</td><td>Minimal</td><td>Weak</td><td>High porosity; normal porosity maintenance</td></tr>
-        <tr><td><strong>Hot towel + plastic cap</strong></td><td>Moist heat (short-lived)</td><td>Yes (fades)</td><td>Moderate</td><td>Budget alternative to steamer</td></tr>
-        <tr><td><strong>Hooded dryer</strong></td><td>Dry heat</td><td>No &mdash; dehydrating</td><td>Moderate (dehydrates)</td><td>Styling, drying &mdash; not conditioning</td></tr>
+        <tr><td data-label="Method"><strong>Hair steamer</strong></td><td data-label="Heat Type">Moist heat</td><td data-label="Moisture Added">Yes &mdash; directly</td><td data-label="Cuticle Opening">Strong</td><td data-label="Best For">Low porosity, maximum absorption</td></tr>
+        <tr><td data-label="Method"><strong>Heat cap / thermal cap</strong></td><td data-label="Heat Type">Dry heat</td><td data-label="Moisture Added">No</td><td data-label="Cuticle Opening">Moderate</td><td data-label="Best For">Normal porosity; budget option</td></tr>
+        <tr><td data-label="Method"><strong>Plastic cap + body heat</strong></td><td data-label="Heat Type">Mild moist (trapped)</td><td data-label="Moisture Added">Minimal</td><td data-label="Cuticle Opening">Weak</td><td data-label="Best For">High porosity; normal porosity maintenance</td></tr>
+        <tr><td data-label="Method"><strong>Hot towel + plastic cap</strong></td><td data-label="Heat Type">Moist heat (short-lived)</td><td data-label="Moisture Added">Yes (fades)</td><td data-label="Cuticle Opening">Moderate</td><td data-label="Best For">Budget alternative to steamer</td></tr>
+        <tr><td data-label="Method"><strong>Hooded dryer</strong></td><td data-label="Heat Type">Dry heat</td><td data-label="Moisture Added">No &mdash; dehydrating</td><td data-label="Cuticle Opening">Moderate (dehydrates)</td><td data-label="Best For">Styling, drying &mdash; not conditioning</td></tr>
       </tbody>
     </table>
     </div>

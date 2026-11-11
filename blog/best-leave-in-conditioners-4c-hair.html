@@ -212,6 +212,19 @@ article p.card-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 
   .qp-key{max-width:none;}
 }
 </style>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -352,12 +365,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h2>How to Choose by Porosity</h2>
   <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
-  <table id="porosity-guide" class="growth-table" aria-label="Leave-in conditioner selection by porosity">
+  <table id="porosity-guide" class="m-stack growth-table" aria-label="Leave-in conditioner selection by porosity">
     <thead><tr><th>Porosity</th><th>Best Formula</th><th>Key Ingredients to Look For</th><th>Avoid</th></tr></thead>
     <tbody>
-      <tr><td><strong>High porosity</strong></td><td>Rich cream or butter leave-in</td><td>Proteins, shea butter, avocado oil, glycerin</td><td>Light watery mists alone</td></tr>
-      <tr><td><strong>Low porosity</strong></td><td>Lightweight liquid or mist</td><td>Glycerin, aloe vera, panthenol, lightweight oils</td><td>Heavy butters, silicones, thick creams</td></tr>
-      <tr><td><strong>Medium porosity</strong></td><td>Cream leave-in</td><td>Balanced humectants + emollients + light protein</td><td>Very heavy butter formulas</td></tr>
+      <tr><td data-label="Porosity"><strong>High porosity</strong></td><td data-label="Best Formula">Rich cream or butter leave-in</td><td data-label="Key Ingredients to Look For">Proteins, shea butter, avocado oil, glycerin</td><td data-label="Avoid">Light watery mists alone</td></tr>
+      <tr><td data-label="Porosity"><strong>Low porosity</strong></td><td data-label="Best Formula">Lightweight liquid or mist</td><td data-label="Key Ingredients to Look For">Glycerin, aloe vera, panthenol, lightweight oils</td><td data-label="Avoid">Heavy butters, silicones, thick creams</td></tr>
+      <tr><td data-label="Porosity"><strong>Medium porosity</strong></td><td data-label="Best Formula">Cream leave-in</td><td data-label="Key Ingredients to Look For">Balanced humectants + emollients + light protein</td><td data-label="Avoid">Very heavy butter formulas</td></tr>
     </tbody>
   </table>
   </div>

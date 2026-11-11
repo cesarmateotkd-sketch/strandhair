@@ -198,6 +198,19 @@ footer { background: var(--espresso); padding: 48px 48px 28px; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
 }
 </style>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -240,34 +253,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h2>Dry vs Damp vs Conditioner: Which Is Right for Your Hair?</h2>
 
-  <table class="method-table" aria-label="Detangling method comparison">
+  <table class="m-stack method-table" aria-label="Detangling method comparison">
     <thead>
       <tr><th>Method</th><th>How It Works</th><th>Best For</th><th>Avoid If</th></tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>Dry detangle</strong><br>(before wash day)</td>
-        <td>Detangle completely dry hair, often as part of a <a href="pre-poo-treatment-natural-hair.html" style="color:#8B5E1A;">pre-poo</a>; oil or conditioner provides slip</td>
-        <td>2C–3C hair; removing shed hair before wash day; pre-poo routines</td>
-        <td>4B/4C hair — dry coils are the least elastic and most prone to snapping under tension</td>
+        <td data-label="Method"><strong>Dry detangle</strong><br>(before wash day)</td>
+        <td data-label="How It Works">Detangle completely dry hair, often as part of a <a href="pre-poo-treatment-natural-hair.html" style="color:#8B5E1A;">pre-poo</a>; oil or conditioner provides slip</td>
+        <td data-label="Best For">2C–3C hair; removing shed hair before wash day; pre-poo routines</td>
+        <td data-label="Avoid If">4B/4C hair — dry coils are the least elastic and most prone to snapping under tension</td>
       </tr>
       <tr>
-        <td><strong>Damp detangle</strong><br>(misted, not wet)</td>
-        <td>Hair is lightly misted then coated with leave-in or detangling spray</td>
-        <td>3A–4A who want more elasticity than dry but don&rsquo;t want to do a full wash</td>
-        <td>4C and very high-porosity hair — damp without conditioner gives less slip than expected</td>
+        <td data-label="Method"><strong>Damp detangle</strong><br>(misted, not wet)</td>
+        <td data-label="How It Works">Hair is lightly misted then coated with leave-in or detangling spray</td>
+        <td data-label="Best For">3A–4A who want more elasticity than dry but don&rsquo;t want to do a full wash</td>
+        <td data-label="Avoid If">4C and very high-porosity hair — damp without conditioner gives less slip than expected</td>
       </tr>
       <tr>
-        <td><strong>Under conditioner</strong><br>(in shower)</td>
-        <td>Hair is soaking wet under running conditioner or deep conditioner; maximum slip, maximum elasticity</td>
-        <td>4A–4C hair; anyone with heavy tangling; recommended for wash day</td>
-        <td>Very fine or low-porosity hair that can over-absorb conditioner and become limp</td>
+        <td data-label="Method"><strong>Under conditioner</strong><br>(in shower)</td>
+        <td data-label="How It Works">Hair is soaking wet under running conditioner or deep conditioner; maximum slip, maximum elasticity</td>
+        <td data-label="Best For">4A–4C hair; anyone with heavy tangling; recommended for wash day</td>
+        <td data-label="Avoid If">Very fine or low-porosity hair that can over-absorb conditioner and become limp</td>
       </tr>
       <tr>
-        <td><strong>Finger detangle only</strong></td>
-        <td>No tool used; shed hairs removed by hand, working section by section</td>
-        <td>4C hair; very damaged or over-processed hair; after protective style takedown</td>
-        <td>Fine hair or loose curl types where a comb is faster and equally safe</td>
+        <td data-label="Method"><strong>Finger detangle only</strong></td>
+        <td data-label="How It Works">No tool used; shed hairs removed by hand, working section by section</td>
+        <td data-label="Best For">4C hair; very damaged or over-processed hair; after protective style takedown</td>
+        <td data-label="Avoid If">Fine hair or loose curl types where a comb is faster and equally safe</td>
       </tr>
     </tbody>
   </table>

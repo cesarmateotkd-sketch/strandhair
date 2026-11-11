@@ -174,6 +174,19 @@ footer{background:var(--espresso);padding:48px 48px 28px;}
   .footer-grid{grid-template-columns:1fr;gap:28px;}
 }
 </style>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCVJS3MM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -205,31 +218,31 @@ footer{background:var(--espresso);padding:48px 48px 28px;}
   <h2>What Is 2B Hair?</h2>
   <p>Type 2B hair forms a well-defined S-wave that begins around mid-length &mdash; flatter at the roots, gaining definition as it moves toward the ends. It is the most common wavy subtype and the one most likely to be mistaken for &ldquo;almost straight&rdquo; by people who haven&rsquo;t learned to work with their wave pattern yet.</p>
 
-  <table class="compare-table" aria-label="Wavy hair subtype comparison">
+  <table class="m-stack compare-table" aria-label="Wavy hair subtype comparison">
     <thead>
       <tr><th>Type</th><th>Wave Pattern</th><th>Frizz Risk</th><th>Product Weight</th><th>Biggest Challenge</th></tr>
     </thead>
     <tbody>
       <tr>
-        <td>2A</td>
-        <td>Loose bend, mostly at ends</td>
-        <td>Low</td>
-        <td>Featherlight</td>
-        <td>Waves disappear easily</td>
+        <td data-label="Type">2A</td>
+        <td data-label="Wave Pattern">Loose bend, mostly at ends</td>
+        <td data-label="Frizz Risk">Low</td>
+        <td data-label="Product Weight">Featherlight</td>
+        <td data-label="Biggest Challenge">Waves disappear easily</td>
       </tr>
       <tr class="highlight">
-        <td>2B</td>
-        <td>S-wave from mid-length</td>
-        <td>Moderate</td>
-        <td>Lightweight</td>
-        <td>Products too heavy; roots go flat</td>
+        <td data-label="Type">2B</td>
+        <td data-label="Wave Pattern">S-wave from mid-length</td>
+        <td data-label="Frizz Risk">Moderate</td>
+        <td data-label="Product Weight">Lightweight</td>
+        <td data-label="Biggest Challenge">Products too heavy; roots go flat</td>
       </tr>
       <tr>
-        <td>2C</td>
-        <td>Tight S-wave from near root</td>
-        <td>High</td>
-        <td>Light-to-medium</td>
-        <td>Frizz in humidity, wave dropout</td>
+        <td data-label="Type">2C</td>
+        <td data-label="Wave Pattern">Tight S-wave from near root</td>
+        <td data-label="Frizz Risk">High</td>
+        <td data-label="Product Weight">Light-to-medium</td>
+        <td data-label="Biggest Challenge">Frizz in humidity, wave dropout</td>
       </tr>
     </tbody>
   </table>

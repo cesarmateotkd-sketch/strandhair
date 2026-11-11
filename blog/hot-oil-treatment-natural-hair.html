@@ -250,6 +250,19 @@ footer{background:var(--espresso);color:#C4A882;padding:48px 40px 32px;margin-to
 .footer-legal a{color:#9B8070}
 @media(max-width:640px){footer{padding:40px 20px 28px}}
 </style>
+<style>
+/* Wide tables stack into labeled cards on phones (Nov 2026) */
+@media(max-width:640px){
+  table.m-stack{min-width:0!important;width:100%!important;border:0!important;}
+  table.m-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+  table.m-stack,table.m-stack tbody,table.m-stack tr,table.m-stack td,table.m-stack tbody th{display:block;width:100%!important;}
+  table.m-stack tr{border:1px solid #E8DDD0;border-top:3px solid #3D2B1F;margin:0 0 14px;background:#FAF7F2;}
+  table.m-stack td,table.m-stack tbody th{border:0;border-bottom:1px dashed #E8DDD0;padding:10px 14px!important;text-align:left!important;white-space:normal!important;background:transparent!important;}
+  table.m-stack td:last-child{border-bottom:0;}
+  table.m-stack td:first-child,table.m-stack tbody th:first-child{font-weight:600;}
+  table.m-stack td[data-label]::before,table.m-stack tbody th[data-label]::before{content:attr(data-label);display:block;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#6B5B53;margin-bottom:2px;}
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -316,18 +329,18 @@ footer{background:var(--espresso);color:#C4A882;padding:48px 40px 32px;margin-to
 
   <h2>Which Oils to Use (by Hair Type and Concern)</h2>
   <div class="table-wrap">
-    <table>
+    <table class="m-stack">
       <thead>
         <tr><th>Oil</th><th>Best for</th><th>Penetrates?</th><th>Weight</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Coconut oil</strong></td><td>All types; protein loss, pre-poo protection</td><td>Yes (deep)</td><td>Medium</td></tr>
-        <tr><td><strong>Castor oil</strong></td><td>Scalp treatments, growth, 4B/4C ends</td><td>Minimal</td><td>Heavy</td></tr>
-        <tr><td><strong>Jojoba oil</strong></td><td>Low-porosity, scalp balance, fine wavy/curly</td><td>Minimal (mimics sebum)</td><td>Light</td></tr>
-        <tr><td><strong>Argan oil</strong></td><td>Color-treated, frizz, shine, 3A–3C curls</td><td>Minimal</td><td>Light</td></tr>
-        <tr><td><strong>Olive oil</strong></td><td>Very dry or coarse hair, 4B/4C; deep moisture</td><td>Partial</td><td>Medium-heavy</td></tr>
-        <tr><td><strong>Avocado oil</strong></td><td>High-porosity, damaged hair, breakage repair</td><td>Yes (moderate)</td><td>Medium</td></tr>
-        <tr><td><strong>Sweet almond oil</strong></td><td>Fine hair, scalp massage, wavy types</td><td>Minimal</td><td>Light</td></tr>
+        <tr><td data-label="Oil"><strong>Coconut oil</strong></td><td data-label="Best for">All types; protein loss, pre-poo protection</td><td data-label="Penetrates?">Yes (deep)</td><td data-label="Weight">Medium</td></tr>
+        <tr><td data-label="Oil"><strong>Castor oil</strong></td><td data-label="Best for">Scalp treatments, growth, 4B/4C ends</td><td data-label="Penetrates?">Minimal</td><td data-label="Weight">Heavy</td></tr>
+        <tr><td data-label="Oil"><strong>Jojoba oil</strong></td><td data-label="Best for">Low-porosity, scalp balance, fine wavy/curly</td><td data-label="Penetrates?">Minimal (mimics sebum)</td><td data-label="Weight">Light</td></tr>
+        <tr><td data-label="Oil"><strong>Argan oil</strong></td><td data-label="Best for">Color-treated, frizz, shine, 3A–3C curls</td><td data-label="Penetrates?">Minimal</td><td data-label="Weight">Light</td></tr>
+        <tr><td data-label="Oil"><strong>Olive oil</strong></td><td data-label="Best for">Very dry or coarse hair, 4B/4C; deep moisture</td><td data-label="Penetrates?">Partial</td><td data-label="Weight">Medium-heavy</td></tr>
+        <tr><td data-label="Oil"><strong>Avocado oil</strong></td><td data-label="Best for">High-porosity, damaged hair, breakage repair</td><td data-label="Penetrates?">Yes (moderate)</td><td data-label="Weight">Medium</td></tr>
+        <tr><td data-label="Oil"><strong>Sweet almond oil</strong></td><td data-label="Best for">Fine hair, scalp massage, wavy types</td><td data-label="Penetrates?">Minimal</td><td data-label="Weight">Light</td></tr>
       </tbody>
     </table>
   </div>

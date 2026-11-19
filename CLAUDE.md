@@ -149,6 +149,12 @@ footer
 - Amazon Associates: tag `strand01-20` on all product links (search-URL format `amazon.com/s?k=...&tag=strand01-20`)
 - Google AdSense account meta tag on all pages (pending traffic threshold)
 
+### IndexNow (Bing, Yandex, Seznam; set up Nov 19, 2026)
+- Key file: `/550351eabd079cebf80844006cd035b7.txt` at the site root (contains the key). Don't delete or rename it.
+- After any merge that changes pages, ping the changed URLs (Google does not use IndexNow; keep requesting indexing in GSC):
+  `curl -s -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json' -d '{"host":"hairtypequiz.hair","key":"550351eabd079cebf80844006cd035b7","keyLocation":"https://hairtypequiz.hair/550351eabd079cebf80844006cd035b7.txt","urlList":["https://hairtypequiz.hair/blog/..."]}'`
+  200 or 202 means accepted. Submit only real, changed URLs (no bulk re-pings of unchanged pages).
+
 ### Indexing routine
 - The owner can request ~10 indexings/day in the Search Console app. Prioritize by GA traffic and affiliate value.
 - "Discovered/unknown" pages: request indexing. "Crawled — currently not indexed" pages: Google read them and passed, so re-requesting doesn't help; they need content changes (differentiate or merge). As of Oct 25: 4A routine, how to wash 4C, protective styles, how to find your hair type, scalp care, baggy method. Nov 7: all but "how to find your hair type" got evidence tables and claim fixes; the owner requests indexing for them once.

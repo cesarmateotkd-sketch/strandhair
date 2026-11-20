@@ -976,7 +976,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ═══ AFFILIATE DISCLOSURE BAR (FTC compliant, always visible) ═══ -->
 <div class="affiliate-bar" role="note" aria-label="Affiliate disclosure">
   <span>ⓘ</span>
-  <span><strong>Affiliate Disclosure:</strong> Strand earns a commission from qualifying Amazon purchases at no extra cost to you. We only recommend products with strong community reviews. <a href="#disclosure">Learn more ↓</a></span>
+  <span><strong>Affiliate Disclosure:</strong> Strand earns a commission from qualifying Amazon purchases at no extra cost to you. Brands never pay us to feature products. <a href="#disclosure">Learn more ↓</a></span>
 </div>
 
 <!-- ═══ NAVIGATION ═══ -->
@@ -1157,7 +1157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="ftc-disclosure" id="disclosure" role="note">
     <span class="ftc-icon">💛</span>
     <div>
-      <strong>Affiliate Disclosure:</strong> Strand participates in the Amazon Associates Program. When you click a product link and make a purchase on Amazon, we may earn a small commission at no additional cost to you. This helps us keep Strand free. Our product selections are based entirely on review data and community feedback — we are never paid by brands to feature their products. <a href="https://www.ftc.gov/business-guidance/resources/ftc-endorsement-guides-what-people-are-asking" target="_blank" rel="noopener noreferrer" style="color:var(--caramel)">FTC Disclosure Guidelines ↗</a>
+      <strong>Affiliate Disclosure:</strong> Strand participates in the Amazon Associates Program. When you click a product link and make a purchase on Amazon, we may earn a small commission at no additional cost to you. This helps us keep Strand free. We choose products by their ingredients and, where it exists, the research behind them. Brands never pay us to feature their products. <a href="https://www.ftc.gov/business-guidance/resources/ftc-endorsement-guides-what-people-are-asking" target="_blank" rel="noopener noreferrer" style="color:var(--caramel)">FTC Disclosure Guidelines ↗</a>
     </div>
   </div>
 
@@ -1548,7 +1548,7 @@ function _loadQuiz(cb) {
   _quizQ.push(cb);
   if (_quizQ.length > 1) return;
   const s = document.createElement('script');
-  s.src = '/js/quiz.js?v=5';
+  s.src = '/js/quiz.js?v=6';
   s.onload = function() { _quizReady = true; _quizQ.splice(0).forEach(fn => fn()); };
   document.head.appendChild(s);
 }

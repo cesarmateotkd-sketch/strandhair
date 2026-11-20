@@ -422,6 +422,50 @@ function buildChecklistSignup(type) {
   return wrap;
 }
 
+// ─── SHOP THIS ROUTINE (summary at the top of results) ───
+function buildShopRoutine(type, data) {
+  const wrap = document.createElement('section');
+  wrap.className = 'shop-routine';
+  wrap.setAttribute('aria-labelledby', 'shop-routine-h');
+  const tiers = [['Top picks', 0], ['Best value', 1], ['Premium', 2]];
+  const rows = tier => data.steps.map((st, i) => {
+    const p = st.products[tier] || st.products[0];
+    return `<li class="sr-row">
+      <span class="sr-no" aria-hidden="true">0${i + 1}</span>
+      <span class="sr-id"><span class="sr-step">${st.step}</span><span class="sr-name">${p.brand} ${p.name}</span></span>
+      <a class="sr-buy" href="${amzLink(p.brand, p.name)}" target="_blank" rel="noopener sponsored" data-placement="quiz_summary" data-product="${(p.brand + ' ' + p.name).replace(/"/g, '')}" aria-label="View ${(p.brand + ' ' + p.name).replace(/"/g, '')} on Amazon (affiliate link, opens in a new tab)">Amazon &rarr;</a>
+    </li>`;
+  }).join('');
+  wrap.innerHTML = `
+    <div class="sr-head">
+      <p class="sr-kicker">Shop the Type ${type} routine</p>
+      <h3 id="shop-routine-h">Your routine at a glance</h3>
+    </div>
+    <div class="sr-tabs" role="group" aria-label="Choose a price tier">
+      ${tiers.map(([label, t]) => `<button type="button" class="sr-tab${t === 0 ? ' on' : ''}" data-tier="${t}" aria-pressed="${t === 0}">${label}</button>`).join('')}
+    </div>
+    <ol class="sr-list">${rows(0)}</ol>
+    <p class="sr-note">One product per step, in order. Alternatives and why each step matters are below.</p>`;
+  wrap.querySelectorAll('.sr-tab').forEach(btn => btn.addEventListener('click', () => {
+    const t = +btn.dataset.tier;
+    wrap.querySelectorAll('.sr-tab').forEach(b => { b.classList.toggle('on', b === btn); b.setAttribute('aria-pressed', b === btn); });
+    wrap.querySelector('.sr-list').innerHTML = rows(t);
+    if (typeof gtag === 'function') gtag('event', 'routine_tier', { tier: btn.textContent, hair_type: type });
+  }));
+  return wrap;
+}
+
+// Measure affiliate clicks by placement (quiz summary vs product cards)
+document.addEventListener('click', e => {
+  const a = e.target.closest && e.target.closest('#results a[href*="amazon.com"]');
+  if (!a || typeof gtag !== 'function') return;
+  gtag('event', 'affiliate_click', {
+    placement: a.dataset.placement || 'quiz_card',
+    product: a.dataset.product || (a.getAttribute('aria-label') || '').replace(/^View | on Amazon.*$/g, ''),
+    hair_type: typeof selectedType !== 'undefined' ? selectedType : ''
+  });
+});
+
 function _showResults(skipScroll) {
   if (!selectedType) { alert('Please select your hair type above first.'); return; }
   try {
@@ -434,6 +478,7 @@ function _showResults(skipScroll) {
 
   const container = document.getElementById('routineSteps');
   container.innerHTML = '';
+  container.appendChild(buildShopRoutine(selectedType, data));
 
   data.steps.forEach((step, i) => {
     const div = document.createElement('div');

@@ -627,6 +627,25 @@ nav {
 }
 .amazon-btn:hover { background: var(--caramel); }
 
+/* ─── SHOP THIS ROUTINE ─── */
+.shop-routine { background: var(--warm-white); border: 1px solid var(--sand); border-top: 3px solid var(--espresso); padding: 22px 24px 14px; margin: 0 0 40px; }
+.sr-kicker { font-family: ui-monospace,'SF Mono',Menlo,Consolas,monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--caramel-text); margin: 0 0 4px; }
+.shop-routine h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; font-weight: 400; color: var(--espresso); margin: 0 0 14px; }
+.sr-tabs { display: flex; gap: 6px; margin-bottom: 6px; flex-wrap: wrap; }
+.sr-tab { font: 500 12px 'DM Sans', sans-serif; letter-spacing: .06em; text-transform: uppercase; padding: 7px 12px; border: 1px solid var(--espresso); background: transparent; color: var(--espresso); cursor: pointer; }
+.sr-tab.on { background: var(--espresso); color: var(--cream); }
+.sr-list { list-style: none; margin: 0; padding: 0; }
+.sr-row { display: grid; grid-template-columns: 28px minmax(0,1fr) auto; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px dashed var(--sand); }
+.sr-row:last-child { border-bottom: 0; }
+.sr-no { font-family: ui-monospace,'SF Mono',Menlo,Consolas,monospace; font-size: 12px; color: var(--muted); }
+.sr-id { display: flex; flex-direction: column; min-width: 0; }
+.sr-step { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.sr-name { font-size: 15px; color: var(--text); line-height: 1.35; }
+.sr-buy { white-space: nowrap; padding: 8px 12px; background: var(--espresso); color: var(--cream); text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: .04em; }
+.sr-buy:hover { background: var(--caramel); }
+.sr-note { font-size: 12px; color: var(--muted); margin: 10px 0 0; }
+@media (max-width: 640px) { .shop-routine { padding: 18px 16px 10px; } .shop-routine h3 { font-size: 23px; } }
+
 /* ─── VIDEO TUTORIALS ─── */
 .tutorials-block {
   background: var(--espresso);
@@ -1529,7 +1548,7 @@ function _loadQuiz(cb) {
   _quizQ.push(cb);
   if (_quizQ.length > 1) return;
   const s = document.createElement('script');
-  s.src = '/js/quiz.js?v=4';
+  s.src = '/js/quiz.js?v=5';
   s.onload = function() { _quizReady = true; _quizQ.splice(0).forEach(fn => fn()); };
   document.head.appendChild(s);
 }

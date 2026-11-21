@@ -466,6 +466,21 @@ document.addEventListener('click', e => {
   });
 });
 
+// ─── GUIDE OFFER (Type 4 results only) ───
+function buildGuideOffer(type) {
+  const wrap = document.createElement('aside');
+  wrap.className = 'guide-offer-quiz';
+  wrap.innerHTML = `
+    <p class="go-kicker">For Type ${type} hair</p>
+    <p class="go-title">Keep the length you <em>grow</em></p>
+    <p class="go-text">Your routine, turned into a full wash-day system: why Type 4 length disappears, routines by porosity, a printable checklist and a 12-week length tracker. 12 pages, 22 studies cited. $9 launch price (then $12).</p>
+    <a class="go-btn" href="/guide.html" data-placement="quiz_results">See the guide &rarr;</a>`;
+  wrap.querySelector('a').addEventListener('click', () => {
+    if (typeof gtag === 'function') gtag('event', 'guide_click', { placement: 'quiz_results', hair_type: type });
+  });
+  return wrap;
+}
+
 function _showResults(skipScroll) {
   if (!selectedType) { alert('Please select your hair type above first.'); return; }
   try {
@@ -479,6 +494,7 @@ function _showResults(skipScroll) {
   const container = document.getElementById('routineSteps');
   container.innerHTML = '';
   container.appendChild(buildShopRoutine(selectedType, data));
+  if (/^4[ABC]$/.test(selectedType)) container.appendChild(buildGuideOffer(selectedType));
 
   data.steps.forEach((step, i) => {
     const div = document.createElement('div');

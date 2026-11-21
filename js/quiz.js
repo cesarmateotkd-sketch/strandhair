@@ -473,7 +473,7 @@ function buildGuideOffer(type) {
   wrap.innerHTML = `
     <p class="go-kicker">For Type ${type} hair</p>
     <p class="go-title">Keep the length you <em>grow</em></p>
-    <p class="go-text">Your routine, turned into a full wash-day system: why Type 4 length disappears, routines by porosity, a printable checklist and a 12-week length tracker. 12 pages, 22 studies cited. $9 launch price (then $12).</p>
+    <p class="go-text">Your routine, turned into a full wash-day system: why Type 4 length disappears, routines by porosity, a printable checklist and a 12-week length tracker. 12 pages, 20 studies cited. $9 launch price (then $12).</p>
     <a class="go-btn" href="/guide.html" data-placement="quiz_results">See the guide &rarr;</a>`;
   wrap.querySelector('a').addEventListener('click', () => {
     if (typeof gtag === 'function') gtag('event', 'guide_click', { placement: 'quiz_results', hair_type: type });

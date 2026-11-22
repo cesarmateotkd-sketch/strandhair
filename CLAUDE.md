@@ -21,7 +21,7 @@ Monetization: Amazon Associates affiliate commissions + Google AdSense (not appl
 ├── 404.html
 ├── favicon.svg             # Branded SVG favicon (espresso bg, caramel italic "s")
 ├── robots.txt              # Allow all crawlers
-├── sitemap.xml             # 60 URLs; submitted to GSC as the non-www URL
+├── sitemap.xml             # 62 URLs; submitted to GSC as the non-www URL
 ├── CNAME                   # hairtypequiz.hair
 ├── fonts/                  # Self-hosted WOFF2 (see Fonts below for exact filenames)
 ├── images/                 # OG/pin images (1000×1500 PNG), named og-[slug].png
@@ -235,6 +235,8 @@ Merge the approved branch into `main` and push. GitHub Pages deploys in about a 
 
 ## Open Items (as of Nov 19, 2026)
 Start here in a new session. Update this list as items close.
+
+- [x] **Nov 22: hair myths hub + wash page merge (live).** `blog/hair-myths-vs-evidence.html`: 34 claims, each with PubMed sources and a verdict, row anchors (`#float-test` etc.) for outreach to cite; featured "Latest" on the blog. `how-to-wash-4c-hair` (crawled-not-indexed, 0 impressions) folded into `4c-hair-care-routine` (#research table + #wash-day); the old URL is a meta-refresh stub with canonical to the routine, out of the sitemap, 23 internal links repointed. Owner: a Cloudflare 301 for `/blog/how-to-wash-4c-hair*` would be cleaner. Unsourced 70–80% shrinkage numbers removed from the 4C routine. Gmail labels `Strand/*` (Outreach, Needs reply, Sales and affiliates, Email list, Google and SEO, Tools and accounts); a twice-daily inbox scan task labels new mail and drafts replies (never sends).
 
 - [x] **Nov 19 evidence passes (live):** low porosity, high porosity, best gels and hot oil pages got answer-first intros, "What research shows" tables and claim fixes. Product ingredient lists were checked against brand/retailer pages: Aunt Jackie's Don't Shrink is carbomer-based (flaxseed added), Kinky-Curly Curl Custard holds with pectin + agave, Uncle Funky's Curly Magic has no agave or acrylates, Pattern Strong Hold lists PVP + sea moss/aloe/chia, OGX Argan Oil of Morocco is mostly silicone. Check ingredient claims this way for every roundup. Next passes: protein treatment, pre-poo, castor oil, LOC method.
 - [x] **Nov 19 page-1 quick wins (live):** 3C low porosity section, 4C growth claim fixes, 3B vs 3C table, 2B products box, FAQs on Post 57 and silk press, gels/3C internal links, homepage routine links, 8 stale sitemap lastmods fixed.

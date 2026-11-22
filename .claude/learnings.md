@@ -28,6 +28,8 @@ Goal: revenue (Amazon Associates, the $12 guide, later brand affiliates and AdSe
 ## Mistakes and lessons (newest first)
 | Date | What happened | Cost | Lesson / rule added |
 |---|---|---|---|
+| 2026-11-22 | Told the owner "about 20" posts needed the waves & curls signup before counting; it was 9 | A question asked on a wrong number | Count before quoting a number to the owner |
+| 2026-11-22 | `git checkout <file>` during cleanup reverted claim fixes made minutes earlier on the 4C printable page | None (redone in the same session) | Run `git diff <file>` before any `git checkout <file>` |
 | 2026-11-22 | The 4C checklist PDF (our only lead magnet) still had unsourced claims (hygral fatigue, cuticle sealing, LOC/LCO rules); its source file wasn't in the repo | Trust | Check lead magnets and PDFs in evidence passes, not just posts; keep PDF sources in the repo (scripts/checklists) |
 | 2026-11-22 | Merging snippet fixes into main also pulled in the unapproved high porosity preview | None (caught before the push) | List commits before merging (rule above) |
 | 2026-11-21 | Launch email: 3 of 11 opened, 0 clicks | No sales from the list | 11 subscribers can't validate a product. Grow the list before judging the guide by email |

@@ -1,0 +1,9 @@
+# GitHub Pages build settings.
+# Keep internal notes and working files off the public website.
+# They stay in the repo; they just aren't published at hairtypequiz.hair.
+# Never add 550351eabd079cebf80844006cd035b7.txt here (IndexNow needs it).
+exclude:
+  - CLAUDE.md
+  - ads-launch-checklist.txt
+  - email-welcome-and-checklist.txt
+  - "PageSpeed Insights.html"

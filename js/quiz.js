@@ -390,19 +390,25 @@ function buildVideoBlock(type, stepName) {
   `;
 }
 
-// Free 4C Wash Day Checklist signup, shown on type 4 results only (4A, 4B, 4C).
-// Same Mailchimp form as the blog posts; Mailchimp sends subscribers to /checklist.html.
+// Free wash day checklist signup on 2A-4C results: the 4C checklist for type 4,
+// the Waves & Curls checklist for 2A-3C. Same Mailchimp form as the blog posts;
+// Mailchimp sends subscribers to /checklist.html, which offers both PDFs and puts
+// the one matching localStorage 'strand_type' first.
 function buildChecklistSignup(type) {
   const wrap = document.createElement('section');
   wrap.className = 'quiz-signup';
   wrap.setAttribute('aria-labelledby', 'quizSignupHeading');
   wrap.style.cssText = 'margin:8px 0 56px;padding:36px 28px;background:#3D2B1F;border-radius:4px;text-align:center;';
+  const isType4 = /^4/.test(type);
+  const name = isType4 ? 'the 4C Wash Day Checklist' : 'the Waves &amp; Curls Wash Day Checklist';
   const sub = type === '4C'
     ? 'Every wash day step in order, from pre-poo to protecting your hair overnight. One printable page.'
-    : 'Every wash day step in order, from pre-poo to protecting your hair overnight. Written for 4C. Take what fits your ' + type + ' wash day.';
+    : isType4
+      ? 'Every wash day step in order, from pre-poo to protecting your hair overnight. Written for 4C. Take what fits your ' + type + ' wash day.'
+      : 'Every wash day step in order for ' + type + ' hair, from shampoo to day-3 curls, with what research supports. One printable page.';
   wrap.innerHTML = `
     <p style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#C4945A;margin:0 0 12px;font-family:'DM Sans',sans-serif;">Free download</p>
-    <h3 id="quizSignupHeading" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(22px,4vw,30px);font-weight:400;color:#FAF7F2;margin:0 0 8px;line-height:1.2;">Get the 4C Wash Day Checklist</h3>
+    <h3 id="quizSignupHeading" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(22px,4vw,30px);font-weight:400;color:#FAF7F2;margin:0 0 8px;line-height:1.2;">Get ${name}</h3>
     <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#E8DDD0;margin:0 auto 24px;line-height:1.5;max-width:460px;">${sub}</p>
     <form action="https://hair.us10.list-manage.com/subscribe/post?u=d1b239b37b6c1105dd901b721&amp;id=4220e3e234&amp;f_id=0046e0e1f0" method="post" target="_blank" rel="noopener noreferrer">
       <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:500px;margin:0 auto;position:relative;">
@@ -417,6 +423,7 @@ function buildChecklistSignup(type) {
     <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(232,221,208,0.75);margin:16px 0 0;">Free. No spam. Unsubscribe anytime.</p>
   `;
   wrap.querySelector('form').addEventListener('submit', () => {
+    try { localStorage.setItem('strand_type', type); } catch (e) {}
     if (typeof gtag === 'function') gtag('event', 'sign_up', { method: 'quiz_results', hair_type: type });
   });
   return wrap;
@@ -526,7 +533,7 @@ function _showResults(skipScroll) {
       ${buildVideoBlock(key, step.step)}
     `;
     container.appendChild(div);
-    if (i === 0 && /^4[ABC]$/.test(selectedType)) container.appendChild(buildChecklistSignup(selectedType));
+    if (i === 0 && /^[234][ABC]$/.test(selectedType)) container.appendChild(buildChecklistSignup(selectedType));
   });
 
   const resultsEl = document.getElementById('results');

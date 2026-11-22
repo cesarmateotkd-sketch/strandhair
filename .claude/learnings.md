@@ -12,6 +12,7 @@ Goal: revenue (Amazon Associates, the $12 guide, later brand affiliates and AdSe
 5. **Log** here, commit to the `claude/*` work branch and push. Report to the owner with what was learned, not just what was done.
 
 ## Rules learned the hard way (check before acting)
+- Before calling a page weak, check its last crawl date. Three "crawled, not indexed" pages had last been read before their upgrades (Nov 22).
 - Before merging a branch into main, list `git log main..branch`. A merge pulled an unapproved preview into main on Nov 22 (caught before the push). Cherry-pick when only part is approved.
 - Check every product claim against the brand's or retailer's current label: Ouidad in the curl cream post, a nonexistent Mielle detangling spray, Curl La La "flaxseed", Babassu listed as a leave-in. A wrong product is the fastest way to lose a reader's trust and a sale.
 - No comparisons between ethnic groups (13 posts had them until Nov 21). Search for these terms before any merge: African, Caucasian, Asian, ethnic, race.
@@ -27,6 +28,7 @@ Goal: revenue (Amazon Associates, the $12 guide, later brand affiliates and AdSe
 ## Mistakes and lessons (newest first)
 | Date | What happened | Cost | Lesson / rule added |
 |---|---|---|---|
+| 2026-11-22 | The 4C checklist PDF (our only lead magnet) still had unsourced claims (hygral fatigue, cuticle sealing, LOC/LCO rules); its source file wasn't in the repo | Trust | Check lead magnets and PDFs in evidence passes, not just posts; keep PDF sources in the repo (scripts/checklists) |
 | 2026-11-22 | Merging snippet fixes into main also pulled in the unapproved high porosity preview | None (caught before the push) | List commits before merging (rule above) |
 | 2026-11-21 | Launch email: 3 of 11 opened, 0 clicks | No sales from the list | 11 subscribers can't validate a product. Grow the list before judging the guide by email |
 | 2026-11-21 | Ethnicity comparisons found in 13 posts | Brand risk | Owner rule plus a grep before every merge |
@@ -41,3 +43,5 @@ Goal: revenue (Amazon Associates, the $12 guide, later brand affiliates and AdSe
 | E3 | 2026-11-22 | Myths hub | New linkable page | Outreach links to it; it gets indexed | Referring domains (Ahrefs DR 0), indexed, impressions | 2026-12-20 | |
 | E4 | 2026-11-21 | 3C, 4C products, low porosity, 2B | Retitled for near-page-1 queries | Position up, first clicks | Positions in the Monday ranking report | 2026-12-13 | |
 | E5 | 2026-11-21 | guide.html + quiz offer | $12 guide, launch price $9 | Some readers buy | guide_click, begin_checkout, Gumroad sales (owner) | 2026-12-05 | |
+| E6 | 2026-11-22 | Quiz 2A–3C results + thank-you page | Waves & Curls checklist signup (was 4A–4C only) | Type 2–3 quiz takers sign up too | sign_up (method quiz_results) by hair_type; Mailchimp list size (12 on Nov 22) | 2026-12-20 | |
+| E7 | 2026-11-22 | 6 crawled-not-indexed pages | 4A, protective styles, scalp, baggy: just need a recrawl (Google last read them Jul–Oct, before the Nov 7 upgrades). Twist-out: short-answer box + link from the 4C routine. Wash day checklist page rebuilt with both checklists inline + research table | Pages get indexed once recrawled | Indexed yes/no via URL inspection | 2026-12-20 | |

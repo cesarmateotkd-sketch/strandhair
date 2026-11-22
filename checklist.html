@@ -117,14 +117,13 @@ footer a{color:rgba(250,247,242,.6);}
 <script>document.querySelectorAll('.guide-offer a').forEach(function(a){a.addEventListener('click',function(){if(typeof gtag==='function')gtag('event','guide_click',{placement:a.dataset.placement});});});</script>
 <script>
 (function(){
-  var t=null;try{t=localStorage.getItem('strand_type');}catch(e){}
-  if(!t)return;
-  var key=/^4/.test(t)?'4c':(/^[23]/.test(t)?'wc':null);
+  var t=null,c=null;try{t=localStorage.getItem('strand_type');c=localStorage.getItem('strand_cl');}catch(e){}
+  var key=t?(/^4/.test(t)?'4c':(/^[23]/.test(t)?'wc':null)):(c==='wc'?'wc':null);
   if(!key)return;
   var list=document.querySelector('.cl-list'),item=list&&list.querySelector('.cl-item[data-cl="'+key+'"]');
   if(!item)return;
   item.classList.add('match');
-  var b=document.createElement('span');b.className='cl-badge';b.textContent='Matches your '+t+' result';item.insertBefore(b,item.firstChild);
+  var b=document.createElement('span');b.className='cl-badge';b.textContent=t?'Matches your '+t+' result':'For waves and curls';item.insertBefore(b,item.firstChild);
   list.insertBefore(item,list.firstChild);
   if(key==='wc'){var g=document.querySelector('.guide-offer');if(g)g.style.display='none';}
 })();

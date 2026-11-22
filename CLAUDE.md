@@ -311,6 +311,7 @@ Standing feedback from the site owner. Apply it without being reminded, and add 
 
 ### Copy & platforms
 - **No comparisons between ethnic groups (Nov 21, 2026).** Don't compare growth rates, knots, water uptake or anything else by ancestry (e.g. "African vs Caucasian hair"). Describe study subjects by hair shape ("tightly coiled hair"), and say "no study has measured X by curl type" where that's the truth. Medical population facts (CCCA, traction alopecia, seborrheic dermatitis) and product/technique names (African Black Soap, African threading) are fine. General growth line: "Hair grows every month; breakage is why length doesn't show."
+- **Outreach pitches (Nov 22, 2026):** the owner authorized Claude to send 3–5 vetted, free guest-post/resource pitches a week from their Gmail without asking each time, then report who was contacted. Never paid links or sponsored posts, at most one polite follow-up per site, no pitches to sites that charge, and nothing outside hair/beauty. Track every pitch in the outreach log.
 - Quora answers should be genuinely useful and drive traffic to the site, usually via the quiz link where it fits naturally. Don't force links.
 - Meta ads: never "you/your hair" personal-attribute framing or health claims. Talk about the research and the products.
 - Pinterest is the priority channel; post 1–3 pins/day, never in bursts. Facebook is a later, light test. Instagram and X are not automated.

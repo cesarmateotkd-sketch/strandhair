@@ -7,3 +7,4 @@ exclude:
   - ads-launch-checklist.txt
   - email-welcome-and-checklist.txt
   - "PageSpeed Insights.html"
+  - scripts

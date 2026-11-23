@@ -8,12 +8,18 @@ Small fixes go live without a preview only if this passes. For every changed
   - the file didn't shrink by more than 300 bytes (truncation guard)
   - stylesheet count didn't drop
   - no visible text was lost outside <article> (head/nav/footer unchanged in length, ±200 bytes)
-Usage: python3 scripts/check_pages.py [ref]
+Usage: python3 scripts/check_pages.py [ref] [--allow-shrink FILE ...]
+  --allow-shrink: only after reviewing `git diff --word-diff` and confirming every removed
+  passage is an intended claim removal inside the article.
 Exit code 1 on any failure.
 """
 import json, re, subprocess, sys
 
-ref = sys.argv[1] if len(sys.argv) > 1 else "origin/main"
+args = sys.argv[1:]
+allow = set()
+if "--allow-shrink" in args:
+    i = args.index("--allow-shrink"); allow = set(args[i+1:]); args = args[:i]
+ref = args[0] if args else "origin/main"
 files = subprocess.run(["git", "diff", "--name-only", ref, "--", "*.html"],
                        capture_output=True, text=True).stdout.split()
 fail = False
@@ -44,7 +50,7 @@ for f in files:
         if new.count("<article") != 1 or new.count("</article>") != 1:
             problems.append("article tags missing or duplicated")
     if old is not None:
-        if len(new) < len(old) - 300:
+        if len(new) < len(old) - 300 and f not in allow:
             problems.append(f"file shrank {len(old)} -> {len(new)} bytes")
         if new.count("<style") < old.count("<style"):
             problems.append("a <style> block was removed")

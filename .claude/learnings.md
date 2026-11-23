@@ -12,6 +12,7 @@ Goal: revenue (Amazon Associates, the $12 guide, later brand affiliates and AdSe
 5. **Log** here, commit to the `claude/*` work branch and push. Report to the owner with what was learned, not just what was done.
 
 ## Rules learned the hard way (check before acting)
+- Test what matters, not just the format: a link test must check each product ID against the verified list (Nov 23).
 - Before calling a page weak, check its last crawl date. Three "crawled, not indexed" pages had last been read before their upgrades (Nov 22).
 - Before merging a branch into main, list `git log main..branch`. A merge pulled an unapproved preview into main on Nov 22 (caught before the push). Cherry-pick when only part is approved.
 - Check every product claim against the brand's or retailer's current label: Ouidad in the curl cream post, a nonexistent Mielle detangling spray, Curl La La "flaxseed", Babassu listed as a leave-in. A wrong product is the fastest way to lose a reader's trust and a sale.
@@ -28,6 +29,7 @@ Goal: revenue (Amazon Associates, the $12 guide, later brand affiliates and AdSe
 ## Mistakes and lessons (newest first)
 | Date | What happened | Cost | Lesson / rule added |
 |---|---|---|---|
+| 2026-11-23 | The exact-links preview (v10) still pointed 11 slots (Not Your Mother's, Aunt Jackie's) at old, unchecked ASINs: the update regex skipped names with escaped apostrophes, and the link test only checked URL format | None (caught in the Monday cycle before merge) | Parse quiz.js entries with an escape-aware pattern; the link test now fails on any /dp/ ASIN not in the verified list |
 | 2026-11-22 | Told the owner "about 20" posts needed the waves & curls signup before counting; it was 9 | A question asked on a wrong number | Count before quoting a number to the owner |
 | 2026-11-22 | `git checkout <file>` during cleanup reverted claim fixes made minutes earlier on the 4C printable page | None (redone in the same session) | Run `git diff <file>` before any `git checkout <file>` |
 | 2026-11-22 | The 4C checklist PDF (our only lead magnet) still had unsourced claims (hygral fatigue, cuticle sealing, LOC/LCO rules); its source file wasn't in the repo | Trust | Check lead magnets and PDFs in evidence passes, not just posts; keep PDF sources in the repo (scripts/checklists) |
@@ -47,4 +49,7 @@ Goal: revenue (Amazon Associates, the $12 guide, later brand affiliates and AdSe
 | E5 | 2026-11-21 | guide.html + quiz offer | $12 guide, launch price $9 | Some readers buy | guide_click, begin_checkout, Gumroad sales (owner) | 2026-12-05 | |
 | E6 | 2026-11-22 | Quiz 2A–3C results + thank-you page | Waves & Curls checklist signup (was 4A–4C only) | Type 2–3 quiz takers sign up too | sign_up (method quiz_results) by hair_type; Mailchimp list size (12 on Nov 22) | 2026-12-20 | |
 | E7 | 2026-11-22 | 6 crawled-not-indexed pages | 4A, protective styles, scalp, baggy: just need a recrawl (Google last read them Jul–Oct, before the Nov 7 upgrades). Twist-out: short-answer box + link from the 4C routine. Wash day checklist page rebuilt with both checklists inline + research table | Pages get indexed once recrawled | Indexed yes/no via URL inspection | 2026-12-20 | |
-| E8 | 2026-11-22 | Quiz (js/quiz.js v10) | Exact Amazon product pages (/dp/ASIN) for 123 of 145 product slots; search links kept for 16 discontinued or multi-pack-only products (22 slots) | Exact pages convert better than search results, so more clicks per quiz | Amazon outbound clicks (GA4 `click`, linkDomain amazon.com, page /) per quiz_complete: 35 / 93 = 0.38 (Oct 25–Nov 21). Note: `affiliate_click` only recorded 2 in that window because it was added late; use the outbound `click` event | 2026-12-20 | |
+| E8 | 2026-11-22 | Quiz (js/quiz.js v10) | Exact Amazon product pages for every checked product (184 of 204 rendered links across the 12 types); 5 discontinued products swapped for label-checked ones already on the site (Sunny Isle JBCO, SheaMoisture ABS Bamboo Charcoal, Mielle leave-in, SheaMoisture smoothie, Aunt Jackie's gel); search links for Not Your Mother's Curl Talk and 9 other unavailable items | Exact pages convert better than search results, so more clicks per quiz | Amazon outbound clicks (GA4 `click`, linkDomain amazon.com, page /) per quiz_complete: 35 / 93 = 0.38 (Oct 25–Nov 21). Note: `affiliate_click` only recorded 2 in that window because it was added late; use the outbound `click` event | 2026-12-20 | |
+
+## Weekly log
+- **Nov 23 (week Nov 15–21 vs Nov 8–14):** impressions 1,945 → 2,367, clicks 2 → 10, CTR 0.10% → 0.42%, avg position 29.4 → 23.5. Indexed 45/62 (twist-out newly indexed). Sessions: Facebook 45 (new, source unknown), Pinterest 16, organic search 23. Amazon outbound clicks 35 (20 from the quiz on Nov 17 alone), quiz_complete 24, sign_up 0 (1 the week before; Mailchimp shows +1 real subscriber Nov 22). No experiment reached its check date.

@@ -188,7 +188,7 @@ const routines = {
       { step:'Wave-Enhancing Mousse', why:'Scrunch into soaking-wet hair — mousse over gel keeps fine waves from crunching', products:[
         { brand:'Herbal Essences', name:'bio:renew Curl Boosting Mousse', why:'Featherlight mousse for soft, natural waves without stiffness or crunch', asin:'B0B995XZ6T', emoji:'💨' },
         { brand:'Not Your Mother\'s', name:'Curl Talk Curl Defining Mousse', why:'Budget mousse for wavy hair — defines without weighing down', asin:'B07MQ3RXPJ', emoji:'💨' },
-        { brand:'Bumble and bumble', name:'Surf Foam Spray Blow Dry', why:'Adds beachy texture and wave definition — premium pick for 2A', asin:'', emoji:'💨' }
+        { brand:'Bumble and bumble', name:'Surf Foam Spray Blow Dry', why:'Adds beachy texture and wave definition — premium pick for 2A', asin:'B01E0EGNDE', emoji:'💨' }
       ]}
     ]
   },
@@ -204,7 +204,7 @@ const routines = {
       { step:'Conditioner', why:'Finger-detangle in the shower, rinse 70% — leaving a little in helps 2C waves', products:[
         { brand:'SheaMoisture', name:'Coconut & Hibiscus Curl & Shine Conditioner', why:'Moisture-rich but not heavy — deeply conditions coarse wave texture', asin:'B00EUMC62O', emoji:'🫙' },
         { brand:'Aussie', name:'Miracle Moist Conditioner', why:'Budget staple — outstanding slip and moisture', asin:'B07KRS9JG1', emoji:'🫙' },
-        { brand:'Jessicurl', name:'Aloeba Daily Conditioner', why:'Specifically formulated for wavy-to-curly hair by a wavy-hair brand', asin:'', emoji:'🫙' }
+        { brand:'Jessicurl', name:'Aloeba Daily Conditioner', why:'Specifically formulated for wavy-to-curly hair by a wavy-hair brand', asin:'B000P0F9BK', emoji:'🫙' }
       ]},
       { step:'Leave-In Conditioner', why:'Apply to soaking-wet hair before any stylers — moisture base is critical for 2C', products:[
         { brand:'Not Your Mother\'s', name:'Curl Talk Leave-In Conditioner', why:'Lightweight but effective — controls frizz without flattening thick waves', asin:'B07MQ3BQLZ', emoji:'💧' },
@@ -213,7 +213,7 @@ const routines = {
       ]},
       { step:'Curl Cream + Gel', why:'Layer a curl cream under gel — scrunching both in wet gives 2C its best definition', products:[
         { brand:'Moroccanoil', name:'Curl Defining Cream', why:'Argan oil formula controls thick 2C frizz with beautiful shine', asin:'B003RW2K0G', emoji:'🌀' },
-        { brand:'Cantu', name:'Wave Whip Curling Mousse', why:'Affordable definition cream for wavy-to-curly types — great value', asin:'', emoji:'🌀' },
+        { brand:'Cantu', name:'Wave Whip Curling Mousse', why:'Affordable definition cream for wavy-to-curly types — great value', asin:'B0178H2MFS', emoji:'🌀' },
         { brand:'Ouidad', name:'Curl Quencher Moisturizing Gel', why:'Professional curl brand — humidity-resistant hold for coarse 2C waves', asin:'B0002VNKPY', emoji:'🌀' }
       ]}
     ]
@@ -225,7 +225,7 @@ const routines = {
       { step:'Co-Wash or Shampoo', why:'Co-wash 1–2x weekly; clarify with shampoo every 2 weeks to remove buildup', products:[
         { brand:'As I Am', name:'Coconut CoWash Cleansing Conditioner', why:'Gentle co-wash standard — preserves moisture in 3A spirals without stripping', asin:'B07YCS1TLY', emoji:'🧴' },
         { brand:'SheaMoisture', name:'Coconut & Hibiscus Curl & Shine Shampoo', why:'Lightweight moisture shampoo — defines 3A spirals while cleansing gently', asin:'B0038TXGL0', emoji:'🧴' },
-        { brand:'Pattern Beauty', name:'Cleansing Shampoo', why:'Tracee Ellis Ross\'s curl brand — formulated specifically for Type 3 spirals', asin:'', emoji:'🧴' }
+        { brand:'Pattern Beauty', name:'Cleansing Shampoo', why:'Tracee Ellis Ross\'s curl brand — formulated specifically for Type 3 spirals', asin:'B0CBQQNBPR', emoji:'🧴' }
       ]},
       { step:'Conditioner', why:'Detangle with fingers while conditioner is in — rinse out fully for 3A', products:[
         { brand:'Briogeo', name:'Curl Charisma Rice Amino + Avocado Leave-In', why:'Light enough for 3A spirals — adds definition without weighing large curls down', asin:'B00MGV01YQ', emoji:'🫙' },

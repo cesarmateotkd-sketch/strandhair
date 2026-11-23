@@ -12,6 +12,7 @@ Goal: revenue (Amazon Associates, the $12 guide, later brand affiliates and AdSe
 5. **Log** here, commit to the `claude/*` work branch and push. Report to the owner with what was learned, not just what was done.
 
 ## Rules learned the hard way (check before acting)
+- Run `python3 scripts/check_pages.py` before every push to main; small fixes go live only if it passes (owner, Nov 23).
 - Never run a page-wide find-and-replace that can reach the JSON-LD; validate every JSON-LD block before each commit (Nov 23).
 - Edit only inside `<article>…</article>`, cap every regex match length, and compare file size before/after: a page that shrinks by more than a few hundred bytes is a stop sign (Nov 23).
 - Test what matters, not just the format: a link test must check each product ID against the verified list (Nov 23).

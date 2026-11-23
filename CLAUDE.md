@@ -295,7 +295,7 @@ Standing feedback from the site owner. Apply it without being reminded, and add 
 
 ### Approval before anything goes out
 - **Preview first, always.** Show designs, pins, ads, and site changes before posting or pushing. Site changes: screenshot desktop + mobile, wait for approval, then push.
-- **Small fixes merge without asking (Nov 22, 2026).** Title/meta tweaks and claim corrections (removing or softening unsourced claims, fixing wrong product/ingredient facts) can go live directly; tell the owner afterward what changed. Anything bigger (new sections, new pages, product swaps, design or quiz changes, anything sold) still gets a preview and the owner's MERGE IT.
+- **Small fixes merge without asking (Nov 22, 2026).** Title/meta tweaks and claim corrections (removing or softening unsourced claims, fixing wrong product/ingredient facts) can go live directly; tell the owner afterward what changed. **Since Nov 23, only after `python3 scripts/check_pages.py` passes** (valid JSON-LD, head/body/article intact, no shrinkage, no lost styles, nothing changed outside the article), plus a rendered screenshot. If it fails, fix it or send a preview instead. Anything bigger (new sections, new pages, product swaps, design or quiz changes, anything sold) still gets a preview and the owner's MERGE IT.
 - **Social posts are approved in batches.** Prepare 5–7 pins (image, title, description, link) per batch. Only pins marked approved in the queue get posted; scheduled runs never post unapproved items.
 - **Use Opus for implementation work on the site** when the owner asks for changes to be made.
 

@@ -12,6 +12,7 @@ Goal: revenue (Amazon Associates, the $12 guide, later brand affiliates and AdSe
 5. **Log** here, commit to the `claude/*` work branch and push. Report to the owner with what was learned, not just what was done.
 
 ## Rules learned the hard way (check before acting)
+- For every named product: confirm it exists, it is the type the post says (cleanser vs styler, rinse-out vs mask), and the directions match the brand (Nov 23).
 - Before reporting a traffic spike, check engaged sessions and dates: 45 "Facebook" sessions on Nov 19 had 0 engagement (crawler) (Nov 23).
 - Run `python3 scripts/check_pages.py` before every push to main; small fixes go live only if it passes (owner, Nov 23).
 - Never run a page-wide find-and-replace that can reach the JSON-LD; validate every JSON-LD block before each commit (Nov 23).
@@ -33,6 +34,7 @@ Goal: revenue (Amazon Associates, the $12 guide, later brand affiliates and AdSe
 ## Mistakes and lessons (newest first)
 | Date | What happened | Cost | Lesson / rule added |
 |---|---|---|---|
+| 2026-11-23 | Older posts recommended products that don't exist ("Darling Amigos" threading thread, "Curad" magnetic rollers) and wrong product types (Camille Rose Spiked Honey "co-wash" is a styling mousse; Olaplex No. 5 "20–30 min treatment" is a 1–3 min rinse-out) | Readers sent to searches for nonexistent or wrong products; lost affiliate trust | Every pass checks each named product exists and is the type claimed (brand page or retailer listing), not just its ingredients |
 | 2026-11-23 | A claim fix on the 2C routine used a page-wide regex that also matched the same sentence inside the JSON-LD FAQ, inserting an HTML link with quotes and breaking the structured data; it went live. Worse: the same regex (`.*?` across tags) matched from a sentence in the JSON-LD to a sentence in the article and deleted ~17 KB in between (end of JSON-LD, all CSS, top of the article); the first repair then kept the truncated file | The live 2C page lost its styles and article top for about an hour | Edit body text and JSON-LD separately: parse the JSON, change it, dump it back. After every page edit, validate all JSON-LD blocks before committing |
 | 2026-11-23 | The exact-links preview (v10) still pointed 11 slots (Not Your Mother's, Aunt Jackie's) at old, unchecked ASINs: the update regex skipped names with escaped apostrophes, and the link test only checked URL format | None (caught in the Monday cycle before merge) | Parse quiz.js entries with an escape-aware pattern; the link test now fails on any /dp/ ASIN not in the verified list |
 | 2026-11-22 | Told the owner "about 20" posts needed the waves & curls signup before counting; it was 9 | A question asked on a wrong number | Count before quoting a number to the owner |

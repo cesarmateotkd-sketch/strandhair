@@ -12,6 +12,7 @@ Goal: revenue (Amazon Associates, the $12 guide, later brand affiliates and AdSe
 5. **Log** here, commit to the `claude/*` work branch and push. Report to the owner with what was learned, not just what was done.
 
 ## Rules learned the hard way (check before acting)
+- Never run a page-wide find-and-replace that can reach the JSON-LD; validate every JSON-LD block before each commit (Nov 23).
 - Test what matters, not just the format: a link test must check each product ID against the verified list (Nov 23).
 - Before calling a page weak, check its last crawl date. Three "crawled, not indexed" pages had last been read before their upgrades (Nov 22).
 - Before merging a branch into main, list `git log main..branch`. A merge pulled an unapproved preview into main on Nov 22 (caught before the push). Cherry-pick when only part is approved.
@@ -29,6 +30,7 @@ Goal: revenue (Amazon Associates, the $12 guide, later brand affiliates and AdSe
 ## Mistakes and lessons (newest first)
 | Date | What happened | Cost | Lesson / rule added |
 |---|---|---|---|
+| 2026-11-23 | A claim fix on the 2C routine used a page-wide regex that also matched the same sentence inside the JSON-LD FAQ, inserting an HTML link with quotes and breaking the structured data; it went live for about 30 minutes | Google could not read the 2C FAQ/article data briefly | Edit body text and JSON-LD separately: parse the JSON, change it, dump it back. After every page edit, validate all JSON-LD blocks before committing |
 | 2026-11-23 | The exact-links preview (v10) still pointed 11 slots (Not Your Mother's, Aunt Jackie's) at old, unchecked ASINs: the update regex skipped names with escaped apostrophes, and the link test only checked URL format | None (caught in the Monday cycle before merge) | Parse quiz.js entries with an escape-aware pattern; the link test now fails on any /dp/ ASIN not in the verified list |
 | 2026-11-22 | Told the owner "about 20" posts needed the waves & curls signup before counting; it was 9 | A question asked on a wrong number | Count before quoting a number to the owner |
 | 2026-11-22 | `git checkout <file>` during cleanup reverted claim fixes made minutes earlier on the 4C printable page | None (redone in the same session) | Run `git diff <file>` before any `git checkout <file>` |

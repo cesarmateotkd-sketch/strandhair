@@ -56,7 +56,7 @@ for f in files:
             problems.append("a <style> block was removed")
         oo, no = outside_article(old), outside_article(new)
         # JSON-LD and added <style> blocks may legitimately change outside the article
-        strip = lambda s: re.sub(r'<script type="application/ld\+json">.*?</script>|<style>\n#research.*?</style>\n', "", s, flags=re.S)
+        strip = lambda s: re.sub(r'<script type="application/ld\+json">.*?</script>|<style>\n#research.*?</style>\n|<style>\n@media\(max-width:640px\)\{table\.m-stack.*?</style>\n', "", s, flags=re.S)
         if abs(len(strip(no)) - len(strip(oo))) > 200:
             problems.append(f"content outside <article> changed by {len(strip(no)) - len(strip(oo))} bytes")
     status = "OK " if not problems else "FAIL"

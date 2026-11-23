@@ -2,6 +2,7 @@
 !.claude/skills/
 !.claude/settings.json
 !.claude/learnings.md
+!.claude/indexing-queue.md
 
 # Python bytecode
 __pycache__/

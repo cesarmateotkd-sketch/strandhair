@@ -30,6 +30,8 @@ def old_version(path):
 
 def outside_article(s):
     a, b = s.find("<article"), s.find("</article>")
+    if a < 0 or b < 0:  # a few older posts wrap content in <main> instead
+        a, b = s.find("<main"), s.find("</main>")
     return s if a < 0 or b < 0 else s[:a] + s[b:]
 
 for f in files:
@@ -47,8 +49,9 @@ for f in files:
     if new.count("</head>") != 1 or new.count("<body") != 1:
         problems.append("head/body tags missing or duplicated")
     if f.startswith("blog/") and f != "blog/index.html":
-        if new.count("<article") != 1 or new.count("</article>") != 1:
-            problems.append("article tags missing or duplicated")
+        if (new.count("<article"), new.count("</article>")) not in ((1, 1),) and \
+           not (new.count("<article") == 0 and new.count("<main") == 1 and new.count("</main>") == 1):
+            problems.append("article/main tags missing or duplicated")
     if old is not None:
         if len(new) < len(old) - 300 and f not in allow:
             problems.append(f"file shrank {len(old)} -> {len(new)} bytes")

@@ -279,7 +279,7 @@ Start here in a new session. Update this list as items close.
 - [ ] **Near-page-1 posts**: tune titles/intros for "3b vs 3c", "does 4c hair grow slower", protein-treatment frequency, sulfate-free shampoo questions
 - [ ] **"Crawled, not indexed" posts**: differentiate or merge
 - [ ] **Pinterest**: 1–3 pins/day; enable Rich Pins via URL debugger
-- [ ] **Apply for AdSense** at ~100 daily sessions
+- [ ] **Apply for AdSense** when real sessions reach ~50/day (Nov 24: ~10/day excl. the Facebook crawler; the Monday cycle flags it). Ads only on pages without Amazon links (myths, hair type chart, typing guide, porosity test); needs CSP + EU/UK consent banner; preview first
 - [ ] **Amazon Associates audit** — most clicks come from the quiz (45 of 63 Amazon clicks in 60 days)
 
 ### Monetization Stack

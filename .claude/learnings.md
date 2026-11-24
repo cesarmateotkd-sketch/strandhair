@@ -66,3 +66,22 @@ Goal: revenue (Amazon Associates, the $12 guide, later brand affiliates and AdSe
 
 ## Weekly log
 - **Nov 23 (week Nov 15–21 vs Nov 8–14):** impressions 1,945 → 2,367, clicks 2 → 10, CTR 0.10% → 0.42%, avg position 29.4 → 23.5. Indexed 45/62 (twist-out newly indexed). Sessions: Facebook 45 (checked Nov 23: all on Nov 19, 25+ different landing pages, 0 engaged sessions, 0 s duration: link-preview crawler or automated scan, not readers; exclude from traffic), Pinterest 16, organic search 23. Amazon outbound clicks 35 (20 from the quiz on Nov 17 alone), quiz_complete 24, sign_up 0 (1 the week before; Mailchimp shows +1 real subscriber Nov 22). No experiment reached its check date.
+
+## Outreach log
+Free pitches only (owner: up to 10/week since Nov 24; replies need the owner's OK). One follow-up per site after 7 days.
+
+| Date | Site | Contact | Page / offer | Status |
+|---|---|---|---|---|
+| 2026-11-19 | Hair Is Curly | editorial@ | Guest post: porosity research | Declined Nov 20 |
+| 2026-11-19 | Curl Warehouse | hello@ | Paid guest post (their store links) | No follow-ups (their request) |
+| 2026-11-19 | Quicksilver Hair | joli@ | Porosity research tables | Sent |
+| 2026-11-19 | CurlsBot | info@ | Hair typing study page | Sent |
+| 2026-11-19 | Naturally You! | form | Guest article (4C growth) | Submitted |
+| 2026-11-22 | The Beauty Web | contact@ | Guest article: porosity research | Sent |
+| 2026-11-22 | The Mestiza Muse | team@ | Article: mixed curl patterns | Sent |
+| 2026-11-24 | Big Head Justice | info@ | Myths page (#castor-grows, #float-test, #oil-moisturizes) | Sent |
+| 2026-11-24 | Natural Haircare News | info@ | Guest post: 5 myths checked against research | Sent |
+| 2026-11-24 | Kindred Curl (salon, Pittsburgh) | hello@ | Myths page #typing-science, #wash-rarely for their curl-training myths post | Sent |
+| 2026-11-24 | Raising Biracial Babies | christina@ | Myths page #not-growing, #detangle-often for her hair growth posts | Sent |
+
+Lessons (Nov 24 research): free, real hair blogs are a small pool; many "write for us" pages are paid or wig shops, and "best blogs" lists are often years old or noindex (Curlee 2021, noindex). Vet: active in 12 months, indexable, real email. Benchmarks: link outreach replies ~8.5% (Backlinko/Pitchbox, 12M emails); manually edited emails beat automated ones (Hunter 2026). Plan on ~1 link per 10-15 pitches.

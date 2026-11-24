@@ -81,5 +81,7 @@ Free pitches only (owner: up to 10/week since Nov 24; replies need the owner's O
 | 2026-11-22 | The Mestiza Muse | team@ | Article: mixed curl patterns | Sent |
 | 2026-11-24 | Big Head Justice | info@ | Myths page (#castor-grows, #float-test, #oil-moisturizes) | Sent |
 | 2026-11-24 | Natural Haircare News | info@ | Guest post: 5 myths checked against research | Sent |
+| 2026-11-24 | Kindred Curl (salon, Pittsburgh) | hello@ | Myths page #typing-science, #wash-rarely for their curl-training myths post | Sent |
+| 2026-11-24 | Raising Biracial Babies | christina@ | Myths page #not-growing, #detangle-often for her hair growth posts | Sent |
 
 Lessons (Nov 24 research): free, real hair blogs are a small pool; many "write for us" pages are paid or wig shops, and "best blogs" lists are often years old or noindex (Curlee 2021, noindex). Vet: active in 12 months, indexable, real email. Benchmarks: link outreach replies ~8.5% (Backlinko/Pitchbox, 12M emails); manually edited emails beat automated ones (Hunter 2026). Plan on ~1 link per 10-15 pitches.

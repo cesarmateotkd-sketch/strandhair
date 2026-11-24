@@ -85,3 +85,5 @@ Free pitches only (owner: up to 10/week since Nov 24; replies need the owner's O
 | 2026-11-24 | Raising Biracial Babies | christina@ | Myths page #not-growing, #detangle-often for her hair growth posts | Sent |
 
 Lessons (Nov 24 research): free, real hair blogs are a small pool; many "write for us" pages are paid or wig shops, and "best blogs" lists are often years old or noindex (Curlee 2021, noindex). Vet: active in 12 months, indexable, real email. Benchmarks: link outreach replies ~8.5% (Backlinko/Pitchbox, 12M emails); manually edited emails beat automated ones (Hunter 2026). Plan on ~1 link per 10-15 pitches.
+
+- 2026-11-24: Canva's AI chart for 1A-4C looked polished but drew the patterns wrong (3A and all type 4 as the same squiggle, no 4B zigzag, unequal lengths that contradicted its own "same length" caption, renamed 3B/3C). For diagrams where the drawing is the content, generate the geometry in code; use Canva for photographic pins and layouts.

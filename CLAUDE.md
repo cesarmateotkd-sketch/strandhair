@@ -160,7 +160,7 @@ footer
 - "Discovered/unknown" pages: request indexing. "Crawled — currently not indexed" pages: Google read them and passed, so re-requesting doesn't help; they need content changes (differentiate or merge). As of Oct 25: 4A routine, how to wash 4C, protective styles, how to find your hair type, scalp care, baggy method. Nov 7: all but "how to find your hair type" got evidence tables and claim fixes; the owner requests indexing for them once.
 
 ### Analytics to-dos
-- Mark `quiz_complete` as a GA4 key event (owner)
+- [x] `quiz_complete` and `affiliate_click` marked as GA4 key events by the owner (Nov 25, 2026; not retroactive, counts start that day)
 - Per-placement Amazon Associates tracking IDs; monthly Associates CSV exports via a Google Drive folder
 - Optional: Microsoft Clarity (needs CSP change, preview first), Bing Webmaster Tools
 

@@ -222,6 +222,7 @@ Merge the approved branch into `main` and push. GitHub Pages deploys in about a 
 
 ### Connectors status (Oct 2026)
 - Working: GA4 and Search Console (via proxy), Gmail, Google Drive/Docs/Sheets/Calendar, Canva, Firecrawl, vidIQ, GitHub.
+- **YouTube (Nov 25, 2026):** channel Strand Hair `@strandhair` (UCVoFflPo_CMjQB06zjxoJmg), connected to vidIQ. Faceless "myth vs research" Shorts, 2–3 a week; Claude scripts and builds, the owner reviews and uploads (never upload without the owner's yes). Pillars: myths vs research, the minimal routine, know your hair (type and porosity). Shorts can't carry clickable links, so they point to a long hub video and the bio link (`?utm_source=youtube`). Embed videos on the matching site pages.
 - Blocked: Semrush (out of API units), Ahrefs (connection not finished). Firecrawl can't read Pinterest's newsroom/trend report.
 
 ---

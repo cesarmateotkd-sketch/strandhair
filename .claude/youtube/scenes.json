@@ -1,0 +1,38 @@
+{
+"wash": {"tag": "MYTH CHECK #01", "source": "Source: Punyani et al., Skin Appendage Disord 2021 (PMID 34055906). Funded by Procter & Gamble. AAD: hair care tips for tightly coiled hair.",
+ "scenes": [
+  {"from": 0, "kind": "statement", "label": "THE MYTH", "text": "“Washing more often damages your hair.”", "size": 120},
+  {"from": 2, "kind": "ledger", "title": "THE STUDY · 2021", "rows": [["Journal", "Skin Appendage Disord."], ["Design", "Controlled wash test"], ["Plus", "Survey of habits"]]},
+  {"from": 3, "kind": "cal", "title": "TWO GROUPS", "a": "1×", "b": "7×"},
+  {"from": 4, "kind": "ledger", "title": "DAILY VS WEEKLY", "rows": [["Scalp measures", "Daily ", "ok"], ["Hair measures", "Daily ", "ok"], ["How people rated it", "Daily ", "ok"]]},
+  {"from": 5, "kind": "statement", "label": "THE RESULT", "text": "Hair damage found:", "size": 110, "stamp": "NONE", "sy": 900, "st": 0.6, "sc": [74, 124, 95]},
+  {"from": 6, "kind": "statement", "label": "BUT", "text": "Two catches.", "size": 140},
+  {"from": 7, "kind": "ledger", "title": "THE CATCHES", "lag": 2.3, "rows": [["1. Paid for by", "a shampoo co.", "q"], ["2. Curly & coily hair", "not studied", "q"]]},
+  {"from": 9, "kind": "ledger", "title": "TIGHTLY COILED HAIR", "rows": [["Dermatologists (AAD)", "every 1–2 weeks", "ok"]]},
+  {"from": 10, "kind": "statement", "label": "THE VERDICT", "text": "Wash when your scalp needs it.", "size": 116, "stamp": "MYTH: NOT SUPPORTED", "sy": 1100, "st": 1.2},
+  {"from": 12, "kind": "statement", "label": "THE MYTH", "text": "“Washing more often damages your hair.”", "size": 120}
+ ]},
+"float": {"tag": "MYTH CHECK #02", "source": "Source: Hessefort et al., J Cosmet Sci 2008 (PMID 18818850). No at-home porosity test has been validated.",
+ "scenes": [
+  {"from": 0, "kind": "glass", "title": "THE FLOAT TEST"},
+  {"from": 1, "kind": "glass", "title": "THE FLOAT TEST", "stamp": "TELLS YOU NOTHING", "st": 0.1},
+  {"from": 2, "kind": "ledger", "title": "THE EVIDENCE", "rows": [["Studies showing the float test measures porosity", "0", "no"]]},
+  {"from": 3, "kind": "statement", "label": "WHAT LABS MEASURE", "text": "Porosity follows damage.", "size": 130},
+  {"from": 5, "kind": "bars", "title": "HAIR SURFACE AREA", "bars": [["Untreated hair", 1, "1×"], ["After 1 minute of bleach", 2.9, "nearly 3×"]]},
+  {"from": 7, "kind": "statement", "label": "MEANING", "text": "Damage opens up the hair.", "size": 130},
+  {"from": 8, "kind": "chips", "text": "4C hair can be:", "chips": [["low", [122, 88, 72]], ["normal", [74, 124, 95]], ["high", [168, 58, 42]]]},
+  {"from": 10, "kind": "ledger", "title": "USE THIS INSTEAD", "rows": [["Bleached hair", "more porous", "q"], ["Heat-damaged hair", "more porous", "q"]]},
+  {"from": 11, "kind": "glass", "title": "THE FLOAT TEST", "x": true, "xt": 0.2, "stamp": "NOT SUPPORTED", "st": 0.6}
+ ]},
+"oil": {"tag": "MYTH CHECK #03", "source": "Sources: Keis et al., J Cosmet Sci 2007 (PMID 17520153); Ruetsch et al., J Cosmet Sci 2001 (PMID 11413497).",
+ "scenes": [
+  {"from": 0, "kind": "statement", "label": "THE MYTH", "text": "“Oil moisturizes your hair.”", "size": 130, "stamp": "MISLEADING", "sy": 1020, "st": 0.5},
+  {"from": 1, "kind": "drop", "text": "Water does."},
+  {"from": 2, "kind": "film", "title": "OIL FILM ON HAIR (LAB TEST)", "oil": true, "lab": "Less water gets in…"},
+  {"from": 3, "kind": "film", "title": "OIL FILM ON HAIR (LAB TEST)", "oil": true, "out": true, "lab": "…and less gets out."},
+  {"from": 4, "kind": "ledger", "title": "THE ORDER", "lag": 2.6, "rows": [["1. Water-based product", "first", "ok"], ["2. Oil, to seal", "last", "ok"]]},
+  {"from": 6, "kind": "statement", "label": "ALSO", "text": "Not every oil gets inside the hair.", "size": 116},
+  {"from": 7, "kind": "ledger", "title": "DOES IT GET IN?", "lag": 1.6, "rows": [["Coconut oil", "yes", "ok"], ["Mineral oil", "surface only", "no"], ["Jojoba", "never tested", "q"], ["Avocado", "never tested", "q"], ["Almond", "never tested", "q"]]},
+  {"from": 11, "kind": "statement", "label": "THE VERDICT", "text": "Oil seals. Water moisturizes.", "size": 120, "stamp": "MISLEADING", "sy": 1060, "st": 0.4}
+ ]}
+}

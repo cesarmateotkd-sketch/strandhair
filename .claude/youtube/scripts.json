@@ -1,0 +1,97 @@
+{
+ "wash": {
+  "lines": [
+   "Washing your hair more often damages it.",
+   "That's what the internet says.",
+   "A 2021 study actually tested it.",
+   "People washed once a week, or every single day.",
+   "Daily washing came out ahead on every measure.",
+   "And no damage to the hair was found.",
+   "Two catches.",
+   "A shampoo company paid for the study,",
+   "and it didn't study curly or coily hair.",
+   "For tightly coiled hair, the American Academy of Dermatology suggests washing every week or two.",
+   "So wash when your scalp needs it,",
+   "not to follow a rule.",
+   "So, does washing more damage your hair?"
+  ],
+  "t": [
+   0,
+   2.769,
+   4.493,
+   7.419,
+   10.815,
+   13.976,
+   16.483,
+   17.633,
+   20.062,
+   23.144,
+   29.414,
+   31.608,
+   33.332,
+   36.18
+  ]
+ },
+ "float": {
+  "lines": [
+   "Your hair floated in a glass of water?",
+   "That tells you nothing.",
+   "No study has shown the float test measures porosity.",
+   "Here's what labs do measure.",
+   "Porosity follows damage.",
+   "In one study, bleach nearly tripled the hair's surface area",
+   "in the first minute.",
+   "Damage opens up the hair.",
+   "So porosity isn't set by your curl type.",
+   "4C hair can be low, normal or high porosity.",
+   "Bleached or heat-damaged hair? Treat it as more porous.",
+   "And skip the glass of water."
+  ],
+  "t": [
+   0,
+   2.586,
+   4.153,
+   7.471,
+   9.43,
+   11.624,
+   15.673,
+   17.162,
+   19.122,
+   22.047,
+   26.253,
+   30.302,
+   32.026
+  ]
+ },
+ "oil": {
+  "lines": [
+   "Oil doesn't moisturize your hair.",
+   "Water does.",
+   "In a lab study, an oil film cut how much water hair took in,",
+   "but it also slowed water leaving.",
+   "So put your water-based product on first,",
+   "and your oil last, to seal it in.",
+   "And not every oil gets inside the hair.",
+   "Coconut oil got in.",
+   "Mineral oil stayed on the surface.",
+   "Jojoba, avocado, almond?",
+   "Never tested.",
+   "So which oil are you using?"
+  ],
+  "t": [
+   0,
+   2.194,
+   3.265,
+   7.784,
+   10.214,
+   12.983,
+   15.569,
+   18.26,
+   19.905,
+   22.256,
+   25.182,
+   26.593,
+   28.787
+  ]
+ }
+}

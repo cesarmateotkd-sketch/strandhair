@@ -81,8 +81,11 @@ Free pitches only (owner: up to 10/week since Nov 24; replies need the owner's O
 | 2026-11-22 | The Mestiza Muse | team@ | Article: mixed curl patterns | Sent |
 | 2026-11-24 | Big Head Justice | info@ | Myths page (#castor-grows, #float-test, #oil-moisturizes) | Sent |
 | 2026-11-24 | Natural Haircare News | info@ | Guest post: 5 myths checked against research | Sent |
-| 2026-11-24 | Kindred Curl (salon, Pittsburgh) | hello@ | Myths page #typing-science, #wash-rarely for their curl-training myths post | Sent |
+| 2026-11-24 | Kindred Curl (salon, Pittsburgh) | hello@ | Myths page #typing-science, #wash-rarely for their curl-training myths post | Autoreply Nov 24 (owner busy, slow replies) |
 | 2026-11-24 | Raising Biracial Babies | christina@ | Myths page #not-growing, #detangle-often for her hair growth posts | Sent |
+| 2026-11-25 | Wild Soul Salon (Jackie Wilt, Denver curl specialist) | jackiewiltartistry@gmail.com | #typing-science + hair type chart for "What Hair Type Do I Have?" (Jan 2026) | Sent |
+| 2026-11-25 | Black Girl Curls (blackcurlmagic.com) | info@ | #oil-moisturizes for Myth #1 in "5 Common Natural Hair Care Myths Debunked" | Sent |
+| 2026-11-25 | A Second Chance, Inc. (kinship care nonprofit, PA) | communications@ | Hair type chart + quiz for "A Kinship Caregiver's Guide to Caring for Diverse Hair Textures" (Sep 2026) | Sent |
 
 Lessons (Nov 24 research): free, real hair blogs are a small pool; many "write for us" pages are paid or wig shops, and "best blogs" lists are often years old or noindex (Curlee 2021, noindex). Vet: active in 12 months, indexable, real email. Benchmarks: link outreach replies ~8.5% (Backlinko/Pitchbox, 12M emails); manually edited emails beat automated ones (Hunter 2026). Plan on ~1 link per 10-15 pitches.
 

@@ -160,7 +160,7 @@ footer
 - "Discovered/unknown" pages: request indexing. "Crawled — currently not indexed" pages: Google read them and passed, so re-requesting doesn't help; they need content changes (differentiate or merge). As of Oct 25: 4A routine, how to wash 4C, protective styles, how to find your hair type, scalp care, baggy method. Nov 7: all but "how to find your hair type" got evidence tables and claim fixes; the owner requests indexing for them once.
 
 ### Analytics to-dos
-- Mark `quiz_complete` as a GA4 key event (owner)
+- [x] `quiz_complete` and `affiliate_click` marked as GA4 key events by the owner (Nov 25, 2026; not retroactive, counts start that day)
 - Per-placement Amazon Associates tracking IDs; monthly Associates CSV exports via a Google Drive folder
 - Optional: Microsoft Clarity (needs CSP change, preview first), Bing Webmaster Tools
 
@@ -221,7 +221,8 @@ Merge the approved branch into `main` and push. GitHub Pages deploys in about a 
 - First manual run: Post 55 (Oct 25–26, 2026): GSC/GA gap analysis → vidIQ + Firecrawl validation → PubMed evidence → article + pin → preview → deploy.
 
 ### Connectors status (Oct 2026)
-- Working: GA4 and Search Console (via proxy), Gmail, Google Drive/Docs/Sheets/Calendar, Canva, Firecrawl, vidIQ, GitHub.
+- Working: GA4 and Search Console (via proxy), Gmail, Google Drive/Docs/Sheets/Calendar, Canva, Firecrawl, vidIQ, GitHub, Parallel Search (connected Nov 25; free web search and fetch, the first fallback when Firecrawl credits run out).
+- **YouTube (Nov 25, 2026):** channel Strand Hair `@strandhair` (UCVoFflPo_CMjQB06zjxoJmg), connected to vidIQ. Faceless "myth vs research" Shorts, 2–3 a week; Claude scripts and builds, the owner reviews and uploads (never upload without the owner's yes). Pillars: myths vs research, the minimal routine, know your hair (type and porosity). Shorts can't carry clickable links, so they point to a long hub video and the bio link (`?utm_source=youtube`). Embed videos on the matching site pages.
 - Blocked: Semrush (out of API units), Ahrefs (connection not finished). Firecrawl can't read Pinterest's newsroom/trend report.
 
 ---
@@ -244,7 +245,7 @@ Start here in a new session. Update this list as items close.
 - [x] **Nov 19 page-1 quick wins (live):** 3C low porosity section, 4C growth claim fixes, 3B vs 3C table, 2B products box, FAQs on Post 57 and silk press, gels/3C internal links, homepage routine links, 8 stale sitemap lastmods fixed.
 - [x] **Author byline (live Nov 19):** "By César, founder of Strand" with initials badge on all posts, Person author schema, About author section (`about.html#author`).
 - [x] **Indexing Nov 19:** sitemap resubmitted (61 URLs read, old www sitemap gone); IndexNow set up (see SEO); owner requesting ~10/day from the priority list (day 1 done).
-- [ ] **Outreach (Nov 19):** pitches sent from the owner's Gmail to Hair Is Curly (editorial@), Curl Warehouse (hello@, paid post), Quicksilver Hair (joli@), CurlsBot (info@); guest article "Does 4C hair grow slower?" submitted to Naturally You! Owner: Feedspot listing (bot-blocked). Follow up once on Nov 26. hello@hairtypequiz.hair only forwards (Namecheap); it can't send until the owner adds it as a Gmail "Send mail as" alias.
+- [ ] **Outreach (Nov 19):** pitches sent from the owner's Gmail to Hair Is Curly (editorial@), Curl Warehouse (hello@, paid post), Quicksilver Hair (joli@), CurlsBot (info@); guest article "Does 4C hair grow slower?" submitted to Naturally You! Feedspot listing submitted by the owner (Nov 25). Follow up once on Nov 26. hello@hairtypequiz.hair only forwards (Namecheap); it can't send until the owner adds it as a Gmail "Send mail as" alias.
 - [x] **GA4 `hair_type` custom dimension** registered Nov 19 (collects from that day).
 - [x] **Email signups fixed (Nov 10):** thank-you redirect set and tested, catch-up email sent to 13, bots archived (see Email).
 - [x] **Quiz-results signup box (live Nov 10):** the checklist signup after step 1 on 4A/4B/4C results, a `sign_up` GA event (`method: quiz_results`), `/checklist.html` loading analytics immediately, and `js/quiz.js?v=4`. GitHub Pages skipped the merge build once; a small follow-up commit (sitemap lastmod) triggered it.
@@ -278,7 +279,7 @@ Start here in a new session. Update this list as items close.
 - [ ] **Backlinks**: the main ranking weakness (the site ranks ~#73 for "hair type quiz")
 - [ ] **Near-page-1 posts**: tune titles/intros for "3b vs 3c", "does 4c hair grow slower", protein-treatment frequency, sulfate-free shampoo questions
 - [ ] **"Crawled, not indexed" posts**: differentiate or merge
-- [ ] **Pinterest**: 1–3 pins/day; enable Rich Pins via URL debugger
+- [ ] **Pinterest**: 1–3 pins/day (Rich Pins active, confirmed Nov 25)
 - [ ] **Apply for AdSense** when real sessions reach ~50/day (Nov 24: ~10/day excl. the Facebook crawler; the Monday cycle flags it). Ads only on pages without Amazon links (myths, hair type chart, typing guide, porosity test); needs CSP + EU/UK consent banner; preview first
 - [ ] **Amazon Associates audit** — most clicks come from the quiz (45 of 63 Amazon clicks in 60 days)
 

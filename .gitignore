@@ -3,6 +3,7 @@
 !.claude/settings.json
 !.claude/learnings.md
 !.claude/indexing-queue.md
+!.claude/youtube/
 
 # Python bytecode
 __pycache__/

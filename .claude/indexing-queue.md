@@ -4,16 +4,16 @@ Ranked best first. The daily check-in hands the owner the next 10 rows with stat
 
 | # | URL | Why | Status | Google (Nov 24 check) |
 |---|---|---|---|---|
-| 1 | https://hairtypequiz.hair/blog/hair-myths-vs-evidence.html | new page, linkable asset | todo | URL is unknown to Google |
-| 2 | https://hairtypequiz.hair/hair-type-chart.html | new link magnet Nov 24 (outreach offers it) | todo | URL is unknown to Google |
-| 3 | https://hairtypequiz.hair/blog/hair-porosity-test.html | evidence pass Nov 24, pos 60-75 | todo | Submitted and indexed, last read 2026-11-10 |
-| 4 | https://hairtypequiz.hair/wash-day-checklist.html | rebuilt Nov 22, lead magnet | todo | Crawled - currently not indexed, last read 2026-10-27 |
-| 5 | https://hairtypequiz.hair/blog/natural-hair-care-beginners.html | evidence pass Nov 24, pos 10.3 | todo | Submitted and indexed, last read 2026-11-10 |
-| 6 | https://hairtypequiz.hair/blog/4b-hair-care-routine.html | evidence pass Nov 24, pos 15.6 | todo | Submitted and indexed, last read 2026-11-08 |
-| 7 | https://hairtypequiz.hair/blog/best-oils-natural-hair.html | evidence pass Nov 24, pos 26.8 | todo | Submitted and indexed, last read 2026-11-09 |
-| 8 | https://hairtypequiz.hair/blog/2b-hair-care-routine.html | evidence pass Nov 24 | todo | Submitted and indexed, last read 2026-11-19 |
-| 9 | https://hairtypequiz.hair/blog/3a-hair-care-routine.html | evidence pass Nov 24 | todo | Submitted and indexed, last read 2026-11-09 |
-| 10 | https://hairtypequiz.hair/blog/pre-poo-treatment-natural-hair.html | claim fixes Nov 24 | todo | Submitted and indexed, last read 2026-11-10 |
+| 1 | https://hairtypequiz.hair/blog/hair-myths-vs-evidence.html | new page, linkable asset | asked 2026-11-25 | URL is unknown to Google |
+| 2 | https://hairtypequiz.hair/hair-type-chart.html | new link magnet Nov 24 (outreach offers it) | asked 2026-11-25 | URL is unknown to Google |
+| 3 | https://hairtypequiz.hair/blog/hair-porosity-test.html | evidence pass Nov 24, pos 60-75 | asked 2026-11-25 | Submitted and indexed, last read 2026-11-10 |
+| 4 | https://hairtypequiz.hair/wash-day-checklist.html | rebuilt Nov 22, lead magnet | asked 2026-11-25 | Crawled - currently not indexed, last read 2026-10-27 |
+| 5 | https://hairtypequiz.hair/blog/natural-hair-care-beginners.html | evidence pass Nov 24, pos 10.3 | asked 2026-11-25 | Submitted and indexed, last read 2026-11-10 |
+| 6 | https://hairtypequiz.hair/blog/4b-hair-care-routine.html | evidence pass Nov 24, pos 15.6 | asked 2026-11-25 | Submitted and indexed, last read 2026-11-08 |
+| 7 | https://hairtypequiz.hair/blog/best-oils-natural-hair.html | evidence pass Nov 24, pos 26.8 | asked 2026-11-25 | Submitted and indexed, last read 2026-11-09 |
+| 8 | https://hairtypequiz.hair/blog/2b-hair-care-routine.html | evidence pass Nov 24 | asked 2026-11-25 | Submitted and indexed, last read 2026-11-19 |
+| 9 | https://hairtypequiz.hair/blog/3a-hair-care-routine.html | evidence pass Nov 24 | asked 2026-11-25 | Submitted and indexed, last read 2026-11-09 |
+| 10 | https://hairtypequiz.hair/blog/pre-poo-treatment-natural-hair.html | claim fixes Nov 24 | asked 2026-11-25 | Submitted and indexed, last read 2026-11-10 |
 | 11 | https://hairtypequiz.hair/blog/best-products-for-4c-hair.html | evidence pass Nov 24, affiliate roundup, pos 17.1 | todo | Submitted and indexed, last read 2026-11-11 |
 | 12 | https://hairtypequiz.hair/blog/3b-hair-care-routine.html | evidence pass Nov 24 | todo | Submitted and indexed, last read 2026-11-11 |
 | 13 | https://hairtypequiz.hair/blog/silk-bonnet-vs-satin-pillowcase.html | evidence pass Nov 24 | todo | Submitted and indexed, last read 2026-11-10 |

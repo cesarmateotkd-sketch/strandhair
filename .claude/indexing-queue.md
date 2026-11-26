@@ -1,6 +1,6 @@
 # Indexing queue (owner requests ~10/day in Search Console)
 
-Ranked best first. The daily check-in hands the owner the next 10 rows with status `todo`, marks them `asked YYYY-MM-DD` once the owner says "done indexing", and the weekly cycle updates `google` from URL inspection. Add pages here whenever they change.
+Ranked best first. The daily check-in hands the owner the next 10 rows with status `todo`, marks them `asked YYYY-MM-DD` once the owner says "done indexing", and the weekly cycle updates `google` from URL inspection. Add pages here whenever they change. Search Console allows about 10 requests a day per account (the owner hit the limit at 11 on Nov 25, quota resets daily), so hand out one batch of 10 per day.
 
 | # | URL | Why | Status | Google (Nov 24 check) |
 |---|---|---|---|---|
@@ -14,7 +14,7 @@ Ranked best first. The daily check-in hands the owner the next 10 rows with stat
 | 8 | https://hairtypequiz.hair/blog/2b-hair-care-routine.html | evidence pass Nov 24 | asked 2026-11-25 | Submitted and indexed, last read 2026-11-19 |
 | 9 | https://hairtypequiz.hair/blog/3a-hair-care-routine.html | evidence pass Nov 24 | asked 2026-11-25 | Submitted and indexed, last read 2026-11-09 |
 | 10 | https://hairtypequiz.hair/blog/pre-poo-treatment-natural-hair.html | claim fixes Nov 24 | asked 2026-11-25 | Submitted and indexed, last read 2026-11-10 |
-| 11 | https://hairtypequiz.hair/blog/best-products-for-4c-hair.html | evidence pass Nov 24, affiliate roundup, pos 17.1 | todo | Submitted and indexed, last read 2026-11-11 |
+| 11 | https://hairtypequiz.hair/blog/best-products-for-4c-hair.html | evidence pass Nov 24, affiliate roundup, pos 17.1 | asked 2026-11-25 | Submitted and indexed, last read 2026-11-11 |
 | 12 | https://hairtypequiz.hair/blog/3b-hair-care-routine.html | evidence pass Nov 24 | todo | Submitted and indexed, last read 2026-11-11 |
 | 13 | https://hairtypequiz.hair/blog/silk-bonnet-vs-satin-pillowcase.html | evidence pass Nov 24 | todo | Submitted and indexed, last read 2026-11-10 |
 | 14 | https://hairtypequiz.hair/blog/best-satin-bonnets-pillowcases-natural-hair.html | claims table fixed Nov 24 | todo | Submitted and indexed, last read 2026-11-13 |

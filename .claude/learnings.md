@@ -74,8 +74,8 @@ Free pitches only (owner: up to 10/week since Nov 24; replies need the owner's O
 |---|---|---|---|---|
 | 2026-11-19 | Hair Is Curly | editorial@ | Guest post: porosity research | Declined Nov 20 |
 | 2026-11-19 | Curl Warehouse | hello@ | Paid guest post (their store links) | No follow-ups (their request) |
-| 2026-11-19 | Quicksilver Hair | joli@ | Porosity research tables | Sent |
-| 2026-11-19 | CurlsBot | info@ | Hair typing study page | Sent |
+| 2026-11-19 | Quicksilver Hair | joli@ | Porosity research tables | Followed up Nov 26 (+ #float-test row) |
+| 2026-11-19 | CurlsBot | info@ | Hair typing study page | Followed up Nov 26 (+ hair type chart) |
 | 2026-11-19 | Naturally You! | form | Guest article (4C growth) | Submitted |
 | 2026-11-22 | The Beauty Web | contact@ | Guest article: porosity research | Sent |
 | 2026-11-22 | The Mestiza Muse | team@ | Article: mixed curl patterns | Sent |
@@ -83,7 +83,7 @@ Free pitches only (owner: up to 10/week since Nov 24; replies need the owner's O
 | 2026-11-24 | Natural Haircare News | info@ | Guest post: 5 myths checked against research | Sent |
 | 2026-11-24 | Kindred Curl (salon, Pittsburgh) | hello@ | Myths page #typing-science, #wash-rarely for their curl-training myths post | Autoreply Nov 24 (owner busy, slow replies) |
 | 2026-11-24 | Raising Biracial Babies | christina@ | Myths page #not-growing, #detangle-often for her hair growth posts | Sent |
-| 2026-11-25 | Wild Soul Salon (Jackie Wilt, Denver curl specialist) | jackiewiltartistry@gmail.com | #typing-science + hair type chart for "What Hair Type Do I Have?" (Jan 2026) | Sent |
+| 2026-11-25 | Wild Soul Salon (Jackie Wilt, Denver curl specialist) | jackiewiltartistry@gmail.com | #typing-science + hair type chart for "What Hair Type Do I Have?" (Jan 2026) | Autoreply Nov 25 |
 | 2026-11-25 | Black Girl Curls (blackcurlmagic.com) | info@ | #oil-moisturizes for Myth #1 in "5 Common Natural Hair Care Myths Debunked" | Sent |
 | 2026-11-25 | A Second Chance, Inc. (kinship care nonprofit, PA) | communications@ | Hair type chart + quiz for "A Kinship Caregiver's Guide to Caring for Diverse Hair Textures" (Sep 2026) | Sent |
 

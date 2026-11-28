@@ -13,3 +13,6 @@ Nov 28 drafts (voice: Higgsfield seed_audio preset "Gia", 530df032-c311-483b-a75
 4 castor   postId 32e02288-95fd-47ff-828c-aa53acfcf32e rev fccb487f  planned Dec 2 7pm ET
 5 breakage postId c0e3fee7-c861-4553-b37f-c1ed4a3f2a77 rev c6b42bfc  planned Dec 4 7pm ET
 Higgsfield free credits: 6 used for these two voiceovers (balance now ~0).
+Uploaded Nov 28 via vidIQ (owner approved), public at 7 pm ET:
+4 castor   https://www.youtube.com/watch?v=eWTJuZ7bKtw  Dec 2
+5 breakage https://www.youtube.com/watch?v=ekuXDguM0dA  Dec 4

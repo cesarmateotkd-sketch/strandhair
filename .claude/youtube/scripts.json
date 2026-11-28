@@ -98,30 +98,52 @@
   "lines": [
    "Castor oil makes your hair grow?",
    "Here's the catch.",
-   "No study has tested castor oil on its own for hair growth in people.",
-   "The growth idea comes from a lab theory:",
-   "that it may block a scalp chemical linked to pattern hair loss.",
-   "A 2026 dermatology review says that's still unproven.",
+   "No study has tested castor oil alone for hair growth in people.",
+   "The idea comes from a lab theory that it blocks a scalp chemical linked to hair loss.",
+   "A 2026 dermatology review calls that unproven.",
    "What it can do: add shine.",
-   "And with heavy use, there are rare reports of hair felting,",
+   "And heavy use has rare reports of hair felting,",
    "strands matting into a hard tangle.",
-   "So if your hair isn't getting longer, look at breakage first.",
+   "So if your hair isn't getting longer, check breakage first.",
    "So, does castor oil grow hair?"
+  ],
+  "t": [
+   0,
+   3.03,
+   4.56,
+   9.0,
+   14.72,
+   19.73,
+   23.06,
+   25.87,
+   28.65,
+   32.39,
+   35.92
   ]
  },
  "breakage": {
   "lines": [
-   "Your hair isn't stuck. It's breaking.",
-   "In a small case report, three people with tightly coiled hair combed it every day.",
-   "Three years after a haircut, their hair was only about seven centimeters long.",
-   "That's under three inches.",
-   "The hair was growing the whole time.",
-   "Daily combing acted like a daily haircut.",
-   "It's only three people, so it's a clue, not proof.",
-   "But it fits what we see: hair grows every month. Breakage is why length doesn't show.",
-   "Detangle wet, with conditioner in, starting at the ends.",
-   "And comb less often.",
+   "Your hair isn't stuck.",
+   "It's breaking.",
+   "In a small case report, three people with tightly coiled hair combed it daily.",
+   "Three years after a haircut, it was only about seven centimeters long.",
+   "It grew the whole time; combing acted like a daily haircut.",
+   "Just three people, so it's a clue.",
+   "But hair grows every month; breakage is why length doesn't show.",
+   "Detangle wet with conditioner, ends first, and comb less.",
    "So, is your hair really not growing?"
+  ],
+  "t": [
+   0,
+   2.15,
+   3.67,
+   9.33,
+   14.35,
+   18.89,
+   21.87,
+   26.49,
+   31.14,
+   33.54
   ]
  }
 }
